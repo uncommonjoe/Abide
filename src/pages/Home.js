@@ -8,9 +8,10 @@ import {
 } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
-import styles from '../../assets/styles/container.style';
+import styles from '../assets/styles/container.style';
+import { TitleText, Text } from '../assets/styles/Text';
+
 // import { Header } from '../../assets/components/header/Header';
-// import { TitleText, Text } from '../../assets/styles/Text';
 // import Verse from '../../api/GetDailyVerse.js';
 // import CurrentDate from '../../assets/components/CurrentDate.js';
 // import LatestSermon from '../../api/GetLatestSermon.js';
@@ -22,18 +23,12 @@ export default function HomePage() {
 	return (
 		<View style={styles.container}>
 			<StatusBar barStyle='light-content' />
-			<Header>
-				{/* <Image
-					style={{ resizeMode: 'cover', height: 25, width: 190 }}
-					source={require('../../../src/assets/img/logo.png')}
-				/> */}
-			</Header>
 
 			<ScrollView contentInsetAdjustmentBehavior='automatic'>
 				<SafeAreaView>
 					<View style={styles.page}>
 						<TitleText style={{ marginBottom: 25 }}>
-							Latest Sermon
+							Calendar
 						</TitleText>
 					</View>
 				</SafeAreaView>

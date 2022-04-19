@@ -1,20 +1,32 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+	faHouse,
+	faToolbox,
+	faSliders,
+} from '@fortawesome/free-solid-svg-icons';
+
+//import { FontAwesome } from "@expo/vector-icons";
 
 // Pages
-import HomePage from './src/screens/Home';
+import HomePage from './src/pages/Home';
+import Toolbox from './src/pages/Toolbox';
+import Settings from './src/pages/Settings';
 
 const BottomNavigation = createBottomTabNavigator();
+
+//fontawesome.library.add(faCheckSquare, faCoffee);
 
 export default function App() {
 	return (
 		<NavigationContainer>
 			<BottomNavigation.Navigator
-				tabBarOptions={{
-					activeTintColor: '#0C7B93',
-					inactiveTintColor: 'rgba(26,27,29, .4)',
-					style: {
+				screenOptions={{
+					tabBarStyle: {
 						backgroundColor: 'white',
 						borderTopWidth: 1,
 						borderTopColor: '#F0F0F0',
@@ -22,39 +34,49 @@ export default function App() {
 						height: 85,
 					},
 				}}
-				screenOptions={({ route }) => ({
-					tabBarIcon: ({ color, size }) => {
-						if (route.name === 'Home') {
-							return (
-								<FontAwesomeIcon
-									icon='fa-light fa-house-blank'
-									color={color}
-									size={size}
-								/>
-							);
-						} else if (route.name === 'Toolbox') {
-							return (
-								<FontAwesomeIcon
-									icon='fa-light fa-toolbox'
-									color={color}
-									size={size}
-								/>
-							);
-						}
-
-						return (
-							<FontAwesomeIcon
-								icon='fa-light fa-sliders'
-								color={color}
-								size={size}
-							/>
-						);
-					},
-				})}
 			>
-				<BottomNavigation.Screen name='Home' component={HomePage} />
-				<BottomNavigation.Screen name='Toolbox' component={Toolbox} />
-				<BottomNavigation.Screen name='Settings' component={Settings} />
+				<BottomNavigation.Screen
+					name='Home'
+					component={HomePage}
+					options={{
+						tabBarLabel: '',
+						tabBarIcon: ({ color, size }) => (
+							<FontAwesomeIcon
+								icon={faHouse}
+								color={color}
+								size='3x'
+							/>
+						),
+					}}
+				/>
+				<BottomNavigation.Screen
+					name='Toolbox'
+					component={Toolbox}
+					options={{
+						tabBarLabel: '',
+						tabBarIcon: ({ color, size }) => (
+							<FontAwesomeIcon
+								icon={faToolbox}
+								color={color}
+								size='3x'
+							/>
+						),
+					}}
+				/>
+				<BottomNavigation.Screen
+					name='Settings'
+					component={Settings}
+					options={{
+						tabBarLabel: '',
+						tabBarIcon: ({ color, size }) => (
+							<FontAwesomeIcon
+								icon={faSliders}
+								color={color}
+								size='3x'
+							/>
+						),
+					}}
+				/>
 			</BottomNavigation.Navigator>
 		</NavigationContainer>
 	);
