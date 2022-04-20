@@ -1,34 +1,35 @@
 {
-  "name": "abide",
-  "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
-  "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-regular-svg-icons": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/react-fontawesome": "^0.1.18",
-    "@react-navigation/bottom-tabs": "^6.3.1",
-    "@react-navigation/native": "^6.0.10",
-    "babel-loader": "^8.2.4",
-    "expo": "^44.0.0",
-    "expo-status-bar": "~1.2.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "react-native": "0.64.3",
-    "react-native-safe-area-context": "3.3.2",
-    "react-native-screens": "~3.10.1",
-    "react-native-web": "0.17.1",
-    "styled-components": "^5.3.5"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.17.9"
-  },
-  "private": true
+	"name": "abide",
+	"version": "1.0.0",
+	"main": "node_modules/expo/AppEntry.js",
+	"scripts": {
+		"start": "expo start",
+		"android": "expo start --android",
+		"ios": "expo start --ios",
+		"web": "expo start --web",
+		"eject": "expo eject"
+	},
+	"dependencies": {
+		"@fortawesome/free-regular-svg-icons": "^6.1.1",
+		"@fortawesome/free-solid-svg-icons": "^6.1.1",
+		"@fortawesome/react-native-fontawesome": "^0.2.7",
+		"@react-navigation/bottom-tabs": "^6.3.1",
+		"@react-navigation/native": "^6.0.10",
+		"babel-loader": "^8.2.4",
+		"expo": "~41.0.1",
+		"expo-cli": "^5.3.2",
+		"expo-status-bar": "~1.0.4",
+		"react": "17.0.1",
+		"react-dom": "17.0.1",
+		"react-native": "0.64.2",
+		"react-native-safe-area-context": "3.2.0",
+		"react-native-screens": "~3.0.0",
+		"react-native-web": "0.17.1",
+		"styled-components": "^5.3.5",
+		"uuid": "^8.3.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.17.9"
+	},
+	"private": true
 }

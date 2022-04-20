@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {
 	faHouse,
 	faToolbox,
@@ -18,8 +18,6 @@ import Toolbox from './src/pages/Toolbox';
 import Settings from './src/pages/Settings';
 
 const BottomNavigation = createBottomTabNavigator();
-
-//fontawesome.library.add(faCheckSquare, faCoffee);
 
 export default function App() {
 	return (
@@ -44,7 +42,7 @@ export default function App() {
 							<FontAwesomeIcon
 								icon={faHouse}
 								color={color}
-								size='3x'
+								size={size}
 							/>
 						),
 					}}
@@ -58,7 +56,7 @@ export default function App() {
 							<FontAwesomeIcon
 								icon={faToolbox}
 								color={color}
-								size='3x'
+								size={size}
 							/>
 						),
 					}}
@@ -72,7 +70,7 @@ export default function App() {
 							<FontAwesomeIcon
 								icon={faSliders}
 								color={color}
-								size='3x'
+								size={size}
 							/>
 						),
 					}}
@@ -81,12 +79,3 @@ export default function App() {
 		</NavigationContainer>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-});
