@@ -9,6 +9,8 @@ import {
 	faToolbox,
 	faSliders,
 } from '@fortawesome/free-solid-svg-icons';
+import { initializeApp } from 'firebase/app';
+import { getAnalytics } from 'firebase/analytics';
 
 //import { FontAwesome } from "@expo/vector-icons";
 
