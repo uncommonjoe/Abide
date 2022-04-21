@@ -1,38 +1,61 @@
 import React, { useEffect, useState } from 'react';
 import {
 	View,
-	Image,
+	ActivityIndicator,
+	FlatList,
 	SafeAreaView,
 	ScrollView,
-	Dimensions,
 } from 'react-native';
+import Moment from 'moment';
 import { StatusBar } from 'expo-status-bar';
-
 import styles from '../assets/styles/container.style';
 import { TitleText, Text } from '../assets/styles/Text';
 
-// import { Header } from '../../assets/components/header/Header';
-// import Verse from '../../api/GetDailyVerse.js';
-// import CurrentDate from '../../assets/components/CurrentDate.js';
-// import LatestSermon from '../../api/GetLatestSermon.js';
-// import SeriesList from '../../api/GetSeriesList.js';
-
 export default function HomePage() {
-	const { windowWidth } = Dimensions.get('window');
+	const [isLoading, setLoading] = useState(true);
+	const [data, setData, setDate] = useState(null);
+
+	let today = new Date();
+	let date = Moment(today).format('dd, MMM d, YYYY');
+
+	const getPlan = async () => {
+		try {
+			const response = await fetch(
+				'https://cornerstonebillings.org/api/abide-small.json'
+			);
+			const json = await response.json();
+			setData(json.plans);
+		} catch (error) {
+			console.error(error);
+		} finally {
+			setLoading(false);
+		}
+	};
+
+	useEffect(() => {
+		getPlan();
+	}, []);
 
 	return (
-		<View style={styles.container}>
-			<StatusBar barStyle='light-content' />
+		<View style={{ flex: 1, padding: 24 }}>
+			<View>
+				<Text>
+					{'Current Date'} - {date}
+				</Text>
 
-			<ScrollView contentInsetAdjustmentBehavior='automatic'>
-				<SafeAreaView>
-					<View style={styles.page}>
-						<TitleText style={{ marginBottom: 25 }}>
-							Calendar
-						</TitleText>
-					</View>
-				</SafeAreaView>
-			</ScrollView>
+				{isLoading ? (
+					<ActivityIndicator />
+				) : (
+					<FlatList
+						data={data}
+						renderItem={({ item, index }) => (
+							<View>
+								<Text>{item.date}</Text>
+							</View>
+						)}
+					/>
+				)}
+			</View>
 		</View>
 	);
 }
