@@ -5,7 +5,6 @@ import Constants from 'expo-constants';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
 	apiKey: Constants.manifest?.extra?.firebaseApiKey,
 	authDomain: Constants.manifest?.extra?.firebaseAuthDomain,
@@ -17,6 +16,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
 
-export default app;
+const auth = initializeApp(firebaseConfig);
+
+export default auth;
