@@ -1,5 +1,9 @@
+// Guide to installing Firebase with React Native
+// https://blog.logrocket.com/integrating-firebase-authentication-expo-mobile-app
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
+import 'firebase/auth';
 import Constants from 'expo-constants';
 
 // TODO: Add SDKs for Firebase products that you want to use

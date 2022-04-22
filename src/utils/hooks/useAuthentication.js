@@ -18,6 +18,7 @@ export function useAuthentication() {
 					// User is signed out
 					setUser(undefined);
 				}
+				//setUser(undefined); // set user to undefined to get to the signup screen
 			}
 		);
 
