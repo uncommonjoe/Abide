@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 import { getAuth } from 'firebase/auth';
 import RadioButton from '../../components/RadioButton';
@@ -8,6 +8,7 @@ import { useNavigation } from '@react-navigation/native';
 const SelectTrackModal = () => {
 	const navigation = useNavigation();
 	const auth = getAuth();
+	const [option, setOption] = useState(null);
 
 	const data = [
 		{ value: 'Track 1' },
@@ -15,23 +16,39 @@ const SelectTrackModal = () => {
 		{ value: 'Track 3' },
 	];
 
-	const submit = async () => {};
+	const submit = async () => {
+		// try {
+		// 	const docRef = await addDoc(collection(db, 'users'), {
+		// 		first: 'Ada',
+		// 		last: 'Lovelace',
+		// 		born: 1815,
+		// 	});
+		// 	console.log('Document written with ID: ', docRef.id);
+		// } catch (e) {
+		// 	console.error('Error adding document: ', e);
+		// }
+	};
 
 	return (
 		<View style={styles.container}>
 			<StatusBar barStyle='light-content' />
 
 			<View style={styles.container}>
-				<Text>Select Track</Text>
+				<Text style={styles.title}>Welcome to Abide!</Text>
+				<Text style={styles.title}>Select track to begin</Text>
 
-				<View style={styles.controls}>
-					<RadioButton data={data} />
+				<View style={styles.control}>
+					<RadioButton
+						data={data}
+						onSelect={(value) => setOption(value)}
+					/>
 
-					<Text>This can be changed later</Text>
+					<Text>{option}</Text>
+					<Text style={styles.title}>This can be changed later</Text>
 
 					<Button
-						title='Continue'
-						buttonStyle={styles.control}
+						title='Get Started'
+						style={styles.control}
 						onPress={submit}
 					/>
 				</View>
@@ -49,8 +66,9 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 	},
 
-	controls: {
-		flex: 1,
+	control: {
+		marginTop: 20,
+		marginBottom: 20,
 	},
 
 	input: {
@@ -60,7 +78,7 @@ const styles = StyleSheet.create({
 	},
 
 	title: {
-		marginTop: 10,
+		marginTop: 20,
 	},
 
 	error: {

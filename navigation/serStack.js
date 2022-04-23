@@ -14,14 +14,17 @@ import HomePage from '../src/pages/Home';
 import SelectTrackModal from '../src/pages/users/SelectTrackModal';
 import Toolbox from '../src/pages/Toolbox';
 import Settings from '../src/pages/Settings';
+import { TransitionPresets } from '@react-navigation/stack';
 
 const HomeNav = createStackNavigator();
 const BottomNavigation = createBottomTabNavigator();
 
 var createHomeStack = () => (
 	<HomeNav.Navigator
-		mode='modal'
+		presentation='modal'
 		screenOptions={() => ({
+			headerShown: false,
+			cardOverlayEnabled: true,
 			gestureEnabled: true,
 		})}
 	>
@@ -36,8 +39,10 @@ var createHomeStack = () => (
 			options={{
 				animationEnabled: true,
 				title: '',
+				...TransitionPresets.ModalSlideFromBottomIOS,
+
 				headerStyle: {
-					backgroundColor: 'white',
+					backgroundColor: 'red',
 					borderBottomWidth: 0,
 				},
 				headerTintColor: '#1A1B1D',
@@ -75,20 +80,7 @@ export default function UserStack() {
 						),
 					}}
 				/>
-				{/* <BottomNavigation.Screen
-					name='Home'
-					component={HomePage}
-					options={{
-						tabBarLabel: '',
-						tabBarIcon: ({ color, size }) => (
-							<FontAwesomeIcon
-								icon={faHouse}
-								color={color}
-								size={size}
-							/>
-						),
-					}}
-				/> */}
+
 				<BottomNavigation.Screen
 					name='Toolbox'
 					component={Toolbox}
