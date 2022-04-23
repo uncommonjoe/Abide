@@ -1,40 +1,87 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import {
+	getAuth,
+	updateProfile,
+	createUserWithEmailAndPassword,
+} from 'firebase/auth';
 
-export default function SignUpScreen() {
+const SignUpScreen = () => {
+	const navigation = useNavigation();
 	const auth = getAuth();
 
 	const [value, setValue] = React.useState({
+		displayName: '',
 		email: '',
 		password: '',
 		error: '',
+		nameError: '',
+		emailError: '',
+		passwordError: '',
 	});
 
-	async function signUp() {
-		if (value.email === '' || value.password === '') {
+	const signUp = async () => {
+		if (!value.displayName) {
 			setValue({
 				...value,
-				error: 'Email and password are mandatory.',
+				nameError: 'Name is required.',
 			});
-			return;
+		}
+		if (!value.email) {
+			setValue({
+				...value,
+				emailError: 'Email is required.',
+			});
+		}
+		if (!value.password) {
+			setValue({
+				...value,
+				passwordError: 'Password is required.',
+			});
 		}
 
 		try {
-			await createUserWithEmailAndPassword(
+			const addUser = await createUserWithEmailAndPassword(
 				auth,
 				value.email,
 				value.password
 			);
-			navigation.navigate('Sign In');
+
+			const updateProfile = await updateProfile(addUser, {
+				displayName: value.displayName,
+			});
 		} catch (error) {
 			setValue({
 				...value,
 				error: error.message,
 			});
 		}
-	}
+
+		// assuming the next two functions are asynchrnous AND return a promise
+		// if not, just remove await
+		//user.updateProfile({ displayName: value.displayName });
+		// createUser({
+		// 	id: id,
+		// 	name: value.name,
+		// 	email: value.email,
+		// 	type: 'Test Type',
+		// });
+		// try {
+		// 	await createUserWithEmailAndPassword(
+		// 		auth,
+		// 		value.email,
+		// 		value.password
+		// 	);
+
+		// 	navigation.navigate('Sign In');
+		// } catch (error) {
+		// 	setValue({
+		// 		...value,
+		// 		error: error.message,
+		// 	});
+		// }
+	};
 
 	return (
 		<View>
@@ -49,24 +96,42 @@ export default function SignUpScreen() {
 				)}
 
 				<View style={styles.controls}>
+					<Text style={styles.title}>Name</Text>
 					<TextInput
-						placeholder='Email'
-						containerStyle={styles.control}
+						style={styles.input}
+						value={value.displayName}
+						onChangeText={(text) =>
+							setValue({ ...value, displayName: text })
+						}
+					/>
+					{!!value.nameError && (
+						<Text style={styles.error}>{value.nameError}</Text>
+					)}
+
+					<Text style={styles.title}>Email</Text>
+					<TextInput
+						style={styles.input}
 						value={value.email}
 						onChangeText={(text) =>
 							setValue({ ...value, email: text })
 						}
 					/>
+					{!!value.emailError && (
+						<Text style={styles.error}>{value.emailError}</Text>
+					)}
 
+					<Text style={styles.title}>Password</Text>
 					<TextInput
-						placeholder='Password'
-						containerStyle={styles.control}
+						style={styles.input}
 						value={value.password}
 						onChangeText={(text) =>
 							setValue({ ...value, password: text })
 						}
 						secureTextEntry={true}
 					/>
+					{!!value.passwordError && (
+						<Text style={styles.error}>{value.passwordError}</Text>
+					)}
 
 					<Button
 						title='Sign up'
@@ -77,13 +142,35 @@ export default function SignUpScreen() {
 			</View>
 		</View>
 	);
-}
+};
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
+		paddingTop: 20,
 		backgroundColor: '#fff',
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
+
+	controls: {
+		flex: 1,
+	},
+
+	input: {
+		borderColor: '#ccc',
+		borderWidth: 1,
+		padding: 5,
+	},
+
+	title: {
+		marginTop: 10,
+	},
+
+	error: {
+		marginTop: 5,
+		color: 'red',
+	},
 });
+
+export default SignUpScreen;

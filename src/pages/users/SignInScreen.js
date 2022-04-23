@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigation } from '@react-navigation/native';
 
-export default function SignInScreen() {
+const SignInScreen = () => {
 	const auth = getAuth();
 	const [value, setValue] = React.useState({
 		email: '',
@@ -51,14 +51,14 @@ export default function SignInScreen() {
 			<View style={styles.controls}>
 				<TextInput
 					placeholder='Email'
-					containerStyle={styles.control}
+					style={styles.control}
 					value={value.email}
 					onChangeText={(text) => setValue({ ...value, email: text })}
 				/>
 
 				<TextInput
 					placeholder='Password'
-					containerStyle={styles.control}
+					style={styles.control}
 					value={value.password}
 					onChangeText={(text) =>
 						setValue({ ...value, password: text })
@@ -72,9 +72,18 @@ export default function SignInScreen() {
 					onPress={signIn}
 				/>
 			</View>
+
+			<View style={styles.container}>
+				<Button
+					title='Register'
+					type='outline'
+					buttonStyle={styles.button}
+					onPress={() => navigation.navigate('Sign Up')}
+				/>
+			</View>
 		</View>
 	);
-}
+};
 
 const styles = StyleSheet.create({
 	container: {
@@ -89,14 +98,20 @@ const styles = StyleSheet.create({
 		flex: 1,
 	},
 
-	control: {
+	input: {
+		borderColor: '#ccc',
+		borderWidth: 1,
+		padding: 5,
+	},
+
+	title: {
 		marginTop: 10,
 	},
 
 	error: {
-		marginTop: 10,
-		padding: 10,
-		color: '#fff',
-		backgroundColor: '#D54826FF',
+		marginTop: 5,
+		color: 'red',
 	},
 });
+
+export default SignInScreen;

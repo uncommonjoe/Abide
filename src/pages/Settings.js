@@ -16,7 +16,7 @@ export default function Settings() {
 			<SafeAreaView>
 				<View>
 					<TitleText style={{ marginBottom: 25 }}>
-						Hello {user?.email}!
+						Hello {user?.displayName}
 					</TitleText>
 
 					<Button title='Sign Out' onPress={() => signOut(auth)} />

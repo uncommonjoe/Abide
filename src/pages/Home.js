@@ -10,10 +10,12 @@ import Moment from 'moment';
 import { StatusBar } from 'expo-status-bar';
 import styles from '../assets/styles/container.style';
 import { TitleText, Text } from '../assets/styles/Text';
+import { useNavigation } from '@react-navigation/native';
 
 export default function HomePage() {
 	const [isLoading, setLoading] = useState(true);
-	const [data, setData, setDate] = useState(null);
+	const [data, setData] = useState(null);
+	const navigation = useNavigation();
 
 	let today = new Date();
 	let date = Moment(today).format('dd, MMM d, YYYY');
@@ -34,6 +36,8 @@ export default function HomePage() {
 
 	useEffect(() => {
 		getPlan();
+
+		navigation.navigate('SelectTrackScreen');
 	}, []);
 
 	return (
