@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { View, ActivityIndicator } from 'react-native';
 import { useAuthentication } from '../src/utils/hooks/useAuthentication';
+
 import UserStack from './serStack';
 import AuthStack from './authStack';
 

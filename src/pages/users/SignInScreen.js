@@ -4,9 +4,8 @@ import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigation } from '@react-navigation/native';
 
-const auth = getAuth();
-
 export default function SignInScreen() {
+	const auth = getAuth();
 	const [value, setValue] = React.useState({
 		email: '',
 		password: '',
@@ -15,8 +14,6 @@ export default function SignInScreen() {
 	const navigation = useNavigation();
 
 	async function signIn() {
-		const auth = getAuth();
-
 		if (value.email === '' || value.password === '') {
 			setValue({
 				...value,
