@@ -7,13 +7,44 @@ import {
 	faToolbox,
 	faSliders,
 } from '@fortawesome/free-solid-svg-icons';
+import { createStackNavigator } from '@react-navigation/stack';
 
 // Pages
 import HomePage from '../src/pages/Home';
+import SelectTrackModal from '../src/pages/users/SelectTrackModal';
 import Toolbox from '../src/pages/Toolbox';
 import Settings from '../src/pages/Settings';
 
+const HomeNav = createStackNavigator();
 const BottomNavigation = createBottomTabNavigator();
+
+var createHomeStack = () => (
+	<HomeNav.Navigator
+		mode='modal'
+		screenOptions={() => ({
+			gestureEnabled: true,
+		})}
+	>
+		<HomeNav.Screen
+			name='Home'
+			component={HomePage}
+			options={{ headerShown: false }}
+		/>
+		<HomeNav.Screen
+			name='SelectTrackScreen'
+			component={SelectTrackModal}
+			options={{
+				animationEnabled: true,
+				title: '',
+				headerStyle: {
+					backgroundColor: 'white',
+					borderBottomWidth: 0,
+				},
+				headerTintColor: '#1A1B1D',
+			}}
+		/>
+	</HomeNav.Navigator>
+);
 
 export default function UserStack() {
 	return (
@@ -30,6 +61,21 @@ export default function UserStack() {
 				}}
 			>
 				<BottomNavigation.Screen
+					name='Main'
+					children={createHomeStack}
+					options={{
+						headerShown: false,
+						tabBarLabel: '',
+						tabBarIcon: ({ color, size }) => (
+							<FontAwesomeIcon
+								icon={faHouse}
+								color={color}
+								size={size}
+							/>
+						),
+					}}
+				/>
+				{/* <BottomNavigation.Screen
 					name='Home'
 					component={HomePage}
 					options={{
@@ -42,11 +88,12 @@ export default function UserStack() {
 							/>
 						),
 					}}
-				/>
+				/> */}
 				<BottomNavigation.Screen
 					name='Toolbox'
 					component={Toolbox}
 					options={{
+						headerShown: false,
 						tabBarLabel: '',
 						tabBarIcon: ({ color, size }) => (
 							<FontAwesomeIcon
@@ -61,6 +108,7 @@ export default function UserStack() {
 					name='Settings'
 					component={Settings}
 					options={{
+						headerShown: false,
 						tabBarLabel: '',
 						tabBarIcon: ({ color, size }) => (
 							<FontAwesomeIcon
