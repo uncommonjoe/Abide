@@ -3,7 +3,7 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, addDoc } from 'firebase/firestore';
 
 import 'firebase/auth';
 import Constants from 'expo-constants';
@@ -26,4 +26,17 @@ const firebaseConfig = {
 const auth = initializeApp(firebaseConfig);
 const db = getFirestore(auth);
 
-export default auth;
+export const addTrack = async (props) => {
+	if (props) {
+		try {
+			const docRef = await addDoc(collection(db, 'users'), {
+				uid: props.user.uid,
+				name: props.user.displayName,
+				tier: props.option,
+			});
+			console.log('Document written with ID: ', docRef.id);
+		} catch (e) {
+			console.error('Error adding document: ', e);
+		}
+	}
+};

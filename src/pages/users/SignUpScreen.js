@@ -8,7 +8,6 @@ import {
 } from 'firebase/auth';
 
 const SignUpScreen = () => {
-	const navigation = useNavigation();
 	const auth = getAuth();
 
 	const [value, setValue] = React.useState({
@@ -42,13 +41,12 @@ const SignUpScreen = () => {
 		}
 
 		try {
-			const addUser = await createUserWithEmailAndPassword(
+			const { user } = await createUserWithEmailAndPassword(
 				auth,
 				value.email,
 				value.password
 			);
-
-			const updateProfile = await updateProfile(addUser, {
+			await updateProfile(user, {
 				displayName: value.displayName,
 			});
 		} catch (error) {
@@ -57,30 +55,6 @@ const SignUpScreen = () => {
 				error: error.message,
 			});
 		}
-
-		// assuming the next two functions are asynchrnous AND return a promise
-		// if not, just remove await
-		//user.updateProfile({ displayName: value.displayName });
-		// createUser({
-		// 	id: id,
-		// 	name: value.name,
-		// 	email: value.email,
-		// 	type: 'Test Type',
-		// });
-		// try {
-		// 	await createUserWithEmailAndPassword(
-		// 		auth,
-		// 		value.email,
-		// 		value.password
-		// 	);
-
-		// 	navigation.navigate('Sign In');
-		// } catch (error) {
-		// 	setValue({
-		// 		...value,
-		// 		error: error.message,
-		// 	});
-		// }
 	};
 
 	return (

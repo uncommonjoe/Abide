@@ -1,14 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
-import { getAuth } from 'firebase/auth';
+import { StyleSheet, Text, View, Button } from 'react-native';
+
 import RadioButton from '../../components/RadioButton';
-import { useNavigation } from '@react-navigation/native';
+import { useAuthentication } from '../../../src/utils/hooks/useAuthentication';
+import { addTrack } from '../../../src/config/firebase';
 
 const SelectTrackModal = () => {
-	const navigation = useNavigation();
-	const auth = getAuth();
 	const [option, setOption] = useState(null);
+	const user = useAuthentication();
 
 	const data = [
 		{ value: 'Track 1' },
@@ -16,17 +16,17 @@ const SelectTrackModal = () => {
 		{ value: 'Track 3' },
 	];
 
-	const submit = async () => {
-		// try {
-		// 	const docRef = await addDoc(collection(db, 'users'), {
-		// 		first: 'Ada',
-		// 		last: 'Lovelace',
-		// 		born: 1815,
-		// 	});
-		// 	console.log('Document written with ID: ', docRef.id);
-		// } catch (e) {
-		// 	console.error('Error adding document: ', e);
-		// }
+	const submit = () => {
+		if (user) {
+			let props = {
+				user: user.user,
+				option: option,
+			};
+
+			return addTrack(props);
+		} else {
+			console.log('no user');
+		}
 	};
 
 	return (
