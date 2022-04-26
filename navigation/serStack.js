@@ -39,13 +39,7 @@ var createHomeStack = () => (
 			options={{
 				animationEnabled: true,
 				title: '',
-				...TransitionPresets.ModalSlideFromBottomIOS,
-
-				headerStyle: {
-					backgroundColor: 'red',
-					borderBottomWidth: 0,
-				},
-				headerTintColor: '#1A1B1D',
+				...TransitionPresets.DefaultTransition,
 			}}
 		/>
 	</HomeNav.Navigator>

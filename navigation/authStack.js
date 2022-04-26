@@ -5,7 +5,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../src/pages/Home';
 import SignInScreen from '../src/pages/users/SignInScreen';
 import SignOutScreen from '../src/pages/users/SignUpScreen';
-import SelectTrackScreen from '../src/pages/users/SelectTrackModal';
 
 const Stack = createStackNavigator();
 
