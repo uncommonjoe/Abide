@@ -36,8 +36,6 @@ export default function HomePage() {
 
 	useEffect(() => {
 		getPlan();
-
-		navigation.navigate('SelectTrackScreen');
 	}, []);
 
 	return (

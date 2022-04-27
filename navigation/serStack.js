@@ -7,43 +7,13 @@ import {
 	faToolbox,
 	faSliders,
 } from '@fortawesome/free-solid-svg-icons';
-import { createStackNavigator } from '@react-navigation/stack';
 
 // Pages
 import HomePage from '../src/pages/Home';
-import SelectTrackModal from '../src/pages/users/SelectTrackModal';
 import Toolbox from '../src/pages/Toolbox';
 import Settings from '../src/pages/Settings';
-import { TransitionPresets } from '@react-navigation/stack';
 
-const HomeNav = createStackNavigator();
 const BottomNavigation = createBottomTabNavigator();
-
-var createHomeStack = () => (
-	<HomeNav.Navigator
-		presentation='modal'
-		screenOptions={() => ({
-			headerShown: false,
-			cardOverlayEnabled: true,
-			gestureEnabled: true,
-		})}
-	>
-		<HomeNav.Screen
-			name='Home'
-			component={HomePage}
-			options={{ headerShown: false }}
-		/>
-		<HomeNav.Screen
-			name='SelectTrackScreen'
-			component={SelectTrackModal}
-			options={{
-				animationEnabled: true,
-				title: '',
-				...TransitionPresets.DefaultTransition,
-			}}
-		/>
-	</HomeNav.Navigator>
-);
 
 export default function UserStack() {
 	return (
@@ -61,7 +31,7 @@ export default function UserStack() {
 			>
 				<BottomNavigation.Screen
 					name='Main'
-					children={createHomeStack}
+					component={HomePage}
 					options={{
 						headerShown: false,
 						tabBarLabel: '',

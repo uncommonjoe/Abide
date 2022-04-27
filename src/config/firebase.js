@@ -3,7 +3,14 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs, addDoc } from 'firebase/firestore';
+import {
+	getFirestore,
+	collection,
+	getDocs,
+	addDoc,
+	query,
+	where,
+} from 'firebase/firestore';
 
 import 'firebase/auth';
 import Constants from 'expo-constants';
@@ -38,5 +45,25 @@ export const addTrack = async (props) => {
 		} catch (e) {
 			console.error('Error adding document: ', e);
 		}
+	}
+};
+
+export const getTrack = async (user) => {
+	let userObj;
+	if (user) {
+		try {
+			const q = query(
+				collection(db, 'users'),
+				where('uid', '==', user.uid)
+			);
+
+			const querySnapshot = await getDocs(q);
+			querySnapshot.forEach((doc) => {
+				userObj = doc.data();
+			});
+		} catch (e) {
+			console.error('Error getting document: ', e);
+		}
+		return userObj;
 	}
 };
