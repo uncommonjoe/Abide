@@ -1,116 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import {
-	View,
-	ActivityIndicator,
-	FlatList,
-	SafeAreaView,
-	ScrollView,
-} from 'react-native';
+import { View, Text } from 'react-native';
 import Moment from 'moment';
-import { StatusBar } from 'expo-status-bar';
-import styles from '../assets/styles/container.style';
-import { TitleText, Text } from '../assets/styles/Text';
-import { filter, remove } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
+import TodaysReading from '../components/TodaysReading';
+import Calendar from '../components/Calendar';
 
-export default function HomePage() {
-	const [isLoading, setLoading] = useState(true);
-	const [data, setData] = useState(null);
-	const [todaysObject, setTodaysObject] = useState(null);
+const HomePage = () => {
 	const navigation = useNavigation();
 
 	const userObj = {
 		myTrack: 'track 3',
 	};
 
-	let today = new Date();
-	let date = Moment(today).format('dd, MMM d, YYYY');
+	let getDate = new Date();
+	let today = Moment(getDate).format('dd, MMM d, YYYY');
 
-	const getPlan = async () => {
-		try {
-			const response = await fetch(
-				'https://cornerstonebillings.org/api/abide-small.json?v=1'
-			);
-			const json = await response.json();
-
-			// Filter plans and get the object that matches todays date
-			const datesMatch = filter(json.plans, function (p) {
-				if (p.date == 'Tue, Jul 5, 2022') {
-					// Filter track by users selected track
-					return p.date;
-				}
-			});
-
-			filter(datesMatch[0].tracks, function (t) {
-				if (t.title == userObj.myTrack) {
-					// Create collection of tracks based on users selected track
-					if (t.title == 'track 1') {
-						var pickTracks = remove(
-							datesMatch[0].tracks,
-							function (r) {
-								return (
-									//r.title == 'track 2' || r.title == 'track 3'
-									r.title == 'track 1'
-								);
-							}
-						);
-
-						console.log('track 1', pickTracks);
-						setTodaysObject(pickTracks);
-
-						//todaysObject = pick(p.tracks[0], ['track 1']);
-					} else if (t.title == 'track 2') {
-						var pickTracks = remove(
-							datesMatch[0].tracks,
-							function (r) {
-								return (
-									r.title == 'track 1' || r.title == 'track 2'
-								);
-							}
-						);
-
-						console.log('track 2', pickTracks);
-						setTodaysObject(pickTracks);
-					} else if (t.title == 'track 3') {
-						console.log('track 3', datesMatch[0].tracks);
-						setTodaysObject(datesMatch[0].tracks);
-					}
-				}
-			});
-		} catch (error) {
-			console.error(error);
-		} finally {
-			setLoading(false);
-		}
-	};
-
-	useEffect(() => {
-		getPlan();
-	}, []);
+	useEffect(() => {}, []);
 
 	return (
 		<View style={{ flex: 1, padding: 24 }}>
 			<View>
-				<Text>
-					{'Current Date'} - {date}
-				</Text>
+				<Calendar date={today} />
 
-				{isLoading ? (
-					<ActivityIndicator />
-				) : (
-					<FlatList
-						data={todaysObject}
-						keyExtractor={(item) => item.title}
-						renderItem={({ item }) => (
-							<View>
-								<Text>{item.title}</Text>
-								<Text>{item.reading1}</Text>
-								<Text>{item.reading2}</Text>
-							</View>
-						)}
-					/>
-				)}
+				<TodaysReading date={today} />
 			</View>
 		</View>
 	);
-}
+};
+
+export default HomePage;
