@@ -10,21 +10,21 @@ import Moment from 'moment';
 import { StatusBar } from 'expo-status-bar';
 import styles from '../assets/styles/container.style';
 import { TitleText, Text } from '../assets/styles/Text';
-import { filter, pick } from 'lodash';
+import { filter, remove } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
 
 export default function HomePage() {
 	const [isLoading, setLoading] = useState(true);
 	const [data, setData] = useState(null);
+	const [todaysObject, setTodaysObject] = useState(null);
 	const navigation = useNavigation();
 
 	const userObj = {
-		myTrack: 'track 2',
+		myTrack: 'track 3',
 	};
 
 	let today = new Date();
 	let date = Moment(today).format('dd, MMM d, YYYY');
-	let todaysObject, myTrack;
 
 	const getPlan = async () => {
 		try {
@@ -34,40 +34,49 @@ export default function HomePage() {
 			const json = await response.json();
 
 			// Filter plans and get the object that matches todays date
-			filter(json.plans, function (p) {
+			const datesMatch = filter(json.plans, function (p) {
 				if (p.date == 'Tue, Jul 5, 2022') {
 					// Filter track by users selected track
-					filter(p.tracks, function (t) {
-						if ((t = userObj.myTrack)) {
-							myTrack = t;
-
-							// Create collection of tracks based on users selected track
-							if (myTrack == 'track 1') {
-								todaysObject = pick(p.tracks[0], ['track 1']);
-							} else if (myTrack == 'track 2') {
-								todaysObject = pick(p.tracks[0], [
-									'track 1',
-									'track 2',
-								]);
-							} else if (myTrack == 'track 3') {
-								todaysObject = pick(p.tracks[0], [
-									'track 1',
-									'track 2',
-									'track 3',
-								]);
-							}
-
-							setData(todaysObject);
-						}
-					});
+					return p.date;
 				}
 			});
-			console.log(todaysObject);
 
-			// todaysObject = filter(json.plans, function (o) {
-			// 	return o.date == 'Tue, Jul 5, 2022'; // should be today's date
-			// });
-			// console.log(todaysObject[0]);
+			filter(datesMatch[0].tracks, function (t) {
+				if (t.title == userObj.myTrack) {
+					// Create collection of tracks based on users selected track
+					if (t.title == 'track 1') {
+						var pickTracks = remove(
+							datesMatch[0].tracks,
+							function (r) {
+								return (
+									//r.title == 'track 2' || r.title == 'track 3'
+									r.title == 'track 1'
+								);
+							}
+						);
+
+						console.log('track 1', pickTracks);
+						setTodaysObject(pickTracks);
+
+						//todaysObject = pick(p.tracks[0], ['track 1']);
+					} else if (t.title == 'track 2') {
+						var pickTracks = remove(
+							datesMatch[0].tracks,
+							function (r) {
+								return (
+									r.title == 'track 1' || r.title == 'track 2'
+								);
+							}
+						);
+
+						console.log('track 2', pickTracks);
+						setTodaysObject(pickTracks);
+					} else if (t.title == 'track 3') {
+						console.log('track 3', datesMatch[0].tracks);
+						setTodaysObject(datesMatch[0].tracks);
+					}
+				}
+			});
 		} catch (error) {
 			console.error(error);
 		} finally {
@@ -90,10 +99,13 @@ export default function HomePage() {
 					<ActivityIndicator />
 				) : (
 					<FlatList
-						data={data}
-						renderItem={({ item, index }) => (
+						data={todaysObject}
+						keyExtractor={(item) => item.title}
+						renderItem={({ item }) => (
 							<View>
-								<Text>{item[0]}</Text>
+								<Text>{item.title}</Text>
+								<Text>{item.reading1}</Text>
+								<Text>{item.reading2}</Text>
 							</View>
 						)}
 					/>
