@@ -1,0 +1,4180 @@
+{
+  "Abide App": [
+    {
+      "Track 1, Reading 1": "Matt 1",
+      "Track 1, Reading 2": "2 Cor 1",
+      "Track 2, Reading 1": "Prov 1",
+      "Track 3, Reading 1": "Gen 1",
+      "Track 3, Reading 2": "2 Chr 1",
+      "Date": "Mon, Jul 4, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 2",
+      "Track 1, Reading 2": "2 Cor 2",
+      "Track 2, Reading 1": "Prov 2",
+      "Track 3, Reading 1": "Gen 2",
+      "Track 3, Reading 2": "2 Chr 2",
+      "Date": "Tue, Jul 5, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 3",
+      "Track 1, Reading 2": "2 Cor 3",
+      "Track 2, Reading 1": "Prov 3",
+      "Track 3, Reading 1": "Gen 3",
+      "Track 3, Reading 2": "2 Chr 3",
+      "Date": "Wed, Jul 6, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 4",
+      "Track 1, Reading 2": "2 Cor 4",
+      "Track 2, Reading 1": "Prov 4",
+      "Track 3, Reading 1": "Gen 4",
+      "Track 3, Reading 2": "2 Chr 4",
+      "Date": "Thu, Jul 7, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 5",
+      "Track 1, Reading 2": "2 Cor 5",
+      "Track 2, Reading 1": "Prov 5",
+      "Track 3, Reading 1": "Gen 5",
+      "Track 3, Reading 2": "2 Chr 5",
+      "Date": "Fri, Jul 8, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jul 9, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jul 10, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 6",
+      "Track 1, Reading 2": "2 Cor 6",
+      "Track 2, Reading 1": "Prov 6",
+      "Track 3, Reading 1": "Gen 6",
+      "Track 3, Reading 2": "2 Chr 6",
+      "Date": "Mon, Jul 11, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 7",
+      "Track 1, Reading 2": "2 Cor 7",
+      "Track 2, Reading 1": "Prov 7",
+      "Track 3, Reading 1": "Gen 7",
+      "Track 3, Reading 2": "2 Chr 7",
+      "Date": "Tue, Jul 12, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 8",
+      "Track 1, Reading 2": "2 Cor 8",
+      "Track 2, Reading 1": "Prov 8",
+      "Track 3, Reading 1": "Gen 8",
+      "Track 3, Reading 2": "2 Chr 8",
+      "Date": "Wed, Jul 13, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 9",
+      "Track 1, Reading 2": "2 Cor 9",
+      "Track 2, Reading 1": "Prov 9",
+      "Track 3, Reading 1": "Gen 9",
+      "Track 3, Reading 2": "2 Chr 9",
+      "Date": "Thu, Jul 14, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 10",
+      "Track 1, Reading 2": "2 Cor 10",
+      "Track 2, Reading 1": "Prov 10",
+      "Track 3, Reading 1": "Gen 10",
+      "Track 3, Reading 2": "2 Chr 10",
+      "Date": "Fri, Jul 15, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jul 16, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jul 17, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 11",
+      "Track 1, Reading 2": "2 Cor 11",
+      "Track 2, Reading 1": "Prov 11",
+      "Track 3, Reading 1": "Gen 11",
+      "Track 3, Reading 2": "2 Chr 11",
+      "Date": "Mon, Jul 18, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 12",
+      "Track 1, Reading 2": "2 Cor 12",
+      "Track 2, Reading 1": "Prov 12",
+      "Track 3, Reading 1": "Gen 12",
+      "Track 3, Reading 2": "2 Chr 12",
+      "Date": "Tue, Jul 19, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 13",
+      "Track 1, Reading 2": "2 Cor 13",
+      "Track 2, Reading 1": "Prov 13",
+      "Track 3, Reading 1": "Gen 13",
+      "Track 3, Reading 2": "2 Chr 13",
+      "Date": "Wed, Jul 20, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 14",
+      "Track 1, Reading 2": "Gal 1",
+      "Track 2, Reading 1": "Prov 14",
+      "Track 3, Reading 1": "Gen 14",
+      "Track 3, Reading 2": "2 Chr 14",
+      "Date": "Thu, Jul 21, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 15",
+      "Track 1, Reading 2": "Gal 2",
+      "Track 2, Reading 1": "Prov 15",
+      "Track 3, Reading 1": "Gen 15",
+      "Track 3, Reading 2": "2 Chr 15",
+      "Date": "Fri, Jul 22, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jul 23, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jul 24, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 16",
+      "Track 1, Reading 2": "Gal 3",
+      "Track 2, Reading 1": "Prov 16",
+      "Track 3, Reading 1": "Gen 16",
+      "Track 3, Reading 2": "2 Chr 16",
+      "Date": "Mon, Jul 25, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 17",
+      "Track 1, Reading 2": "Gal 4",
+      "Track 2, Reading 1": "Prov 17",
+      "Track 3, Reading 1": "Gen 17",
+      "Track 3, Reading 2": "2 Chr 17",
+      "Date": "Tue, Jul 26, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 18",
+      "Track 1, Reading 2": "Gal 5",
+      "Track 2, Reading 1": "Prov 18",
+      "Track 3, Reading 1": "Gen 18",
+      "Track 3, Reading 2": "2 Chr 18",
+      "Date": "Wed, Jul 27, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 19",
+      "Track 1, Reading 2": "Gal 6",
+      "Track 2, Reading 1": "Prov 19",
+      "Track 3, Reading 1": "Gen 19",
+      "Track 3, Reading 2": "2 Chr 19",
+      "Date": "Thu, Jul 28, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 20",
+      "Track 1, Reading 2": "Eph 1",
+      "Track 2, Reading 1": "Prov 20",
+      "Track 3, Reading 1": "Gen 20",
+      "Track 3, Reading 2": "2 Chr 20",
+      "Date": "Fri, Jul 29, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jul 30, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jul 31, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 21",
+      "Track 1, Reading 2": "Eph 2",
+      "Track 2, Reading 1": "Prov 21",
+      "Track 3, Reading 1": "Gen 21",
+      "Track 3, Reading 2": "2 Chr 21",
+      "Date": "Mon, Aug 1, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 22",
+      "Track 1, Reading 2": "Eph 3",
+      "Track 2, Reading 1": "Prov 22",
+      "Track 3, Reading 1": "Gen 22",
+      "Track 3, Reading 2": "2 Chr 22",
+      "Date": "Tue, Aug 2, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 23",
+      "Track 1, Reading 2": "Eph 4",
+      "Track 2, Reading 1": "Prov 23",
+      "Track 3, Reading 1": "Gen 23",
+      "Track 3, Reading 2": "2 Chr 23",
+      "Date": "Wed, Aug 3, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 24",
+      "Track 1, Reading 2": "Eph 5",
+      "Track 2, Reading 1": "Prov 24",
+      "Track 3, Reading 1": "Gen 24",
+      "Track 3, Reading 2": "2 Chr 24",
+      "Date": "Thu, Aug 4, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 25",
+      "Track 1, Reading 2": "Eph 6",
+      "Track 2, Reading 1": "Prov 25",
+      "Track 3, Reading 1": "Gen 25",
+      "Track 3, Reading 2": "2 Chr 25",
+      "Date": "Fri, Aug 5, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Aug 6, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Aug 7, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 26",
+      "Track 1, Reading 2": "Phil 1",
+      "Track 2, Reading 1": "Prov 26",
+      "Track 3, Reading 1": "Gen 26",
+      "Track 3, Reading 2": "2 Chr 26",
+      "Date": "Mon, Aug 8, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 27",
+      "Track 1, Reading 2": "Phil 2",
+      "Track 2, Reading 1": "Prov 27",
+      "Track 3, Reading 1": "Gen 27",
+      "Track 3, Reading 2": "2 Chr 27",
+      "Date": "Tue, Aug 9, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Matt 28",
+      "Track 1, Reading 2": "Phil 3",
+      "Track 2, Reading 1": "Prov 28",
+      "Track 3, Reading 1": "Gen 28",
+      "Track 3, Reading 2": "2 Chr 28",
+      "Date": "Wed, Aug 10, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 1",
+      "Track 1, Reading 2": "Phil 4",
+      "Track 2, Reading 1": "Prov 29",
+      "Track 3, Reading 1": "Gen 29",
+      "Track 3, Reading 2": "2 Chr 29",
+      "Date": "Thu, Aug 11, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 2",
+      "Track 1, Reading 2": "Col 1",
+      "Track 2, Reading 1": "Prov 30",
+      "Track 3, Reading 1": "Gen 30",
+      "Track 3, Reading 2": "2 Chr 30",
+      "Date": "Fri, Aug 12, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Aug 13, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Aug 14, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 3",
+      "Track 1, Reading 2": "Col 2",
+      "Track 2, Reading 1": "Prov 31",
+      "Track 3, Reading 1": "Gen 31",
+      "Track 3, Reading 2": "2 Chr 31",
+      "Date": "Mon, Aug 15, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 4",
+      "Track 1, Reading 2": "Col 3",
+      "Track 2, Reading 1": "Ps 1",
+      "Track 3, Reading 1": "Gen 32",
+      "Track 3, Reading 2": "2 Chr 32",
+      "Date": "Tue, Aug 16, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 5",
+      "Track 1, Reading 2": "Col 4",
+      "Track 2, Reading 1": "Ps 2",
+      "Track 3, Reading 1": "Gen 33",
+      "Track 3, Reading 2": "2 Chr 33",
+      "Date": "Wed, Aug 17, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 6",
+      "Track 1, Reading 2": "1 Thess 1",
+      "Track 2, Reading 1": "Ps 3",
+      "Track 3, Reading 1": "Gen 34",
+      "Track 3, Reading 2": "2 Chr 34",
+      "Date": "Thu, Aug 18, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 7",
+      "Track 1, Reading 2": "1 Thess 2",
+      "Track 2, Reading 1": "Ps 4",
+      "Track 3, Reading 1": "Gen 35",
+      "Track 3, Reading 2": "2 Chr 35",
+      "Date": "Fri, Aug 19, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Aug 20, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Aug 21, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 8",
+      "Track 1, Reading 2": "1 Thess 3",
+      "Track 2, Reading 1": "Ps 5",
+      "Track 3, Reading 1": "Gen 36",
+      "Track 3, Reading 2": "2 Chr 36",
+      "Date": "Mon, Aug 22, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 9",
+      "Track 1, Reading 2": "1 Thess 4",
+      "Track 2, Reading 1": "Ps 6",
+      "Track 3, Reading 1": "Gen 37",
+      "Track 3, Reading 2": "Ezra 1",
+      "Date": "Tue, Aug 23, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 10",
+      "Track 1, Reading 2": "1 Thess 5",
+      "Track 2, Reading 1": "Ps 7",
+      "Track 3, Reading 1": "Gen 38",
+      "Track 3, Reading 2": "Ezra 2",
+      "Date": "Wed, Aug 24, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 11",
+      "Track 1, Reading 2": "2 Thess 1",
+      "Track 2, Reading 1": "Ps 8",
+      "Track 3, Reading 1": "Gen 39",
+      "Track 3, Reading 2": "Ezra 3",
+      "Date": "Thu, Aug 25, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 12",
+      "Track 1, Reading 2": "2 Thess 2",
+      "Track 2, Reading 1": "Ps 9",
+      "Track 3, Reading 1": "Gen 40",
+      "Track 3, Reading 2": "Ezra 4",
+      "Date": "Fri, Aug 26, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Aug 27, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Aug 28, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 13",
+      "Track 1, Reading 2": "2 Thess 3",
+      "Track 2, Reading 1": "Ps 10",
+      "Track 3, Reading 1": "Gen 41",
+      "Track 3, Reading 2": "Ezra 5",
+      "Date": "Mon, Aug 29, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 14",
+      "Track 1, Reading 2": "1 Tim 1",
+      "Track 2, Reading 1": "Ps 11",
+      "Track 3, Reading 1": "Gen 42",
+      "Track 3, Reading 2": "Ezra 6",
+      "Date": "Tue, Aug 30, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 15",
+      "Track 1, Reading 2": "1 Tim 2",
+      "Track 2, Reading 1": "Ps 12",
+      "Track 3, Reading 1": "Gen 43",
+      "Track 3, Reading 2": "Ezra 7",
+      "Date": "Wed, Aug 31, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 16",
+      "Track 1, Reading 2": "1 Tim 3",
+      "Track 2, Reading 1": "Ps 13",
+      "Track 3, Reading 1": "Gen 44",
+      "Track 3, Reading 2": "Ezra 8",
+      "Date": "Thu, Sep 1, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 17",
+      "Track 1, Reading 2": "1 Tim 4",
+      "Track 2, Reading 1": "Ps 14",
+      "Track 3, Reading 1": "Gen 45",
+      "Track 3, Reading 2": "Ezra 9",
+      "Date": "Fri, Sep 2, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Sep 3, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Sep 4, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 18",
+      "Track 1, Reading 2": "1 Tim 5",
+      "Track 2, Reading 1": "Ps 15",
+      "Track 3, Reading 1": "Gen 46",
+      "Track 3, Reading 2": "Ezra 10",
+      "Date": "Mon, Sep 5, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 19",
+      "Track 1, Reading 2": "1 Tim 6",
+      "Track 2, Reading 1": "Ps 16",
+      "Track 3, Reading 1": "Gen 47",
+      "Track 3, Reading 2": "Neh 1",
+      "Date": "Tue, Sep 6, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 20",
+      "Track 1, Reading 2": "2 Tim 1",
+      "Track 2, Reading 1": "Ps 17",
+      "Track 3, Reading 1": "Gen 48",
+      "Track 3, Reading 2": "Neh 2",
+      "Date": "Wed, Sep 7, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 21",
+      "Track 1, Reading 2": "2 Tim 2",
+      "Track 2, Reading 1": "Ps 18",
+      "Track 3, Reading 1": "Gen 49",
+      "Track 3, Reading 2": "Neh 3",
+      "Date": "Thu, Sep 8, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 1",
+      "Track 1, Reading 2": "2 Tim 3",
+      "Track 2, Reading 1": "Ps 19",
+      "Track 3, Reading 1": "Gen 50",
+      "Track 3, Reading 2": "Neh 4",
+      "Date": "Fri, Sep 9, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Sep 10, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Sep 11, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 2",
+      "Track 1, Reading 2": "2 Tim 4",
+      "Track 2, Reading 1": "Ps 20",
+      "Track 3, Reading 1": "Ex 1",
+      "Track 3, Reading 2": "Neh 5",
+      "Date": "Mon, Sep 12, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 3",
+      "Track 1, Reading 2": "Titus 1",
+      "Track 2, Reading 1": "Ps 21",
+      "Track 3, Reading 1": "Ex 2",
+      "Track 3, Reading 2": "Neh 6",
+      "Date": "Tue, Sep 13, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 4",
+      "Track 1, Reading 2": "Titus 2",
+      "Track 2, Reading 1": "Ps 22",
+      "Track 3, Reading 1": "Ex 3",
+      "Track 3, Reading 2": "Neh 7",
+      "Date": "Wed, Sep 14, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 5",
+      "Track 1, Reading 2": "Titus 3",
+      "Track 2, Reading 1": "Ps 23",
+      "Track 3, Reading 1": "Ex 4",
+      "Track 3, Reading 2": "Neh 8",
+      "Date": "Thu, Sep 15, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 6",
+      "Track 1, Reading 2": "Philemon",
+      "Track 2, Reading 1": "Ps 24",
+      "Track 3, Reading 1": "Ex 5",
+      "Track 3, Reading 2": "Neh 9",
+      "Date": "Fri, Sep 16, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Sep 17, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Sep 18, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 7",
+      "Track 1, Reading 2": "Heb 1",
+      "Track 2, Reading 1": "Ps 25",
+      "Track 3, Reading 1": "Ex 6",
+      "Track 3, Reading 2": "Neh 10",
+      "Date": "Mon, Sep 19, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 8",
+      "Track 1, Reading 2": "Heb 2",
+      "Track 2, Reading 1": "Ps 26",
+      "Track 3, Reading 1": "Ex 7",
+      "Track 3, Reading 2": "Neh 11",
+      "Date": "Tue, Sep 20, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 9",
+      "Track 1, Reading 2": "Heb 3",
+      "Track 2, Reading 1": "Ps 27",
+      "Track 3, Reading 1": "Ex 8",
+      "Track 3, Reading 2": "Neh 12",
+      "Date": "Wed, Sep 21, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 10",
+      "Track 1, Reading 2": "Heb 4",
+      "Track 2, Reading 1": "Ps 28",
+      "Track 3, Reading 1": "Ex 9",
+      "Track 3, Reading 2": "Neh 13",
+      "Date": "Thu, Sep 22, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 11",
+      "Track 1, Reading 2": "Heb 5",
+      "Track 2, Reading 1": "Ps 29",
+      "Track 3, Reading 1": "Ex 10",
+      "Track 3, Reading 2": "Est 1",
+      "Date": "Fri, Sep 23, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Sep 24, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Sep 25, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 12",
+      "Track 1, Reading 2": "Heb 6",
+      "Track 2, Reading 1": "Ps 30",
+      "Track 3, Reading 1": "Ex 11",
+      "Track 3, Reading 2": "Est 2",
+      "Date": "Mon, Sep 26, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 13",
+      "Track 1, Reading 2": "Heb 7",
+      "Track 2, Reading 1": "Ps 31",
+      "Track 3, Reading 1": "Ex 12",
+      "Track 3, Reading 2": "Est 3",
+      "Date": "Tue, Sep 27, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 14",
+      "Track 1, Reading 2": "Heb 8",
+      "Track 2, Reading 1": "Ps 32",
+      "Track 3, Reading 1": "Ex 13",
+      "Track 3, Reading 2": "Est 4",
+      "Date": "Wed, Sep 28, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 15",
+      "Track 1, Reading 2": "Heb 9",
+      "Track 2, Reading 1": "Ps 33",
+      "Track 3, Reading 1": "Ex 14",
+      "Track 3, Reading 2": "Est 5",
+      "Date": "Thu, Sep 29, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 16",
+      "Track 1, Reading 2": "Heb 10",
+      "Track 2, Reading 1": "Ps 34",
+      "Track 3, Reading 1": "Ex 15",
+      "Track 3, Reading 2": "Est 6",
+      "Date": "Fri, Sep 30, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Oct 1, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Oct 2, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 17",
+      "Track 1, Reading 2": "Heb 11",
+      "Track 2, Reading 1": "Ps 35",
+      "Track 3, Reading 1": "Ex 16",
+      "Track 3, Reading 2": "Est 7",
+      "Date": "Mon, Oct 3, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 18",
+      "Track 1, Reading 2": "Heb 12",
+      "Track 2, Reading 1": "Ps 36",
+      "Track 3, Reading 1": "Ex 17",
+      "Track 3, Reading 2": "Est 8",
+      "Date": "Tue, Oct 4, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 19",
+      "Track 1, Reading 2": "Heb 13",
+      "Track 2, Reading 1": "Ps 37",
+      "Track 3, Reading 1": "Ex 18",
+      "Track 3, Reading 2": "Est 9",
+      "Date": "Wed, Oct 5, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 20",
+      "Track 1, Reading 2": "Jam 1",
+      "Track 2, Reading 1": "Ps 38",
+      "Track 3, Reading 1": "Ex 19",
+      "Track 3, Reading 2": "Est 10",
+      "Date": "Thu, Oct 6, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 21",
+      "Track 1, Reading 2": "Jam 2",
+      "Track 2, Reading 1": "Ps 39",
+      "Track 3, Reading 1": "Ex 20",
+      "Track 3, Reading 2": "Job 1",
+      "Date": "Fri, Oct 7, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Oct 8, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Oct 9, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 22",
+      "Track 1, Reading 2": "Jam 3",
+      "Track 2, Reading 1": "Ps 40",
+      "Track 3, Reading 1": "Ex 21",
+      "Track 3, Reading 2": "Job 2",
+      "Date": "Mon, Oct 10, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 23",
+      "Track 1, Reading 2": "Jam 4",
+      "Track 2, Reading 1": "Ps 41",
+      "Track 3, Reading 1": "Ex 22",
+      "Track 3, Reading 2": "Job 3",
+      "Date": "Tue, Oct 11, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 24",
+      "Track 1, Reading 2": "Jam 5",
+      "Track 2, Reading 1": "Ps 42",
+      "Track 3, Reading 1": "Ex 23",
+      "Track 3, Reading 2": "Job 4",
+      "Date": "Wed, Oct 12, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 25",
+      "Track 1, Reading 2": "1 Pet 1",
+      "Track 2, Reading 1": "Ps 43",
+      "Track 3, Reading 1": "Ex 24",
+      "Track 3, Reading 2": "Job 5",
+      "Date": "Thu, Oct 13, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 26",
+      "Track 1, Reading 2": "1 Pet 2",
+      "Track 2, Reading 1": "Ps 44",
+      "Track 3, Reading 1": "Ex 25",
+      "Track 3, Reading 2": "Job 6",
+      "Date": "Fri, Oct 14, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Oct 15, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Oct 16, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 27",
+      "Track 1, Reading 2": "1 Pet 3",
+      "Track 2, Reading 1": "Ps 45",
+      "Track 3, Reading 1": "Ex 26",
+      "Track 3, Reading 2": "Job 7",
+      "Date": "Mon, Oct 17, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Acts 28",
+      "Track 1, Reading 2": "1 Pet 4",
+      "Track 2, Reading 1": "Ps 46",
+      "Track 3, Reading 1": "Ex 27",
+      "Track 3, Reading 2": "Job 8",
+      "Date": "Tue, Oct 18, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Rom 1",
+      "Track 1, Reading 2": "1 Pet 5",
+      "Track 2, Reading 1": "Ps 47",
+      "Track 3, Reading 1": "Ex 28",
+      "Track 3, Reading 2": "Job 9",
+      "Date": "Wed, Oct 19, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Rom 2",
+      "Track 1, Reading 2": "2 Pet 1",
+      "Track 2, Reading 1": "Ps 48",
+      "Track 3, Reading 1": "Ex 29",
+      "Track 3, Reading 2": "Job 10",
+      "Date": "Thu, Oct 20, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Rom 3",
+      "Track 1, Reading 2": "2 Pet 2",
+      "Track 2, Reading 1": "Ps 49",
+      "Track 3, Reading 1": "Ex 30",
+      "Track 3, Reading 2": "Job 11",
+      "Date": "Fri, Oct 21, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Oct 22, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Oct 23, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Rom 4",
+      "Track 1, Reading 2": "2 Pet 3",
+      "Track 2, Reading 1": "Ps 50",
+      "Track 3, Reading 1": "Ex 31",
+      "Track 3, Reading 2": "Job 12",
+      "Date": "Mon, Oct 24, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Rom 5",
+      "Track 1, Reading 2": "1 John 1",
+      "Track 2, Reading 1": "Ps 51",
+      "Track 3, Reading 1": "Ex 32",
+      "Track 3, Reading 2": "Job 13",
+      "Date": "Tue, Oct 25, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Rom 6",
+      "Track 1, Reading 2": "1 John 2",
+      "Track 2, Reading 1": "Ps 52",
+      "Track 3, Reading 1": "Ex 33",
+      "Track 3, Reading 2": "Job 14",
+      "Date": "Wed, Oct 26, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Rom 7",
+      "Track 1, Reading 2": "1 John 3",
+      "Track 2, Reading 1": "Ps 53",
+      "Track 3, Reading 1": "Ex 34",
+      "Track 3, Reading 2": "Job 15",
+      "Date": "Thu, Oct 27, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Rom 8",
+      "Track 1, Reading 2": "1 John 4",
+      "Track 2, Reading 1": "Ps 54",
+      "Track 3, Reading 1": "Ex 35",
+      "Track 3, Reading 2": "Job 16",
+      "Date": "Fri, Oct 28, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Oct 29, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Oct 30, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Rom 9",
+      "Track 1, Reading 2": "1 John 5",
+      "Track 2, Reading 1": "Ps 55",
+      "Track 3, Reading 1": "Ex 36",
+      "Track 3, Reading 2": "Job 17",
+      "Date": "Mon, Oct 31, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Rom 10",
+      "Track 1, Reading 2": "2 John",
+      "Track 2, Reading 1": "Ps 56",
+      "Track 3, Reading 1": "Ex 37",
+      "Track 3, Reading 2": "Job 18",
+      "Date": "Tue, Nov 1, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Rom 11",
+      "Track 1, Reading 2": "3 John",
+      "Track 2, Reading 1": "Ps 57",
+      "Track 3, Reading 1": "Ex 38",
+      "Track 3, Reading 2": "Job 19",
+      "Date": "Wed, Nov 2, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Rom 12",
+      "Track 1, Reading 2": "Jude",
+      "Track 2, Reading 1": "Ps 58",
+      "Track 3, Reading 1": "Ex 39",
+      "Track 3, Reading 2": "Job 20",
+      "Date": "Thu, Nov 3, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Rom 13",
+      "Track 1, Reading 2": "Rev 1",
+      "Track 2, Reading 1": "Ps 59",
+      "Track 3, Reading 1": "Ex 40",
+      "Track 3, Reading 2": "Job 21",
+      "Date": "Fri, Nov 4, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Nov 5, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Nov 6, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Rom 14",
+      "Track 1, Reading 2": "Rev 2",
+      "Track 2, Reading 1": "Ps 60",
+      "Track 3, Reading 1": "Lev 1",
+      "Track 3, Reading 2": "Job 22",
+      "Date": "Mon, Nov 7, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Rom 15",
+      "Track 1, Reading 2": "Rev 3",
+      "Track 2, Reading 1": "Ps 61",
+      "Track 3, Reading 1": "Lev 2",
+      "Track 3, Reading 2": "Job 23",
+      "Date": "Tue, Nov 8, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Rom 16",
+      "Track 1, Reading 2": "Rev 4",
+      "Track 2, Reading 1": "Ps 62",
+      "Track 3, Reading 1": "Lev 3",
+      "Track 3, Reading 2": "Job 24",
+      "Date": "Wed, Nov 9, 2022"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 1",
+      "Track 1, Reading 2": "Rev 5",
+      "Track 2, Reading 1": "Ps 63",
+      "Track 3, Reading 1": "Lev 4",
+      "Track 3, Reading 2": "Job 25",
+      "Date": "Thu, Nov 10, 2022"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 2",
+      "Track 1, Reading 2": "Rev 6",
+      "Track 2, Reading 1": "Ps 64",
+      "Track 3, Reading 1": "Lev 5",
+      "Track 3, Reading 2": "Job 26",
+      "Date": "Fri, Nov 11, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Nov 12, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Nov 13, 2022"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 3",
+      "Track 1, Reading 2": "Rev 7",
+      "Track 2, Reading 1": "Ps 65",
+      "Track 3, Reading 1": "Lev 6",
+      "Track 3, Reading 2": "Job 27",
+      "Date": "Mon, Nov 14, 2022"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 4",
+      "Track 1, Reading 2": "Rev 8",
+      "Track 2, Reading 1": "Ps 66",
+      "Track 3, Reading 1": "Lev 7",
+      "Track 3, Reading 2": "Job 28",
+      "Date": "Tue, Nov 15, 2022"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 5",
+      "Track 1, Reading 2": "Rev 9",
+      "Track 2, Reading 1": "Ps 67",
+      "Track 3, Reading 1": "Lev 8",
+      "Track 3, Reading 2": "Job 29",
+      "Date": "Wed, Nov 16, 2022"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 6",
+      "Track 1, Reading 2": "Rev 10",
+      "Track 2, Reading 1": "Ps 68",
+      "Track 3, Reading 1": "Lev 9",
+      "Track 3, Reading 2": "Job 30",
+      "Date": "Thu, Nov 17, 2022"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 7",
+      "Track 1, Reading 2": "Rev 11",
+      "Track 2, Reading 1": "Ps 69",
+      "Track 3, Reading 1": "Lev 10",
+      "Track 3, Reading 2": "Job 31",
+      "Date": "Fri, Nov 18, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Nov 19, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Nov 20, 2022"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 8",
+      "Track 1, Reading 2": "Rev 12",
+      "Track 2, Reading 1": "Ps 70",
+      "Track 3, Reading 1": "Lev 11",
+      "Track 3, Reading 2": "Job 32",
+      "Date": "Mon, Nov 21, 2022"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 9",
+      "Track 1, Reading 2": "Rev 13",
+      "Track 2, Reading 1": "Ps 71",
+      "Track 3, Reading 1": "Lev 12",
+      "Track 3, Reading 2": "Job 33",
+      "Date": "Tue, Nov 22, 2022"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 10",
+      "Track 1, Reading 2": "Rev 14",
+      "Track 2, Reading 1": "Ps 72",
+      "Track 3, Reading 1": "Lev 13",
+      "Track 3, Reading 2": "Job 34",
+      "Date": "Wed, Nov 23, 2022"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 11",
+      "Track 1, Reading 2": "Rev 15",
+      "Track 2, Reading 1": "Ps 73",
+      "Track 3, Reading 1": "Lev 14",
+      "Track 3, Reading 2": "Job 35",
+      "Date": "Thu, Nov 24, 2022"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 12",
+      "Track 1, Reading 2": "Rev 16",
+      "Track 2, Reading 1": "Ps 74",
+      "Track 3, Reading 1": "Lev 15",
+      "Track 3, Reading 2": "Job 36",
+      "Date": "Fri, Nov 25, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Nov 26, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Nov 27, 2022"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 13",
+      "Track 1, Reading 2": "Rev 17",
+      "Track 2, Reading 1": "Ps 75",
+      "Track 3, Reading 1": "Lev 16",
+      "Track 3, Reading 2": "Job 37",
+      "Date": "Mon, Nov 28, 2022"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 14",
+      "Track 1, Reading 2": "Rev 18",
+      "Track 2, Reading 1": "Ps 76",
+      "Track 3, Reading 1": "Lev 17",
+      "Track 3, Reading 2": "Job 38",
+      "Date": "Tue, Nov 29, 2022"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 15",
+      "Track 1, Reading 2": "Rev 19",
+      "Track 2, Reading 1": "Ps 77",
+      "Track 3, Reading 1": "Lev 18",
+      "Track 3, Reading 2": "Job 39",
+      "Date": "Wed, Nov 30, 2022"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 16",
+      "Track 1, Reading 2": "Rev 20",
+      "Track 2, Reading 1": "Ps 78:1-31",
+      "Track 3, Reading 1": "Lev 19",
+      "Track 3, Reading 2": "Job 40",
+      "Date": "Thu, Dec 1, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Mark 1",
+      "Track 1, Reading 2": "Rev 21",
+      "Track 2, Reading 1": "Ps 78:32-72",
+      "Track 3, Reading 1": "Lev 20",
+      "Track 3, Reading 2": "Job 41",
+      "Date": "Fri, Dec 2, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Dec 3, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Dec 4, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Mark 2",
+      "Track 1, Reading 2": "2 Cor 1",
+      "Track 2, Reading 1": "Ps 79",
+      "Track 3, Reading 1": "Lev 21",
+      "Track 3, Reading 2": "Job 42",
+      "Date": "Mon, Dec 5, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Mark 3",
+      "Track 1, Reading 2": "2 Cor 2",
+      "Track 2, Reading 1": "Ps 80",
+      "Track 3, Reading 1": "Lev 22",
+      "Track 3, Reading 2": "Ecc 1",
+      "Date": "Tue, Dec 6, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Mark 4",
+      "Track 1, Reading 2": "2 Cor 3",
+      "Track 2, Reading 1": "Ps 81",
+      "Track 3, Reading 1": "Lev 23",
+      "Track 3, Reading 2": "Ecc 2",
+      "Date": "Wed, Dec 7, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Mark 5",
+      "Track 1, Reading 2": "2 Cor 4",
+      "Track 2, Reading 1": "Ps 82",
+      "Track 3, Reading 1": "Lev 24",
+      "Track 3, Reading 2": "Ecc 3",
+      "Date": "Thu, Dec 8, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Mark 6",
+      "Track 1, Reading 2": "2 Cor 5",
+      "Track 2, Reading 1": "Ps 83",
+      "Track 3, Reading 1": "Lev 25",
+      "Track 3, Reading 2": "Ecc 4",
+      "Date": "Fri, Dec 9, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Dec 10, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Dec 11, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Mark 7",
+      "Track 1, Reading 2": "2 Cor 6",
+      "Track 2, Reading 1": "Ps 84",
+      "Track 3, Reading 1": "Lev 26",
+      "Track 3, Reading 2": "Ecc 5",
+      "Date": "Mon, Dec 12, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Mark 8",
+      "Track 1, Reading 2": "2 Cor 7",
+      "Track 2, Reading 1": "Ps 85",
+      "Track 3, Reading 1": "Lev 27",
+      "Track 3, Reading 2": "Ecc 6",
+      "Date": "Tue, Dec 13, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Mark 9",
+      "Track 1, Reading 2": "2 Cor 8",
+      "Track 2, Reading 1": "Ps 86",
+      "Track 3, Reading 1": "Num 1",
+      "Track 3, Reading 2": "Ecc 7",
+      "Date": "Wed, Dec 14, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Mark 10",
+      "Track 1, Reading 2": "2 Cor 9",
+      "Track 2, Reading 1": "Ps 87",
+      "Track 3, Reading 1": "Num 2",
+      "Track 3, Reading 2": "Ecc 8",
+      "Date": "Thu, Dec 15, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Mark 11",
+      "Track 1, Reading 2": "2 Cor 10",
+      "Track 2, Reading 1": "Ps 88",
+      "Track 3, Reading 1": "Num 3",
+      "Track 3, Reading 2": "Ecc 9",
+      "Date": "Fri, Dec 16, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Dec 17, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Dec 18, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Mark 12",
+      "Track 1, Reading 2": "2 Cor 11",
+      "Track 2, Reading 1": "Ps 89",
+      "Track 3, Reading 1": "Num 4",
+      "Track 3, Reading 2": "Ecc 10",
+      "Date": "Mon, Dec 19, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Mark 13",
+      "Track 1, Reading 2": "2 Cor 12",
+      "Track 2, Reading 1": "Ps 90",
+      "Track 3, Reading 1": "Num 5",
+      "Track 3, Reading 2": "Ecc 11",
+      "Date": "Tue, Dec 20, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Mark 14",
+      "Track 1, Reading 2": "2 Cor 13",
+      "Track 2, Reading 1": "Ps 91",
+      "Track 3, Reading 1": "Num 6",
+      "Track 3, Reading 2": "Ecc 12",
+      "Date": "Wed, Dec 21, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Mark 15",
+      "Track 1, Reading 2": "Gal 1",
+      "Track 2, Reading 1": "Ps 92",
+      "Track 3, Reading 1": "Num 7",
+      "Track 3, Reading 2": "Song 1",
+      "Date": "Thu, Dec 22, 2022"
+    },
+    {
+      "Track 1, Reading 1": "Mark 16",
+      "Track 1, Reading 2": "Gal 2",
+      "Track 2, Reading 1": "Ps 93",
+      "Track 3, Reading 1": "Num 8",
+      "Track 3, Reading 2": "Song 2",
+      "Date": "Fri, Dec 23, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Dec 24, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Dec 25, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 1",
+      "Track 1, Reading 2": "Gal 3",
+      "Track 2, Reading 1": "Ps 94",
+      "Track 3, Reading 1": "Num 9",
+      "Track 3, Reading 2": "Song 3",
+      "Date": "Mon, Dec 26, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 2",
+      "Track 1, Reading 2": "Gal 4",
+      "Track 2, Reading 1": "Ps 95",
+      "Track 3, Reading 1": "Num 10",
+      "Track 3, Reading 2": "Song 4",
+      "Date": "Tue, Dec 27, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 3",
+      "Track 1, Reading 2": "Gal 5",
+      "Track 2, Reading 1": "Ps 96",
+      "Track 3, Reading 1": "Num 11",
+      "Track 3, Reading 2": "Song 5",
+      "Date": "Wed, Dec 28, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 4",
+      "Track 1, Reading 2": "Gal 6",
+      "Track 2, Reading 1": "Ps 97",
+      "Track 3, Reading 1": "Num 12",
+      "Track 3, Reading 2": "Song 6",
+      "Date": "Thu, Dec 29, 2022"
+    },
+    {
+      "Track 1, Reading 1": "John 5",
+      "Track 1, Reading 2": "Eph 1",
+      "Track 2, Reading 1": "Ps 98",
+      "Track 3, Reading 1": "Num 13",
+      "Track 3, Reading 2": "Song 7",
+      "Date": "Fri, Dec 30, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Dec 31, 2022"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jan 1, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 6",
+      "Track 1, Reading 2": "Eph 2",
+      "Track 2, Reading 1": "Ps 99",
+      "Track 3, Reading 1": "Num 14",
+      "Track 3, Reading 2": "Song 8",
+      "Date": "Mon, Jan 2, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 7",
+      "Track 1, Reading 2": "Eph 3",
+      "Track 2, Reading 1": "Ps 100",
+      "Track 3, Reading 1": "Num 15",
+      "Track 3, Reading 2": "Isa 1",
+      "Date": "Tue, Jan 3, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 8",
+      "Track 1, Reading 2": "Eph 4",
+      "Track 2, Reading 1": "Ps 101",
+      "Track 3, Reading 1": "Num 16",
+      "Track 3, Reading 2": "Isa 2",
+      "Date": "Wed, Jan 4, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 9",
+      "Track 1, Reading 2": "Eph 5",
+      "Track 2, Reading 1": "Ps 102",
+      "Track 3, Reading 1": "Num 17",
+      "Track 3, Reading 2": "Isa 3",
+      "Date": "Thu, Jan 5, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 10",
+      "Track 1, Reading 2": "Eph 6",
+      "Track 2, Reading 1": "Ps 103",
+      "Track 3, Reading 1": "Num 18",
+      "Track 3, Reading 2": "Isa 4",
+      "Date": "Fri, Jan 6, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jan 7, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jan 8, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 11",
+      "Track 1, Reading 2": "Phil 1",
+      "Track 2, Reading 1": "Ps 104",
+      "Track 3, Reading 1": "Num 19",
+      "Track 3, Reading 2": "Isa 5",
+      "Date": "Mon, Jan 9, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 12",
+      "Track 1, Reading 2": "Phil 2",
+      "Track 2, Reading 1": "Ps 105",
+      "Track 3, Reading 1": "Num 20",
+      "Track 3, Reading 2": "Isa 6",
+      "Date": "Tue, Jan 10, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 13",
+      "Track 1, Reading 2": "Phil 3",
+      "Track 2, Reading 1": "Ps 106",
+      "Track 3, Reading 1": "Num 21",
+      "Track 3, Reading 2": "Isa 7",
+      "Date": "Wed, Jan 11, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 14",
+      "Track 1, Reading 2": "Phil 4",
+      "Track 2, Reading 1": "Ps 107",
+      "Track 3, Reading 1": "Num 22",
+      "Track 3, Reading 2": "Isa 8",
+      "Date": "Thu, Jan 12, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 15",
+      "Track 1, Reading 2": "Col 1",
+      "Track 2, Reading 1": "Ps 108",
+      "Track 3, Reading 1": "Num 23",
+      "Track 3, Reading 2": "Isa 9",
+      "Date": "Fri, Jan 13, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jan 14, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jan 15, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 16",
+      "Track 1, Reading 2": "Col 2",
+      "Track 2, Reading 1": "Ps 109",
+      "Track 3, Reading 1": "Num 24",
+      "Track 3, Reading 2": "Isa 10",
+      "Date": "Mon, Jan 16, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 17",
+      "Track 1, Reading 2": "Col 3",
+      "Track 2, Reading 1": "Ps 110",
+      "Track 3, Reading 1": "Num 25",
+      "Track 3, Reading 2": "Isa 11",
+      "Date": "Tue, Jan 17, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 18",
+      "Track 1, Reading 2": "Col 4",
+      "Track 2, Reading 1": "Ps 111",
+      "Track 3, Reading 1": "Num 26",
+      "Track 3, Reading 2": "Isa 12",
+      "Date": "Wed, Jan 18, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 19",
+      "Track 1, Reading 2": "1 Thess 1",
+      "Track 2, Reading 1": "Ps 112",
+      "Track 3, Reading 1": "Num 27",
+      "Track 3, Reading 2": "Isa 13",
+      "Date": "Thu, Jan 19, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 20",
+      "Track 1, Reading 2": "1 Thess 2",
+      "Track 2, Reading 1": "Ps 113",
+      "Track 3, Reading 1": "Num 28",
+      "Track 3, Reading 2": "Isa 14",
+      "Date": "Fri, Jan 20, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jan 21, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jan 22, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 21",
+      "Track 1, Reading 2": "1 Thess 3",
+      "Track 2, Reading 1": "Ps 114",
+      "Track 3, Reading 1": "Num 29",
+      "Track 3, Reading 2": "Isa 15",
+      "Date": "Mon, Jan 23, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 1",
+      "Track 1, Reading 2": "1 Thess 4",
+      "Track 2, Reading 1": "Ps 115",
+      "Track 3, Reading 1": "Num 30",
+      "Track 3, Reading 2": "Isa 16",
+      "Date": "Tue, Jan 24, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 2",
+      "Track 1, Reading 2": "1 Thess 5",
+      "Track 2, Reading 1": "Ps 116",
+      "Track 3, Reading 1": "Num 31",
+      "Track 3, Reading 2": "Isa 17",
+      "Date": "Wed, Jan 25, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 3",
+      "Track 1, Reading 2": "2 Thess 1",
+      "Track 2, Reading 1": "Ps 117",
+      "Track 3, Reading 1": "Num 32",
+      "Track 3, Reading 2": "Isa 18",
+      "Date": "Thu, Jan 26, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 4",
+      "Track 1, Reading 2": "2 Thess 2",
+      "Track 2, Reading 1": "Ps 118",
+      "Track 3, Reading 1": "Num 33",
+      "Track 3, Reading 2": "Isa 19",
+      "Date": "Fri, Jan 27, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jan 28, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jan 29, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 5",
+      "Track 1, Reading 2": "2 Thess 3",
+      "Track 2, Reading 1": "Ps 119:1-32",
+      "Track 3, Reading 1": "Num 34",
+      "Track 3, Reading 2": "Isa 20",
+      "Date": "Mon, Jan 30, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 6",
+      "Track 1, Reading 2": "1 Tim 1",
+      "Track 2, Reading 1": "Ps 119:33-56",
+      "Track 3, Reading 1": "Num 35",
+      "Track 3, Reading 2": "Isa 21",
+      "Date": "Tue, Jan 31, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 7",
+      "Track 1, Reading 2": "1 Tim 2",
+      "Track 2, Reading 1": "Ps 119:57-88",
+      "Track 3, Reading 1": "Num 36",
+      "Track 3, Reading 2": "Isa 22",
+      "Date": "Wed, Feb 1, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 8",
+      "Track 1, Reading 2": "1 Tim 3",
+      "Track 2, Reading 1": "Ps 119:89-120",
+      "Track 3, Reading 1": "Deut 1",
+      "Track 3, Reading 2": "Isa 23",
+      "Date": "Thu, Feb 2, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 9",
+      "Track 1, Reading 2": "1 Tim 4",
+      "Track 2, Reading 1": "Ps 119:121-152",
+      "Track 3, Reading 1": "Deut 2",
+      "Track 3, Reading 2": "Isa 24",
+      "Date": "Fri, Feb 3, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Feb 4, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Feb 5, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 10",
+      "Track 1, Reading 2": "1 Tim 5",
+      "Track 2, Reading 1": "Ps 119:153-176",
+      "Track 3, Reading 1": "Deut 3",
+      "Track 3, Reading 2": "Isa 25",
+      "Date": "Mon, Feb 6, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 11",
+      "Track 1, Reading 2": "1 Tim 6",
+      "Track 2, Reading 1": "Ps 120",
+      "Track 3, Reading 1": "Deut 4",
+      "Track 3, Reading 2": "Isa 26",
+      "Date": "Tue, Feb 7, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 12",
+      "Track 1, Reading 2": "2 Tim 1",
+      "Track 2, Reading 1": "Ps 121",
+      "Track 3, Reading 1": "Deut 5",
+      "Track 3, Reading 2": "Isa 27",
+      "Date": "Wed, Feb 8, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 13",
+      "Track 1, Reading 2": "2 Tim 2",
+      "Track 2, Reading 1": "Ps 122",
+      "Track 3, Reading 1": "Deut 6",
+      "Track 3, Reading 2": "Isa 28",
+      "Date": "Thu, Feb 9, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 14",
+      "Track 1, Reading 2": "2 Tim 3",
+      "Track 2, Reading 1": "Ps 123",
+      "Track 3, Reading 1": "Deut 7",
+      "Track 3, Reading 2": "Isa 29",
+      "Date": "Fri, Feb 10, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Feb 11, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Feb 12, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 15",
+      "Track 1, Reading 2": "2 Tim 4",
+      "Track 2, Reading 1": "Ps 124",
+      "Track 3, Reading 1": "Deut 8",
+      "Track 3, Reading 2": "Isa 30",
+      "Date": "Mon, Feb 13, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 16",
+      "Track 1, Reading 2": "Titus 1",
+      "Track 2, Reading 1": "Ps 125",
+      "Track 3, Reading 1": "Deut 9",
+      "Track 3, Reading 2": "Isa 31",
+      "Date": "Tue, Feb 14, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 17",
+      "Track 1, Reading 2": "Titus 2",
+      "Track 2, Reading 1": "Ps 126",
+      "Track 3, Reading 1": "Deut 10",
+      "Track 3, Reading 2": "Isa 32",
+      "Date": "Wed, Feb 15, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 18",
+      "Track 1, Reading 2": "Titus 3",
+      "Track 2, Reading 1": "Ps 127",
+      "Track 3, Reading 1": "Deut 11",
+      "Track 3, Reading 2": "Isa 33",
+      "Date": "Thu, Feb 16, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 19",
+      "Track 1, Reading 2": "Philemon",
+      "Track 2, Reading 1": "Ps 128",
+      "Track 3, Reading 1": "Deut 12",
+      "Track 3, Reading 2": "Isa 34",
+      "Date": "Fri, Feb 17, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Feb 18, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Feb 19, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 20",
+      "Track 1, Reading 2": "Heb 1",
+      "Track 2, Reading 1": "Ps 129",
+      "Track 3, Reading 1": "Deut 13",
+      "Track 3, Reading 2": "Isa 35",
+      "Date": "Mon, Feb 20, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 21",
+      "Track 1, Reading 2": "Heb 2",
+      "Track 2, Reading 1": "Ps 130",
+      "Track 3, Reading 1": "Deut 14",
+      "Track 3, Reading 2": "Isa 36",
+      "Date": "Tue, Feb 21, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 22",
+      "Track 1, Reading 2": "Heb 3",
+      "Track 2, Reading 1": "Ps 131",
+      "Track 3, Reading 1": "Deut 15",
+      "Track 3, Reading 2": "Isa 37",
+      "Date": "Wed, Feb 22, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 23",
+      "Track 1, Reading 2": "Heb 4",
+      "Track 2, Reading 1": "Ps 132",
+      "Track 3, Reading 1": "Deut 16",
+      "Track 3, Reading 2": "Isa 38",
+      "Date": "Thu, Feb 23, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 24",
+      "Track 1, Reading 2": "Heb 5",
+      "Track 2, Reading 1": "Ps 133",
+      "Track 3, Reading 1": "Deut 17",
+      "Track 3, Reading 2": "Isa 39",
+      "Date": "Fri, Feb 24, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Feb 25, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Feb 26, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 25",
+      "Track 1, Reading 2": "Heb 6",
+      "Track 2, Reading 1": "Ps 134",
+      "Track 3, Reading 1": "Deut 18",
+      "Track 3, Reading 2": "Isa 40",
+      "Date": "Mon, Feb 27, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 26",
+      "Track 1, Reading 2": "Heb 7",
+      "Track 2, Reading 1": "Ps 135",
+      "Track 3, Reading 1": "Deut 19",
+      "Track 3, Reading 2": "Isa 41",
+      "Date": "Tue, Feb 28, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 27",
+      "Track 1, Reading 2": "Heb 8",
+      "Track 2, Reading 1": "Ps 136",
+      "Track 3, Reading 1": "Deut 20",
+      "Track 3, Reading 2": "Isa 42",
+      "Date": "Wed, Mar 1, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 28",
+      "Track 1, Reading 2": "Heb 9",
+      "Track 2, Reading 1": "Ps 137",
+      "Track 3, Reading 1": "Deut 21",
+      "Track 3, Reading 2": "Isa 43",
+      "Date": "Thu, Mar 2, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 1",
+      "Track 1, Reading 2": "Heb 10",
+      "Track 2, Reading 1": "Ps 138",
+      "Track 3, Reading 1": "Deut 22",
+      "Track 3, Reading 2": "Isa 44",
+      "Date": "Fri, Mar 3, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Mar 4, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Mar 5, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 2",
+      "Track 1, Reading 2": "Heb 11",
+      "Track 2, Reading 1": "Ps 139",
+      "Track 3, Reading 1": "Deut 23",
+      "Track 3, Reading 2": "Isa 45",
+      "Date": "Mon, Mar 6, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 3",
+      "Track 1, Reading 2": "Heb 12",
+      "Track 2, Reading 1": "Ps 140",
+      "Track 3, Reading 1": "Deut 24",
+      "Track 3, Reading 2": "Isa 46",
+      "Date": "Tue, Mar 7, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 4",
+      "Track 1, Reading 2": "Heb 13",
+      "Track 2, Reading 1": "Ps 141",
+      "Track 3, Reading 1": "Deut 25",
+      "Track 3, Reading 2": "Isa 47",
+      "Date": "Wed, Mar 8, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 5",
+      "Track 1, Reading 2": "Jam 1",
+      "Track 2, Reading 1": "Ps 142",
+      "Track 3, Reading 1": "Deut 26",
+      "Track 3, Reading 2": "Isa 48",
+      "Date": "Thu, Mar 9, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 6",
+      "Track 1, Reading 2": "Jam 2",
+      "Track 2, Reading 1": "Ps 143",
+      "Track 3, Reading 1": "Deut 27",
+      "Track 3, Reading 2": "Isa 49",
+      "Date": "Fri, Mar 10, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Mar 11, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Mar 12, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 7",
+      "Track 1, Reading 2": "Jam 3",
+      "Track 2, Reading 1": "Ps 144",
+      "Track 3, Reading 1": "Deut 28",
+      "Track 3, Reading 2": "Isa 50",
+      "Date": "Mon, Mar 13, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 8",
+      "Track 1, Reading 2": "Jam 4",
+      "Track 2, Reading 1": "Ps 145",
+      "Track 3, Reading 1": "Deut 29",
+      "Track 3, Reading 2": "Isa 51",
+      "Date": "Tue, Mar 14, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 9",
+      "Track 1, Reading 2": "Jam 5",
+      "Track 2, Reading 1": "Ps 146",
+      "Track 3, Reading 1": "Deut 30",
+      "Track 3, Reading 2": "Isa 52",
+      "Date": "Wed, Mar 15, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 10",
+      "Track 1, Reading 2": "1 Pet 1",
+      "Track 2, Reading 1": "Ps 147",
+      "Track 3, Reading 1": "Deut 31",
+      "Track 3, Reading 2": "Isa 53",
+      "Date": "Thu, Mar 16, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 11",
+      "Track 1, Reading 2": "1 Pet 2",
+      "Track 2, Reading 1": "Ps 148",
+      "Track 3, Reading 1": "Deut 32",
+      "Track 3, Reading 2": "Isa 54",
+      "Date": "Fri, Mar 17, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Mar 18, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Mar 19, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 12",
+      "Track 1, Reading 2": "1 Pet 3",
+      "Track 2, Reading 1": "Ps 149",
+      "Track 3, Reading 1": "Deut 33",
+      "Track 3, Reading 2": "Isa 55",
+      "Date": "Mon, Mar 20, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 13",
+      "Track 1, Reading 2": "1 Pet 4",
+      "Track 2, Reading 1": "Ps 150",
+      "Track 3, Reading 1": "Deut 34",
+      "Track 3, Reading 2": "Isa 56",
+      "Date": "Tue, Mar 21, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 14",
+      "Track 1, Reading 2": "1 Pet 5",
+      "Track 2, Reading 1": "Prov 1",
+      "Track 3, Reading 1": "Josh 1",
+      "Track 3, Reading 2": "Isa 57",
+      "Date": "Wed, Mar 22, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 15",
+      "Track 1, Reading 2": "2 Pet 1",
+      "Track 2, Reading 1": "Prov 2",
+      "Track 3, Reading 1": "Josh 2",
+      "Track 3, Reading 2": "Isa 58",
+      "Date": "Thu, Mar 23, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 16",
+      "Track 1, Reading 2": "2 Pet 2",
+      "Track 2, Reading 1": "Prov 3",
+      "Track 3, Reading 1": "Josh 3",
+      "Track 3, Reading 2": "Isa 59",
+      "Date": "Fri, Mar 24, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Mar 25, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Mar 26, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 1",
+      "Track 1, Reading 2": "2 Pet 3",
+      "Track 2, Reading 1": "Prov 4",
+      "Track 3, Reading 1": "Josh 4",
+      "Track 3, Reading 2": "Isa 60",
+      "Date": "Mon, Mar 27, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 2",
+      "Track 1, Reading 2": "1 John 1",
+      "Track 2, Reading 1": "Prov 5",
+      "Track 3, Reading 1": "Josh 5",
+      "Track 3, Reading 2": "Isa 61",
+      "Date": "Tue, Mar 28, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 3",
+      "Track 1, Reading 2": "1 John 2",
+      "Track 2, Reading 1": "Prov 6",
+      "Track 3, Reading 1": "Josh 6",
+      "Track 3, Reading 2": "Isa 62",
+      "Date": "Wed, Mar 29, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 4",
+      "Track 1, Reading 2": "1 John 3",
+      "Track 2, Reading 1": "Prov 7",
+      "Track 3, Reading 1": "Josh 7",
+      "Track 3, Reading 2": "Isa 63",
+      "Date": "Thu, Mar 30, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 5",
+      "Track 1, Reading 2": "1 John 4",
+      "Track 2, Reading 1": "Prov 8",
+      "Track 3, Reading 1": "Josh 8",
+      "Track 3, Reading 2": "Isa 64",
+      "Date": "Fri, Mar 31, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Apr 1, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Apr 2, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 6",
+      "Track 1, Reading 2": "1 John 5",
+      "Track 2, Reading 1": "Prov 9",
+      "Track 3, Reading 1": "Josh 9",
+      "Track 3, Reading 2": "Isa 65",
+      "Date": "Mon, Apr 3, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 7",
+      "Track 1, Reading 2": "2 John",
+      "Track 2, Reading 1": "Prov 10",
+      "Track 3, Reading 1": "Josh 10",
+      "Track 3, Reading 2": "Isa 66",
+      "Date": "Tue, Apr 4, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 8",
+      "Track 1, Reading 2": "3 John",
+      "Track 2, Reading 1": "Prov 11",
+      "Track 3, Reading 1": "Josh 11",
+      "Track 3, Reading 2": "Jer 1",
+      "Date": "Wed, Apr 5, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 9",
+      "Track 1, Reading 2": "Jude",
+      "Track 2, Reading 1": "Prov 12",
+      "Track 3, Reading 1": "Josh 12",
+      "Track 3, Reading 2": "Jer 2",
+      "Date": "Thu, Apr 6, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 10",
+      "Track 1, Reading 2": "Rev 1",
+      "Track 2, Reading 1": "Prov 13",
+      "Track 3, Reading 1": "Josh 13",
+      "Track 3, Reading 2": "Jer 3",
+      "Date": "Fri, Apr 7, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Apr 8, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Apr 9, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 11",
+      "Track 1, Reading 2": "Rev 2",
+      "Track 2, Reading 1": "Prov 14",
+      "Track 3, Reading 1": "Josh 14",
+      "Track 3, Reading 2": "Jer 4",
+      "Date": "Mon, Apr 10, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 12",
+      "Track 1, Reading 2": "Rev 3",
+      "Track 2, Reading 1": "Prov 15",
+      "Track 3, Reading 1": "Josh 15",
+      "Track 3, Reading 2": "Jer 5",
+      "Date": "Tue, Apr 11, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 13",
+      "Track 1, Reading 2": "Rev 4",
+      "Track 2, Reading 1": "Prov 16",
+      "Track 3, Reading 1": "Josh 16",
+      "Track 3, Reading 2": "Jer 6",
+      "Date": "Wed, Apr 12, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 14",
+      "Track 1, Reading 2": "Rev 5",
+      "Track 2, Reading 1": "Prov 17",
+      "Track 3, Reading 1": "Josh 17",
+      "Track 3, Reading 2": "Jer 7",
+      "Date": "Thu, Apr 13, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 15",
+      "Track 1, Reading 2": "Rev 6",
+      "Track 2, Reading 1": "Prov 18",
+      "Track 3, Reading 1": "Josh 18",
+      "Track 3, Reading 2": "Jer 8",
+      "Date": "Fri, Apr 14, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Apr 15, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Apr 16, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 16",
+      "Track 1, Reading 2": "Rev 7",
+      "Track 2, Reading 1": "Prov 19",
+      "Track 3, Reading 1": "Josh 19",
+      "Track 3, Reading 2": "Jer 9",
+      "Date": "Mon, Apr 17, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 1",
+      "Track 1, Reading 2": "Rev 8",
+      "Track 2, Reading 1": "Prov 20",
+      "Track 3, Reading 1": "Josh 20",
+      "Track 3, Reading 2": "Jer 10",
+      "Date": "Tue, Apr 18, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 2",
+      "Track 1, Reading 2": "Rev 9",
+      "Track 2, Reading 1": "Prov 21",
+      "Track 3, Reading 1": "Josh 21",
+      "Track 3, Reading 2": "Jer 11",
+      "Date": "Wed, Apr 19, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 3",
+      "Track 1, Reading 2": "Rev 10",
+      "Track 2, Reading 1": "Prov 22",
+      "Track 3, Reading 1": "Josh 22",
+      "Track 3, Reading 2": "Jer 12",
+      "Date": "Thu, Apr 20, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 4",
+      "Track 1, Reading 2": "Rev 11",
+      "Track 2, Reading 1": "Prov 23",
+      "Track 3, Reading 1": "Josh 23",
+      "Track 3, Reading 2": "Jer 13",
+      "Date": "Fri, Apr 21, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Apr 22, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Apr 23, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 5",
+      "Track 1, Reading 2": "Rev 12",
+      "Track 2, Reading 1": "Prov 24",
+      "Track 3, Reading 1": "Josh 24",
+      "Track 3, Reading 2": "Jer 14",
+      "Date": "Mon, Apr 24, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 6",
+      "Track 1, Reading 2": "Rev 13",
+      "Track 2, Reading 1": "Prov 25",
+      "Track 3, Reading 1": "Jud 1",
+      "Track 3, Reading 2": "Jer 15",
+      "Date": "Tue, Apr 25, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 7",
+      "Track 1, Reading 2": "Rev 14",
+      "Track 2, Reading 1": "Prov 26",
+      "Track 3, Reading 1": "Jud 2",
+      "Track 3, Reading 2": "Jer 16",
+      "Date": "Wed, Apr 26, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 8",
+      "Track 1, Reading 2": "Rev 15",
+      "Track 2, Reading 1": "Prov 27",
+      "Track 3, Reading 1": "Jud 3",
+      "Track 3, Reading 2": "Jer 17",
+      "Date": "Thu, Apr 27, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 9",
+      "Track 1, Reading 2": "Rev 16",
+      "Track 2, Reading 1": "Prov 28",
+      "Track 3, Reading 1": "Jud 4",
+      "Track 3, Reading 2": "Jer 18",
+      "Date": "Fri, Apr 28, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Apr 29, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Apr 30, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 10",
+      "Track 1, Reading 2": "Rev 17",
+      "Track 2, Reading 1": "Prov 29",
+      "Track 3, Reading 1": "Jud 5",
+      "Track 3, Reading 2": "Jer 19",
+      "Date": "Mon, May 1, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 11",
+      "Track 1, Reading 2": "Rev 18",
+      "Track 2, Reading 1": "Prov 30",
+      "Track 3, Reading 1": "Jud 6",
+      "Track 3, Reading 2": "Jer 20",
+      "Date": "Tue, May 2, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 12",
+      "Track 1, Reading 2": "Rev 19",
+      "Track 2, Reading 1": "Prov 31",
+      "Track 3, Reading 1": "Jud 7",
+      "Track 3, Reading 2": "Jer 21",
+      "Date": "Wed, May 3, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 13",
+      "Track 1, Reading 2": "Rev 20",
+      "Track 2, Reading 1": "Ps 1",
+      "Track 3, Reading 1": "Jud 8",
+      "Track 3, Reading 2": "Jer 22",
+      "Date": "Thu, May 4, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 14",
+      "Track 1, Reading 2": "Rev 21",
+      "Track 2, Reading 1": "Ps 2",
+      "Track 3, Reading 1": "Jud 9",
+      "Track 3, Reading 2": "Jer 23",
+      "Date": "Fri, May 5, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, May 6, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, May 7, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 15",
+      "Track 1, Reading 2": "2 Cor 1",
+      "Track 2, Reading 1": "Ps 3",
+      "Track 3, Reading 1": "Jud 10",
+      "Track 3, Reading 2": "Jer 24",
+      "Date": "Mon, May 8, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 16",
+      "Track 1, Reading 2": "2 Cor 2",
+      "Track 2, Reading 1": "Ps 4",
+      "Track 3, Reading 1": "Jud 11",
+      "Track 3, Reading 2": "Jer 25",
+      "Date": "Tue, May 9, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 17",
+      "Track 1, Reading 2": "2 Cor 3",
+      "Track 2, Reading 1": "Ps 5",
+      "Track 3, Reading 1": "Jud 12",
+      "Track 3, Reading 2": "Jer 26",
+      "Date": "Wed, May 10, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 18",
+      "Track 1, Reading 2": "2 Cor 4",
+      "Track 2, Reading 1": "Ps 6",
+      "Track 3, Reading 1": "Jud 13",
+      "Track 3, Reading 2": "Jer 27",
+      "Date": "Thu, May 11, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 19",
+      "Track 1, Reading 2": "2 Cor 5",
+      "Track 2, Reading 1": "Ps 7",
+      "Track 3, Reading 1": "Jud 14",
+      "Track 3, Reading 2": "Jer 28",
+      "Date": "Fri, May 12, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, May 13, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, May 14, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 20",
+      "Track 1, Reading 2": "2 Cor 6",
+      "Track 2, Reading 1": "Ps 8",
+      "Track 3, Reading 1": "Jud 15",
+      "Track 3, Reading 2": "Jer 29",
+      "Date": "Mon, May 15, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 21",
+      "Track 1, Reading 2": "2 Cor 7",
+      "Track 2, Reading 1": "Ps 9",
+      "Track 3, Reading 1": "Jud 16",
+      "Track 3, Reading 2": "Jer 30",
+      "Date": "Tue, May 16, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 22",
+      "Track 1, Reading 2": "2 Cor 8",
+      "Track 2, Reading 1": "Ps 10",
+      "Track 3, Reading 1": "Jud 17",
+      "Track 3, Reading 2": "Jer 31",
+      "Date": "Wed, May 17, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 23",
+      "Track 1, Reading 2": "2 Cor 9",
+      "Track 2, Reading 1": "Ps 11",
+      "Track 3, Reading 1": "Jud 18",
+      "Track 3, Reading 2": "Jer 32",
+      "Date": "Thu, May 18, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Luke 24",
+      "Track 1, Reading 2": "2 Cor 10",
+      "Track 2, Reading 1": "Ps 12",
+      "Track 3, Reading 1": "Jud 19",
+      "Track 3, Reading 2": "Jer 33",
+      "Date": "Fri, May 19, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, May 20, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, May 21, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 1",
+      "Track 1, Reading 2": "2 Cor 11",
+      "Track 2, Reading 1": "Ps 13",
+      "Track 3, Reading 1": "Jud 20",
+      "Track 3, Reading 2": "Jer 34",
+      "Date": "Mon, May 22, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 2",
+      "Track 1, Reading 2": "2 Cor 12",
+      "Track 2, Reading 1": "Ps 14",
+      "Track 3, Reading 1": "Jud 21",
+      "Track 3, Reading 2": "Jer 35",
+      "Date": "Tue, May 23, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 3",
+      "Track 1, Reading 2": "2 Cor 13",
+      "Track 2, Reading 1": "Ps 15",
+      "Track 3, Reading 1": "Ruth 1",
+      "Track 3, Reading 2": "Jer 36",
+      "Date": "Wed, May 24, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 4",
+      "Track 1, Reading 2": "Gal 1",
+      "Track 2, Reading 1": "Ps 16",
+      "Track 3, Reading 1": "Ruth 2",
+      "Track 3, Reading 2": "Jer 37",
+      "Date": "Thu, May 25, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 5",
+      "Track 1, Reading 2": "Gal 2",
+      "Track 2, Reading 1": "Ps 17",
+      "Track 3, Reading 1": "Ruth 3",
+      "Track 3, Reading 2": "Jer 38",
+      "Date": "Fri, May 26, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, May 27, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, May 28, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 6",
+      "Track 1, Reading 2": "Gal 3",
+      "Track 2, Reading 1": "Ps 18",
+      "Track 3, Reading 1": "Ruth 4",
+      "Track 3, Reading 2": "Jer 39",
+      "Date": "Mon, May 29, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 7",
+      "Track 1, Reading 2": "Gal 4",
+      "Track 2, Reading 1": "Ps 19",
+      "Track 3, Reading 1": "1 Sam 1",
+      "Track 3, Reading 2": "Jer 40",
+      "Date": "Tue, May 30, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 8",
+      "Track 1, Reading 2": "Gal 5",
+      "Track 2, Reading 1": "Ps 20",
+      "Track 3, Reading 1": "1 Sam 2",
+      "Track 3, Reading 2": "Jer 41",
+      "Date": "Wed, May 31, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 9",
+      "Track 1, Reading 2": "Gal 6",
+      "Track 2, Reading 1": "Ps 21",
+      "Track 3, Reading 1": "1 Sam 3",
+      "Track 3, Reading 2": "Jer 42",
+      "Date": "Thu, Jun 1, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 10",
+      "Track 1, Reading 2": "Eph 1",
+      "Track 2, Reading 1": "Ps 22",
+      "Track 3, Reading 1": "1 Sam 4",
+      "Track 3, Reading 2": "Jer 43",
+      "Date": "Fri, Jun 2, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jun 3, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jun 4, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 11",
+      "Track 1, Reading 2": "Eph 2",
+      "Track 2, Reading 1": "Ps 23",
+      "Track 3, Reading 1": "1 Sam 5",
+      "Track 3, Reading 2": "Jer 44",
+      "Date": "Mon, Jun 5, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 12",
+      "Track 1, Reading 2": "Eph 3",
+      "Track 2, Reading 1": "Ps 24",
+      "Track 3, Reading 1": "1 Sam 6",
+      "Track 3, Reading 2": "Jer 45",
+      "Date": "Tue, Jun 6, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 13",
+      "Track 1, Reading 2": "Eph 4",
+      "Track 2, Reading 1": "Ps 25",
+      "Track 3, Reading 1": "1 Sam 7",
+      "Track 3, Reading 2": "Jer 46",
+      "Date": "Wed, Jun 7, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 14",
+      "Track 1, Reading 2": "Eph 5",
+      "Track 2, Reading 1": "Ps 26",
+      "Track 3, Reading 1": "1 Sam 8",
+      "Track 3, Reading 2": "Jer 47",
+      "Date": "Thu, Jun 8, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 15",
+      "Track 1, Reading 2": "Eph 6",
+      "Track 2, Reading 1": "Ps 27",
+      "Track 3, Reading 1": "1 Sam 9",
+      "Track 3, Reading 2": "Jer 48",
+      "Date": "Fri, Jun 9, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jun 10, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jun 11, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 16",
+      "Track 1, Reading 2": "Phil 1",
+      "Track 2, Reading 1": "Ps 28",
+      "Track 3, Reading 1": "1 Sam 10",
+      "Track 3, Reading 2": "Jer 49",
+      "Date": "Mon, Jun 12, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 17",
+      "Track 1, Reading 2": "Phil 2",
+      "Track 2, Reading 1": "Ps 29",
+      "Track 3, Reading 1": "1 Sam 11",
+      "Track 3, Reading 2": "Jer 50",
+      "Date": "Tue, Jun 13, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 18",
+      "Track 1, Reading 2": "Phil 3",
+      "Track 2, Reading 1": "Ps 30",
+      "Track 3, Reading 1": "1 Sam 12",
+      "Track 3, Reading 2": "Jer 51",
+      "Date": "Wed, Jun 14, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 19",
+      "Track 1, Reading 2": "Phil 4",
+      "Track 2, Reading 1": "Ps 31",
+      "Track 3, Reading 1": "1 Sam 13",
+      "Track 3, Reading 2": "Jer 52",
+      "Date": "Thu, Jun 15, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 20",
+      "Track 1, Reading 2": "Col 1",
+      "Track 2, Reading 1": "Ps 32",
+      "Track 3, Reading 1": "1 Sam 14",
+      "Track 3, Reading 2": "Lam 1",
+      "Date": "Fri, Jun 16, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jun 17, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jun 18, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 21",
+      "Track 1, Reading 2": "Col 2",
+      "Track 2, Reading 1": "Ps 33",
+      "Track 3, Reading 1": "1 Sam 15",
+      "Track 3, Reading 2": "Lam 2",
+      "Date": "Mon, Jun 19, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 1",
+      "Track 1, Reading 2": "Col 3",
+      "Track 2, Reading 1": "Ps 34",
+      "Track 3, Reading 1": "1 Sam 16",
+      "Track 3, Reading 2": "Lam 3",
+      "Date": "Tue, Jun 20, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 2",
+      "Track 1, Reading 2": "Col 4",
+      "Track 2, Reading 1": "Ps 35",
+      "Track 3, Reading 1": "1 Sam 17",
+      "Track 3, Reading 2": "Lam 4",
+      "Date": "Wed, Jun 21, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 3",
+      "Track 1, Reading 2": "1 Thess 1",
+      "Track 2, Reading 1": "Ps 36",
+      "Track 3, Reading 1": "1 Sam 18",
+      "Track 3, Reading 2": "Lam 5",
+      "Date": "Thu, Jun 22, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 4",
+      "Track 1, Reading 2": "1 Thess 2",
+      "Track 2, Reading 1": "Ps 37",
+      "Track 3, Reading 1": "1 Sam 19",
+      "Track 3, Reading 2": "Ezk 1",
+      "Date": "Fri, Jun 23, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jun 24, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jun 25, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 5",
+      "Track 1, Reading 2": "1 Thess 3",
+      "Track 2, Reading 1": "Ps 38",
+      "Track 3, Reading 1": "1 Sam 20",
+      "Track 3, Reading 2": "Ezk 2",
+      "Date": "Mon, Jun 26, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 6",
+      "Track 1, Reading 2": "1 Thess 4",
+      "Track 2, Reading 1": "Ps 39",
+      "Track 3, Reading 1": "1 Sam 21",
+      "Track 3, Reading 2": "Ezk 3",
+      "Date": "Tue, Jun 27, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 7",
+      "Track 1, Reading 2": "1 Thess 5",
+      "Track 2, Reading 1": "Ps 40",
+      "Track 3, Reading 1": "1 Sam 22",
+      "Track 3, Reading 2": "Ezk 4",
+      "Date": "Wed, Jun 28, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 8",
+      "Track 1, Reading 2": "2 Thess 1",
+      "Track 2, Reading 1": "Ps 41",
+      "Track 3, Reading 1": "1 Sam 23",
+      "Track 3, Reading 2": "Ezk 5",
+      "Date": "Thu, Jun 29, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 9",
+      "Track 1, Reading 2": "2 Thess 2",
+      "Track 2, Reading 1": "Ps 42",
+      "Track 3, Reading 1": "1 Sam 24",
+      "Track 3, Reading 2": "Ezk 6",
+      "Date": "Fri, Jun 30, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jul 1, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jul 2, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 10",
+      "Track 1, Reading 2": "2 Thess 3",
+      "Track 2, Reading 1": "Ps 43",
+      "Track 3, Reading 1": "1 Sam 25",
+      "Track 3, Reading 2": "Ezk 7",
+      "Date": "Mon, Jul 3, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 11",
+      "Track 1, Reading 2": "1 Tim 1",
+      "Track 2, Reading 1": "Ps 44",
+      "Track 3, Reading 1": "1 Sam 26",
+      "Track 3, Reading 2": "Ezk 8",
+      "Date": "Tue, Jul 4, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 12",
+      "Track 1, Reading 2": "1 Tim 2",
+      "Track 2, Reading 1": "Ps 45",
+      "Track 3, Reading 1": "1 Sam 27",
+      "Track 3, Reading 2": "Ezk 9",
+      "Date": "Wed, Jul 5, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 13",
+      "Track 1, Reading 2": "1 Tim 3",
+      "Track 2, Reading 1": "Ps 46",
+      "Track 3, Reading 1": "1 Sam 28",
+      "Track 3, Reading 2": "Ezk 10",
+      "Date": "Thu, Jul 6, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 14",
+      "Track 1, Reading 2": "1 Tim 4",
+      "Track 2, Reading 1": "Ps 47",
+      "Track 3, Reading 1": "1 Sam 29",
+      "Track 3, Reading 2": "Ezk 11",
+      "Date": "Fri, Jul 7, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jul 8, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jul 9, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 15",
+      "Track 1, Reading 2": "1 Tim 5",
+      "Track 2, Reading 1": "Ps 48",
+      "Track 3, Reading 1": "1 Sam 30",
+      "Track 3, Reading 2": "Ezk 12",
+      "Date": "Mon, Jul 10, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 16",
+      "Track 1, Reading 2": "1 Tim 6",
+      "Track 2, Reading 1": "Ps 49",
+      "Track 3, Reading 1": "1 Sam 31",
+      "Track 3, Reading 2": "Ezk 13",
+      "Date": "Tue, Jul 11, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 17",
+      "Track 1, Reading 2": "2 Tim 1",
+      "Track 2, Reading 1": "Ps 50",
+      "Track 3, Reading 1": "2 Sam 1",
+      "Track 3, Reading 2": "Ezk 14",
+      "Date": "Wed, Jul 12, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 18",
+      "Track 1, Reading 2": "2 Tim 2",
+      "Track 2, Reading 1": "Ps 51",
+      "Track 3, Reading 1": "2 Sam 2",
+      "Track 3, Reading 2": "Ezk 15",
+      "Date": "Thu, Jul 13, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 19",
+      "Track 1, Reading 2": "2 Tim 3",
+      "Track 2, Reading 1": "Ps 52",
+      "Track 3, Reading 1": "2 Sam 3",
+      "Track 3, Reading 2": "Ezk 16",
+      "Date": "Fri, Jul 14, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jul 15, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jul 16, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 20",
+      "Track 1, Reading 2": "2 Tim 4",
+      "Track 2, Reading 1": "Ps 53",
+      "Track 3, Reading 1": "2 Sam 4",
+      "Track 3, Reading 2": "Ezk 17",
+      "Date": "Mon, Jul 17, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 21",
+      "Track 1, Reading 2": "Titus 1",
+      "Track 2, Reading 1": "Ps 54",
+      "Track 3, Reading 1": "2 Sam 5",
+      "Track 3, Reading 2": "Ezk 18",
+      "Date": "Tue, Jul 18, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 22",
+      "Track 1, Reading 2": "Titus 2",
+      "Track 2, Reading 1": "Ps 55",
+      "Track 3, Reading 1": "2 Sam 6",
+      "Track 3, Reading 2": "Ezk 19",
+      "Date": "Wed, Jul 19, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 23",
+      "Track 1, Reading 2": "Titus 3",
+      "Track 2, Reading 1": "Ps 56",
+      "Track 3, Reading 1": "2 Sam 7",
+      "Track 3, Reading 2": "Ezk 20",
+      "Date": "Thu, Jul 20, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 24",
+      "Track 1, Reading 2": "Philemon",
+      "Track 2, Reading 1": "Ps 57",
+      "Track 3, Reading 1": "2 Sam 8",
+      "Track 3, Reading 2": "Ezk 21",
+      "Date": "Fri, Jul 21, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jul 22, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jul 23, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 25",
+      "Track 1, Reading 2": "Heb 1",
+      "Track 2, Reading 1": "Ps 58",
+      "Track 3, Reading 1": "2 Sam 9",
+      "Track 3, Reading 2": "Ezk 22",
+      "Date": "Mon, Jul 24, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 26",
+      "Track 1, Reading 2": "Heb 2",
+      "Track 2, Reading 1": "Ps 59",
+      "Track 3, Reading 1": "2 Sam 10",
+      "Track 3, Reading 2": "Ezk 23",
+      "Date": "Tue, Jul 25, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 27",
+      "Track 1, Reading 2": "Heb 3",
+      "Track 2, Reading 1": "Ps 60",
+      "Track 3, Reading 1": "2 Sam 11",
+      "Track 3, Reading 2": "Ezk 24",
+      "Date": "Wed, Jul 26, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 28",
+      "Track 1, Reading 2": "Heb 4",
+      "Track 2, Reading 1": "Ps 61",
+      "Track 3, Reading 1": "2 Sam 12",
+      "Track 3, Reading 2": "Ezk 25",
+      "Date": "Thu, Jul 27, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 1",
+      "Track 1, Reading 2": "Heb 5",
+      "Track 2, Reading 1": "Ps 62",
+      "Track 3, Reading 1": "2 Sam 13",
+      "Track 3, Reading 2": "Ezk 26",
+      "Date": "Fri, Jul 28, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Jul 29, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Jul 30, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 2",
+      "Track 1, Reading 2": "Heb 6",
+      "Track 2, Reading 1": "Ps 63",
+      "Track 3, Reading 1": "2 Sam 14",
+      "Track 3, Reading 2": "Ezk 27",
+      "Date": "Mon, Jul 31, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 3",
+      "Track 1, Reading 2": "Heb 7",
+      "Track 2, Reading 1": "Ps 64",
+      "Track 3, Reading 1": "2 Sam 15",
+      "Track 3, Reading 2": "Ezk 28",
+      "Date": "Tue, Aug 1, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 4",
+      "Track 1, Reading 2": "Heb 8",
+      "Track 2, Reading 1": "Ps 65",
+      "Track 3, Reading 1": "2 Sam 16",
+      "Track 3, Reading 2": "Ezk 29",
+      "Date": "Wed, Aug 2, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 5",
+      "Track 1, Reading 2": "Heb 9",
+      "Track 2, Reading 1": "Ps 66",
+      "Track 3, Reading 1": "2 Sam 17",
+      "Track 3, Reading 2": "Ezk 30",
+      "Date": "Thu, Aug 3, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 6",
+      "Track 1, Reading 2": "Heb 10",
+      "Track 2, Reading 1": "Ps 67",
+      "Track 3, Reading 1": "2 Sam 18",
+      "Track 3, Reading 2": "Ezk 31",
+      "Date": "Fri, Aug 4, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Aug 5, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Aug 6, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 7",
+      "Track 1, Reading 2": "Heb 11",
+      "Track 2, Reading 1": "Ps 68",
+      "Track 3, Reading 1": "2 Sam 19",
+      "Track 3, Reading 2": "Ezk 32",
+      "Date": "Mon, Aug 7, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 8",
+      "Track 1, Reading 2": "Heb 12",
+      "Track 2, Reading 1": "Ps 69",
+      "Track 3, Reading 1": "2 Sam 20",
+      "Track 3, Reading 2": "Ezk 33",
+      "Date": "Tue, Aug 8, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 9",
+      "Track 1, Reading 2": "Heb 13",
+      "Track 2, Reading 1": "Ps 70",
+      "Track 3, Reading 1": "2 Sam 21",
+      "Track 3, Reading 2": "Ezk 34",
+      "Date": "Wed, Aug 9, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 10",
+      "Track 1, Reading 2": "Jam 1",
+      "Track 2, Reading 1": "Ps 71",
+      "Track 3, Reading 1": "2 Sam 22",
+      "Track 3, Reading 2": "Ezk 35",
+      "Date": "Thu, Aug 10, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 11",
+      "Track 1, Reading 2": "Jam 2",
+      "Track 2, Reading 1": "Ps 72",
+      "Track 3, Reading 1": "2 Sam 23",
+      "Track 3, Reading 2": "Ezk 36",
+      "Date": "Fri, Aug 11, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Aug 12, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Aug 13, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 12",
+      "Track 1, Reading 2": "Jam 3",
+      "Track 2, Reading 1": "Ps 73",
+      "Track 3, Reading 1": "2 Sam 24",
+      "Track 3, Reading 2": "Ezk 37",
+      "Date": "Mon, Aug 14, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 13",
+      "Track 1, Reading 2": "Jam 4",
+      "Track 2, Reading 1": "Ps 74",
+      "Track 3, Reading 1": "1 Kings 1",
+      "Track 3, Reading 2": "Ezk 38",
+      "Date": "Tue, Aug 15, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 14",
+      "Track 1, Reading 2": "Jam 5",
+      "Track 2, Reading 1": "Ps 75",
+      "Track 3, Reading 1": "1 Kings 2",
+      "Track 3, Reading 2": "Ezk 39",
+      "Date": "Wed, Aug 16, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 15",
+      "Track 1, Reading 2": "1 Pet 1",
+      "Track 2, Reading 1": "Ps 76",
+      "Track 3, Reading 1": "1 Kings 3",
+      "Track 3, Reading 2": "Ezk 40",
+      "Date": "Thu, Aug 17, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Rom 16",
+      "Track 1, Reading 2": "1 Pet 2",
+      "Track 2, Reading 1": "Ps 77",
+      "Track 3, Reading 1": "1 Kings 4",
+      "Track 3, Reading 2": "Ezk 41",
+      "Date": "Fri, Aug 18, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Aug 19, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Aug 20, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 1",
+      "Track 1, Reading 2": "1 Pet 3",
+      "Track 2, Reading 1": "Ps 78:1-31",
+      "Track 3, Reading 1": "1 Kings 5",
+      "Track 3, Reading 2": "Ezk 42",
+      "Date": "Mon, Aug 21, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 2",
+      "Track 1, Reading 2": "1 Pet 4",
+      "Track 2, Reading 1": "Ps 78:32-72",
+      "Track 3, Reading 1": "1 Kings 6",
+      "Track 3, Reading 2": "Ezk 43",
+      "Date": "Tue, Aug 22, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 3",
+      "Track 1, Reading 2": "1 Pet 5",
+      "Track 2, Reading 1": "Ps 79",
+      "Track 3, Reading 1": "1 Kings 7",
+      "Track 3, Reading 2": "Ezk 44",
+      "Date": "Wed, Aug 23, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 4",
+      "Track 1, Reading 2": "2 Pet 1",
+      "Track 2, Reading 1": "Ps 80",
+      "Track 3, Reading 1": "1 Kings 8",
+      "Track 3, Reading 2": "Ezk 45",
+      "Date": "Thu, Aug 24, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 5",
+      "Track 1, Reading 2": "2 Pet 2",
+      "Track 2, Reading 1": "Ps 81",
+      "Track 3, Reading 1": "1 Kings 9",
+      "Track 3, Reading 2": "Ezk 46",
+      "Date": "Fri, Aug 25, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Aug 26, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Aug 27, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 6",
+      "Track 1, Reading 2": "2 Pet 3",
+      "Track 2, Reading 1": "Ps 82",
+      "Track 3, Reading 1": "1 Kings 10",
+      "Track 3, Reading 2": "Ezk 47",
+      "Date": "Mon, Aug 28, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 7",
+      "Track 1, Reading 2": "1 John 1",
+      "Track 2, Reading 1": "Ps 83",
+      "Track 3, Reading 1": "1 Kings 11",
+      "Track 3, Reading 2": "Ezk 48",
+      "Date": "Tue, Aug 29, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 8",
+      "Track 1, Reading 2": "1 John 2",
+      "Track 2, Reading 1": "Ps 84",
+      "Track 3, Reading 1": "1 Kings 12",
+      "Track 3, Reading 2": "Dan 1",
+      "Date": "Wed, Aug 30, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 9",
+      "Track 1, Reading 2": "1 John 3",
+      "Track 2, Reading 1": "Ps 85",
+      "Track 3, Reading 1": "1 Kings 13",
+      "Track 3, Reading 2": "Dan 2",
+      "Date": "Thu, Aug 31, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 10",
+      "Track 1, Reading 2": "1 John 4",
+      "Track 2, Reading 1": "Ps 86",
+      "Track 3, Reading 1": "1 Kings 14",
+      "Track 3, Reading 2": "Dan 3",
+      "Date": "Fri, Sep 1, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Sep 2, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Sep 3, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 11",
+      "Track 1, Reading 2": "1 John 5",
+      "Track 2, Reading 1": "Ps 87",
+      "Track 3, Reading 1": "1 Kings 15",
+      "Track 3, Reading 2": "Dan 4",
+      "Date": "Mon, Sep 4, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 12",
+      "Track 1, Reading 2": "2 John",
+      "Track 2, Reading 1": "Ps 88",
+      "Track 3, Reading 1": "1 Kings 16",
+      "Track 3, Reading 2": "Dan 5",
+      "Date": "Tue, Sep 5, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 13",
+      "Track 1, Reading 2": "3 John",
+      "Track 2, Reading 1": "Ps 89",
+      "Track 3, Reading 1": "1 Kings 17",
+      "Track 3, Reading 2": "Dan 6",
+      "Date": "Wed, Sep 6, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 14",
+      "Track 1, Reading 2": "Jude",
+      "Track 2, Reading 1": "Ps 90",
+      "Track 3, Reading 1": "1 Kings 18",
+      "Track 3, Reading 2": "Dan 7",
+      "Date": "Thu, Sep 7, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 15",
+      "Track 1, Reading 2": "Rev 1",
+      "Track 2, Reading 1": "Ps 91",
+      "Track 3, Reading 1": "1 Kigns 19",
+      "Track 3, Reading 2": "Dan 8",
+      "Date": "Fri, Sep 8, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Sep 9, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Sep 10, 2023"
+    },
+    {
+      "Track 1, Reading 1": "1 Cor 16",
+      "Track 1, Reading 2": "Rev 2",
+      "Track 2, Reading 1": "Ps 92",
+      "Track 3, Reading 1": "1 Kings 20",
+      "Track 3, Reading 2": "Dan 9",
+      "Date": "Mon, Sep 11, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 1",
+      "Track 1, Reading 2": "Rev 3",
+      "Track 2, Reading 1": "Ps 93",
+      "Track 3, Reading 1": "1 Kings 21",
+      "Track 3, Reading 2": "Dan 10",
+      "Date": "Tue, Sep 12, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 2",
+      "Track 1, Reading 2": "Rev 4",
+      "Track 2, Reading 1": "Ps 94",
+      "Track 3, Reading 1": "1 Kings 22",
+      "Track 3, Reading 2": "Dan 11",
+      "Date": "Wed, Sep 13, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 3",
+      "Track 1, Reading 2": "Rev 5",
+      "Track 2, Reading 1": "Ps 95",
+      "Track 3, Reading 1": "2 Kings 1",
+      "Track 3, Reading 2": "Dan 12",
+      "Date": "Thu, Sep 14, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 4",
+      "Track 1, Reading 2": "Rev 6",
+      "Track 2, Reading 1": "Ps 96",
+      "Track 3, Reading 1": "2 Kings 2",
+      "Track 3, Reading 2": "Hos 1",
+      "Date": "Fri, Sep 15, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Sep 16, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Sep 17, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 5",
+      "Track 1, Reading 2": "Rev 7",
+      "Track 2, Reading 1": "Ps 97",
+      "Track 3, Reading 1": "2 Kings 3",
+      "Track 3, Reading 2": "Hos 2",
+      "Date": "Mon, Sep 18, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 6",
+      "Track 1, Reading 2": "Rev 8",
+      "Track 2, Reading 1": "Ps 98",
+      "Track 3, Reading 1": "2 Kings 4",
+      "Track 3, Reading 2": "Hos 3",
+      "Date": "Tue, Sep 19, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 7",
+      "Track 1, Reading 2": "Rev 9",
+      "Track 2, Reading 1": "Ps 99",
+      "Track 3, Reading 1": "2 Kings 5",
+      "Track 3, Reading 2": "Hos 4",
+      "Date": "Wed, Sep 20, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 8",
+      "Track 1, Reading 2": "Rev 10",
+      "Track 2, Reading 1": "Ps 100",
+      "Track 3, Reading 1": "2 Kings 6",
+      "Track 3, Reading 2": "Hos 5",
+      "Date": "Thu, Sep 21, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 9",
+      "Track 1, Reading 2": "Rev 11",
+      "Track 2, Reading 1": "Ps 101",
+      "Track 3, Reading 1": "2 Kings 7",
+      "Track 3, Reading 2": "Hos 6",
+      "Date": "Fri, Sep 22, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Sep 23, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Sep 24, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 10",
+      "Track 1, Reading 2": "Rev 12",
+      "Track 2, Reading 1": "Ps 102",
+      "Track 3, Reading 1": "2 Kings 8",
+      "Track 3, Reading 2": "Hos 7",
+      "Date": "Mon, Sep 25, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 11",
+      "Track 1, Reading 2": "Rev 13",
+      "Track 2, Reading 1": "Ps 103",
+      "Track 3, Reading 1": "2 Kings 9",
+      "Track 3, Reading 2": "Hos 8",
+      "Date": "Tue, Sep 26, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 12",
+      "Track 1, Reading 2": "Rev 14",
+      "Track 2, Reading 1": "Ps 104",
+      "Track 3, Reading 1": "2 Kings 10",
+      "Track 3, Reading 2": "Hos 9",
+      "Date": "Wed, Sep 27, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 13",
+      "Track 1, Reading 2": "Rev 15",
+      "Track 2, Reading 1": "Ps 105",
+      "Track 3, Reading 1": "2 Kings 11",
+      "Track 3, Reading 2": "Hos 10",
+      "Date": "Thu, Sep 28, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 14",
+      "Track 1, Reading 2": "Rev 16",
+      "Track 2, Reading 1": "Ps 106",
+      "Track 3, Reading 1": "2 Kings 12",
+      "Track 3, Reading 2": "Hos 11",
+      "Date": "Fri, Sep 29, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Sep 30, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Oct 1, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 15",
+      "Track 1, Reading 2": "Rev 17",
+      "Track 2, Reading 1": "Ps 107",
+      "Track 3, Reading 1": "2 Kings 13",
+      "Track 3, Reading 2": "Hos 12",
+      "Date": "Mon, Oct 2, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 16",
+      "Track 1, Reading 2": "Rev 18",
+      "Track 2, Reading 1": "Ps 108",
+      "Track 3, Reading 1": "2 Kings 14",
+      "Track 3, Reading 2": "Hos 13",
+      "Date": "Tue, Oct 3, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 17",
+      "Track 1, Reading 2": "Rev 19",
+      "Track 2, Reading 1": "Ps 109",
+      "Track 3, Reading 1": "2 Kings 15",
+      "Track 3, Reading 2": "Hos 14",
+      "Date": "Wed, Oct 4, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 18",
+      "Track 1, Reading 2": "Rev 20",
+      "Track 2, Reading 1": "Ps 110",
+      "Track 3, Reading 1": "2 Kings 16",
+      "Track 3, Reading 2": "Joel 1",
+      "Date": "Thu, Oct 5, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 19",
+      "Track 1, Reading 2": "Rev 21",
+      "Track 2, Reading 1": "Ps 111",
+      "Track 3, Reading 1": "2 Kings 17",
+      "Track 3, Reading 2": "Joel 2",
+      "Date": "Fri, Oct 6, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Oct 7, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Oct 8, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 20",
+      "Track 1, Reading 2": "2 Cor 1",
+      "Track 2, Reading 1": "Ps 112",
+      "Track 3, Reading 1": "2 Kings 18",
+      "Track 3, Reading 2": "Joel 3",
+      "Date": "Mon, Oct 9, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 21",
+      "Track 1, Reading 2": "2 Cor 2",
+      "Track 2, Reading 1": "Ps 113",
+      "Track 3, Reading 1": "2 Kings 19",
+      "Track 3, Reading 2": "Amos 1",
+      "Date": "Tue, Oct 10, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 22",
+      "Track 1, Reading 2": "2 Cor 3",
+      "Track 2, Reading 1": "Ps 114",
+      "Track 3, Reading 1": "2 Kings 20",
+      "Track 3, Reading 2": "Amos 2",
+      "Date": "Wed, Oct 11, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 23",
+      "Track 1, Reading 2": "2 Cor 4",
+      "Track 2, Reading 1": "Ps 115",
+      "Track 3, Reading 1": "2 Kings 21",
+      "Track 3, Reading 2": "Amos 3",
+      "Date": "Thu, Oct 12, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 24",
+      "Track 1, Reading 2": "2 Cor 5",
+      "Track 2, Reading 1": "Ps 116",
+      "Track 3, Reading 1": "2 Kings 22",
+      "Track 3, Reading 2": "Amos 4",
+      "Date": "Fri, Oct 13, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Oct 14, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Oct 15, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 25",
+      "Track 1, Reading 2": "2 Cor 6",
+      "Track 2, Reading 1": "Ps 117",
+      "Track 3, Reading 1": "2 Kings 23",
+      "Track 3, Reading 2": "Amos 5",
+      "Date": "Mon, Oct 16, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 26",
+      "Track 1, Reading 2": "2 Cor 7",
+      "Track 2, Reading 1": "Ps 118",
+      "Track 3, Reading 1": "2 Kings 24",
+      "Track 3, Reading 2": "Amos 6",
+      "Date": "Tue, Oct 17, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 27",
+      "Track 1, Reading 2": "2 Cor 8",
+      "Track 2, Reading 1": "Ps 119:1-32",
+      "Track 3, Reading 1": "2 Kings 25",
+      "Track 3, Reading 2": "Amos 7",
+      "Date": "Wed, Oct 18, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Matt 28",
+      "Track 1, Reading 2": "2 Cor 9",
+      "Track 2, Reading 1": "Ps 119:33-56",
+      "Track 3, Reading 1": "1 Chr 1",
+      "Track 3, Reading 2": "Amos 8",
+      "Date": "Thu, Oct 19, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 1",
+      "Track 1, Reading 2": "2 Cor 10",
+      "Track 2, Reading 1": "Ps 119:57-88",
+      "Track 3, Reading 1": "1 Chr 2",
+      "Track 3, Reading 2": "Amos 9",
+      "Date": "Fri, Oct 20, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Oct 21, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Oct 22, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 2",
+      "Track 1, Reading 2": "2 Cor 11",
+      "Track 2, Reading 1": "Ps 119:89-120",
+      "Track 3, Reading 1": "1 Chr 3",
+      "Track 3, Reading 2": "Obadiah",
+      "Date": "Mon, Oct 23, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 3",
+      "Track 1, Reading 2": "2 Cor 12",
+      "Track 2, Reading 1": "Ps 119:121-152",
+      "Track 3, Reading 1": "1 Chr 4",
+      "Track 3, Reading 2": "Jonah 1",
+      "Date": "Tue, Oct 24, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 4",
+      "Track 1, Reading 2": "2 Cor 13",
+      "Track 2, Reading 1": "Ps 119:153-176",
+      "Track 3, Reading 1": "1 Chr 5",
+      "Track 3, Reading 2": "Jonah 2",
+      "Date": "Wed, Oct 25, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 5",
+      "Track 1, Reading 2": "Gal 1",
+      "Track 2, Reading 1": "Ps 120",
+      "Track 3, Reading 1": "1 Chr 6",
+      "Track 3, Reading 2": "Jonah 3",
+      "Date": "Thu, Oct 26, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 6",
+      "Track 1, Reading 2": "Gal 2",
+      "Track 2, Reading 1": "Ps 121",
+      "Track 3, Reading 1": "1 Chr 7",
+      "Track 3, Reading 2": "Jonah 4",
+      "Date": "Fri, Oct 27, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Oct 28, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Oct 29, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 7",
+      "Track 1, Reading 2": "Gal 3",
+      "Track 2, Reading 1": "Ps 122",
+      "Track 3, Reading 1": "1 Chr 8",
+      "Track 3, Reading 2": "Nahum 1",
+      "Date": "Mon, Oct 30, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 8",
+      "Track 1, Reading 2": "Gal 4",
+      "Track 2, Reading 1": "Ps 123",
+      "Track 3, Reading 1": "1 Chr 9",
+      "Track 3, Reading 2": "Nahum 2",
+      "Date": "Tue, Oct 31, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 9",
+      "Track 1, Reading 2": "Gal 5",
+      "Track 2, Reading 1": "Ps 124",
+      "Track 3, Reading 1": "1 Chr 10",
+      "Track 3, Reading 2": "Nahum 3",
+      "Date": "Wed, Nov 1, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 10",
+      "Track 1, Reading 2": "Gal 6",
+      "Track 2, Reading 1": "Ps 125",
+      "Track 3, Reading 1": "1 Chr 11",
+      "Track 3, Reading 2": "Hab 1",
+      "Date": "Thu, Nov 2, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 11",
+      "Track 1, Reading 2": "Eph 1",
+      "Track 2, Reading 1": "Ps 126",
+      "Track 3, Reading 1": "1 Chr 12",
+      "Track 3, Reading 2": "Hab 2",
+      "Date": "Fri, Nov 3, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Nov 4, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Nov 5, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 12",
+      "Track 1, Reading 2": "Eph 2",
+      "Track 2, Reading 1": "Ps 127",
+      "Track 3, Reading 1": "1 Chr 13",
+      "Track 3, Reading 2": "Hab 3",
+      "Date": "Mon, Nov 6, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 13",
+      "Track 1, Reading 2": "Eph 3",
+      "Track 2, Reading 1": "Ps 128",
+      "Track 3, Reading 1": "1 Chr 14",
+      "Track 3, Reading 2": "Zeph 1",
+      "Date": "Tue, Nov 7, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 14",
+      "Track 1, Reading 2": "Eph 4",
+      "Track 2, Reading 1": "Ps 129",
+      "Track 3, Reading 1": "1 Chr 15",
+      "Track 3, Reading 2": "Zeph 2",
+      "Date": "Wed, Nov 8, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 15",
+      "Track 1, Reading 2": "Eph 5",
+      "Track 2, Reading 1": "Ps 130",
+      "Track 3, Reading 1": "1 Chr 16",
+      "Track 3, Reading 2": "Zeph 3",
+      "Date": "Thu, Nov 9, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 16",
+      "Track 1, Reading 2": "Eph 6",
+      "Track 2, Reading 1": "Ps 131",
+      "Track 3, Reading 1": "1 Chr 17",
+      "Track 3, Reading 2": "Haggai 1",
+      "Date": "Fri, Nov 10, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Nov 11, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Nov 12, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 17",
+      "Track 1, Reading 2": "Phil 1",
+      "Track 2, Reading 1": "Ps 132",
+      "Track 3, Reading 1": "1 Chr 18",
+      "Track 3, Reading 2": "Haggai 2",
+      "Date": "Mon, Nov 13, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 18",
+      "Track 1, Reading 2": "Phil 2",
+      "Track 2, Reading 1": "Ps 133",
+      "Track 3, Reading 1": "1 Chr 19",
+      "Track 3, Reading 2": "Zech 1",
+      "Date": "Tue, Nov 14, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 19",
+      "Track 1, Reading 2": "Phil 3",
+      "Track 2, Reading 1": "Ps 134",
+      "Track 3, Reading 1": "1 Chr 20",
+      "Track 3, Reading 2": "Zech 2",
+      "Date": "Wed, Nov 15, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 20",
+      "Track 1, Reading 2": "Phil 4",
+      "Track 2, Reading 1": "Ps 135",
+      "Track 3, Reading 1": "1 Chr 21",
+      "Track 3, Reading 2": "Zech 3",
+      "Date": "Thu, Nov 16, 2023"
+    },
+    {
+      "Track 1, Reading 1": "John 21",
+      "Track 1, Reading 2": "Col 1",
+      "Track 2, Reading 1": "Ps 136",
+      "Track 3, Reading 1": "1 Chr 22",
+      "Track 3, Reading 2": "Zech 4",
+      "Date": "Fri, Nov 17, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Nov 18, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Nov 19, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 1",
+      "Track 1, Reading 2": "Col 2",
+      "Track 2, Reading 1": "Ps 137",
+      "Track 3, Reading 1": "1 Chr 23",
+      "Track 3, Reading 2": "Zech 5",
+      "Date": "Mon, Nov 20, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 2",
+      "Track 1, Reading 2": "Col 3",
+      "Track 2, Reading 1": "Ps 138",
+      "Track 3, Reading 1": "1 Chr 24",
+      "Track 3, Reading 2": "Zech 6",
+      "Date": "Tue, Nov 21, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 3",
+      "Track 1, Reading 2": "Col 4",
+      "Track 2, Reading 1": "Ps 139",
+      "Track 3, Reading 1": "1 Chr 25",
+      "Track 3, Reading 2": "Zech 7",
+      "Date": "Wed, Nov 22, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 4",
+      "Track 1, Reading 2": "1 Thess 1",
+      "Track 2, Reading 1": "Ps 140",
+      "Track 3, Reading 1": "1 Chr 26",
+      "Track 3, Reading 2": "Zech 8",
+      "Date": "Thu, Nov 23, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 5",
+      "Track 1, Reading 2": "1 Thess 2",
+      "Track 2, Reading 1": "Ps 141",
+      "Track 3, Reading 1": "1 Chr 27",
+      "Track 3, Reading 2": "Zech 9",
+      "Date": "Fri, Nov 24, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Nov 25, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Nov 26, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 6",
+      "Track 1, Reading 2": "1 Thess 3",
+      "Track 2, Reading 1": "Ps 142",
+      "Track 3, Reading 1": "1 Chr 28",
+      "Track 3, Reading 2": "Zech 10",
+      "Date": "Mon, Nov 27, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 7",
+      "Track 1, Reading 2": "1 Thess 4",
+      "Track 2, Reading 1": "Ps 143",
+      "Track 3, Reading 1": "1 Chr 29",
+      "Track 3, Reading 2": "Zech 11",
+      "Date": "Tue, Nov 28, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 8",
+      "Track 1, Reading 2": "1 Thess 5",
+      "Track 2, Reading 1": "Ps 144",
+      "Track 3, Reading 1": "Micah 1",
+      "Track 3, Reading 2": "Zech 12",
+      "Date": "Wed, Nov 29, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 9",
+      "Track 1, Reading 2": "2 Thess 1",
+      "Track 2, Reading 1": "Ps 145",
+      "Track 3, Reading 1": "Micah 2",
+      "Track 3, Reading 2": "Zech 13",
+      "Date": "Thu, Nov 30, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 10",
+      "Track 1, Reading 2": "2 Thess 2",
+      "Track 2, Reading 1": "Ps 146",
+      "Track 3, Reading 1": "Micah 3",
+      "Track 3, Reading 2": "Zech 14",
+      "Date": "Fri, Dec 1, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sat, Dec 2, 2023"
+    },
+    {
+      "Track 1, Reading 1": null,
+      "Track 1, Reading 2": null,
+      "Track 2, Reading 1": null,
+      "Track 3, Reading 1": null,
+      "Track 3, Reading 2": null,
+      "Date": "Sun, Dec 3, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 11",
+      "Track 1, Reading 2": "2 Thess 3",
+      "Track 2, Reading 1": "Ps 147",
+      "Track 3, Reading 1": "Micah 4",
+      "Track 3, Reading 2": "Mal 1",
+      "Date": "Mon, Dec 4, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 12",
+      "Track 1, Reading 2": "1 Tim 1",
+      "Track 2, Reading 1": "Ps 148",
+      "Track 3, Reading 1": "Micah 5",
+      "Track 3, Reading 2": "Mal 2",
+      "Date": "Tue, Dec 5, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 13",
+      "Track 1, Reading 2": "1 Tim 2",
+      "Track 2, Reading 1": "Ps 149",
+      "Track 3, Reading 1": "Micah 6",
+      "Track 3, Reading 2": "Mal 3",
+      "Date": "Wed, Dec 6, 2023"
+    },
+    {
+      "Track 1, Reading 1": "Acts 14",
+      "Track 1, Reading 2": "1 Tim 3",
+      "Track 2, Reading 1": "Ps 150",
+      "Track 3, Reading 1": "Micah 7",
+      "Track 3, Reading 2": "Mal 4",
+      "Date": "Thu, Dec 7, 2023"
+    }
+  ]
+}
