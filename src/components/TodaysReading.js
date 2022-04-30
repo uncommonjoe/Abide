@@ -5,6 +5,7 @@ import {
 	FlatList,
 	SafeAreaView,
 	ScrollView,
+	TouchableOpacity,
 } from 'react-native';
 import Moment from 'moment';
 import { StatusBar } from 'expo-status-bar';
@@ -46,7 +47,7 @@ const TodaysReading = () => {
 							function (r) {
 								return (
 									//r.title == 'track 2' || r.title == 'track 3'
-									r.title == 'track 1'
+									r.title == 'track 1' // for some reason the remove is include
 								);
 							}
 						);
@@ -60,7 +61,8 @@ const TodaysReading = () => {
 							datesMatch[0].tracks,
 							function (r) {
 								return (
-									r.title == 'track 1' || r.title == 'track 2'
+									//r.title == 'track 3'
+									r.title == 'track 1' || r.title == 'track 2' // for some reason the remove is include
 								);
 							}
 						);
@@ -94,11 +96,11 @@ const TodaysReading = () => {
 					data={todaysObject}
 					keyExtractor={(item) => item.title}
 					renderItem={({ item }) => (
-						<View>
+						<TouchableOpacity>
 							<Text>{item.title}</Text>
 							<Text>{item.reading1}</Text>
 							<Text>{item.reading2}</Text>
-						</View>
+						</TouchableOpacity>
 					)}
 				/>
 			)}
