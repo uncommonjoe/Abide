@@ -1,56 +1,64 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { View, Text } from 'react-native';
 
 import { useAuthentication } from '../src/utils/hooks/useAuthentication';
-import { getTrack } from '../src/config/firebase';
+import { getTier } from '../src/config/firebase';
 
 import UserStack from './serStack';
 import AuthStack from './authStack';
 import SelectTrackModal from '../src/pages/users/SelectTrackModal';
+import { initial } from 'lodash';
 
-export default function RootNavigation() {
-	const user = useAuthentication();
+const RootNavigation = () => {
+	const [isLoading, setLoading] = useState(true);
+	const [userObj, setUserObj] = useState({
+		id: '',
+		tier: '',
+	});
+	const componentMounted = useRef(true);
+	const { user } = useAuthentication();
+
+	const getUserTier = async (user) => {
+		// Get user tier from db
+		// const tier = await getTier(user);
+		// return {
+		// 	id: user.uid,
+		// 	tier: tier,
+		// };
+	};
+
+	useEffect(async () => {
+		// setLoading(true);
+		// var response = await getUserTier(user);
+		// setUserObj(response);
+		// setLoading(false);
+		// if (componentMounted.current) {
+		// 	setUserObj(response);
+		// }
+		// return () => {
+		// 	// This code runs when component is unmounted
+		// 	componentMounted.current = false;
+		// };
+	});
+
+	// this goes in an infinite loop
+	//console.log(userObj);
+
+	//return user ? <UserStack /> : <AuthStack />;
 
 	return user ? <UserStack /> : <AuthStack />;
 
-	// let response;
-	// let id;
-	// let tier;
-
-	// const getUserTrack = async (user) => {
-	// 	try {
-	// 		response = await getTrack(user);
-	// 	} catch (error) {
-	// 		console.error(error);
-	// 	}
-	// 	return response;
-	// };
-
-	// useEffect(() => {
-	// 	Promise.all([user]).then((responses) => {
-	// 		getUserTrack(responses[0].user).then((userObj) => {
-	// 			id = user.user.uid;
-	// 			tier = userObj.tier;
-	// 			console.log('user ', user.user.uid);
-	// 			console.log('obj ', userObj.tier);
-	// 		});
-	// 	});
-	// });
-
-	// This doesn't work and I can't figure out why!
-	// "Uncaught TypeError: Cannot read properties of undefined (reading 'state')""
-
-	// console.log('id ', this.state.id);
-	// console.log('tier ', this.state.tier);
-	// if (id && !tier) {
+	// if (userObj.id && !userObj.tier) {
 	// 	console.log('a');
 	// 	return <SelectTrackModal />;
 	// }
-	// if (id && tier) {
+	// if (userObj.id && userObj.tier) {
 	// 	console.log('b');
 	// 	return <UserStack />;
 	// } else {
 	// 	console.log('c');
 	// 	return <AuthStack />;
 	// }
-}
+};
+
+export default RootNavigation;

@@ -49,16 +49,16 @@ const SignInScreen = () => {
 			)}
 
 			<View style={styles.controls}>
+				<Text style={styles.title}>Email</Text>
 				<TextInput
-					placeholder='Email'
-					style={styles.control}
+					style={styles.input}
 					value={value.email}
 					onChangeText={(text) => setValue({ ...value, email: text })}
 				/>
 
+				<Text style={styles.title}>Password</Text>
 				<TextInput
-					placeholder='Password'
-					style={styles.control}
+					style={styles.input}
 					value={value.password}
 					onChangeText={(text) =>
 						setValue({ ...value, password: text })
