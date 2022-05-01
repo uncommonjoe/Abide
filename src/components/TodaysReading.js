@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
+	StyleSheet,
 	View,
 	ActivityIndicator,
 	FlatList,
@@ -9,7 +10,6 @@ import {
 } from 'react-native';
 import Moment from 'moment';
 import { StatusBar } from 'expo-status-bar';
-import styles from '../assets/styles/container.style';
 import { TitleText, Text } from '../assets/styles/Text';
 import { filter, remove } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
@@ -82,6 +82,10 @@ const TodaysReading = () => {
 		}
 	};
 
+	const selectReading = (reading) => {
+		console.log('You selected ', reading);
+	};
+
 	useEffect(() => {
 		getPlan();
 	}, []);
@@ -92,20 +96,45 @@ const TodaysReading = () => {
 			{isLoading ? (
 				<ActivityIndicator />
 			) : (
-				<FlatList
-					data={todaysObject}
-					keyExtractor={(item) => item.title}
-					renderItem={({ item }) => (
-						<TouchableOpacity>
-							<Text>{item.title}</Text>
-							<Text>{item.reading1}</Text>
-							<Text>{item.reading2}</Text>
-						</TouchableOpacity>
-					)}
-				/>
+				<View style={styles.container}>
+					<FlatList
+						horizontal={true}
+						data={todaysObject}
+						keyExtractor={(item) => item.title}
+						renderItem={({ item }) => (
+							<TouchableOpacity
+								key={item}
+								onPress={() => selectReading(item)}
+								style={styles.button}
+							>
+								<Text>{item.title}</Text>
+								<Text>{item.reading1}</Text>
+								<Text>{item.reading2}</Text>
+							</TouchableOpacity>
+						)}
+					/>
+				</View>
 			)}
 		</View>
 	);
 };
+
+const styles = StyleSheet.create({
+	container: {
+		//flex: 1,
+		backgroundColor: 'lightgray',
+		padding: 20,
+	},
+	button: {
+		flex: 1,
+		flexDirection: 'row',
+		flexGrow: 1,
+		backgroundColor: 'white',
+		marginHorizontal: 10,
+		marginBottom: 6,
+		paddingHorizontal: 15,
+		paddingVertical: 6,
+	},
+});
 
 export default TodaysReading;
