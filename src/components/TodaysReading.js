@@ -13,6 +13,7 @@ import { StatusBar } from 'expo-status-bar';
 import { TitleText, Text } from '../assets/styles/Text';
 import { filter, remove } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
+import ReadScreen from '../pages/scriptures/ReadScreen';
 
 const TodaysReading = () => {
 	const [isLoading, setLoading] = useState(true);
@@ -84,6 +85,7 @@ const TodaysReading = () => {
 
 	const selectReading = (reading) => {
 		console.log('You selected ', reading);
+		navigation.navigate('ReadScreen');
 	};
 
 	useEffect(() => {

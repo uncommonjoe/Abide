@@ -7,13 +7,27 @@ import {
 	faToolbox,
 	faSliders,
 } from '@fortawesome/free-solid-svg-icons';
+import { createStackNavigator } from '@react-navigation/stack';
 
 // Pages
 import HomePage from '../src/pages/Home';
+import ReadScreen from '../src/pages/scriptures/ReadScreen';
 import Toolbox from '../src/pages/Toolbox';
 import Settings from '../src/pages/Settings';
 
+const Home = createStackNavigator();
 const BottomNavigation = createBottomTabNavigator();
+
+var homeStack = () => (
+	<Home.Navigator
+		screenOptions={() => ({
+			gestureEnabled: true,
+		})}
+	>
+		<Home.Screen name='Home' component={HomePage} />
+		<Home.Screen name='Read' component={ReadScreen} />
+	</Home.Navigator>
+);
 
 export default function UserStack() {
 	return (
@@ -31,9 +45,10 @@ export default function UserStack() {
 			>
 				<BottomNavigation.Screen
 					name='Main'
-					component={HomePage}
+					children={homeStack}
 					options={{
 						headerShown: false,
+						hideTabBar: true,
 						tabBarLabel: '',
 						tabBarIcon: ({ color, size }) => (
 							<FontAwesomeIcon
