@@ -48,7 +48,7 @@ export const addTrack = async (props) => {
 	}
 };
 
-export const getTier = async (user) => {
+export const getUserSettings = async (user) => {
 	let userObj;
 	if (user) {
 		try {

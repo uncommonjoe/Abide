@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 const auth = getAuth();
 
-export function useAuthentication() {
-	const [user, setUser] = React.useState();
+const useAuthentication = () => {
+	const [user, setUser] = useState();
 
-	React.useEffect(() => {
+	useEffect(() => {
 		const unsubscribeFromAuthStatuChanged = onAuthStateChanged(
 			auth,
 			(user) => {
@@ -25,7 +25,7 @@ export function useAuthentication() {
 		return unsubscribeFromAuthStatuChanged;
 	}, []);
 
-	return {
-		user,
-	};
-}
+	return { user };
+};
+
+export default useAuthentication;

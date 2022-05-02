@@ -2,7 +2,7 @@ import React from 'react';
 import { View, SafeAreaView, Button } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { TitleText, Text } from '../assets/styles/Text';
-import { useAuthentication } from '../utils/hooks/useAuthentication';
+import useAuthentication from '../utils/hooks/useAuthentication';
 import { signOut, getAuth } from 'firebase/auth';
 
 export default function Settings() {

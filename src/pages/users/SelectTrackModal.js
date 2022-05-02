@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
 import RadioButton from '../../components/RadioButton';
-import { useAuthentication } from '../../../src/utils/hooks/useAuthentication';
+import useAuthentication from '../../../src/utils/hooks/useAuthentication';
 import { addTrack } from '../../../src/config/firebase';
 
 const SelectTrackModal = () => {
