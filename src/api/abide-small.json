@@ -21,23 +21,33 @@
 			]
 		},
 		{
-			"id": 2,
 			"date": "Tue, Jul 5, 2022",
-			"tracks": [
+			"readings": [
 				{
-					"title": "track 1",
-					"reading1": "Matt 2",
-					"reading2": "2 Cor 2"
+					"track": "track 1",
+					"title": "Reading 1",
+					"passage": "Matt 2"
 				},
 				{
-					"title": "track 2",
-					"reading1": "Prov 2"
+					"track": "track 1",
+					"title": "Reading 2",
+					"passage": "2 Cor 2"
+				},
+				{
+					"track": "track 2",
+					"title": "Reading 2",
+					"passage": "Prov 2"
 				},
 
 				{
-					"title": "track 3",
-					"reading1": "Gen 2",
-					"reading2": "2 Chr 2"
+					"track": "track 3",
+					"title": "Reading 1",
+					"passage": "Gen 2"
+				},
+				{
+					"track": "track 3",
+					"title": "Reading 1",
+					"passage": "2 Chr 2"
 				}
 			]
 		},
