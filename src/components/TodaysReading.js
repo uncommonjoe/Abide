@@ -9,7 +9,6 @@ import {
 import { TitleText, Text } from '../assets/styles/Text';
 import { filter } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
-import ReadScreen from '../pages/scriptures/ReadScreen';
 
 const TodaysReading = () => {
 	const [isLoading, setLoading] = useState(true);
@@ -19,8 +18,8 @@ const TodaysReading = () => {
 	const userObj = {
 		myTrack: 'track 3',
 	};
-
-	const userTrackNum = userObj.myTrack.match(/\d+/)[0];
+	console.log('global user ', global.user);
+	console.log('global prefs ', global.usrSettngs);
 
 	const getPlan = async () => {
 		let pickTracks = [];
@@ -54,7 +53,6 @@ const TodaysReading = () => {
 						},
 					];
 
-					console.log('track 1', pickTracks);
 					setTodaysObject(pickTracks);
 					break;
 
@@ -77,7 +75,6 @@ const TodaysReading = () => {
 						},
 					];
 
-					console.log('track 2', pickTracks);
 					setTodaysObject(pickTracks);
 					break;
 
@@ -101,16 +98,15 @@ const TodaysReading = () => {
 						{
 							title: 'Reading 4',
 							track: 'Track 3',
-							passage: datesMatch[0].tracks.track1[0].reading4,
+							passage: datesMatch[0].tracks.track3[0].reading4,
 						},
 						{
 							title: 'Reading 5',
 							track: 'Track 3',
-							passage: datesMatch[0].tracks.track1[1].reading5,
+							passage: datesMatch[0].tracks.track3[1].reading5,
 						},
 					];
 
-					console.log('track 3', pickTracks);
 					setTodaysObject(pickTracks);
 					break;
 			}
@@ -118,16 +114,17 @@ const TodaysReading = () => {
 			console.error(error);
 		} finally {
 			setLoading(false);
-			console.log(todaysObject);
 		}
 	};
 
 	const selectReading = (reading) => {
 		console.log('You selected ', reading);
-		navigation.navigate('ReadScreen');
+		navigation.navigate('Read', { reading: reading });
 	};
 
 	useEffect(() => {
+		console.log('global user ', global.user);
+		console.log('global prefs ', global.usrSettngs);
 		getPlan();
 	}, []);
 

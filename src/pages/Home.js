@@ -8,10 +8,6 @@ import Calendar from '../components/Calendar';
 const HomePage = () => {
 	const navigation = useNavigation();
 
-	const userObj = {
-		myTrack: 'track 3',
-	};
-
 	let getDate = new Date();
 	let today = Moment(getDate).format('dd, MMM d, YYYY');
 

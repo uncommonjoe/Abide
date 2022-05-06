@@ -2,13 +2,14 @@ import React, { useEffect, useState, useRef } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Text, TitleText } from '../assets/styles/Text';
 
-const Scripture = ({ passage }) => {
+const Scripture = ({ reading }) => {
 	const [isLoading, setLoading] = useState(true);
+	console.log(reading);
 
 	return (
 		<View>
 			<Text>Scripture</Text>
-			<Text>{passage}</Text>
+			<Text>{reading.passage}</Text>
 		</View>
 	);
 };

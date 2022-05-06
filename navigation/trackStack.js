@@ -20,7 +20,6 @@ export default function AuthStack() {
 						...TransitionPresets.DefaultTransition,
 					}}
 				/>
-				<Stack.Screen name='Home' component={HomeScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

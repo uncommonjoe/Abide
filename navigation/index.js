@@ -11,8 +11,8 @@ import SelectTrackModal from '../src/pages/users/SelectTrackModal';
 const RootNavigation = () => {
 	const { user } = useAuthentication();
 	const { usrSettngs } = userSettings();
-
-	console.log('settings ', usrSettngs);
+	global.user = user;
+	global.usrSettngs = usrSettngs;
 
 	return user ? <UserStack /> : <AuthStack />;
 
