@@ -13,19 +13,27 @@ import {
 } from 'firebase/firestore';
 
 import 'firebase/auth';
-import Constants from 'expo-constants';
+//import Constants from 'expo-constants';
+import {
+	FIREBASE_API_KEY,
+	FIREBASE_AUTH_DOMAIN,
+	FIREBASE_PROJECT_ID,
+	FIREBASE_STORAGE_BUCKET,
+	FIREBASE_APP_ID,
+	FIREBASE_MEASUREMENT_ID,
+} from '@env';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 const firebaseConfig = {
-	apiKey: Constants.manifest?.extra?.firebaseApiKey,
-	authDomain: Constants.manifest?.extra?.firebaseAuthDomain,
-	projectId: Constants.manifest?.extra?.firebaseProjectId,
-	storageBucket: Constants.manifest?.extra?.firebaseStorageBucket,
-	messagingSenderId: Constants.manifest?.extra?.firebaseMessagingSenderId,
-	appId: Constants.manifest?.extra?.firebaseAppId,
-	measurementId: Constants.manifest?.extra?.measurementId,
+	apiKey: FIREBASE_API_KEY,
+	authDomain: FIREBASE_AUTH_DOMAIN,
+	projectId: FIREBASE_PROJECT_ID,
+	storageBucket: FIREBASE_STORAGE_BUCKET,
+	messagingSenderId: FIREBASE_APP_ID,
+	appId: FIREBASE_APP_ID,
+	measurementId: FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
