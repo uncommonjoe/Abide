@@ -7,7 +7,7 @@ import {
 	faToolbox,
 	faSliders,
 } from '@fortawesome/free-solid-svg-icons';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // Pages
 import HomePage from '../src/pages/Home';
@@ -15,7 +15,7 @@ import ReadScreen from '../src/pages/scriptures/ReadScreen';
 import Toolbox from '../src/pages/Toolbox';
 import Settings from '../src/pages/Settings';
 
-const Home = createStackNavigator();
+const Home = createNativeStackNavigator();
 const BottomNavigation = createBottomTabNavigator();
 
 var homeStack = () => (
@@ -31,66 +31,64 @@ var homeStack = () => (
 
 export default function UserStack() {
 	return (
-		<NavigationContainer>
-			<BottomNavigation.Navigator
-				screenOptions={{
-					tabBarStyle: {
-						backgroundColor: 'white',
-						borderTopWidth: 1,
-						borderTopColor: '#F0F0F0',
-						justifyContent: 'center',
-						height: 85,
-					},
+		<BottomNavigation.Navigator
+			screenOptions={{
+				tabBarStyle: {
+					backgroundColor: 'white',
+					borderTopWidth: 1,
+					borderTopColor: '#F0F0F0',
+					justifyContent: 'center',
+					height: 85,
+				},
+			}}
+		>
+			<BottomNavigation.Screen
+				name='Main'
+				children={homeStack}
+				options={{
+					headerShown: false,
+					hideTabBar: true,
+					tabBarLabel: '',
+					tabBarIcon: ({ color, size }) => (
+						<FontAwesomeIcon
+							icon={faHouse}
+							color={color}
+							size={size}
+						/>
+					),
 				}}
-			>
-				<BottomNavigation.Screen
-					name='Main'
-					children={homeStack}
-					options={{
-						headerShown: false,
-						hideTabBar: true,
-						tabBarLabel: '',
-						tabBarIcon: ({ color, size }) => (
-							<FontAwesomeIcon
-								icon={faHouse}
-								color={color}
-								size={size}
-							/>
-						),
-					}}
-				/>
+			/>
 
-				<BottomNavigation.Screen
-					name='Toolbox'
-					component={Toolbox}
-					options={{
-						headerShown: false,
-						tabBarLabel: '',
-						tabBarIcon: ({ color, size }) => (
-							<FontAwesomeIcon
-								icon={faToolbox}
-								color={color}
-								size={size}
-							/>
-						),
-					}}
-				/>
-				<BottomNavigation.Screen
-					name='Settings'
-					component={Settings}
-					options={{
-						headerShown: false,
-						tabBarLabel: '',
-						tabBarIcon: ({ color, size }) => (
-							<FontAwesomeIcon
-								icon={faSliders}
-								color={color}
-								size={size}
-							/>
-						),
-					}}
-				/>
-			</BottomNavigation.Navigator>
-		</NavigationContainer>
+			<BottomNavigation.Screen
+				name='Toolbox'
+				component={Toolbox}
+				options={{
+					headerShown: false,
+					tabBarLabel: '',
+					tabBarIcon: ({ color, size }) => (
+						<FontAwesomeIcon
+							icon={faToolbox}
+							color={color}
+							size={size}
+						/>
+					),
+				}}
+			/>
+			<BottomNavigation.Screen
+				name='Settings'
+				component={Settings}
+				options={{
+					headerShown: false,
+					tabBarLabel: '',
+					tabBarIcon: ({ color, size }) => (
+						<FontAwesomeIcon
+							icon={faSliders}
+							color={color}
+							size={size}
+						/>
+					),
+				}}
+			/>
+		</BottomNavigation.Navigator>
 	);
 }

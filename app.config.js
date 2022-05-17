@@ -1,5 +1,3 @@
-import 'dotenv/config';
-
 export default {
 	expo: {
 		name: 'abide',
@@ -18,8 +16,12 @@ export default {
 		assetBundlePatterns: ['**/*'],
 		ios: {
 			supportsTablet: true,
+			bundleIdentifier: 'org.cornerstonebillings.abide',
+			googleServicesFile: './src/config/GoogleService-Info.plist',
 		},
 		android: {
+			package: 'org.cornerstonebillings.abide',
+			googleServicesFile: './src/config/google-services.json',
 			adaptiveIcon: {
 				foregroundImage: './src/assets/img/adaptive-icon.png',
 				backgroundColor: '#FFFFFF',
@@ -28,5 +30,13 @@ export default {
 		web: {
 			favicon: './src/assets/img/favicon.png',
 		},
+		// extra: {
+		// 	firebaseApiKey: process.env.FIREBASE_API_KEY,
+		// 	firebaseAuthDomain: process.env.FIREBASE_AUTH_DOMAIN,
+		// 	firebaseProjectId: process.env.FIREBASE_PROJECT_ID,
+		// 	firebaseStorageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+		// 	firebaseAppId: process.env.FIREBASE_APP_ID,
+		// 	measurementId: process.env.FIREBASE_MEASUREMENT_ID,
+		// },
 	},
 };

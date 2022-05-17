@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "585698451422",
+    "project_id": "abide-f6023",
+    "storage_bucket": "abide-f6023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585698451422:android:3866202e4dc2ef8c9b874f",
+        "android_client_info": {
+          "package_name": "org.cornerstonebillings.abide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585698451422-nq7f35552b32bd6delqkakk3pe0ms0ki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwefmraWte08kits7mojp3DQllP52eH0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585698451422-nq7f35552b32bd6delqkakk3pe0ms0ki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
