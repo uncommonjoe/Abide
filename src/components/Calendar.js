@@ -11,7 +11,7 @@ import { Text, TitleText } from '../assets/styles/Text';
 import { map } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
 
-const Calendar = (today) => {
+const Calendar = ({ setSelectedDay }) => {
 	const [isLoading, setLoading] = useState(true);
 	const [currentWeek, setCurrentWeek] = useState(null);
 	const componentMounted = useRef(true);
@@ -36,7 +36,7 @@ const Calendar = (today) => {
 			const dayObj = {
 				title: m.format('dd'),
 				day: m.format('DD'),
-				date: m,
+				date: m.format('ddd, MMM D, YYYY'),
 			};
 
 			week.push(dayObj);
@@ -48,6 +48,10 @@ const Calendar = (today) => {
 	};
 
 	const selectDay = (day) => {
+		let selectedDay = Moment(day.date)
+			.add(1, 'y')
+			.format('ddd, MMM D, YYYY'); // TODO: For testing purposes. Remove before production
+		setSelectedDay(selectedDay);
 		console.log('You selected ', day);
 	};
 
@@ -71,10 +75,6 @@ const Calendar = (today) => {
 	return (
 		<View>
 			<TitleText>Calendar</TitleText>
-
-			<Text>
-				{'Current Date'} - {today.date}
-			</Text>
 
 			<View style={styles.container}>
 				<FlatList

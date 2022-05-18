@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, Text, SafeAreaView, ScrollView } from 'react-native';
 import Moment from 'moment';
-import { useNavigation } from '@react-navigation/native';
 import TodaysReading from '../components/TodaysReading';
 import Calendar from '../components/Calendar';
 
 const HomePage = () => {
-	const navigation = useNavigation();
-
+	// Get today's date to default into Today's Reading and Calendar
 	let getDate = new Date();
-	let today = Moment(getDate).format('dd, MMM d, YYYY');
 
-	useEffect(() => {}, []);
+	// addYear is just to use next years data
+	let addYear = Moment(getDate).add(1, 'y'); // TODO: For testing purposes. Remove before production
+
+	// Format the date
+	let today = Moment(addYear).format('ddd, MMM D, YYYY');
+
+	// Create selectedDay state and default it to today
+	const [selectedDay, setSelectedDay] = useState(today);
 
 	return (
 		<ScrollView
@@ -19,9 +23,8 @@ const HomePage = () => {
 			contentInsetAdjustmentBehavior='automatic'
 		>
 			<SafeAreaView>
-				<Calendar date={today} />
-
-				<TodaysReading date={today} />
+				<Calendar setSelectedDay={setSelectedDay} />
+				<TodaysReading selectedDay={selectedDay} />
 			</SafeAreaView>
 		</ScrollView>
 	);

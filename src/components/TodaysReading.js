@@ -10,105 +10,127 @@ import { TitleText, Text } from '../assets/styles/Text';
 import { filter } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
 
-const TodaysReading = () => {
+const TodaysReading = ({ selectedDay }) => {
 	const [isLoading, setLoading] = useState(true);
 	const [todaysObject, setTodaysObject] = useState(null);
+	const [hasTracks, setHasTracks] = useState(false);
 	const navigation = useNavigation();
 
+	// TODO: get users selected track
 	const userObj = {
 		myTrack: 'track 3',
 	};
-	console.log('global user ', global.user);
-	console.log('global prefs ', global.usrSettngs);
+	// console.log('global user ', global.user);
+	// console.log('global prefs ', global.usrSettngs);
 
-	const getPlan = async () => {
+	const getPlan = async (selectedDay) => {
 		let pickTracks = [];
 		try {
 			const response = await fetch(
-				'https://cornerstonebillings.org/api/abide.json?v=5'
+				'https://cornerstonebillings.org/api/abide.json?v=6'
 			);
 			const json = await response.json();
 
 			// Filter plans and get the object that matches todays date
 			const datesMatch = filter(json.plans, function (p) {
-				if (p.date == 'Tue, Jul 5, 2022') {
+				if (p.date == selectedDay) {
 					// Filter track by users selected track
 					return p.date;
 				}
 			});
 
-			// Create collection of tracks based on users selected track
-			switch (userObj.myTrack) {
-				case 'track 1':
-					pickTracks = [
-						{
-							title: 'Reading 1',
-							track: 'Track 1',
-							passage: datesMatch[0].tracks.track1[0].reading1,
-						},
-						{
-							title: 'Reading 2',
-							track: 'Track 1',
-							passage: datesMatch[0].tracks.track1[1].reading2,
-						},
-					];
+			if (datesMatch.length > 0) {
+				setHasTracks(true);
 
-					setTodaysObject(pickTracks);
-					break;
+				// Create collection of tracks based on users selected track
+				switch (userObj.myTrack) {
+					case 'track 1':
+						pickTracks = [
+							{
+								title: 'Reading 1',
+								track: 'Track 1',
+								passage:
+									datesMatch[0].tracks.track1[0].reading1,
+							},
+							{
+								title: 'Reading 2',
+								track: 'Track 1',
+								passage:
+									datesMatch[0].tracks.track1[1].reading2,
+							},
+						];
 
-				case 'track 2':
-					pickTracks = [
-						{
-							title: 'Reading 1',
-							track: 'Track 1',
-							passage: datesMatch[0].tracks.track1[0].reading1,
-						},
-						{
-							title: 'Reading 2',
-							track: 'Track 1',
-							passage: datesMatch[0].tracks.track1[1].reading2,
-						},
-						{
-							title: 'Reading 3',
-							track: 'Track 2',
-							passage: datesMatch[0].tracks.track2[0].reading3,
-						},
-					];
+						setTodaysObject(pickTracks);
+						break;
 
-					setTodaysObject(pickTracks);
-					break;
+					case 'track 2':
+						pickTracks = [
+							{
+								title: 'Reading 1',
+								track: 'Track 1',
+								passage:
+									datesMatch[0].tracks.track1[0].reading1,
+							},
+							{
+								title: 'Reading 2',
+								track: 'Track 1',
+								passage:
+									datesMatch[0].tracks.track1[1].reading2,
+							},
+							{
+								title: 'Reading 3',
+								track: 'Track 2',
+								passage:
+									datesMatch[0].tracks.track2[0].reading3,
+							},
+						];
 
-				case 'track 3':
-					pickTracks = [
-						{
-							title: 'Reading 1',
-							track: 'Track 1',
-							passage: datesMatch[0].tracks.track1[0].reading1,
-						},
-						{
-							title: 'Reading 2',
-							track: 'Track 1',
-							passage: datesMatch[0].tracks.track1[1].reading2,
-						},
-						{
-							title: 'Reading 3',
-							track: 'Track 2',
-							passage: datesMatch[0].tracks.track2[0].reading3,
-						},
-						{
-							title: 'Reading 4',
-							track: 'Track 3',
-							passage: datesMatch[0].tracks.track3[0].reading4,
-						},
-						{
-							title: 'Reading 5',
-							track: 'Track 3',
-							passage: datesMatch[0].tracks.track3[1].reading5,
-						},
-					];
+						setTodaysObject(pickTracks);
+						break;
 
-					setTodaysObject(pickTracks);
-					break;
+					case 'track 3':
+						pickTracks = [
+							{
+								title: 'Reading 1',
+								track: 'Track 1',
+								passage:
+									datesMatch[0].tracks.track1[0].reading1,
+							},
+							{
+								title: 'Reading 2',
+								track: 'Track 1',
+								passage:
+									datesMatch[0].tracks.track1[1].reading2,
+							},
+							{
+								title: 'Reading 3',
+								track: 'Track 2',
+								passage:
+									datesMatch[0].tracks.track2[0].reading3,
+							},
+							{
+								title: 'Reading 4',
+								track: 'Track 3',
+								passage:
+									datesMatch[0].tracks.track3[0].reading4,
+							},
+							{
+								title: 'Reading 5',
+								track: 'Track 3',
+								passage:
+									datesMatch[0].tracks.track3[1].reading5,
+							},
+						];
+
+						setTodaysObject(pickTracks);
+						break;
+
+					default:
+						setHasTracks(false);
+				}
+			} else {
+				setTodaysObject([]);
+				setHasTracks(false);
 			}
 		} catch (error) {
 			console.error(error);
@@ -118,15 +140,12 @@ const TodaysReading = () => {
 	};
 
 	const selectReading = (reading) => {
-		console.log('You selected ', reading);
 		navigation.navigate('Read', { reading: reading });
 	};
 
 	useEffect(() => {
-		console.log('global user ', global.user);
-		console.log('global prefs ', global.usrSettngs);
-		getPlan();
-	}, []);
+		getPlan(selectedDay);
+	}, [selectedDay]);
 
 	return (
 		<View>
@@ -150,6 +169,13 @@ const TodaysReading = () => {
 								<Text>{item.passage}</Text>
 							</TouchableOpacity>
 						)}
+						ListEmptyComponent={() =>
+							todaysObject.length == 0 && (
+								<Text>
+									No reading for today. Select another date.
+								</Text>
+							)
+						}
 					/>
 				</View>
 			)}
