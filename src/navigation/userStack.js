@@ -10,10 +10,10 @@ import {
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // Pages
-import HomePage from '../src/pages/Home';
-import ReadScreen from '../src/pages/scriptures/ReadScreen';
-import Toolbox from '../src/pages/Toolbox';
-import Settings from '../src/pages/Settings';
+import HomePage from '../pages/Home';
+import ReadScreen from '../pages/scriptures/ReadScreen';
+import Toolbox from '../pages/Toolbox';
+import Settings from '../pages/Settings';
 
 const Home = createNativeStackNavigator();
 const BottomNavigation = createBottomTabNavigator();

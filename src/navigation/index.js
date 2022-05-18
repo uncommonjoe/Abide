@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { View, Text } from 'react-native';
 
-import useAuthentication from '../src/utils/hooks/useAuthentication';
-import userSettings from '../src/utils/hooks/userSettings';
+import useAuthentication from '../utils/hooks/useAuthentication';
+import userSettings from '../utils/hooks/userSettings';
 
-import UserStack from './serStack';
+import UserStack from './userStack';
 import AuthStack from './authStack';
-import SelectTrackModal from '../src/pages/users/SelectTrackModal';
+import SelectTrackModal from '../pages/users/SelectTrackModal';
 
 const RootNavigation = () => {
 	const { user } = useAuthentication();

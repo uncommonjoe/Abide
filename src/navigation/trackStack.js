@@ -2,8 +2,8 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import HomeScreen from '../src/pages/Home';
-import SelectTrackModal from '../src/pages/users/SelectTrackModal';
+import HomeScreen from '../pages/Home';
+import SelectTrackModal from '../pages/users/SelectTrackModal';
 
 const Stack = createNativeStackNavigator();
 
