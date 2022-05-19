@@ -29,7 +29,7 @@ const TodaysReading = ({ selectedDay }) => {
 		let pickTracks = [];
 		try {
 			const response = await fetch(
-				'https://cornerstonebillings.org/api/abide.json?v=6'
+				'https://cornerstonebillings.org/api/abide.json?v=7'
 			);
 			const json = await response.json();
 
@@ -156,7 +156,7 @@ const TodaysReading = ({ selectedDay }) => {
 			case 'Reading 4':
 				return { backgroundColor: '#756757' };
 			case 'Reading 5':
-				return { backgroundColor: '#596B55' };
+				return { backgroundColor: '#6E260E' };
 		}
 	};
 
@@ -175,7 +175,7 @@ const TodaysReading = ({ selectedDay }) => {
 				<FlatList
 					data={todaysObject}
 					keyExtractor={(item) => item.title}
-					horizontal={true}
+					horizontal={todaysObject.length == 0 ? false : true}
 					renderItem={({ item }) => (
 						<TouchableOpacity
 							key={item}
@@ -189,9 +189,11 @@ const TodaysReading = ({ selectedDay }) => {
 					)}
 					ListEmptyComponent={() =>
 						todaysObject.length == 0 && (
-							<Text>
-								No reading for today. Select another date.
-							</Text>
+							<View style={styles.noReadingWrap}>
+								<Text style={styles.noReading}>
+									No reading for today. Select another date.
+								</Text>
+							</View>
 						)
 					}
 				/>
@@ -228,6 +230,15 @@ const styles = StyleSheet.create({
 		fontSize: 22,
 		marginBottom: 30,
 		textTransform: 'uppercase',
+	},
+	noReadingWrap: {
+		backgroundColor: '#DDDCE3',
+		paddingHorizontal: 20,
+		paddingVertical: 80,
+		textAlign: 'center',
+	},
+	noReading: {
+		color: '#7D7B84',
 	},
 });
 
