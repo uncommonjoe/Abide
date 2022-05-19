@@ -23,7 +23,10 @@ const HomePage = () => {
 			contentInsetAdjustmentBehavior='automatic'
 		>
 			<SafeAreaView>
-				<Calendar setSelectedDay={setSelectedDay} />
+				<Calendar
+					setSelectedDay={setSelectedDay}
+					selectedDay={selectedDay}
+				/>
 				<TodaysReading selectedDay={selectedDay} />
 			</SafeAreaView>
 		</ScrollView>

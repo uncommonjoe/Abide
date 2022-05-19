@@ -10,8 +10,9 @@ import Moment from 'moment';
 import { Text, TitleText } from '../assets/styles/Text';
 import { Montserrat } from '@expo-google-fonts/inter';
 
-const Calendar = ({ setSelectedDay }) => {
+const Calendar = ({ setSelectedDay, selectedDay }) => {
 	const [currentWeek, setCurrentWeek] = useState(null);
+	const [selected, setSelected] = useState(null);
 	const componentMounted = useRef(true);
 
 	const getWeekRange = () => {
@@ -46,14 +47,28 @@ const Calendar = ({ setSelectedDay }) => {
 	};
 
 	const selectDay = (day) => {
-		let selectedDay = Moment(day.date)
+		let newSelectedDay = Moment(day.date)
 			.add(1, 'y')
 			.format('ddd, MMM D, YYYY'); // TODO: For testing purposes. Remove before production
-		setSelectedDay(selectedDay);
+		setSelectedDay(newSelectedDay);
+		setSelected(day.date);
 		console.log('You selected ', day);
 	};
 
+	// TODO: For testing purposes. Remove whole method before production
+	const convertDate = (date) => {
+		let convertedDate = Moment(date)
+			.subtract(1, 'y')
+			.format('ddd, MMM D, YYYY');
+		setSelected(convertedDate);
+	};
+
+	const activeStyle = (day) => {};
+
 	useEffect(async () => {
+		// Initialize selected date
+		convertDate(selectedDay);
+
 		var someResponse = await getWeekRange();
 		setCurrentWeek(someResponse);
 
@@ -78,10 +93,31 @@ const Calendar = ({ setSelectedDay }) => {
 					<TouchableOpacity
 						key={item}
 						onPress={() => selectDay(item)}
-						style={styles.button}
+						style={[
+							styles.button,
+							item.date === selected ? styles.selected : null,
+						]}
 					>
-						<Text style={styles.month}>{item.title}</Text>
-						<Text style={styles.day}>{item.day}</Text>
+						<Text
+							style={[
+								styles.month,
+								item.date === selected
+									? { color: 'white' }
+									: { color: '#2A292E' },
+							]}
+						>
+							{item.title}
+						</Text>
+						<Text
+							style={[
+								styles.day,
+								item.date === selected
+									? { color: 'white' }
+									: { color: '#AFADB9' },
+							]}
+						>
+							{item.day}
+						</Text>
 					</TouchableOpacity>
 				)}
 			/>
@@ -102,8 +138,11 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		marginHorizontal: 10,
 		marginBottom: 6,
-		paddingHorizontal: 5,
+		paddingHorizontal: 10,
 		paddingVertical: 12,
+	},
+	selected: {
+		backgroundColor: '#454C57',
 	},
 	month: {
 		fontWeight: '700',
@@ -111,7 +150,6 @@ const styles = StyleSheet.create({
 		marginBottom: 20,
 	},
 	day: {
-		color: '#AFADB9',
 		fontSize: 16,
 	},
 });
