@@ -28,7 +28,7 @@ var homeStack = () => (
 			name='Home'
 			component={HomePage}
 			options={{
-				header: () => <Header />,
+				header: () => null,
 			}}
 		/>
 		<Home.Screen
