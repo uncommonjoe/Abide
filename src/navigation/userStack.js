@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {
@@ -8,6 +7,7 @@ import {
 	faSliders,
 } from '@fortawesome/free-solid-svg-icons';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Header from '../components/Header';
 
 // Pages
 import HomePage from '../pages/Home';
@@ -24,8 +24,20 @@ var homeStack = () => (
 			gestureEnabled: true,
 		})}
 	>
-		<Home.Screen name='Home' component={HomePage} />
-		<Home.Screen name='Read' component={ReadScreen} />
+		<Home.Screen
+			name='Home'
+			component={HomePage}
+			options={{
+				header: () => <Header />,
+			}}
+		/>
+		<Home.Screen
+			name='Read'
+			component={ReadScreen}
+			options={{
+				header: () => <Header />,
+			}}
+		/>
 	</Home.Navigator>
 );
 
