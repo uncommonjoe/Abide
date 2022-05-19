@@ -2,17 +2,15 @@ import React, { useEffect, useState, useRef } from 'react';
 import {
 	StyleSheet,
 	View,
-	ActivityIndicator,
 	FlatList,
 	TouchableOpacity,
+	Dimensions,
 } from 'react-native';
 import Moment from 'moment';
 import { Text, TitleText } from '../assets/styles/Text';
-import { map } from 'lodash';
-import { useNavigation } from '@react-navigation/native';
+import { Montserrat } from '@expo-google-fonts/inter';
 
 const Calendar = ({ setSelectedDay }) => {
-	const [isLoading, setLoading] = useState(true);
 	const [currentWeek, setCurrentWeek] = useState(null);
 	const componentMounted = useRef(true);
 
@@ -56,62 +54,65 @@ const Calendar = ({ setSelectedDay }) => {
 	};
 
 	useEffect(async () => {
-		setLoading(true);
 		var someResponse = await getWeekRange();
 		setCurrentWeek(someResponse);
-		setLoading(false);
 
 		if (componentMounted.current) {
-			// (5) is component still mounted?
-			setCurrentWeek(someResponse); // (1) write data to state
-			setLoading(false); // (2) write some value to state
+			setCurrentWeek(someResponse);
 		}
 		return () => {
 			// This code runs when component is unmounted
-			componentMounted.current = false; // (4) set it to false when we leave the page
+			componentMounted.current = false; // set it to false when we leave the page
 		};
 	}, []);
 
 	return (
 		<View>
-			<TitleText>Calendar</TitleText>
+			<TitleText style={{ marginBottom: 20 }}>Calendar</TitleText>
 
-			<View style={styles.container}>
-				<FlatList
-					horizontal={true}
-					data={currentWeek}
-					keyExtractor={(item) => item.day}
-					renderItem={({ item }) => (
-						<TouchableOpacity
-							key={item}
-							onPress={() => selectDay(item)}
-							style={styles.button}
-						>
-							<Text>{item.title}</Text>
-							<Text>{item.day}</Text>
-						</TouchableOpacity>
-					)}
-				/>
-			</View>
+			<FlatList
+				data={currentWeek}
+				keyExtractor={(item) => item.day}
+				contentContainerStyle={styles.container}
+				renderItem={({ item }) => (
+					<TouchableOpacity
+						key={item}
+						onPress={() => selectDay(item)}
+						style={styles.button}
+					>
+						<Text style={styles.month}>{item.title}</Text>
+						<Text style={styles.day}>{item.day}</Text>
+					</TouchableOpacity>
+				)}
+			/>
 		</View>
 	);
 };
 
 const styles = StyleSheet.create({
 	container: {
-		//flex: 1,
-		backgroundColor: 'lightgray',
-		padding: 20,
+		backgroundColor: 'white',
+		padding: 12,
+		flexDirection: 'row',
+		justifyContent: 'space-between',
 	},
 	button: {
-		flex: 1,
-		flexDirection: 'row',
-		flexGrow: 1,
-		backgroundColor: 'white',
+		backgroundColor: 'transparent',
+		flexDirection: 'column',
+		alignItems: 'center',
 		marginHorizontal: 10,
 		marginBottom: 6,
-		paddingHorizontal: 15,
-		paddingVertical: 6,
+		paddingHorizontal: 5,
+		paddingVertical: 12,
+	},
+	month: {
+		fontWeight: '700',
+		fontSize: 14,
+		marginBottom: 20,
+	},
+	day: {
+		color: '#AFADB9',
+		fontSize: 16,
 	},
 });
 

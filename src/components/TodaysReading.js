@@ -5,10 +5,12 @@ import {
 	ActivityIndicator,
 	FlatList,
 	TouchableOpacity,
+	Dimensions,
 } from 'react-native';
 import { TitleText, Text } from '../assets/styles/Text';
 import { filter } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
+import { Montserrat } from '@expo-google-fonts/inter';
 
 const TodaysReading = ({ selectedDay }) => {
 	const [isLoading, setLoading] = useState(true);
@@ -149,55 +151,64 @@ const TodaysReading = ({ selectedDay }) => {
 
 	return (
 		<View>
-			<TitleText>Today's Reading</TitleText>
+			<TitleText style={{ marginBottom: 20, marginTop: 40 }}>
+				Today's Reading
+			</TitleText>
 			{isLoading ? (
 				<ActivityIndicator />
 			) : (
-				<View style={styles.container}>
-					<FlatList
-						horizontal={true}
-						data={todaysObject}
-						keyExtractor={(item) => item.title}
-						renderItem={({ item }) => (
-							<TouchableOpacity
-								key={item}
-								onPress={() => selectReading(item)}
-								style={styles.button}
-							>
-								<Text>{item.title}</Text>
-								<Text>{item.track}</Text>
-								<Text>{item.passage}</Text>
-							</TouchableOpacity>
-						)}
-						ListEmptyComponent={() =>
-							todaysObject.length == 0 && (
-								<Text>
-									No reading for today. Select another date.
-								</Text>
-							)
-						}
-					/>
-				</View>
+				<FlatList
+					data={todaysObject}
+					keyExtractor={(item) => item.title}
+					horizontal={true}
+					renderItem={({ item }) => (
+						<TouchableOpacity
+							key={item}
+							onPress={() => selectReading(item)}
+							style={styles.button}
+						>
+							<Text style={styles.track}>{item.track}</Text>
+							<Text style={styles.reading}>{item.title}</Text>
+							<Text style={styles.passage}>{item.passage}</Text>
+						</TouchableOpacity>
+					)}
+					ListEmptyComponent={() =>
+						todaysObject.length == 0 && (
+							<Text>
+								No reading for today. Select another date.
+							</Text>
+						)
+					}
+				/>
 			)}
 		</View>
 	);
 };
 
 const styles = StyleSheet.create({
-	container: {
-		//flex: 1,
-		backgroundColor: 'lightgray',
+	button: {
+		backgroundColor: '#454C57',
+		flexDirection: 'column',
+		marginHorizontal: 5,
+		marginBottom: 6,
 		padding: 20,
 	},
-	button: {
-		flex: 1,
-		flexDirection: 'row',
-		flexGrow: 1,
-		backgroundColor: 'white',
-		marginHorizontal: 10,
-		marginBottom: 6,
-		paddingHorizontal: 15,
-		paddingVertical: 6,
+	track: {
+		fontWeight: '700',
+		fontSize: 18,
+		marginTop: 30,
+		marginBottom: 5,
+		color: 'white',
+	},
+	reading: {
+		color: 'white',
+		fontSize: 18,
+		marginBottom: 30,
+	},
+	passage: {
+		color: 'white',
+		fontSize: 24,
+		marginBottom: 30,
 	},
 });
 

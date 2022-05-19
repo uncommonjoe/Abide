@@ -10,7 +10,6 @@ import {
 
 //https://docs.expo.dev/guides/using-custom-fonts/
 import { Montserrat } from '@expo-google-fonts/inter';
-
 import { useNavigation } from '@react-navigation/native';
 
 const Header = ({}) => {
