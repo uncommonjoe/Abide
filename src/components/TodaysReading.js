@@ -145,6 +145,21 @@ const TodaysReading = ({ selectedDay }) => {
 		navigation.navigate('Read', { reading: reading });
 	};
 
+	const buttonStyle = (type) => {
+		switch (type) {
+			case 'Reading 1':
+				return { backgroundColor: '#454C57' };
+			case 'Reading 2':
+				return { backgroundColor: '#596B55' };
+			case 'Reading 3':
+				return { backgroundColor: '#C8B598' };
+			case 'Reading 4':
+				return { backgroundColor: '#756757' };
+			case 'Reading 5':
+				return { backgroundColor: '#596B55' };
+		}
+	};
+
 	useEffect(() => {
 		getPlan(selectedDay);
 	}, [selectedDay]);
@@ -165,7 +180,7 @@ const TodaysReading = ({ selectedDay }) => {
 						<TouchableOpacity
 							key={item}
 							onPress={() => selectReading(item)}
-							style={styles.button}
+							style={[styles.button, buttonStyle(item.title)]}
 						>
 							<Text style={styles.track}>{item.track}</Text>
 							<Text style={styles.reading}>{item.title}</Text>
@@ -192,6 +207,7 @@ const styles = StyleSheet.create({
 		marginHorizontal: 5,
 		marginBottom: 6,
 		padding: 20,
+		width: 130,
 	},
 	track: {
 		fontWeight: '700',
@@ -199,16 +215,19 @@ const styles = StyleSheet.create({
 		marginTop: 30,
 		marginBottom: 5,
 		color: 'white',
+		textTransform: 'uppercase',
 	},
 	reading: {
 		color: 'white',
-		fontSize: 18,
+		fontSize: 16,
 		marginBottom: 30,
+		textTransform: 'uppercase',
 	},
 	passage: {
 		color: 'white',
-		fontSize: 24,
+		fontSize: 22,
 		marginBottom: 30,
+		textTransform: 'uppercase',
 	},
 });
 
