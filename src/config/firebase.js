@@ -13,7 +13,7 @@ import {
 } from 'firebase/firestore';
 
 import 'firebase/auth';
-//import Constants from 'expo-constants';
+
 import {
 	FIREBASE_API_KEY,
 	FIREBASE_AUTH_DOMAIN,
@@ -23,7 +23,7 @@ import {
 	FIREBASE_MEASUREMENT_ID,
 } from '@env';
 
-// TODO: Add SDKs for Firebase products that you want to use
+// Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 const firebaseConfig = {
@@ -73,5 +73,42 @@ export const getUserSettings = async (user) => {
 			console.error('Error getting document: ', e);
 		}
 		return userObj;
+	}
+};
+
+export const updateReadingStatus = async (props) => {
+	if (props) {
+		try {
+			const docRef = await addDoc(collection(db, 'readings'), {
+				uid: props.user.uid,
+				track: props.track,
+				reading: props.reading,
+				passage: props.passage,
+				isComplete: props.isComplete,
+			});
+			console.log('Document written with ID: ', docRef.id);
+		} catch (e) {
+			console.error('Error adding document: ', e);
+		}
+	}
+};
+
+export const getUserReadings = async (user) => {
+	let readings;
+	if (user) {
+		try {
+			const q = query(
+				collection(db, 'readings'),
+				where('uid', '==', user.uid)
+			);
+
+			const querySnapshot = await getDocs(q);
+			querySnapshot.forEach((doc) => {
+				readings = doc.data();
+			});
+		} catch (e) {
+			console.error('Error getting document: ', e);
+		}
+		return readings;
 	}
 };
