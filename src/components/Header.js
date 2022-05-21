@@ -10,12 +10,11 @@ import {
 
 //https://docs.expo.dev/guides/using-custom-fonts/
 import { Montserrat } from '@expo-google-fonts/inter';
-import { useNavigation } from '@react-navigation/native';
 
-const Header = ({}) => {
+const Header = ({ title }) => {
 	return (
 		<View style={styles.header}>
-			<Text style={styles.title}>Header</Text>
+			<Text style={styles.title}>{title.passage}</Text>
 
 			<View style={styles.buttonsWrap}>
 				<TouchableOpacity

@@ -12,7 +12,7 @@ import { filter } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
 import { Montserrat } from '@expo-google-fonts/inter';
 
-const TodaysReading = ({ selectedDay }) => {
+const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 	const [isLoading, setLoading] = useState(true);
 	const [todaysObject, setTodaysObject] = useState(null);
 	const [hasTracks, setHasTracks] = useState(false);
@@ -141,7 +141,8 @@ const TodaysReading = ({ selectedDay }) => {
 		}
 	};
 
-	const selectReading = (reading) => {
+	const selectReading = (reading, setHeaderTitle) => {
+		setHeaderTitle(reading);
 		navigation.navigate('Read', { reading: reading });
 	};
 
@@ -179,7 +180,7 @@ const TodaysReading = ({ selectedDay }) => {
 					renderItem={({ item }) => (
 						<TouchableOpacity
 							key={item}
-							onPress={() => selectReading(item)}
+							onPress={() => selectReading(item, setHeaderTitle)}
 							style={[styles.button, buttonStyle(item.title)]}
 						>
 							<Text style={styles.track}>{item.track}</Text>

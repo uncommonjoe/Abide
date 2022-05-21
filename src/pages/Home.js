@@ -4,7 +4,7 @@ import Moment from 'moment';
 import TodaysReading from '../components/TodaysReading';
 import Calendar from '../components/Calendar';
 
-const HomePage = () => {
+const HomePage = ({ setHeaderTitle }) => {
 	// Get today's date to default into Today's Reading and Calendar
 	let getDate = new Date();
 
@@ -27,7 +27,10 @@ const HomePage = () => {
 					setSelectedDay={setSelectedDay}
 					selectedDay={selectedDay}
 				/>
-				<TodaysReading selectedDay={selectedDay} />
+				<TodaysReading
+					selectedDay={selectedDay}
+					setHeaderTitle={setHeaderTitle}
+				/>
 			</SafeAreaView>
 		</ScrollView>
 	);

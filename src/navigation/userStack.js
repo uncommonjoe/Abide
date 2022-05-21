@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {
@@ -18,30 +18,35 @@ import Settings from '../pages/Settings';
 const Home = createNativeStackNavigator();
 const BottomNavigation = createBottomTabNavigator();
 
-var homeStack = () => (
-	<Home.Navigator
-		screenOptions={() => ({
-			gestureEnabled: true,
-		})}
-	>
-		<Home.Screen
-			name='Home'
-			component={HomePage}
-			options={{
-				header: () => null,
-			}}
-		/>
-		<Home.Screen
-			name='Read'
-			component={ReadScreen}
-			options={{
-				header: () => <Header />,
-			}}
-		/>
-	</Home.Navigator>
-);
-
 export default function UserStack() {
+	const [headerTitle, setHeaderTitle] = useState('Abide');
+
+	var homeStack = () => (
+		<Home.Navigator
+			screenOptions={() => ({
+				gestureEnabled: true,
+			})}
+		>
+			<Home.Screen
+				name='Home'
+				options={{
+					header: () => null,
+				}}
+			>
+				{(props) => (
+					<HomePage {...props} setHeaderTitle={setHeaderTitle} />
+				)}
+			</Home.Screen>
+			<Home.Screen
+				name='Read'
+				component={ReadScreen}
+				options={{
+					header: () => <Header title={headerTitle} />,
+				}}
+			/>
+		</Home.Navigator>
+	);
+
 	return (
 		<BottomNavigation.Navigator
 			screenOptions={{
