@@ -8,6 +8,7 @@ import {
 	Dimensions,
 } from 'react-native';
 import { TitleText, Text } from '../assets/styles/Text';
+import CircleCheck from './CircleCheck';
 import { filter } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
 import { Montserrat } from '@expo-google-fonts/inter';
@@ -178,15 +179,27 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 					keyExtractor={(item) => item.title}
 					horizontal={todaysObject.length == 0 ? false : true}
 					renderItem={({ item }) => (
-						<TouchableOpacity
-							key={item}
-							onPress={() => selectReading(item, setHeaderTitle)}
-							style={[styles.button, buttonStyle(item.title)]}
-						>
-							<Text style={styles.track}>{item.track}</Text>
-							<Text style={styles.reading}>{item.title}</Text>
-							<Text style={styles.passage}>{item.passage}</Text>
-						</TouchableOpacity>
+						<View>
+							<TouchableOpacity
+								key={item}
+								onPress={() =>
+									selectReading(item, setHeaderTitle)
+								}
+								style={[styles.button, buttonStyle(item.title)]}
+							>
+								<Text style={styles.track}>{item.track}</Text>
+								<Text style={styles.reading}>{item.title}</Text>
+								<Text style={styles.passage}>
+									{item.passage}
+								</Text>
+							</TouchableOpacity>
+
+							<View
+								style={[styles.button, buttonStyle(item.title)]}
+							>
+								<CircleCheck state={false} />
+							</View>
+						</View>
 					)}
 					ListEmptyComponent={() =>
 						todaysObject.length == 0 && (
@@ -208,7 +221,6 @@ const styles = StyleSheet.create({
 		backgroundColor: '#454C57',
 		flexDirection: 'column',
 		marginHorizontal: 5,
-		marginBottom: 6,
 		padding: 20,
 		width: 130,
 	},
@@ -229,7 +241,6 @@ const styles = StyleSheet.create({
 	passage: {
 		color: 'white',
 		fontSize: 22,
-		marginBottom: 30,
 		textTransform: 'uppercase',
 	},
 	noReadingWrap: {
