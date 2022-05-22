@@ -2,11 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import { Text, TitleText } from '../assets/styles/Text';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import {
-	faVolumeHigh,
-	faCircle,
-	faCircleCheck,
-} from '@fortawesome/free-solid-svg-icons';
+import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
+import CircleCheck from './CircleCheck';
 
 //https://docs.expo.dev/guides/using-custom-fonts/
 import { Montserrat } from '@expo-google-fonts/inter';
@@ -29,18 +26,11 @@ const Header = ({ title }) => {
 					/>
 				</TouchableOpacity>
 
-				<TouchableOpacity
-					style={styles.button}
+				<CircleCheck
+					state={false}
+					color={'#454C57'}
 					onPress={() => alert('Complete')}
-					color='red'
-				>
-					<FontAwesomeIcon
-						icon={faCircle}
-						color={'#454C57'}
-						size={36}
-					/>
-					<Text style={styles.buttonText}>Complete</Text>
-				</TouchableOpacity>
+				/>
 			</View>
 		</View>
 	);

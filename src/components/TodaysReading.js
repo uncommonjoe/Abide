@@ -197,7 +197,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 							<View
 								style={[styles.button, buttonStyle(item.title)]}
 							>
-								<CircleCheck state={false} />
+								<CircleCheck state={false} color={'white'} />
 							</View>
 						</View>
 					)}

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
-const CircleCheck = ({ state }) => {
+const CircleCheck = ({ state, color }) => {
 	const [isChecked, updateIsChecked] = useState(state);
 
 	const selectHandler = (value) => {
@@ -12,31 +12,38 @@ const CircleCheck = ({ state }) => {
 	};
 
 	return (
-		<View>
-			<Pressable
-				key={isChecked}
-				style={styles.circle}
-				onPress={() => selectHandler(isChecked)}
-			>
+		<Pressable
+			key={isChecked}
+			style={[styles.circle, { borderColor: color }]}
+			onPress={() => selectHandler(isChecked)}
+		>
+			<Text>
 				{isChecked ? (
-					<FontAwesomeIcon icon={faCheck} color={'white'} size={20} />
+					<FontAwesomeIcon
+						style={styles.icon}
+						icon={faCheck}
+						color={color}
+						size={20}
+					/>
 				) : (
 					''
 				)}
-			</Pressable>
-		</View>
+			</Text>
+		</Pressable>
 	);
 };
 
 const styles = StyleSheet.create({
 	circle: {
-		borderColor: 'white',
 		borderWidth: 1,
 		width: 34,
 		height: 34,
 		borderRadius: 34 / 2,
 		alignItems: 'center',
 		justifyContent: 'center',
+	},
+	icon: {
+		marginTop: 3,
 	},
 });
 
