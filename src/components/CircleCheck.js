@@ -3,19 +3,29 @@ import { StyleSheet, View, Text, Pressable } from 'react-native';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { updateReadingStatus } from '../config/firebase';
 
-const CircleCheck = ({ state, color }) => {
+const CircleCheck = ({ state, color, readingObj }) => {
 	const [isChecked, updateIsChecked] = useState(state);
 
-	const selectHandler = (value) => {
-		updateIsChecked((value) => !value);
+	const selectHandler = (readingObj) => {
+		updateIsChecked((isChecked) => !isChecked);
+		if (readingObj) {
+			let props = {
+				...readingObj,
+				uid: global.user.uid,
+				isComplete: isChecked,
+			};
+
+			return updateReadingStatus(props);
+		}
 	};
 
 	return (
 		<Pressable
 			key={isChecked}
 			style={[styles.circle, { borderColor: color }]}
-			onPress={() => selectHandler(isChecked)}
+			onPress={() => selectHandler(readingObj)}
 		>
 			<Text>
 				{isChecked ? (

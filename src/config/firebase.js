@@ -80,11 +80,7 @@ export const updateReadingStatus = async (props) => {
 	if (props) {
 		try {
 			const docRef = await addDoc(collection(db, 'readings'), {
-				uid: props.user.uid,
-				track: props.track,
-				reading: props.reading,
-				passage: props.passage,
-				isComplete: props.isComplete,
+				...props,
 			});
 			console.log('Document written with ID: ', docRef.id);
 		} catch (e) {

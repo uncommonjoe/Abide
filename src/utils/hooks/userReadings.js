@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import useAuthentication from './useAuthentication';
-import { getUserSettings } from '../../config/firebase';
+import { getUserReadings } from '../../config/firebase';
 
-const userSettings = () => {
-	const [usrSettngs, setUserSettings] = useState({});
+const userReadings = () => {
+	const [userReadings, setUserReadings] = useState({});
 	const { user } = useAuthentication();
 
 	useEffect(() => {
 		if (user && user !== null) {
 			const fetchData = async () => {
-				const response = await getUserSettings(user);
-				setUserSettings(response);
+				const response = await getUserReadings(user);
+				setUserReadings(response);
 				return response;
 			};
 			fetchData();
 		}
 	}, [user]);
 
-	return { usrSettngs };
+	return { userReadings };
 };
 
-export default userSettings;
+export default userReadings;

@@ -23,8 +23,9 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 	const userObj = {
 		myTrack: 'track 3',
 	};
-	// console.log('global user ', global.user);
+	//console.log('global user ', global.user);
 	// console.log('global prefs ', global.usrSettngs);
+	//console.log('global readings ', global.usrReadings);
 
 	const getPlan = async (selectedDay) => {
 		let pickTracks = [];
@@ -50,16 +51,20 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 					case 'track 1':
 						pickTracks = [
 							{
-								title: 'Reading 1',
+								date: datesMatch[0].date,
+								reading: 'Reading 1',
 								track: 'Track 1',
 								passage:
 									datesMatch[0].tracks.track1[0].reading1,
+								plan: global.planTitle,
 							},
 							{
-								title: 'Reading 2',
+								date: datesMatch[0].date,
+								reading: 'Reading 2',
 								track: 'Track 1',
 								passage:
 									datesMatch[0].tracks.track1[1].reading2,
+								plan: global.planTitle,
 							},
 						];
 
@@ -69,22 +74,28 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 					case 'track 2':
 						pickTracks = [
 							{
-								title: 'Reading 1',
+								date: datesMatch[0].date,
+								reading: 'Reading 1',
 								track: 'Track 1',
 								passage:
 									datesMatch[0].tracks.track1[0].reading1,
+								plan: global.planTitle,
 							},
 							{
-								title: 'Reading 2',
+								date: datesMatch[0].date,
+								reading: 'Reading 2',
 								track: 'Track 1',
 								passage:
 									datesMatch[0].tracks.track1[1].reading2,
+								plan: global.planTitle,
 							},
 							{
-								title: 'Reading 3',
+								date: datesMatch[0].date,
+								reading: 'Reading 3',
 								track: 'Track 2',
 								passage:
 									datesMatch[0].tracks.track2[0].reading3,
+								plan: global.planTitle,
 							},
 						];
 
@@ -94,34 +105,44 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 					case 'track 3':
 						pickTracks = [
 							{
-								title: 'Reading 1',
+								date: datesMatch[0].date,
+								reading: 'Reading 1',
 								track: 'Track 1',
 								passage:
 									datesMatch[0].tracks.track1[0].reading1,
+								plan: global.planTitle,
 							},
 							{
-								title: 'Reading 2',
+								date: datesMatch[0].date,
+								reading: 'Reading 2',
 								track: 'Track 1',
 								passage:
 									datesMatch[0].tracks.track1[1].reading2,
+								plan: global.planTitle,
 							},
 							{
-								title: 'Reading 3',
+								date: datesMatch[0].date,
+								reading: 'Reading 3',
 								track: 'Track 2',
 								passage:
 									datesMatch[0].tracks.track2[0].reading3,
+								plan: global.planTitle,
 							},
 							{
-								title: 'Reading 4',
+								date: datesMatch[0].date,
+								reading: 'Reading 4',
 								track: 'Track 3',
 								passage:
 									datesMatch[0].tracks.track3[0].reading4,
+								plan: global.planTitle,
 							},
 							{
-								title: 'Reading 5',
+								date: datesMatch[0].date,
+								reading: 'Reading 5',
 								track: 'Track 3',
 								passage:
 									datesMatch[0].tracks.track3[1].reading5,
+								plan: global.planTitle,
 							},
 						];
 
@@ -176,7 +197,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 			) : (
 				<FlatList
 					data={todaysObject}
-					keyExtractor={(item) => item.title}
+					keyExtractor={(item) => item.reading}
 					horizontal={todaysObject.length == 0 ? false : true}
 					renderItem={({ item }) => (
 						<View>
@@ -185,19 +206,31 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								onPress={() =>
 									selectReading(item, setHeaderTitle)
 								}
-								style={[styles.button, buttonStyle(item.title)]}
+								style={[
+									styles.button,
+									buttonStyle(item.reading),
+								]}
 							>
 								<Text style={styles.track}>{item.track}</Text>
-								<Text style={styles.reading}>{item.title}</Text>
+								<Text style={styles.reading}>
+									{item.reading}
+								</Text>
 								<Text style={styles.passage}>
 									{item.passage}
 								</Text>
 							</TouchableOpacity>
 
 							<View
-								style={[styles.button, buttonStyle(item.title)]}
+								style={[
+									styles.button,
+									buttonStyle(item.reading),
+								]}
 							>
-								<CircleCheck state={false} color={'white'} />
+								<CircleCheck
+									state={false}
+									color={'white'}
+									readingObj={item}
+								/>
 							</View>
 						</View>
 					)}

@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 
 import useAuthentication from '../utils/hooks/useAuthentication';
 import userSettings from '../utils/hooks/userSettings';
+import userReadings from '../utils/hooks/userReadings';
 
 import UserStack from './userStack';
 import AuthStack from './authStack';
@@ -11,8 +12,13 @@ import SelectTrackModal from '../pages/users/SelectTrackModal';
 const RootNavigation = () => {
 	const { user } = useAuthentication();
 	const { usrSettngs } = userSettings();
+	const { usrReadings } = userReadings();
 	global.user = user;
 	global.usrSettngs = usrSettngs;
+	global.userReadings = usrReadings;
+	global.planTitle = '2022-2023';
+
+	console.log(userReadings);
 
 	return user ? <UserStack /> : <AuthStack />;
 
