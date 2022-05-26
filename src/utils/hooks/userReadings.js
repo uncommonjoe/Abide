@@ -3,7 +3,7 @@ import useAuthentication from './useAuthentication';
 import { getUserReadings } from '../../config/firebase';
 
 const userReadings = () => {
-	const [userReadings, setUserReadings] = useState({});
+	const [usrReadings, setUserReadings] = useState({});
 	const { user } = useAuthentication();
 
 	useEffect(() => {
@@ -17,7 +17,7 @@ const userReadings = () => {
 		}
 	}, [user]);
 
-	return { userReadings };
+	return { usrReadings };
 };
 
 export default userReadings;
