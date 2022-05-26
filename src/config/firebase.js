@@ -7,9 +7,11 @@ import {
 	getFirestore,
 	collection,
 	getDocs,
+	setDoc,
 	addDoc,
 	query,
 	where,
+	doc,
 } from 'firebase/firestore';
 
 import 'firebase/auth';
@@ -76,21 +78,36 @@ export const getUserSettings = async (user) => {
 	}
 };
 
-export const updateReadingStatus = async (props) => {
+export const updateReadingStatus = (props) => {
 	if (props) {
 		try {
-			const docRef = await addDoc(collection(db, 'readings'), {
-				...props,
-			});
-			console.log('Document written with ID: ', docRef.id);
+			const docData = { ...props };
+			setDoc(
+				doc(
+					db,
+					'readings',
+					props.date +
+						'-' +
+						props.reading +
+						'-' +
+						props.plan +
+						'-' +
+						props.uid
+				),
+				docData
+			);
 		} catch (e) {
-			console.error('Error adding document: ', e);
+			console.error('Error updating reading: ', e);
 		}
+	} else {
+		console.error(
+			"'props' or 'match' wasn't defined in firebase.js in _updateReading method"
+		);
 	}
 };
 
 export const getUserReadings = async (user) => {
-	let readings;
+	const readings = [];
 	if (user) {
 		try {
 			const q = query(
@@ -99,12 +116,18 @@ export const getUserReadings = async (user) => {
 			);
 
 			const querySnapshot = await getDocs(q);
+
 			querySnapshot.forEach((doc) => {
-				readings = doc.data();
+				readings.push(doc.data());
 			});
+			console.log(readings);
+			return readings;
 		} catch (e) {
 			console.error('Error getting document: ', e);
 		}
-		return readings;
+	} else {
+		console.error(
+			"'user' wasn't defined in firebase.js in getUserReadings method"
+		);
 	}
 };
