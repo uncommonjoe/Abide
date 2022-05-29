@@ -4,12 +4,7 @@ import { Montserrat } from '@expo-google-fonts/inter';
 const button = StyleSheet.create({
 	button: {
 		padding: 20,
-		color: 'white',
 		textAlign: 'center',
-		fontFamily: 'Montserrat',
-		fontWeight: 700,
-		fontSize: 20,
-		textTransform: 'uppercase',
 	},
 	green: {
 		backgroundColor: '#596B55',
@@ -25,6 +20,13 @@ const button = StyleSheet.create({
 	},
 	red: {
 		backgroundColor: '#802119',
+	},
+	text: {
+		color: 'white',
+		fontFamily: 'Montserrat',
+		fontWeight: 700,
+		fontSize: 20,
+		textTransform: 'uppercase',
 	},
 });
 

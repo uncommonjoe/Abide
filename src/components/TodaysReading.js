@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { TitleText, Text } from '../assets/styles/Text';
 import CircleCheck from './CircleCheck';
-import { filter } from 'lodash';
+import { filter, isEmpty } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
 import { Montserrat } from '@expo-google-fonts/inter';
 
@@ -18,11 +18,8 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 	const [todaysObject, setTodaysObject] = useState(null);
 	const [hasTracks, setHasTracks] = useState(false);
 	const navigation = useNavigation();
+	const userObj = {};
 
-	// TODO: get users selected track
-	const userObj = {
-		myTrack: 'track 3',
-	};
 	//console.log('global user ', global.user);
 	// console.log('global prefs ', global.usrSettngs);
 	//console.log('global readings ', global.usrReadings);
@@ -183,8 +180,26 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 		}
 	};
 
-	useEffect(() => {
-		getPlan(selectedDay);
+	const checkUserTrack = () => {
+		const isTrackEmpty = isEmpty(global.userReadings);
+		if (isTrackEmpty) {
+			return undefined;
+		} else {
+			// TODO: get users selected track
+			//return 'track 3';
+			return 'track 3';
+		}
+	};
+
+	useEffect(async () => {
+		var userTrack = await checkUserTrack();
+
+		userObj.myTrack = userTrack;
+		if (userTrack) {
+			getPlan(selectedDay);
+		} else {
+			navigation.navigate('Select Track');
+		}
 	}, [selectedDay]);
 
 	return (
@@ -255,7 +270,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'column',
 		marginHorizontal: 5,
 		padding: 20,
-		width: 130,
+		width: 140,
 	},
 	track: {
 		fontWeight: '700',

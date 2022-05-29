@@ -7,7 +7,6 @@ import userReadings from '../utils/hooks/userReadings';
 
 import UserStack from './userStack';
 import AuthStack from './authStack';
-import SelectTrackModal from '../pages/users/SelectTrackModal';
 
 const RootNavigation = () => {
 	const { user } = useAuthentication();

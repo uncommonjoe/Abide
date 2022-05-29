@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { StatusBar } from 'expo-status-bar';
 
 import HomeScreen from '../pages/Home';
 import SignInScreen from '../pages/users/SignInScreen';
@@ -9,6 +10,8 @@ import SignUpScreen from '../pages/users/SignUpScreen';
 const Stack = createNativeStackNavigator();
 
 export default function AuthStack() {
+	<StatusBar />;
+
 	return (
 		<Stack.Navigator>
 			<Stack.Screen

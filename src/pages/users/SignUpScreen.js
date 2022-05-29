@@ -16,6 +16,7 @@ import { useNavigation } from '@react-navigation/native';
 import { TitleText } from '../../assets/styles/Text';
 import button from '../../assets/styles/button.style';
 import input from '../../assets/styles/input.style';
+import page from '../../assets/styles/page.style';
 
 const SignUpScreen = () => {
 	const auth = getAuth();
@@ -69,7 +70,7 @@ const SignUpScreen = () => {
 	};
 
 	return (
-		<View style={styles.container}>
+		<View style={page.container}>
 			<TitleText style={{ marginBottom: 20, marginTop: 40 }}>
 				Getting Started
 			</TitleText>
@@ -80,7 +81,7 @@ const SignUpScreen = () => {
 				</View>
 			)}
 
-			<View style={styles.controls}>
+			<View style={page.section}>
 				<View style={input.container}>
 					<Text style={input.title}>Full Name</Text>
 					<TextInput
@@ -128,7 +129,7 @@ const SignUpScreen = () => {
 					style={[button.button, button.blue]}
 					onPress={signUp}
 				>
-					Sign Up
+					<Text style={button.text}>Sign Up</Text>
 				</TouchableOpacity>
 			</View>
 
@@ -138,7 +139,7 @@ const SignUpScreen = () => {
 					style={[button.button, button.green]}
 					onPress={() => navigation.navigate('Sign In')}
 				>
-					Back to Sign In
+					<Text style={button.text}>Back to Sign In</Text>
 				</TouchableOpacity>
 			</View>
 		</View>
@@ -146,15 +147,6 @@ const SignUpScreen = () => {
 };
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		paddingTop: 20,
-		backgroundColor: '#F3F2F8',
-		padding: 25,
-	},
-	controls: {
-		flex: 1,
-	},
 	error: {
 		marginTop: 5,
 		color: 'red',

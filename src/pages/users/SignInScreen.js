@@ -10,6 +10,7 @@ import {
 import { TitleText } from '../../assets/styles/Text';
 import button from '../../assets/styles/button.style';
 import input from '../../assets/styles/input.style';
+import page from '../../assets/styles/page.style';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigation } from '@react-navigation/native';
 
@@ -48,7 +49,7 @@ const SignInScreen = () => {
 	}
 
 	return (
-		<View style={styles.container}>
+		<View style={page.container}>
 			<TitleText style={{ marginBottom: 20, marginTop: 40 }}>
 				Welcome Back
 			</TitleText>
@@ -59,7 +60,7 @@ const SignInScreen = () => {
 				</View>
 			)}
 
-			<View style={styles.controls}>
+			<View style={page.section}>
 				<View style={input.container}>
 					<Text style={input.title}>Email</Text>
 					<TextInput
@@ -87,7 +88,7 @@ const SignInScreen = () => {
 					style={[button.button, button.blue]}
 					onPress={signIn}
 				>
-					Sign in
+					<Text style={button.text}>Sign in</Text>
 				</TouchableOpacity>
 			</View>
 
@@ -97,7 +98,7 @@ const SignInScreen = () => {
 					style={[button.button, button.green]}
 					onPress={() => navigation.navigate('Sign Up')}
 				>
-					Register
+					<Text style={button.text}>Register</Text>
 				</TouchableOpacity>
 			</View>
 		</View>
@@ -105,15 +106,6 @@ const SignInScreen = () => {
 };
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		paddingTop: 20,
-		backgroundColor: '#F3F2F8',
-		padding: 25,
-	},
-	controls: {
-		flex: 1,
-	},
 	error: {
 		marginTop: 5,
 		color: 'red',

@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
 import RadioButton from '../../components/RadioButton';
-import useAuthentication from '../../../src/utils/hooks/useAuthentication';
-import { addTrack } from '../../../src/config/firebase';
+import useAuthentication from '../../utils/hooks/useAuthentication';
+import { addTrack } from '../../config/firebase';
 
-const SelectTrackModal = () => {
+const SelectTrackScreen = () => {
 	const [option, setOption] = useState(null);
 	const user = useAuthentication();
 
@@ -87,4 +87,4 @@ const styles = StyleSheet.create({
 	},
 });
 
-export default SelectTrackModal;
+export default SelectTrackScreen;

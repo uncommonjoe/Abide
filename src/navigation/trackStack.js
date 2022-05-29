@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import HomeScreen from '../pages/Home';
-import SelectTrackModal from '../pages/users/SelectTrackModal';
+import SelectTrackScreen from '../pages/users/SelectTrackScreen';
 
 const Stack = createNativeStackNavigator();
 
