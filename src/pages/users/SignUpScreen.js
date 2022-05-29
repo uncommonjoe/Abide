@@ -1,14 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import {
+	StyleSheet,
+	Text,
+	View,
+	TextInput,
+	TouchableOpacity,
+} from 'react-native';
 import {
 	getAuth,
 	updateProfile,
 	createUserWithEmailAndPassword,
 } from 'firebase/auth';
+import { useNavigation } from '@react-navigation/native';
+import { TitleText } from '../../assets/styles/Text';
+import button from '../../assets/styles/button.style';
+import input from '../../assets/styles/input.style';
 
 const SignUpScreen = () => {
 	const auth = getAuth();
+	const navigation = useNavigation();
 
 	const [value, setValue] = React.useState({
 		displayName: '',
@@ -58,21 +69,22 @@ const SignUpScreen = () => {
 	};
 
 	return (
-		<View>
-			<StatusBar barStyle='light-content' />
+		<View style={styles.container}>
+			<TitleText style={{ marginBottom: 20, marginTop: 40 }}>
+				Getting Started
+			</TitleText>
 
-			<View style={styles.container}>
-				<Text>Sign Up</Text>
-				{!!value.error && (
-					<View style={styles.error}>
-						<Text>{value.error}</Text>
-					</View>
-				)}
+			{!!value.error && (
+				<View style={styles.error}>
+					<Text>{value.error}</Text>
+				</View>
+			)}
 
-				<View style={styles.controls}>
-					<Text style={styles.title}>Name</Text>
+			<View style={styles.controls}>
+				<View style={input.container}>
+					<Text style={input.title}>Full Name</Text>
 					<TextInput
-						style={styles.input}
+						style={input.text}
 						value={value.displayName}
 						onChangeText={(text) =>
 							setValue({ ...value, displayName: text })
@@ -81,10 +93,12 @@ const SignUpScreen = () => {
 					{!!value.nameError && (
 						<Text style={styles.error}>{value.nameError}</Text>
 					)}
+				</View>
 
-					<Text style={styles.title}>Email</Text>
+				<View style={input.container}>
+					<Text style={input.title}>Email</Text>
 					<TextInput
-						style={styles.input}
+						style={input.text}
 						value={value.email}
 						onChangeText={(text) =>
 							setValue({ ...value, email: text })
@@ -93,10 +107,12 @@ const SignUpScreen = () => {
 					{!!value.emailError && (
 						<Text style={styles.error}>{value.emailError}</Text>
 					)}
+				</View>
 
-					<Text style={styles.title}>Password</Text>
+				<View style={input.container}>
+					<Text style={input.title}>Password</Text>
 					<TextInput
-						style={styles.input}
+						style={input.text}
 						value={value.password}
 						onChangeText={(text) =>
 							setValue({ ...value, password: text })
@@ -106,13 +122,24 @@ const SignUpScreen = () => {
 					{!!value.passwordError && (
 						<Text style={styles.error}>{value.passwordError}</Text>
 					)}
-
-					<Button
-						title='Sign up'
-						buttonStyle={styles.control}
-						onPress={signUp}
-					/>
 				</View>
+
+				<TouchableOpacity
+					style={[button.button, button.blue]}
+					onPress={signUp}
+				>
+					Sign Up
+				</TouchableOpacity>
+			</View>
+
+			<View>
+				<Text style={input.title}>Already have an account?</Text>
+				<TouchableOpacity
+					style={[button.button, button.green]}
+					onPress={() => navigation.navigate('Sign In')}
+				>
+					Back to Sign In
+				</TouchableOpacity>
 			</View>
 		</View>
 	);
@@ -122,25 +149,12 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		paddingTop: 20,
-		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
+		backgroundColor: '#F3F2F8',
+		padding: 25,
 	},
-
 	controls: {
 		flex: 1,
 	},
-
-	input: {
-		borderColor: '#ccc',
-		borderWidth: 1,
-		padding: 5,
-	},
-
-	title: {
-		marginTop: 10,
-	},
-
 	error: {
 		marginTop: 5,
 		color: 'red',
