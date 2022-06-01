@@ -1,8 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import {
+	StyleSheet,
+	Text,
+	View,
+	SafeAreaView,
+	ScrollView,
+	TouchableOpacity,
+} from 'react-native';
 
-import RadioButton from '../../components/RadioButton';
+import { TitleText } from '../../assets/styles/Text';
+import button from '../../assets/styles/button.style';
+import input from '../../assets/styles/input.style';
+import page from '../../assets/styles/page.style';
 import useAuthentication from '../../utils/hooks/useAuthentication';
 import { addTrack } from '../../config/firebase';
 
@@ -16,11 +25,11 @@ const SelectTrackScreen = () => {
 		{ value: 'Track 3' },
 	];
 
-	const submit = () => {
-		if (user) {
+	const submit = (track) => {
+		if (user && track) {
 			let props = {
 				user: user.user,
-				option: option,
+				option: track,
 			};
 
 			return addTrack(props);
@@ -30,60 +39,69 @@ const SelectTrackScreen = () => {
 	};
 
 	return (
-		<View style={styles.container}>
-			<StatusBar barStyle='light-content' />
+		<ScrollView
+			style={[page.container, { paddingBottom: 50 }]}
+			contentInsetAdjustmentBehavior='automatic'
+		>
+			<SafeAreaView>
+				<TitleText style={{ marginBottom: 20, marginTop: 40 }}>
+					Select Track to Begin
+				</TitleText>
 
-			<View style={styles.container}>
-				<Text style={styles.title}>Welcome to Abide!</Text>
-				<Text style={styles.title}>Select track to begin</Text>
+				<View style={page.section}>
+					<Text style={input.title}>Track 1</Text>
 
-				<View style={styles.control}>
-					<RadioButton
-						data={data}
-						onSelect={(value) => setOption(value)}
-					/>
-
-					<Text>{option}</Text>
-					<Text style={styles.title}>This can be changed later</Text>
-
-					<Button
-						title='Get Started'
-						style={styles.control}
-						onPress={submit}
-					/>
+					<TouchableOpacity
+						style={[button.button, button.blue]}
+						onPress={() => submit('Track 1')}
+					>
+						<Text style={button.text}>New Testament</Text>
+						<Text style={[button.text, local.textXXL]}>3X</Text>
+					</TouchableOpacity>
 				</View>
-			</View>
-		</View>
+
+				<View style={page.section}>
+					<Text style={input.title}>Track 2</Text>
+
+					<TouchableOpacity
+						style={[button.button, button.tan]}
+						onPress={() => submit('Track 2')}
+					>
+						<Text style={button.text}>Track 1</Text>
+						<Text style={button.text}>+</Text>
+						<View style={{ flexDirection: 'row' }}>
+							<Text style={[button.text, local.textXXL]}>2X</Text>
+							<View
+								style={{ textAlign: 'left', paddingLeft: 20 }}
+							>
+								<Text style={button.text}>Proverbs</Text>
+								<Text style={button.text}>Through</Text>
+								<Text style={button.text}>Psalms</Text>
+							</View>
+						</View>
+					</TouchableOpacity>
+				</View>
+
+				<View style={page.section}>
+					<Text style={input.title}>Track 3</Text>
+					<TouchableOpacity
+						style={[button.button, button.red]}
+						onPress={() => submit('Track 3')}
+					>
+						<Text style={button.text}>Track 2</Text>
+						<Text style={button.text}>+</Text>
+						<Text style={button.text}>Old Testament</Text>
+						<Text style={[button.text, local.textXXL]}>1X</Text>
+					</TouchableOpacity>
+				</View>
+			</SafeAreaView>
+		</ScrollView>
 	);
 };
 
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		paddingTop: 20,
-		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-
-	control: {
-		marginTop: 20,
-		marginBottom: 20,
-	},
-
-	input: {
-		borderColor: '#ccc',
-		borderWidth: 1,
-		padding: 5,
-	},
-
-	title: {
-		marginTop: 20,
-	},
-
-	error: {
-		marginTop: 5,
-		color: 'red',
+const local = StyleSheet.create({
+	textXXL: {
+		fontSize: 54,
 	},
 });
 

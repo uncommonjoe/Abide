@@ -5,6 +5,7 @@ const button = StyleSheet.create({
 	button: {
 		padding: 20,
 		textAlign: 'center',
+		alignItems: 'center',
 	},
 	green: {
 		backgroundColor: '#596B55',

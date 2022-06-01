@@ -18,11 +18,13 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 	const [todaysObject, setTodaysObject] = useState(null);
 	const [hasTracks, setHasTracks] = useState(false);
 	const navigation = useNavigation();
-	const userObj = {};
+	const userObj = {
+		track: global.usrSettngs.track,
+	};
 
-	//console.log('global user ', global.user);
-	// console.log('global prefs ', global.usrSettngs);
-	//console.log('global readings ', global.usrReadings);
+	// console.log('global user ', global.user);
+	// console.log('global user settings ', global.usrSettngs);
+	// console.log('global readings ', global.usrReadings);
 
 	const getPlan = async (selectedDay) => {
 		let pickTracks = [];
@@ -44,8 +46,8 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 				setHasTracks(true);
 
 				// Create collection of tracks based on users selected track
-				switch (userObj.myTrack) {
-					case 'track 1':
+				switch (userObj.track) {
+					case 'Track 1':
 						pickTracks = [
 							{
 								date: datesMatch[0].date,
@@ -68,7 +70,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 						setTodaysObject(pickTracks);
 						break;
 
-					case 'track 2':
+					case 'Track 2':
 						pickTracks = [
 							{
 								date: datesMatch[0].date,
@@ -99,7 +101,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 						setTodaysObject(pickTracks);
 						break;
 
-					case 'track 3':
+					case 'Track 3':
 						pickTracks = [
 							{
 								date: datesMatch[0].date,
@@ -180,26 +182,8 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 		}
 	};
 
-	const checkUserTrack = () => {
-		const isTrackEmpty = isEmpty(global.userReadings);
-		if (isTrackEmpty) {
-			return undefined;
-		} else {
-			// TODO: get users selected track
-			//return 'track 3';
-			return 'track 3';
-		}
-	};
-
-	useEffect(async () => {
-		var userTrack = await checkUserTrack();
-
-		userObj.myTrack = userTrack;
-		if (userTrack) {
-			getPlan(selectedDay);
-		} else {
-			navigation.navigate('Select Track');
-		}
+	useEffect(() => {
+		getPlan(selectedDay);
 	}, [selectedDay]);
 
 	return (

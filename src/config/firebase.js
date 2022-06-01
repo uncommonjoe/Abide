@@ -49,7 +49,7 @@ export const addTrack = async (props) => {
 			const docRef = await addDoc(collection(db, 'users'), {
 				uid: props.user.uid,
 				name: props.user.displayName,
-				tier: props.option,
+				track: props.option,
 			});
 			console.log('Document written with ID: ', docRef.id);
 		} catch (e) {
