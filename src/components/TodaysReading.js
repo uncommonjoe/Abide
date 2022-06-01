@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { TitleText, Text } from '../assets/styles/Text';
 import CircleCheck from './CircleCheck';
-import { filter, isEmpty } from 'lodash';
+import { filter } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
 import { Montserrat } from '@expo-google-fonts/inter';
 
@@ -42,8 +42,51 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 				}
 			});
 
+			const readingsMatch = filter(global.userReadings, function (r) {
+				if (r.date == selectedDay) {
+					return r;
+				}
+			});
+
 			if (datesMatch.length > 0) {
 				setHasTracks(true);
+				console.log('here ', readingsMatch);
+
+				// const readings = [];
+
+				// for (let i = 0; i < 6; i++) {
+				//     readings[i] = filter(readingsMatch, function (r) {
+				//         if (r.reading == 'Reading ' + [i]) {
+				//             return r;
+				//         }
+				//     });
+				// }
+
+				const reading1State = filter(readingsMatch, function (r) {
+					if (r.reading == 'Reading 1') {
+						return r;
+					}
+				});
+				const reading2State = filter(readingsMatch, function (r) {
+					if (r.reading == 'Reading 2') {
+						return r;
+					}
+				});
+				const reading3State = filter(readingsMatch, function (r) {
+					if (r.reading == 'Reading 3') {
+						return r;
+					}
+				});
+				const reading4State = filter(readingsMatch, function (r) {
+					if (r.reading == 'Reading 4') {
+						return r;
+					}
+				});
+				const reading5State = filter(readingsMatch, function (r) {
+					if (r.reading == 'Reading 5') {
+						return r;
+					}
+				});
 
 				// Create collection of tracks based on users selected track
 				switch (userObj.track) {
@@ -56,6 +99,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[0].reading1,
 								plan: global.planTitle,
+								isComplete: reading1State[0].isComplete,
 							},
 							{
 								date: datesMatch[0].date,
@@ -64,6 +108,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[1].reading2,
 								plan: global.planTitle,
+								isComplete: reading2State[0].isComplete,
 							},
 						];
 
@@ -79,6 +124,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[0].reading1,
 								plan: global.planTitle,
+								isComplete: reading1State[0].isComplete,
 							},
 							{
 								date: datesMatch[0].date,
@@ -87,6 +133,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[1].reading2,
 								plan: global.planTitle,
+								isComplete: reading2State[0].isComplete,
 							},
 							{
 								date: datesMatch[0].date,
@@ -95,6 +142,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track2[0].reading3,
 								plan: global.planTitle,
+								isComplete: reading3State[0].isComplete,
 							},
 						];
 
@@ -110,6 +158,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[0].reading1,
 								plan: global.planTitle,
+								isComplete: reading1State[0].isComplete,
 							},
 							{
 								date: datesMatch[0].date,
@@ -118,6 +167,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[1].reading2,
 								plan: global.planTitle,
+								isComplete: reading2State[0].isComplete,
 							},
 							{
 								date: datesMatch[0].date,
@@ -126,6 +176,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track2[0].reading3,
 								plan: global.planTitle,
+								isComplete: reading3State[0].isComplete,
 							},
 							{
 								date: datesMatch[0].date,
@@ -134,6 +185,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track3[0].reading4,
 								plan: global.planTitle,
+								isComplete: reading4State[0].isComplete,
 							},
 							{
 								date: datesMatch[0].date,
@@ -142,6 +194,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track3[1].reading5,
 								plan: global.planTitle,
+								isComplete: reading5State[0].isComplete,
 							},
 						];
 
@@ -184,7 +237,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 
 	useEffect(() => {
 		getPlan(selectedDay);
-	}, [selectedDay]);
+	}, [selectedDay, global.userReadings]);
 
 	return (
 		<View>
@@ -226,7 +279,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								]}
 							>
 								<CircleCheck
-									state={false}
+									state={item.isComplete}
 									color={'white'}
 									readingObj={item}
 								/>
