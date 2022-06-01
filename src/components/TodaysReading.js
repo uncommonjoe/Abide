@@ -18,14 +18,15 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 	const [todaysObject, setTodaysObject] = useState(null);
 	const [hasTracks, setHasTracks] = useState(false);
 	const navigation = useNavigation();
-
-	// TODO: get users selected track
 	const userObj = {
-		myTrack: 'track 3',
+		track: global.usrSettngs.track,
 	};
-	//console.log('global user ', global.user);
-	// console.log('global prefs ', global.usrSettngs);
-	//console.log('global readings ', global.usrReadings);
+	let [reading1, reading2, reading3, reading4, reading5] =
+		Array(5).fill(false);
+
+	// console.log('global user ', global.user);
+	// console.log('global user settings ', global.usrSettngs);
+	// console.log('global readings ', global.usrReadings);
 
 	const getPlan = async (selectedDay) => {
 		let pickTracks = [];
@@ -43,12 +44,89 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 				}
 			});
 
+			const readingsMatch = filter(global.userReadings, function (r) {
+				if (r.date == selectedDay) {
+					return r;
+				}
+			});
+
 			if (datesMatch.length > 0) {
 				setHasTracks(true);
+				console.log('here ', readingsMatch);
+
+				// const readings = [];
+
+				// for (let i = 0; i < 6; i++) {
+				//     readings[i] = filter(readingsMatch, function (r) {
+				//         if (r.reading == 'Reading ' + [i]) {
+				//             return r;
+				//         }
+				//     });
+				// }
+
+				let reading1State = filter(readingsMatch, function (r) {
+					if (r.reading == 'Reading 1') {
+						return r;
+					} else {
+						return false;
+					}
+				});
+
+				if (reading1State.length > 0) {
+					reading1 = reading1State[0].isComplete;
+				}
+
+				let reading2State = filter(readingsMatch, function (r) {
+					if (r.reading == 'Reading 2') {
+						return r;
+					} else {
+						return false;
+					}
+				});
+
+				if (reading2State.length > 0) {
+					reading1 = reading2State[0].isComplete;
+				}
+
+				let reading3State = filter(readingsMatch, function (r) {
+					if (r.reading == 'Reading 3') {
+						return r;
+					} else {
+						return false;
+					}
+				});
+
+				if (reading3State.length > 0) {
+					reading1 = reading3State[0].isComplete;
+				}
+
+				let reading4State = filter(readingsMatch, function (r) {
+					if (r.reading == 'Reading 4') {
+						return r;
+					} else {
+						return false;
+					}
+				});
+
+				if (reading4State.length > 0) {
+					reading1 = reading4State[0].isComplete;
+				}
+
+				let reading5State = filter(readingsMatch, function (r) {
+					if (r.reading == 'Reading 5') {
+						return r;
+					} else {
+						return false;
+					}
+				});
+
+				if (reading5State.length > 0) {
+					reading1 = reading5State[0].isComplete;
+				}
 
 				// Create collection of tracks based on users selected track
-				switch (userObj.myTrack) {
-					case 'track 1':
+				switch (userObj.track) {
+					case 'Track 1':
 						pickTracks = [
 							{
 								date: datesMatch[0].date,
@@ -57,6 +135,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[0].reading1,
 								plan: global.planTitle,
+								isComplete: reading1,
 							},
 							{
 								date: datesMatch[0].date,
@@ -65,13 +144,14 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[1].reading2,
 								plan: global.planTitle,
+								isComplete: reading2,
 							},
 						];
 
 						setTodaysObject(pickTracks);
 						break;
 
-					case 'track 2':
+					case 'Track 2':
 						pickTracks = [
 							{
 								date: datesMatch[0].date,
@@ -80,6 +160,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[0].reading1,
 								plan: global.planTitle,
+								isComplete: reading1,
 							},
 							{
 								date: datesMatch[0].date,
@@ -88,6 +169,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[1].reading2,
 								plan: global.planTitle,
+								isComplete: reading2,
 							},
 							{
 								date: datesMatch[0].date,
@@ -96,13 +178,14 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track2[0].reading3,
 								plan: global.planTitle,
+								isComplete: reading3,
 							},
 						];
 
 						setTodaysObject(pickTracks);
 						break;
 
-					case 'track 3':
+					case 'Track 3':
 						pickTracks = [
 							{
 								date: datesMatch[0].date,
@@ -111,6 +194,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[0].reading1,
 								plan: global.planTitle,
+								isComplete: reading1,
 							},
 							{
 								date: datesMatch[0].date,
@@ -119,6 +203,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[1].reading2,
 								plan: global.planTitle,
+								isComplete: reading2,
 							},
 							{
 								date: datesMatch[0].date,
@@ -127,6 +212,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track2[0].reading3,
 								plan: global.planTitle,
+								isComplete: reading3,
 							},
 							{
 								date: datesMatch[0].date,
@@ -135,6 +221,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track3[0].reading4,
 								plan: global.planTitle,
+								isComplete: reading4,
 							},
 							{
 								date: datesMatch[0].date,
@@ -143,6 +230,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track3[1].reading5,
 								plan: global.planTitle,
+								isComplete: reading5,
 							},
 						];
 
@@ -185,7 +273,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 
 	useEffect(() => {
 		getPlan(selectedDay);
-	}, [selectedDay]);
+	}, [selectedDay, global.userReadings]);
 
 	return (
 		<View>
@@ -198,7 +286,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 				<FlatList
 					data={todaysObject}
 					keyExtractor={(item) => item.reading}
-					horizontal={todaysObject.length == 0 ? false : true}
+					horizontal={todaysObject.length === 0 ? false : true}
 					renderItem={({ item }) => (
 						<View>
 							<TouchableOpacity
@@ -227,7 +315,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								]}
 							>
 								<CircleCheck
-									state={false}
+									state={item.isComplete}
 									color={'white'}
 									readingObj={item}
 								/>
@@ -255,7 +343,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'column',
 		marginHorizontal: 5,
 		padding: 20,
-		width: 130,
+		width: 140,
 	},
 	track: {
 		fontWeight: '700',

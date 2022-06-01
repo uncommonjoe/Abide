@@ -14,6 +14,7 @@ import HomePage from '../pages/Home';
 import ReadScreen from '../pages/scriptures/ReadScreen';
 import Toolbox from '../pages/Toolbox';
 import Settings from '../pages/Settings';
+import SelectTrackScreen from '../pages/users/SelectTrackScreen';
 
 const Home = createNativeStackNavigator();
 const BottomNavigation = createBottomTabNavigator();
@@ -42,6 +43,13 @@ export default function UserStack() {
 				component={ReadScreen}
 				options={{
 					header: () => <Header title={headerTitle} />,
+				}}
+			/>
+			<Home.Screen
+				name='Select Track'
+				component={SelectTrackScreen}
+				options={{
+					header: () => null,
 				}}
 			/>
 		</Home.Navigator>

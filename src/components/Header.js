@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
 	},
 	title: {
 		color: '#454C57',
-		fontWeight: 600,
+		fontWeight: '600',
 		fontFamily: 'Montserrat',
 		fontSize: 24,
 		textTransform: 'uppercase',

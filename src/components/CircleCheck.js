@@ -8,8 +8,12 @@ import { updateReadingStatus } from '../config/firebase';
 const CircleCheck = ({ state, color, readingObj }) => {
 	const [isChecked, updateIsChecked] = useState(state);
 
-	const selectHandler = (readingObj) => {
-		updateIsChecked((isChecked) => !isChecked);
+	const selectHandler = (readingObj, check) => {
+		//updateIsChecked((prevCheck) => !prevCheck);
+		const toggle = React.useCallback(() => setIsToggled(!isToggled));
+		updateIsChecked(toggle);
+		//updateIsChecked(({ check }) => ({ check: !check }));
+
 		if (readingObj) {
 			let props = {
 				...readingObj,
@@ -25,7 +29,7 @@ const CircleCheck = ({ state, color, readingObj }) => {
 		<Pressable
 			key={isChecked}
 			style={[styles.circle, { borderColor: color }]}
-			onPress={() => selectHandler(readingObj)}
+			onPress={() => selectHandler(readingObj, isChecked)}
 		>
 			<Text>
 				{isChecked ? (

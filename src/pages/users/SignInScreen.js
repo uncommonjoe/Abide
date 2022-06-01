@@ -1,6 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import {
+	StyleSheet,
+	Text,
+	View,
+	TextInput,
+	TouchableOpacity,
+} from 'react-native';
+import { TitleText } from '../../assets/styles/Text';
+import button from '../../assets/styles/button.style';
+import input from '../../assets/styles/input.style';
+import page from '../../assets/styles/page.style';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigation } from '@react-navigation/native';
 
@@ -39,8 +49,10 @@ const SignInScreen = () => {
 	}
 
 	return (
-		<View style={styles.container}>
-			<Text>Signin screen!</Text>
+		<View style={page.container}>
+			<TitleText style={{ marginBottom: 20, marginTop: 40 }}>
+				Welcome Back
+			</TitleText>
 
 			{!!value.error && (
 				<View style={styles.error}>
@@ -48,66 +60,52 @@ const SignInScreen = () => {
 				</View>
 			)}
 
-			<View style={styles.controls}>
-				<Text style={styles.title}>Email</Text>
-				<TextInput
-					style={styles.input}
-					value={value.email}
-					onChangeText={(text) => setValue({ ...value, email: text })}
-				/>
+			<View style={page.section}>
+				<View style={input.container}>
+					<Text style={input.title}>Email</Text>
+					<TextInput
+						style={input.text}
+						value={value.email}
+						onChangeText={(text) =>
+							setValue({ ...value, email: text })
+						}
+					/>
+				</View>
 
-				<Text style={styles.title}>Password</Text>
-				<TextInput
-					style={styles.input}
-					value={value.password}
-					onChangeText={(text) =>
-						setValue({ ...value, password: text })
-					}
-					secureTextEntry={true}
-				/>
+				<View style={input.container}>
+					<Text style={input.title}>Password</Text>
+					<TextInput
+						style={input.text}
+						value={value.password}
+						onChangeText={(text) =>
+							setValue({ ...value, password: text })
+						}
+						secureTextEntry={true}
+					/>
+				</View>
 
-				<Button
-					title='Sign in'
-					buttonStyle={styles.control}
+				<TouchableOpacity
+					style={[button.button, button.blue]}
 					onPress={signIn}
-				/>
+				>
+					<Text style={button.text}>Sign in</Text>
+				</TouchableOpacity>
 			</View>
 
-			<View style={styles.container}>
-				<Button
-					title='Register'
-					type='outline'
-					buttonStyle={styles.button}
+			<View>
+				<Text style={input.title}>Don't have an account yet?</Text>
+				<TouchableOpacity
+					style={[button.button, button.green]}
 					onPress={() => navigation.navigate('Sign Up')}
-				/>
+				>
+					<Text style={button.text}>Register</Text>
+				</TouchableOpacity>
 			</View>
 		</View>
 	);
 };
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		paddingTop: 20,
-		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-
-	controls: {
-		flex: 1,
-	},
-
-	input: {
-		borderColor: '#ccc',
-		borderWidth: 1,
-		padding: 5,
-	},
-
-	title: {
-		marginTop: 10,
-	},
-
 	error: {
 		marginTop: 5,
 		color: 'red',
