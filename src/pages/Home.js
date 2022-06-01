@@ -18,10 +18,7 @@ const HomePage = ({ setHeaderTitle }) => {
 	const [selectedDay, setSelectedDay] = useState(today);
 
 	return (
-		<ScrollView
-			style={styles.container}
-			contentInsetAdjustmentBehavior='automatic'
-		>
+		<View style={styles.container}>
 			<SafeAreaView>
 				<Calendar
 					setSelectedDay={setSelectedDay}
@@ -32,7 +29,7 @@ const HomePage = ({ setHeaderTitle }) => {
 					setHeaderTitle={setHeaderTitle}
 				/>
 			</SafeAreaView>
-		</ScrollView>
+		</View>
 	);
 };
 

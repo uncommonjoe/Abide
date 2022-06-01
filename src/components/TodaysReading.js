@@ -21,6 +21,8 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 	const userObj = {
 		track: global.usrSettngs.track,
 	};
+	let [reading1, reading2, reading3, reading4, reading5] =
+		Array(5).fill(false);
 
 	// console.log('global user ', global.user);
 	// console.log('global user settings ', global.usrSettngs);
@@ -62,31 +64,65 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 				//     });
 				// }
 
-				const reading1State = filter(readingsMatch, function (r) {
+				let reading1State = filter(readingsMatch, function (r) {
 					if (r.reading == 'Reading 1') {
 						return r;
+					} else {
+						return false;
 					}
 				});
-				const reading2State = filter(readingsMatch, function (r) {
+
+				if (reading1State.length > 0) {
+					reading1 = reading1State[0].isComplete;
+				}
+
+				let reading2State = filter(readingsMatch, function (r) {
 					if (r.reading == 'Reading 2') {
 						return r;
+					} else {
+						return false;
 					}
 				});
-				const reading3State = filter(readingsMatch, function (r) {
+
+				if (reading2State.length > 0) {
+					reading1 = reading2State[0].isComplete;
+				}
+
+				let reading3State = filter(readingsMatch, function (r) {
 					if (r.reading == 'Reading 3') {
 						return r;
+					} else {
+						return false;
 					}
 				});
-				const reading4State = filter(readingsMatch, function (r) {
+
+				if (reading3State.length > 0) {
+					reading1 = reading3State[0].isComplete;
+				}
+
+				let reading4State = filter(readingsMatch, function (r) {
 					if (r.reading == 'Reading 4') {
 						return r;
+					} else {
+						return false;
 					}
 				});
-				const reading5State = filter(readingsMatch, function (r) {
+
+				if (reading4State.length > 0) {
+					reading1 = reading4State[0].isComplete;
+				}
+
+				let reading5State = filter(readingsMatch, function (r) {
 					if (r.reading == 'Reading 5') {
 						return r;
+					} else {
+						return false;
 					}
 				});
+
+				if (reading5State.length > 0) {
+					reading1 = reading5State[0].isComplete;
+				}
 
 				// Create collection of tracks based on users selected track
 				switch (userObj.track) {
@@ -99,7 +135,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[0].reading1,
 								plan: global.planTitle,
-								isComplete: reading1State[0].isComplete,
+								isComplete: reading1,
 							},
 							{
 								date: datesMatch[0].date,
@@ -108,7 +144,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[1].reading2,
 								plan: global.planTitle,
-								isComplete: reading2State[0].isComplete,
+								isComplete: reading2,
 							},
 						];
 
@@ -124,7 +160,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[0].reading1,
 								plan: global.planTitle,
-								isComplete: reading1State[0].isComplete,
+								isComplete: reading1,
 							},
 							{
 								date: datesMatch[0].date,
@@ -133,7 +169,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[1].reading2,
 								plan: global.planTitle,
-								isComplete: reading2State[0].isComplete,
+								isComplete: reading2,
 							},
 							{
 								date: datesMatch[0].date,
@@ -142,7 +178,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track2[0].reading3,
 								plan: global.planTitle,
-								isComplete: reading3State[0].isComplete,
+								isComplete: reading3,
 							},
 						];
 
@@ -158,7 +194,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[0].reading1,
 								plan: global.planTitle,
-								isComplete: reading1State[0].isComplete,
+								isComplete: reading1,
 							},
 							{
 								date: datesMatch[0].date,
@@ -167,7 +203,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track1[1].reading2,
 								plan: global.planTitle,
-								isComplete: reading2State[0].isComplete,
+								isComplete: reading2,
 							},
 							{
 								date: datesMatch[0].date,
@@ -176,7 +212,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track2[0].reading3,
 								plan: global.planTitle,
-								isComplete: reading3State[0].isComplete,
+								isComplete: reading3,
 							},
 							{
 								date: datesMatch[0].date,
@@ -185,7 +221,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track3[0].reading4,
 								plan: global.planTitle,
-								isComplete: reading4State[0].isComplete,
+								isComplete: reading4,
 							},
 							{
 								date: datesMatch[0].date,
@@ -194,7 +230,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 								passage:
 									datesMatch[0].tracks.track3[1].reading5,
 								plan: global.planTitle,
-								isComplete: reading5State[0].isComplete,
+								isComplete: reading5,
 							},
 						];
 
@@ -250,7 +286,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 				<FlatList
 					data={todaysObject}
 					keyExtractor={(item) => item.reading}
-					horizontal={todaysObject.length == 0 ? false : true}
+					horizontal={todaysObject.length === 0 ? false : true}
 					renderItem={({ item }) => (
 						<View>
 							<TouchableOpacity

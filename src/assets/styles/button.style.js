@@ -25,7 +25,7 @@ const button = StyleSheet.create({
 	text: {
 		color: 'white',
 		fontFamily: 'Montserrat',
-		fontWeight: 700,
+		fontWeight: '700',
 		fontSize: 20,
 		textTransform: 'uppercase',
 	},
