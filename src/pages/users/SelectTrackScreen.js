@@ -14,10 +14,12 @@ import input from '../../assets/styles/input.style';
 import page from '../../assets/styles/page.style';
 import useAuthentication from '../../utils/hooks/useAuthentication';
 import { addTrack } from '../../config/firebase';
+import { useNavigation } from '@react-navigation/native';
 
 const SelectTrackScreen = () => {
 	const [option, setOption] = useState(null);
 	const user = useAuthentication();
+	const navigation = useNavigation();
 
 	const data = [
 		{ value: 'Track 1' },
@@ -32,7 +34,8 @@ const SelectTrackScreen = () => {
 				option: track,
 			};
 
-			return addTrack(props);
+			addTrack(props);
+			navigation.navigate('Home');
 		} else {
 			console.log('no user');
 		}

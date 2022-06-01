@@ -17,12 +17,13 @@ export default function TrackStack() {
 					header: () => null,
 				}}
 			/>
-			{/* <Stack.Screen
-				name='HomePage'
+			<Stack.Screen
+				name='Home'
+				component={HomePage}
 				options={{
 					header: () => null,
 				}}
-			/> */}
+			/>
 		</Stack.Navigator>
 	);
 }
