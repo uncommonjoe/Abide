@@ -10,9 +10,9 @@ const CircleCheck = ({ state, color, readingObj }) => {
 
 	const selectHandler = (readingObj, check) => {
 		//updateIsChecked((prevCheck) => !prevCheck);
-		const toggle = React.useCallback(() => setIsToggled(!isToggled));
-		updateIsChecked(toggle);
-		//updateIsChecked(({ check }) => ({ check: !check }));
+		//const toggle = React.useCallback(() => setIsToggled(!isToggled));
+		//updateIsChecked(toggle);
+		updateIsChecked(({ check }) => ({ check: !check }));
 
 		if (readingObj) {
 			let props = {
