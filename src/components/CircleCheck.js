@@ -33,12 +33,13 @@ const CircleCheck = ({ state, color, readingObj }) => {
 		>
 			<Text>
 				{isChecked ? (
-					<FontAwesomeIcon
-						style={styles.icon}
-						icon={faCheck}
-						color={color}
-						size={20}
-					/>
+					<View style={styles.icon}>
+						<FontAwesomeIcon
+							icon={faCheck}
+							color={color}
+							size={20}
+						/>
+					</View>
 				) : (
 					''
 				)}
