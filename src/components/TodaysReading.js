@@ -11,7 +11,6 @@ import { TitleText, Text } from '../assets/styles/Text';
 import CircleCheck from './CircleCheck';
 import { filter } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
-import { Montserrat } from '@expo-google-fonts/inter';
 
 const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 	const [isLoading, setLoading] = useState(true);

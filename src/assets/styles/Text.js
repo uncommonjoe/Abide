@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-import { Montserrat } from '@expo-google-fonts/inter';
 
 const Text = styled.Text`
 	font-weight: ${(props) => (props.textbold ? '700' : 'normal')};

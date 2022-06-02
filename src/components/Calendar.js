@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 import Moment from 'moment';
 import { Text, TitleText } from '../assets/styles/Text';
-import { Montserrat } from '@expo-google-fonts/inter';
 
 const Calendar = ({ setSelectedDay, selectedDay }) => {
 	const [currentWeek, setCurrentWeek] = useState(null);
