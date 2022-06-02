@@ -65,6 +65,7 @@ export default function UserStack() {
 					justifyContent: 'center',
 					height: 85,
 				},
+				tabBarActiveTintColor: '#454C57',
 			}}
 		>
 			<BottomNavigation.Screen
