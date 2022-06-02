@@ -6,6 +6,8 @@ import {
 	View,
 	TextInput,
 	TouchableOpacity,
+	TouchableWithoutFeedback,
+	Keyboard,
 } from 'react-native';
 import { TitleText } from '../../assets/styles/Text';
 import button from '../../assets/styles/button.style';
@@ -49,60 +51,62 @@ const SignInScreen = () => {
 	}
 
 	return (
-		<View style={page.container}>
-			<TitleText style={{ marginBottom: 20, marginTop: 40 }}>
-				Welcome Back
-			</TitleText>
+		<TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+			<View style={page.container}>
+				<TitleText style={{ marginBottom: 20, marginTop: 40 }}>
+					Welcome Back
+				</TitleText>
 
-			{!!value.error && (
-				<View style={styles.error}>
-					<Text>{value.error}</Text>
+				{!!value.error && (
+					<View style={styles.error}>
+						<Text>{value.error}</Text>
+					</View>
+				)}
+
+				<View style={page.section}>
+					<View style={input.container}>
+						<Text style={input.title}>Email</Text>
+						<TextInput
+							style={input.text}
+							value={value.email}
+							keyboardType='email-address'
+							onChangeText={(text) =>
+								setValue({ ...value, email: text })
+							}
+						/>
+					</View>
+
+					<View style={input.container}>
+						<Text style={input.title}>Password</Text>
+						<TextInput
+							style={input.text}
+							value={value.password}
+							onChangeText={(text) =>
+								setValue({ ...value, password: text })
+							}
+							secureTextEntry={true}
+						/>
+					</View>
+
+					<TouchableOpacity
+						style={[button.button, button.blue]}
+						onPress={signIn}
+					>
+						<Text style={button.text}>Sign in</Text>
+					</TouchableOpacity>
 				</View>
-			)}
 
-			<View style={page.section}>
-				<View style={input.container}>
-					<Text style={input.title}>Email</Text>
-					<TextInput
-						style={input.text}
-						value={value.email}
-						keyboardType='email-address'
-						onChangeText={(text) =>
-							setValue({ ...value, email: text })
-						}
-					/>
+				<View>
+					<Text style={input.title}>Don't have an account yet?</Text>
+					<TouchableOpacity
+						style={[button.button, button.green]}
+						onPress={() => navigation.navigate('Sign Up')}
+					>
+						<Text style={button.text}>Register</Text>
+					</TouchableOpacity>
 				</View>
-
-				<View style={input.container}>
-					<Text style={input.title}>Password</Text>
-					<TextInput
-						style={input.text}
-						value={value.password}
-						onChangeText={(text) =>
-							setValue({ ...value, password: text })
-						}
-						secureTextEntry={true}
-					/>
-				</View>
-
-				<TouchableOpacity
-					style={[button.button, button.blue]}
-					onPress={signIn}
-				>
-					<Text style={button.text}>Sign in</Text>
-				</TouchableOpacity>
 			</View>
-
-			<View>
-				<Text style={input.title}>Don't have an account yet?</Text>
-				<TouchableOpacity
-					style={[button.button, button.green]}
-					onPress={() => navigation.navigate('Sign Up')}
-				>
-					<Text style={button.text}>Register</Text>
-				</TouchableOpacity>
-			</View>
-		</View>
+		</TouchableWithoutFeedback>
 	);
 };
 

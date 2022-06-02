@@ -293,6 +293,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 						<View>
 							<TouchableOpacity
 								key={item}
+								activeOpacity={1}
 								onPress={() =>
 									selectReading(item, setHeaderTitle)
 								}

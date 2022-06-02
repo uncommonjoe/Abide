@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const page = StyleSheet.create({
 	container: {
 		flex: 1,
-		paddingTop: 20,
+		paddingVertical: 40,
 		backgroundColor: '#F3F2F8',
 		padding: 25,
 	},
