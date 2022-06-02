@@ -101,6 +101,7 @@ const SignUpScreen = () => {
 					<TextInput
 						style={input.text}
 						value={value.email}
+						keyboardType='email-address'
 						onChangeText={(text) =>
 							setValue({ ...value, email: text })
 						}
