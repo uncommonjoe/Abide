@@ -20,10 +20,13 @@ const HomePage = ({ setHeaderTitle }) => {
 	return (
 		<View style={styles.container}>
 			<SafeAreaView>
-				<Calendar
-					setSelectedDay={setSelectedDay}
-					selectedDay={selectedDay}
-				/>
+				<View style={styles.section}>
+					<Calendar
+						setSelectedDay={setSelectedDay}
+						selectedDay={selectedDay}
+					/>
+				</View>
+
 				<TodaysReading
 					selectedDay={selectedDay}
 					setHeaderTitle={setHeaderTitle}
@@ -36,8 +39,10 @@ const HomePage = ({ setHeaderTitle }) => {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		padding: 20,
 		backgroundColor: '#F3F2F8',
+	},
+	section: {
+		padding: 20,
 	},
 });
 

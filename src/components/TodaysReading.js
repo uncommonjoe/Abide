@@ -276,13 +276,16 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 
 	return (
 		<View>
-			<TitleText style={{ marginBottom: 20, marginTop: 40 }}>
+			<TitleText
+				style={{ marginBottom: 20, marginTop: 40, marginLeft: 20 }}
+			>
 				Today's Reading
 			</TitleText>
 			{isLoading ? (
 				<ActivityIndicator />
 			) : (
 				<FlatList
+					style={{ paddingHorizontal: 20 }}
 					data={todaysObject}
 					keyExtractor={(item) => item.reading}
 					horizontal={todaysObject.length === 0 ? false : true}
