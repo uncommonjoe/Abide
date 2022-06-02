@@ -15,6 +15,5 @@ module.exports = function (api) {
 				},
 			],
 		],
-		extends: ['plugin:react-hooks/recommended'],
 	};
 };
