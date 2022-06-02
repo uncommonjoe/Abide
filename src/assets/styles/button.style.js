@@ -1,5 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { Montserrat } from '@expo-google-fonts/inter';
+// import {
+// 	Montserrat_400Regular,
+// 	Montserrat_500Medium,
+// 	Montserrat_700Bold,
+// } from '@expo-google-fonts/montserrat';
 
 const button = StyleSheet.create({
 	button: {
@@ -24,8 +28,7 @@ const button = StyleSheet.create({
 	},
 	text: {
 		color: 'white',
-		fontFamily: 'Montserrat',
-		fontWeight: '700',
+		//fontFamily: Montserrat_700Bold,
 		fontSize: 20,
 		textTransform: 'uppercase',
 	},

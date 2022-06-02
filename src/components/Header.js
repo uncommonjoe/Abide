@@ -6,7 +6,11 @@ import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 import CircleCheck from './CircleCheck';
 
 //https://docs.expo.dev/guides/using-custom-fonts/
-import { Montserrat } from '@expo-google-fonts/inter';
+// import {
+// 	Montserrat_400Regular,
+// 	Montserrat_500Medium,
+// 	Montserrat_700Bold,
+// } from '@expo-google-fonts/montserrat';
 
 const Header = ({ title }) => {
 	return (
@@ -48,8 +52,7 @@ const styles = StyleSheet.create({
 	},
 	title: {
 		color: '#454C57',
-		fontWeight: '600',
-		fontFamily: 'Montserrat',
+		//fontFamily: Montserrat_700Bold,
 		fontSize: 24,
 		textTransform: 'uppercase',
 	},
@@ -66,7 +69,7 @@ const styles = StyleSheet.create({
 	},
 	buttonText: {
 		marginLeft: 10,
-		fontFamily: 'Montserrat',
+		//fontFamily: Montserrat_700Bold,
 		textTransform: 'uppercase',
 	},
 });
