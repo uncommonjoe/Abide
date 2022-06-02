@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, Text, SafeAreaView, ScrollView } from 'react-native';
 import Scripture from '../../components/Scripture';
+import page from '../../assets/styles/page.style';
 
 const ReadScreen = ({ route }) => {
 	const readingObj = route.params.reading;
 
 	return (
 		<ScrollView
-			style={styles.container}
+			style={[page.container, styles.background]}
 			contentInsetAdjustmentBehavior='automatic'
 		>
 			<SafeAreaView>
@@ -18,9 +19,7 @@ const ReadScreen = ({ route }) => {
 };
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		padding: 20,
+	background: {
 		backgroundColor: 'white',
 	},
 });

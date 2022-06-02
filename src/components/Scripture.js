@@ -1,11 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import {
-	StyleSheet,
-	View,
-	ActivityIndicator,
-	ScrollView,
-	SafeAreaView,
-} from 'react-native';
+import { StyleSheet, View, ActivityIndicator } from 'react-native';
 import { Text, TitleText } from '../assets/styles/Text';
 import { ESV_API_KEY } from '@env';
 
@@ -18,6 +12,8 @@ const Scripture = ({ reading }) => {
 		const url = 'https://api.esv.org/v3/passage/text/?q=';
 		const apiSettings =
 			'&include-short-copyright=false' +
+			'&include-footnotes=false' +
+			'&include-passage-references=false' +
 			'&include-footnotes=false' +
 			'&indent-paragraphs=0';
 		const reference = reading.passage.split(' ').join('+');
@@ -45,12 +41,10 @@ const Scripture = ({ reading }) => {
 
 	return (
 		<View>
-			<Text>Scripture</Text>
-
 			{isLoading ? (
 				<ActivityIndicator />
 			) : (
-				<Text style={passageText}>{passageText.passages}</Text>
+				<Text style={styles.passageText}>{passageText.passages}</Text>
 			)}
 
 			<Text style={styles.copywriteText}>
@@ -69,12 +63,8 @@ const Scripture = ({ reading }) => {
 };
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		padding: 20,
-	},
 	passageText: {
-		fontSize: 14,
+		fontSize: 20,
 	},
 	copywriteText: {
 		fontSize: 12,
