@@ -2,11 +2,11 @@ import React, { useEffect, useState, useRef } from 'react';
 import { StyleSheet, View, ActivityIndicator } from 'react-native';
 import { Text, TitleText } from '../assets/styles/Text';
 import { ESV_API_KEY } from '@env';
+import reactStringReplace from 'react-string-replace';
 
 const Scripture = ({ reading }) => {
 	const [isLoading, setLoading] = useState(true);
 	const [passageText, setPassageText] = useState();
-	console.log(reading);
 
 	const getPassageText = async () => {
 		const url = 'https://api.esv.org/v3/passage/text/?q=';
@@ -26,8 +26,30 @@ const Scripture = ({ reading }) => {
 					'Content-Type': 'application/x-www-form-urlencoded',
 				}),
 			});
+
 			const json = await response.json();
-			setPassageText(json);
+
+			// Remove brackets from verses
+			const noBrackets = json.passages[0].replace(/[\])}[{(]/g, '');
+
+			// Add <Text> and fontSize to verses
+			const verseStyle = reactStringReplace(
+				noBrackets,
+				/(\d+)/g,
+				(match) => (
+					<Text
+						style={{
+							fontSize: 14,
+							textAlignVertical: 'super',
+							verticalAlign: 'super',
+						}}
+					>
+						{match}
+					</Text>
+				)
+			);
+
+			setPassageText(verseStyle);
 		} catch (error) {
 			console.error(error);
 		} finally {
@@ -44,7 +66,7 @@ const Scripture = ({ reading }) => {
 			{isLoading ? (
 				<ActivityIndicator />
 			) : (
-				<Text style={styles.passageText}>{passageText.passages}</Text>
+				<Text style={styles.passageText}>{passageText}</Text>
 			)}
 
 			<Text style={styles.copywriteText}>
@@ -65,6 +87,7 @@ const Scripture = ({ reading }) => {
 const styles = StyleSheet.create({
 	passageText: {
 		fontSize: 20,
+		lineHeight: 30,
 	},
 	copywriteText: {
 		fontSize: 12,
