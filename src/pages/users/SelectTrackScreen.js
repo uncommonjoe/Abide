@@ -47,7 +47,7 @@ const SelectTrackScreen = () => {
 			contentInsetAdjustmentBehavior='automatic'
 		>
 			<SafeAreaView>
-				<TitleText style={{ marginBottom: 20, marginTop: 40 }}>
+				<TitleText style={{ marginTop: 40 }}>
 					Select Track to Begin
 				</TitleText>
 

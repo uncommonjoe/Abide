@@ -82,7 +82,7 @@ const Calendar = ({ setSelectedDay, selectedDay }) => {
 
 	return (
 		<View>
-			<TitleText style={{ marginBottom: 20 }}>Calendar</TitleText>
+			<TitleText>Calendar</TitleText>
 
 			<FlatList
 				data={currentWeek}

@@ -5,10 +5,10 @@ import page from '../assets/styles/page.style';
 
 export default function Toolbox() {
 	return (
-		<SafeAreaView>
-			<View style={page.container}>
-				<TitleText style={{ marginBottom: 25 }}>Toolbox</TitleText>
-			</View>
-		</SafeAreaView>
+		<View style={[page.container, { paddingTop: 70 }]}>
+			<SafeAreaView>
+				<TitleText>Toolbox</TitleText>
+			</SafeAreaView>
+		</View>
 	);
 }

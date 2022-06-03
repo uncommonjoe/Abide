@@ -53,9 +53,7 @@ const SignInScreen = () => {
 	return (
 		<TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
 			<View style={page.container}>
-				<TitleText style={{ marginBottom: 20, marginTop: 40 }}>
-					Welcome Back
-				</TitleText>
+				<TitleText style={{ marginTop: 40 }}>Welcome Back</TitleText>
 
 				{!!value.error && (
 					<View style={styles.error}>

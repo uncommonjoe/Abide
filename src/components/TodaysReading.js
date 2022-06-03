@@ -5,7 +5,6 @@ import {
 	ActivityIndicator,
 	FlatList,
 	TouchableOpacity,
-	Dimensions,
 } from 'react-native';
 import { TitleText, Text } from '../assets/styles/Text';
 import CircleCheck from './CircleCheck';
@@ -276,9 +275,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 
 	return (
 		<View>
-			<TitleText
-				style={{ marginBottom: 20, marginTop: 40, marginLeft: 20 }}
-			>
+			<TitleText style={{ marginTop: 40, marginLeft: 20 }}>
 				Today's Reading
 			</TitleText>
 			{isLoading ? (

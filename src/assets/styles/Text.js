@@ -10,6 +10,7 @@ const TitleText = styled.Text`
 	color: #454c57;
 	font-weight: 500;
 	text-transform: uppercase;
+	margin-bottom: 25px;
 `;
 
 export { Text, TitleText };

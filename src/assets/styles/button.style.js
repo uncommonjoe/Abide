@@ -10,6 +10,8 @@ const button = StyleSheet.create({
 		padding: 20,
 		textAlign: 'center',
 		alignItems: 'center',
+		justifyContent: 'center',
+		minHeight: 60,
 	},
 	green: {
 		backgroundColor: '#596B55',

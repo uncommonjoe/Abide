@@ -74,9 +74,7 @@ const SignUpScreen = () => {
 	return (
 		<TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
 			<View style={page.container}>
-				<TitleText style={{ marginBottom: 20, marginTop: 40 }}>
-					Getting Started
-				</TitleText>
+				<TitleText style={{ marginTop: 40 }}>Getting Started</TitleText>
 
 				{!!value.error && (
 					<View style={styles.error}>

@@ -11,21 +11,21 @@ export default function Settings() {
 	const auth = getAuth();
 
 	return (
-		<SafeAreaView>
-			<View style={page.container}>
-				<TitleText style={{ marginBottom: 25 }}>
-					Hello {user?.displayName}
-				</TitleText>
+		<View style={[page.container, { paddingTop: 70 }]}>
+			<SafeAreaView>
+				<TitleText>Hello {user?.displayName}</TitleText>
 
 				<View style={page.section}>
 					<TouchableOpacity
 						style={[button.button, button.green]}
 						onPress={() => signOut(auth)}
 					>
-						<Text style={button.text}>Sign Out</Text>
+						<Text style={[button.text, { color: 'white' }]}>
+							Sign Out
+						</Text>
 					</TouchableOpacity>
 				</View>
-			</View>
-		</SafeAreaView>
+			</SafeAreaView>
+		</View>
 	);
 }
