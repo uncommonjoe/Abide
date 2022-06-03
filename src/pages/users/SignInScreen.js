@@ -53,6 +53,8 @@ const SignInScreen = () => {
 	return (
 		<TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
 			<View style={page.container}>
+				<StatusBar style='dark' />
+
 				<TitleText style={{ marginTop: 40 }}>Welcome Back</TitleText>
 
 				{!!value.error && (

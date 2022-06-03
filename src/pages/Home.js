@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { StyleSheet, View, Text, SafeAreaView, ScrollView } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, View, SafeAreaView } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import Moment from 'moment';
 import TodaysReading from '../components/TodaysReading';
 import Calendar from '../components/Calendar';
@@ -20,6 +21,8 @@ const HomePage = ({ setHeaderTitle }) => {
 	return (
 		<View style={styles.container}>
 			<SafeAreaView>
+				<StatusBar style='dark' />
+
 				<View style={styles.section}>
 					<Calendar
 						setSelectedDay={setSelectedDay}

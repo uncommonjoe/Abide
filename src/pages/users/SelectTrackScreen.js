@@ -7,6 +7,7 @@ import {
 	ScrollView,
 	TouchableOpacity,
 } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
 import { TitleText } from '../../assets/styles/Text';
 import button from '../../assets/styles/button.style';
@@ -47,6 +48,8 @@ const SelectTrackScreen = () => {
 			contentInsetAdjustmentBehavior='automatic'
 		>
 			<SafeAreaView>
+				<StatusBar style='dark' />
+
 				<TitleText style={{ marginTop: 40 }}>
 					Select Track to Begin
 				</TitleText>
