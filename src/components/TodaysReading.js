@@ -286,6 +286,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 					data={todaysObject}
 					keyExtractor={(item) => item.reading}
 					horizontal={todaysObject.length === 0 ? false : true}
+					scrollEnabled={todaysObject.length != 0}
 					renderItem={({ item }) => (
 						<View>
 							<TouchableOpacity
@@ -372,6 +373,7 @@ const styles = StyleSheet.create({
 	},
 	noReading: {
 		color: '#7D7B84',
+		textAlign: 'center',
 	},
 });
 

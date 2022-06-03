@@ -1,11 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import {
-	StyleSheet,
-	View,
-	FlatList,
-	TouchableOpacity,
-	Dimensions,
-} from 'react-native';
+import { StyleSheet, View, FlatList, TouchableOpacity } from 'react-native';
 import Moment from 'moment';
 import { Text, TitleText } from '../assets/styles/Text';
 
@@ -62,8 +56,6 @@ const Calendar = ({ setSelectedDay, selectedDay }) => {
 		setSelected(convertedDate);
 	};
 
-	const activeStyle = (day) => {};
-
 	useEffect(async () => {
 		// Initialize selected date
 		convertDate(selectedDay);
@@ -88,6 +80,7 @@ const Calendar = ({ setSelectedDay, selectedDay }) => {
 				data={currentWeek}
 				keyExtractor={(item) => item.day}
 				contentContainerStyle={styles.container}
+				scrollEnabled={false}
 				renderItem={({ item }) => (
 					<TouchableOpacity
 						key={item}
