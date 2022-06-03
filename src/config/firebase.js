@@ -131,3 +131,21 @@ export const getUserReadings = async (user) => {
 		);
 	}
 };
+
+export const getToolbox = async () => {
+	const toolbox = [];
+
+	try {
+		const q = query(collection(db, 'toolbox'));
+
+		const querySnapshot = await getDocs(q);
+
+		querySnapshot.forEach((doc) => {
+			toolbox.push(doc.data());
+		});
+		console.log(toolbox);
+		return toolbox;
+	} catch (e) {
+		console.error('Error getting toolbox: ', e);
+	}
+};

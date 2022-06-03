@@ -33,6 +33,7 @@ const button = StyleSheet.create({
 		//fontFamily: Montserrat_700Bold,
 		fontSize: 20,
 		textTransform: 'uppercase',
+		textAlign: 'center',
 	},
 });
 
