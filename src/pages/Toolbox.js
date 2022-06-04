@@ -12,14 +12,17 @@ import {
 import { StatusBar } from 'expo-status-bar';
 import { TitleText } from '../assets/styles/Text';
 import { getToolbox } from '../config/firebase';
+import { useNavigation } from '@react-navigation/native';
 import page from '../assets/styles/page.style';
 import button from '../assets/styles/button.style';
 
 const Toolbox = () => {
 	const [toolboxItems, setToolboxItems] = useState({});
 	const [isLoading, setLoading] = useState(true);
+	const navigation = useNavigation();
 
 	const buttonStyle = (color) => {
+		// Need to convert color with convertColor hook
 		switch (color) {
 			case 'red':
 				return { backgroundColor: '#802119' };
@@ -36,6 +39,7 @@ const Toolbox = () => {
 
 	const selectBox = (item) => {
 		console.log(item);
+		navigation.navigate('Toolbox Modal', { item: item });
 	};
 
 	useEffect(() => {
@@ -58,28 +62,20 @@ const Toolbox = () => {
 				{isLoading ? (
 					<ActivityIndicator />
 				) : (
-					<FlatList
-						// sort by id decending
-						data={toolboxItems.sort(function (obj1, obj2) {
-							return obj1.id - obj2.id;
-						})}
-						keyExtractor={(item) => item.id}
-						contentContainerStyle={styles.container}
-						scrollEnabled={false}
-						renderItem={({ item }) => (
-							<TouchableOpacity
-								key={item}
-								onPress={() => selectBox(item)}
-								style={[
-									button.button,
-									buttonStyle(item.color),
-									{ marginBottom: 20, height: 100 },
-								]}
-							>
-								<Text style={button.text}>{item.title}</Text>
-							</TouchableOpacity>
-						)}
-					/>
+					toolboxItems.map((item) => (
+						<TouchableOpacity
+							item={item}
+							key={item.id}
+							onPress={() => selectBox(item)}
+							style={[
+								button.button,
+								buttonStyle(item.color),
+								{ marginBottom: 20, height: 100 },
+							]}
+						>
+							<Text style={button.text}>{item.title}</Text>
+						</TouchableOpacity>
+					))
 				)}
 			</SafeAreaView>
 		</ScrollView>

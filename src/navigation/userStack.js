@@ -7,16 +7,19 @@ import {
 	faSliders,
 } from '@fortawesome/free-solid-svg-icons';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { TransitionPresets } from '@react-navigation/stack';
 import Header from '../components/Header';
 
 // Pages
 import HomePage from '../pages/Home';
 import ReadScreen from '../pages/scriptures/ReadScreen';
 import Toolbox from '../pages/Toolbox';
+import ToolboxModal from '../pages/toolbox/ToolboxModal';
 import Settings from '../pages/Settings';
 import SelectTrackScreen from '../pages/users/SelectTrackScreen';
 
 const Home = createNativeStackNavigator();
+const ToolboxStack = createNativeStackNavigator();
 const BottomNavigation = createBottomTabNavigator();
 
 export default function UserStack() {
@@ -55,6 +58,31 @@ export default function UserStack() {
 		</Home.Navigator>
 	);
 
+	var toolboxStack = () => (
+		<ToolboxStack.Navigator
+			screenOptions={() => ({
+				gestureEnabled: true,
+			})}
+		>
+			<ToolboxStack.Screen
+				name='Toolbox'
+				component={Toolbox}
+				options={{
+					header: () => null,
+				}}
+			/>
+			<ToolboxStack.Screen
+				name='Toolbox Modal'
+				component={ToolboxModal}
+				options={{
+					header: () => null,
+					presentation: 'modal',
+					...TransitionPresets.ModalSlideFromBottomIOS,
+				}}
+			/>
+		</ToolboxStack.Navigator>
+	);
+
 	return (
 		<BottomNavigation.Navigator
 			screenOptions={{
@@ -87,7 +115,7 @@ export default function UserStack() {
 
 			<BottomNavigation.Screen
 				name='Toolbox'
-				component={Toolbox}
+				children={toolboxStack}
 				options={{
 					headerShown: false,
 					tabBarLabel: '',
