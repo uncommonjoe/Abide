@@ -44,10 +44,15 @@ const Toolbox = () => {
 
 	useEffect(() => {
 		const fetchToolbox = async () => {
+			// Get data
 			const response = await getToolbox();
-			setToolboxItems(response);
+
+			// Order by id descending
+			const ordered = response.sort(function (obj1, obj2) {
+				return obj1.id - obj2.id;
+			});
+			setToolboxItems(ordered);
 			setLoading(false);
-			return response;
 		};
 		fetchToolbox();
 	}, []);

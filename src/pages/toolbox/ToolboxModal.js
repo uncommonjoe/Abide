@@ -49,6 +49,8 @@ const styles = StyleSheet.create({
 	},
 	white: {
 		color: 'white',
+		fontSize: 20,
+		lineHeight: 30,
 	},
 });
 
