@@ -1,5 +1,6 @@
 import React from 'react';
 import { isEmpty } from 'lodash';
+import 'react-native-gesture-handler';
 
 import useAuthentication from '../utils/hooks/useAuthentication';
 import userSettings from '../utils/hooks/userSettings';
