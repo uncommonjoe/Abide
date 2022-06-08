@@ -17,7 +17,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 	const [hasTracks, setHasTracks] = useState(false);
 	const navigation = useNavigation();
 	const userObj = {
-		track: global.usrSettngs.track,
+		track: global.usrSettngs?.track,
 	};
 	let [reading1, reading2, reading3, reading4, reading5] =
 		Array(5).fill(false);
@@ -285,8 +285,8 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 					style={{ paddingHorizontal: 20 }}
 					data={todaysObject}
 					keyExtractor={(item) => item.reading}
-					horizontal={todaysObject.length === 0 ? false : true}
-					scrollEnabled={todaysObject.length != 0}
+					horizontal={todaysObject?.length === 0 ? false : true}
+					scrollEnabled={todaysObject?.length != 0}
 					renderItem={({ item }) => (
 						<View>
 							<TouchableOpacity
@@ -324,7 +324,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 						</View>
 					)}
 					ListEmptyComponent={() =>
-						todaysObject.length == 0 && (
+						todaysObject?.length == 0 && (
 							<View style={styles.noReadingWrap}>
 								<Text style={styles.noReading}>
 									No reading for today. Select another date.
