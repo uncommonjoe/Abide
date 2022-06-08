@@ -15,6 +15,7 @@ import input from '../../assets/styles/input.style';
 import page from '../../assets/styles/page.style';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigation } from '@react-navigation/native';
+import NavService from '../../navigation/NavService';
 
 const SignInScreen = () => {
 	const auth = getAuth();
@@ -40,7 +41,7 @@ const SignInScreen = () => {
 				value.password
 			).then((user) => {
 				//once we are logged in, we move to the home screen
-				navigation.navigate('Home', { user });
+				global.usrSettngs?.track ? NavService.resetStack('UserStack', { user }) :NavService.resetStack('TrackStack', { user }) ;
 			});
 		} catch (error) {
 			setValue({
