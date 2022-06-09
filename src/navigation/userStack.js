@@ -44,8 +44,11 @@ export default function UserStack() {
         name="Read"
         component={ReadScreen}
         options={{
-          header: () => <Header title={headerTitle} />,
+          header: () => null,
         }}
+        // options={{
+        //   header: () => <Header title={headerTitle} />,
+        // }}
       />
       <Home.Screen
         name="Select Track"
