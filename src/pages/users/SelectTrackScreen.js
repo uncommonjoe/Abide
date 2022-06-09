@@ -36,7 +36,7 @@ const SelectTrackScreen = () => {
 			};
 
 			addTrack(props);
-			navigation.navigate('UserStack');
+			navigation.navigate('Home');
 		} else {
 			console.log('no user');
 		}

@@ -6,6 +6,10 @@ const page = StyleSheet.create({
 		paddingVertical: 40,
 		backgroundColor: '#F3F2F8',
 		padding: 25,
+	}, container1: {
+		flex: 1,
+		paddingVertical: 40,
+		backgroundColor: '#F3F2F8',
 	},
 	section: {
 		flex: 1,
