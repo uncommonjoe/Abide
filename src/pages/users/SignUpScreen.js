@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import React from "react";
+import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   Keyboard,
+  ActivityIndicator,
 } from "react-native";
 import {
   getAuth,
@@ -22,6 +23,7 @@ import page from "../../assets/styles/page.style";
 import NavService from "../../navigation/NavService";
 
 const SignUpScreen = () => {
+  const [loading, setLoading] = useState(false);
   const auth = getAuth();
   const navigation = useNavigation();
 
@@ -36,19 +38,23 @@ const SignUpScreen = () => {
   });
 
   const signUp = async () => {
+    setLoading(true);
     if (!value.displayName) {
+      setLoading(false);
       setValue({
         ...value,
         nameError: "Name is required.",
       });
     }
     if (!value.email) {
+      setLoading(false);
       setValue({
         ...value,
         emailError: "Email is required.",
       });
     }
     if (!value.password) {
+      setLoading(false);
       setValue({
         ...value,
         passwordError: "Password is required.",
@@ -65,9 +71,10 @@ const SignUpScreen = () => {
         displayName: value.displayName,
       });
       console.warn("abc", user2);
-
+      setLoading(false);
       NavService.resetStack("TrackStack", { user2 });
     } catch (error) {
+      setLoading(false);
       setValue({
         ...value,
         error: error.message,
@@ -130,8 +137,13 @@ const SignUpScreen = () => {
           <TouchableOpacity
             style={[button.button, button.blue]}
             onPress={signUp}
+            disabled={loading}
           >
-            <Text style={button.text}>Sign Up</Text>
+            {loading ? (
+              <ActivityIndicator size="small" color="#fff" />
+            ) : (
+              <Text style={button.text}>Sign Up</Text>
+            )}
           </TouchableOpacity>
         </View>
 
