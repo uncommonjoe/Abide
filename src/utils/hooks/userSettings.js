@@ -21,7 +21,7 @@ const userSettings = (user, callback = () => {}) => {
   // }
   //   }, []);
 
-  return { usrSettngs };
+  // return { usrSettngs };
 };
 
 export default userSettings;

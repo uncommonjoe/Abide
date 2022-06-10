@@ -24,6 +24,8 @@ export default function Settings(props) {
             style={[button.button, button.green]}
             onPress={() => {
               signOut(auth);
+              global.usrSettngs = null;
+              global.user = null;
               NavService.resetStack("AuthStack");
             }}
           >
