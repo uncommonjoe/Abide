@@ -70,7 +70,6 @@ const SignUpScreen = () => {
       const user2 = await updateProfile(user, {
         displayName: value.displayName,
       });
-      console.warn("abc", user2);
       setLoading(false);
       NavService.resetStack("TrackStack", { user2 });
     } catch (error) {

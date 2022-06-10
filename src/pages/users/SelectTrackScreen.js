@@ -6,9 +6,11 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
+  ActivityIndicator,
+  Dimensions,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
-
+let { height, width } = Dimensions.get("window");
 import { TitleText } from "../../assets/styles/Text";
 import button from "../../assets/styles/button.style";
 import input from "../../assets/styles/input.style";
@@ -19,6 +21,7 @@ import { useNavigation } from "@react-navigation/native";
 
 const SelectTrackScreen = (props) => {
   const [option, setOption] = useState(null);
+  const [loading, setLoading] = useState(false);
   const user = useAuthentication();
   const navigation = useNavigation();
 
@@ -28,16 +31,17 @@ const SelectTrackScreen = (props) => {
     { value: "Track 3" },
   ];
 
-  const submit = (track) => {
+  const submit = async (track) => {
+    global.usrSettngs = { ...user.user, track };
     if (user && track) {
       let data = {
         user: user.user,
         option: track,
       };
 
-      addTrack(data);
-      console.warn("user", user.user);
-      global.usrSettngs = { ...user.user, track };
+      setLoading(true);
+      await addTrack(data);
+      setLoading(false);
       navigation.navigate("UserStack", { user: user.user });
     } else {
       console.log("no user");
@@ -45,61 +49,77 @@ const SelectTrackScreen = (props) => {
   };
 
   return (
-    <ScrollView
-      style={[page.container, { paddingBottom: 50 }]}
-      contentInsetAdjustmentBehavior="automatic"
-    >
-      <SafeAreaView>
-        <StatusBar style="dark" />
+    <>
+      <ScrollView
+        style={[page.container, { paddingBottom: 50 }]}
+        contentInsetAdjustmentBehavior="automatic"
+      >
+        <SafeAreaView>
+          <StatusBar style="dark" />
 
-        <TitleText style={{ marginTop: 40 }}>Select Track to Begin</TitleText>
+          <TitleText style={{ marginTop: 40 }}>Select Track to Begin</TitleText>
 
-        <View style={page.section}>
-          <Text style={input.title}>Track 1</Text>
+          <View style={page.section}>
+            <Text style={input.title}>Track 1</Text>
 
-          <TouchableOpacity
-            style={[button.button, button.blue]}
-            onPress={() => submit("Track 1")}
-          >
-            <Text style={button.text}>New Testament</Text>
-            <Text style={[button.text, local.textXXL]}>3X</Text>
-          </TouchableOpacity>
-        </View>
+            <TouchableOpacity
+              style={[button.button, button.blue]}
+              onPress={() => submit("Track 1")}
+            >
+              <Text style={button.text}>New Testament</Text>
+              <Text style={[button.text, local.textXXL]}>3X</Text>
+            </TouchableOpacity>
+          </View>
 
-        <View style={page.section}>
-          <Text style={input.title}>Track 2</Text>
+          <View style={page.section}>
+            <Text style={input.title}>Track 2</Text>
 
-          <TouchableOpacity
-            style={[button.button, button.tan]}
-            onPress={() => submit("Track 2")}
-          >
-            <Text style={button.text}>Track 1</Text>
-            <Text style={button.text}>+</Text>
-            <View style={{ flexDirection: "row" }}>
-              <Text style={[button.text, local.textXXL]}>2X</Text>
-              <View style={{ textAlign: "left", paddingLeft: 20 }}>
-                <Text style={button.text}>Proverbs</Text>
-                <Text style={button.text}>Through</Text>
-                <Text style={button.text}>Psalms</Text>
+            <TouchableOpacity
+              style={[button.button, button.tan]}
+              onPress={() => submit("Track 2")}
+            >
+              <Text style={button.text}>Track 1</Text>
+              <Text style={button.text}>+</Text>
+              <View style={{ flexDirection: "row" }}>
+                <Text style={[button.text, local.textXXL]}>2X</Text>
+                <View style={{ textAlign: "left", paddingLeft: 20 }}>
+                  <Text style={button.text}>Proverbs</Text>
+                  <Text style={button.text}>Through</Text>
+                  <Text style={button.text}>Psalms</Text>
+                </View>
               </View>
-            </View>
-          </TouchableOpacity>
-        </View>
+            </TouchableOpacity>
+          </View>
 
-        <View style={page.section}>
-          <Text style={input.title}>Track 3</Text>
-          <TouchableOpacity
-            style={[button.button, button.red]}
-            onPress={() => submit("Track 3")}
-          >
-            <Text style={button.text}>Track 2</Text>
-            <Text style={button.text}>+</Text>
-            <Text style={button.text}>Old Testament</Text>
-            <Text style={[button.text, local.textXXL]}>1X</Text>
-          </TouchableOpacity>
+          <View style={page.section}>
+            <Text style={input.title}>Track 3</Text>
+            <TouchableOpacity
+              style={[button.button, button.red]}
+              onPress={() => submit("Track 3")}
+            >
+              <Text style={button.text}>Track 2</Text>
+              <Text style={button.text}>+</Text>
+              <Text style={button.text}>Old Testament</Text>
+              <Text style={[button.text, local.textXXL]}>1X</Text>
+            </TouchableOpacity>
+          </View>
+        </SafeAreaView>
+      </ScrollView>
+      {loading ? (
+        <View
+          style={{
+            height,
+            width,
+            position: "absolute",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "rgba(0,0,0,0.7)",
+          }}
+        >
+          <ActivityIndicator size="large" color="#fff" />
         </View>
-      </SafeAreaView>
-    </ScrollView>
+      ) : null}
+    </>
   );
 };
 
