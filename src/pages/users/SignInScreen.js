@@ -45,7 +45,6 @@ const SignInScreen = () => {
       await signInWithEmailAndPassword(auth, value.email, value.password).then(
         ({ user }) => {
           userSettings(user, (res) => {
-            console.warn("res", res);
             setLoading(false);
             global.usrSettngs = res;
             global.user = user;
