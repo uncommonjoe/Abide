@@ -1,52 +1,53 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, SafeAreaView } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
-import Moment from 'moment';
-import TodaysReading from '../components/TodaysReading';
-import Calendar from '../components/Calendar';
+import React, { useState } from "react";
+import { StyleSheet, View, SafeAreaView } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import Moment from "moment";
+import TodaysReading from "../components/TodaysReading";
+import Calendar from "../components/Calendar";
+import userReadings from "../utils/hooks/userReadings";
 
 const HomePage = ({ setHeaderTitle }) => {
-	// Get today's date to default into Today's Reading and Calendar
-	let getDate = new Date();
+  const { usrReadings } = userReadings();
+  global.userReadings = usrReadings;
+  global.planTitle = "2022-2023";
+  // Get today's date to default into Today's Reading and Calendar
+  let getDate = new Date();
 
-	// addYear is just to use next years data
-	let addYear = Moment(getDate).add(1, 'y'); // TODO: For testing purposes. Remove before production
+  // addYear is just to use next years data
+  let addYear = Moment(getDate).add(1, "y"); // TODO: For testing purposes. Remove before production
 
-	// Format the date
-	let today = Moment(addYear).format('ddd, MMM D, YYYY');
+  // Format the date
+  let today = Moment(addYear).format("ddd, MMM D, YYYY");
 
-	// Create selectedDay state and default it to today
-	const [selectedDay, setSelectedDay] = useState(today);
+  // Create selectedDay state and default it to today
+  const [selectedDay, setSelectedDay] = useState(today);
 
-	return (
-		<View style={styles.container}>
-			<SafeAreaView>
-				<StatusBar style='dark' />
+  return (
+    <View style={styles.container}>
+      <SafeAreaView>
+        <StatusBar style="dark" />
 
-				<View style={styles.section}>
-					<Calendar
-						setSelectedDay={setSelectedDay}
-						selectedDay={selectedDay}
-					/>
-				</View>
+        <View style={styles.section}>
+          <Calendar setSelectedDay={setSelectedDay} selectedDay={selectedDay} />
+        </View>
 
-				<TodaysReading
-					selectedDay={selectedDay}
-					setHeaderTitle={setHeaderTitle}
-				/>
-			</SafeAreaView>
-		</View>
-	);
+        <TodaysReading
+          selectedDay={selectedDay}
+          setHeaderTitle={setHeaderTitle}
+        />
+      </SafeAreaView>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#F3F2F8',
-	},
-	section: {
-		padding: 20,
-	},
+  container: {
+    flex: 1,
+    backgroundColor: "#F3F2F8",
+  },
+  section: {
+    padding: 20,
+  },
 });
 
 export default HomePage;

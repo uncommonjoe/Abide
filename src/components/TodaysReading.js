@@ -21,7 +21,6 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
   };
   let [reading1, reading2, reading3, reading4, reading5] = Array(5).fill(false);
 
-  // console.log('global user ', global.user);
   // console.log('global user settings ', global.usrSettngs);
   // console.log('global readings ', global.usrReadings);
 

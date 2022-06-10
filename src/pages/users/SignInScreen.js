@@ -20,6 +20,7 @@ import NavService from "../../navigation/NavService";
 import { getUserSettings } from "../../config/firebase";
 import { isEmpty } from "lodash";
 import userSettings from "../../utils/hooks/userSettings";
+import userReadings from "../../utils/hooks/userReadings";
 
 const SignInScreen = () => {
   const [loading, setLoading] = useState(false);
@@ -30,6 +31,12 @@ const SignInScreen = () => {
     error: "",
   });
   const navigation = useNavigation();
+
+  const getUserReading = () => {
+    const { usrReadings } = userReadings();
+    global.userReadings = usrReadings;
+    global.planTitle = "2022-2023";
+  };
 
   async function signIn() {
     setLoading(true);
@@ -45,6 +52,7 @@ const SignInScreen = () => {
       await signInWithEmailAndPassword(auth, value.email, value.password).then(
         ({ user }) => {
           userSettings(user, (res) => {
+            // getUserReading();
             setLoading(false);
             global.usrSettngs = res;
             global.user = user;
@@ -55,6 +63,7 @@ const SignInScreen = () => {
         }
       );
     } catch (error) {
+      console.warn("errpr", error);
       setLoading(false);
       setValue({
         ...value,
