@@ -1,8 +1,9 @@
 import React from 'react';
 import './src/config/firebase';
 import RootNavigation from './src/navigation';
-import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
+import NavService from './src/navigation/NavService';
+import 'react-native-gesture-handler';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import BottomSheetModalProvider from '@gorhom/bottom-sheet';
 
@@ -14,7 +15,9 @@ export default function App() {
 			disallowInterruption
 		>
 			<BottomSheetModalProvider>
-				<NavigationContainer>
+				<NavigationContainer
+					ref={(ref) => NavService.setTopLevelNavigator(ref)}
+				>
 					<RootNavigation />
 				</NavigationContainer>
 			</BottomSheetModalProvider>
