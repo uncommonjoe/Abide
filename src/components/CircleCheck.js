@@ -17,7 +17,7 @@ const CircleCheck = ({ state, color, readingObj }) => {
 		if (readingObj) {
 			let props = {
 				...readingObj,
-				uid: global?.user?.uid,
+				uid: global.user.uid,
 				isComplete: isChecked,
 			};
 

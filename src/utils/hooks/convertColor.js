@@ -16,7 +16,7 @@ const convertColor = (color) => {
 			case 'tan':
 				setHexColor('#C1A98B');
 			default:
-				console.error("Color wasn't found in convert Color.js");
+				console.error("Color wasn't found in convetColor.js");
 		}
 	}, []);
 

@@ -1,21 +1,21 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Scripture from '../../components/Scripture';
 import page from '../../assets/styles/page.style';
 
-const ReadScreen = ({ route, title }) => {
+const ReadScreen = ({ route }) => {
 	const readingObj = route.params.reading;
 
 	return (
 		<ScrollView
-			style={[page.container1, styles.background]}
+			style={[page.container, styles.background]}
 			contentInsetAdjustmentBehavior='automatic'
 		>
 			<SafeAreaView>
 				<StatusBar style='dark' />
 
-				<Scripture reading={readingObj} userName={title.passage} />
+				<Scripture reading={readingObj} />
 			</SafeAreaView>
 		</ScrollView>
 	);

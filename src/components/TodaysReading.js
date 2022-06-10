@@ -17,7 +17,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 	const [hasTracks, setHasTracks] = useState(false);
 	const navigation = useNavigation();
 	const userObj = {
-		track: global?.usrSettngs?.track,
+		track: global.usrSettngs?.track,
 	};
 	let [reading1, reading2, reading3, reading4, reading5] =
 		Array(5).fill(false);
@@ -42,8 +42,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 				}
 			});
 
-
-			const readingsMatch = filter(global?.userReadings, function (r) {
+			const readingsMatch = filter(global.userReadings, function (r) {
 				if (r.date == selectedDay) {
 					return r;
 				}
@@ -51,7 +50,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 
 			if (datesMatch.length > 0) {
 				setHasTracks(true);
-				// console.log('here ', readingsMatch);
+				console.log('here ', readingsMatch);
 
 				// const readings = [];
 
@@ -250,7 +249,6 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 		}
 	};
 
-
 	const selectReading = (reading, setHeaderTitle) => {
 		setHeaderTitle(reading);
 		navigation.navigate('Read', { reading: reading });
@@ -275,8 +273,6 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 		getPlan(selectedDay);
 	}, [selectedDay, global.userReadings]);
 
-	// console.log('todaysObject ', todaysObject)
-
 	return (
 		<View>
 			<TitleText style={{ marginTop: 40, marginLeft: 20 }}>
@@ -290,7 +286,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 					data={todaysObject}
 					keyExtractor={(item) => item.reading}
 					horizontal={todaysObject?.length === 0 ? false : true}
-					scrollEnabled={todaysObject?.length !== 0}
+					scrollEnabled={todaysObject?.length != 0}
 					renderItem={({ item }) => (
 						<View>
 							<TouchableOpacity
@@ -328,13 +324,13 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 						</View>
 					)}
 					ListEmptyComponent={() =>
-						todaysObject?.length == 0 ? (
+						todaysObject?.length == 0 && (
 							<View style={styles.noReadingWrap}>
 								<Text style={styles.noReading}>
 									No reading for today. Select another date.
 								</Text>
 							</View>
-						) : null
+						)
 					}
 				/>
 			)}

@@ -4,6 +4,7 @@ import { Text, TitleText } from '../assets/styles/Text';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 import CircleCheck from './CircleCheck';
+
 //https://docs.expo.dev/guides/using-custom-fonts/
 // import {
 // 	Montserrat_400Regular,
@@ -11,23 +12,15 @@ import CircleCheck from './CircleCheck';
 // 	Montserrat_700Bold,
 // } from '@expo-google-fonts/montserrat';
 
-
-
-const Header = ({ title, onPress }) => {
-	// const { playAudio } = props;
-
-
+const Header = ({ title }) => {
 	return (
 		<View style={styles.header}>
-			<Text style={styles.title}>
-				{title}
-				{/* {title?.passage} */}
-			</Text>
+			<Text style={styles.title}>{title.passage}</Text>
 
 			<View style={styles.buttonsWrap}>
 				<TouchableOpacity
 					style={styles.button}
-					onPress={onPress}
+					onPress={() => alert('Listen!')}
 					color='blue'
 				>
 					<FontAwesomeIcon

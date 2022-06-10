@@ -12,12 +12,11 @@ import {
 import { StatusBar } from 'expo-status-bar';
 import { TitleText } from '../assets/styles/Text';
 import { getToolbox } from '../config/firebase';
-import { useIsFocused, useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import page from '../assets/styles/page.style';
 import button from '../assets/styles/button.style';
 
 const Toolbox = () => {
-	const isFocused = useIsFocused();
 	const [toolboxItems, setToolboxItems] = useState({});
 	const [isLoading, setLoading] = useState(true);
 	const navigation = useNavigation();
@@ -47,20 +46,16 @@ const Toolbox = () => {
 		const fetchToolbox = async () => {
 			// Get data
 			const response = await getToolbox();
+
 			// Order by id descending
 			const ordered = response.sort(function (obj1, obj2) {
 				return obj1.id - obj2.id;
 			});
 			setToolboxItems(ordered);
 			setLoading(false);
-			// try {
-			// } catch (err) {
-			// 	console.log('Error hare')
-			// }
 		};
 		fetchToolbox();
-	}, [isFocused]);
-
+	}, []);
 
 	return (
 		<ScrollView style={[page.container, { paddingTop: 70 }]}>
