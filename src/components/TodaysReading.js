@@ -45,7 +45,6 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
           return r;
         }
       });
-
       if (datesMatch.length > 0) {
         setHasTracks(true);
         console.log("here ", readingsMatch);
@@ -67,7 +66,6 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
             return false;
           }
         });
-
         if (reading1State.length > 0) {
           reading1 = reading1State[0].isComplete;
         }
@@ -81,7 +79,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
         });
 
         if (reading2State.length > 0) {
-          reading1 = reading2State[0].isComplete;
+          reading2 = reading2State[0].isComplete;
         }
 
         let reading3State = filter(readingsMatch, function (r) {
@@ -93,7 +91,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
         });
 
         if (reading3State.length > 0) {
-          reading1 = reading3State[0].isComplete;
+          reading3 = reading3State[0].isComplete;
         }
 
         let reading4State = filter(readingsMatch, function (r) {
@@ -105,7 +103,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
         });
 
         if (reading4State.length > 0) {
-          reading1 = reading4State[0].isComplete;
+          reading4 = reading4State[0].isComplete;
         }
 
         let reading5State = filter(readingsMatch, function (r) {
@@ -117,7 +115,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
         });
 
         if (reading5State.length > 0) {
-          reading1 = reading5State[0].isComplete;
+          reading5 = reading5State[0].isComplete;
         }
 
         // Create collection of tracks based on users selected track

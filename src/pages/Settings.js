@@ -26,6 +26,7 @@ export default function Settings(props) {
               signOut(auth);
               global.usrSettngs = null;
               global.user = null;
+              global.userReadings = [];
               NavService.resetStack("AuthStack");
             }}
           >

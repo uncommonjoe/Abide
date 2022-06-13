@@ -23,7 +23,6 @@ const RootNavigation = () => {
 
   useAuthentication((user) => {
     if (user) {
-      console.warn("hello", user);
       userSettings(user, (res) => {
         setIsUser(true);
         setIsTrack(isEmpty(res));
