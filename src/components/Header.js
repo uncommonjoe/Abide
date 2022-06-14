@@ -13,7 +13,6 @@ import CircleCheck from "./CircleCheck";
 // } from '@expo-google-fonts/montserrat';
 
 const Header = ({ title, onChange = () => {} }) => {
-  //   console.warn("data", title);
   return (
     <View style={styles.header}>
       <Text style={styles.title}>{title.passage}</Text>

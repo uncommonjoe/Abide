@@ -75,7 +75,7 @@ export const getUserSettings = async (user) => {
   }
 };
 
-export const updateReadingStatus = (props) => {
+export const updateReadingStatus = async (props) => {
   if (props) {
     try {
       const docData = { ...props };

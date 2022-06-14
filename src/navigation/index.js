@@ -23,9 +23,7 @@ const RootNavigation = () => {
 
   useAuthentication((user) => {
     if (user) {
-      console.warn("hello", user);
       userSettings(user, (res) => {
-        console.warn("hello world", res);
         setIsUser(true);
         setIsTrack(isEmpty(res));
         setLoading(false);
