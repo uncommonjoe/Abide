@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, View, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  View,
+  TouchableOpacity,
+  ActivityIndicator,
+} from "react-native";
 import { Text, TitleText } from "../assets/styles/Text";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faVolumeHigh } from "@fortawesome/free-solid-svg-icons";
@@ -12,7 +17,12 @@ import CircleCheck from "./CircleCheck";
 // 	Montserrat_700Bold,
 // } from '@expo-google-fonts/montserrat';
 
-const Header = ({ title, onChange = () => {} }) => {
+const Header = ({
+  title,
+  onChange = () => {},
+  onSoundPress = () => {},
+  loading = false,
+}) => {
   return (
     <View style={styles.header}>
       <Text style={styles.title}>{title.passage}</Text>
@@ -20,10 +30,15 @@ const Header = ({ title, onChange = () => {} }) => {
       <View style={styles.buttonsWrap}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => alert("Listen!")}
+          onPress={onSoundPress}
           color="blue"
+          disabled={loading}
         >
-          <FontAwesomeIcon icon={faVolumeHigh} color={"#454C57"} size={36} />
+          {loading ? (
+            <ActivityIndicator size="small" color="#000" />
+          ) : (
+            <FontAwesomeIcon icon={faVolumeHigh} color={"#454C57"} size={36} />
+          )}
         </TouchableOpacity>
 
         <CircleCheck
