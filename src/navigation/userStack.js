@@ -17,6 +17,7 @@ import Toolbox from "../pages/Toolbox";
 import ToolboxModal from "../pages/toolbox/ToolboxModal";
 import Settings from "../pages/Settings";
 import SelectTrackScreen from "../pages/users/SelectTrackScreen";
+import BottomTab from "../components/BottomTab";
 
 const Home = createNativeStackNavigator();
 const ToolboxStack = createNativeStackNavigator();
@@ -97,6 +98,7 @@ export default function UserStack() {
         },
         tabBarActiveTintColor: "#454C57",
       }}
+      tabBar={(props) => <BottomTab {...props} />}
     >
       <BottomNavigation.Screen
         name="Main"

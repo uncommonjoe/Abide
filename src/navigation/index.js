@@ -10,6 +10,7 @@ import AuthStack from "./authStack";
 import TrackStack from "./trackStack";
 import { ActivityIndicator, View } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import BottomTab from "../components/BottomTab";
 
 const RootNavigation = () => {
   const [isUser, setIsUser] = useState(false);
@@ -56,7 +57,7 @@ const RootNavigation = () => {
       />
       <Stack.Screen
         name="UserStack"
-        component={UserStack}
+        component={BottomTab}
         options={{
           header: () => null,
         }}
