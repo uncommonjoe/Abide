@@ -46,54 +46,76 @@ const SignUpScreen = () => {
 				...value,
 				nameError: 'Name is required.',
 			});
-		} else {
-			try {
-				const { user } = await createUserWithEmailAndPassword(
-					auth,
-					value.email,
-					value.password
-				);
-				const user2 = await updateProfile(user, {
-					displayName: value.displayName,
-				});
+			return;
+		}
+		if (value.email.length < 4) {
+			setLoading(false);
+			setValue({
+				...value,
+				emailError: 'Email address is required.',
+			});
+			return;
+		}
 
-				setLoading(false);
-				NavService.resetStack('TrackStack', { user2 });
-			} catch (error) {
-				setLoading(false);
+		if (value.password.length < 4) {
+			setLoading(false);
+			setValue({
+				...value,
+				passwordError: 'Password is required.',
+			});
+			return;
+		}
 
-				if (error.code === 'auth/missing-email') {
-					setLoading(false);
+		try {
+			const { user } = await createUserWithEmailAndPassword(
+				auth,
+				value.email,
+				value.password
+			);
+			const user2 = await updateProfile(user, {
+				displayName: value.displayName,
+			});
+
+			setLoading(false);
+			NavService.resetStack('TrackStack', { user2 });
+		} catch (error) {
+			var errorCode = error.code;
+			var errorMessage = error.message;
+
+			switch (errorCode) {
+				case 'auth/missing-email':
 					setValue({
 						...value,
 						emailError: 'Email is required.',
 					});
-				} else if (error.code === 'auth/invalid-email') {
-					setLoading(false);
+					break;
+				case 'auth/invalid-email':
 					setValue({
 						...value,
 						emailError: 'Please enter valid email address.',
 					});
-				} else if (error.code === 'auth/missing-password') {
-					setLoading(false);
+					break;
+				case 'auth/missing-password':
 					setValue({
 						...value,
 						passwordError: 'Password is required.',
 					});
-				} else if (error.code === 'auth/weak-password') {
-					setLoading(false);
+					break;
+				case 'auth/weak-password':
 					setValue({
 						...value,
 						passwordError:
 							'Password should be at least 6 characters.',
 					});
-				} else {
+					break;
+				default:
 					setValue({
 						...value,
-						error: error.message,
+						error: 'Check to make sure all fields are valid',
 					});
-				}
+					console.warn(errorMessage);
 			}
+			setLoading(false);
 		}
 	};
 
