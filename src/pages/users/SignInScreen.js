@@ -71,13 +71,16 @@ const SignInScreen = () => {
 			var errorCode = error.code;
 			var errorMessage = error.message;
 
-			if (
-				errorCode === 'auth/wrong-password' ||
-				errorCode === 'auth/invalid-email'
-			) {
+			if (errorCode === 'auth/user-not-found') {
 				setValue({
 					...value,
 					error: 'Username or password was incorrect',
+				});
+			} else if (errorCode === 'auth/invalid-email') {
+				setLoading(false);
+				setValue({
+					...value,
+					emailError: 'Email address is invalid.',
 				});
 			} else {
 				setValue({
@@ -90,6 +93,26 @@ const SignInScreen = () => {
 			setLoading(false);
 		}
 	}
+
+	const updateEmail = (text) => {
+		// clear out error and update text
+		setValue({
+			...value,
+			email: text,
+			emailError: '',
+			error: '',
+		});
+	};
+
+	const updatePassword = (text) => {
+		// clear out error and update text
+		setValue({
+			...value,
+			password: text,
+			passwordError: '',
+			error: '',
+		});
+	};
 
 	return (
 		<TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -105,9 +128,7 @@ const SignInScreen = () => {
 							style={input.text}
 							value={value.email}
 							keyboardType='email-address'
-							onChangeText={(text) =>
-								setValue({ ...value, email: text })
-							}
+							onChangeText={(text) => updateEmail(text)}
 						/>
 
 						{!!value.emailError && (
@@ -120,9 +141,7 @@ const SignInScreen = () => {
 						<TextInput
 							style={input.text}
 							value={value.password}
-							onChangeText={(text) =>
-								setValue({ ...value, password: text })
-							}
+							onChangeText={(text) => updatePassword(text)}
 							secureTextEntry={true}
 						/>
 
@@ -157,8 +176,13 @@ const SignInScreen = () => {
 					<TouchableOpacity
 						style={[button.button, button.green]}
 						onPress={() => navigation.navigate('Sign Up')}
+						disabled={loading}
 					>
-						<Text style={button.text}>Register</Text>
+						{loading ? (
+							<ActivityIndicator size='small' color='#fff' />
+						) : (
+							<Text style={button.text}>Register</Text>
+						)}
 					</TouchableOpacity>
 				</View>
 			</View>

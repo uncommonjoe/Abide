@@ -39,48 +39,90 @@ const SignUpScreen = () => {
 
 	const signUp = async () => {
 		setLoading(true);
-		if (!value.displayName) {
+
+		if (value.displayName.length < 3) {
 			setLoading(false);
 			setValue({
 				...value,
 				nameError: 'Name is required.',
 			});
-		}
-		if (!value.email) {
-			setLoading(false);
-			setValue({
-				...value,
-				emailError: 'Email is required.',
-			});
-		}
-		if (!value.password) {
-			setLoading(false);
-			setValue({
-				...value,
-				passwordError: 'Password is required.',
-			});
-		}
+		} else {
+			try {
+				const { user } = await createUserWithEmailAndPassword(
+					auth,
+					value.email,
+					value.password
+				);
+				const user2 = await updateProfile(user, {
+					displayName: value.displayName,
+				});
 
-		try {
-			const { user } = await createUserWithEmailAndPassword(
-				auth,
-				value.email,
-				value.password
-			);
-			const user2 = await updateProfile(user, {
-				displayName: value.displayName,
-			});
-			setLoading(false);
-			NavService.resetStack('TrackStack', { user2 });
-		} catch (error) {
-			setLoading(false);
-			setValue({
-				...value,
-				error: error.message,
-			});
+				setLoading(false);
+				NavService.resetStack('TrackStack', { user2 });
+			} catch (error) {
+				setLoading(false);
+
+				if (error.code === 'auth/missing-email') {
+					setLoading(false);
+					setValue({
+						...value,
+						emailError: 'Email is required.',
+					});
+				} else if (error.code === 'auth/invalid-email') {
+					setLoading(false);
+					setValue({
+						...value,
+						emailError: 'Please enter valid email address.',
+					});
+				} else if (error.code === 'auth/missing-password') {
+					setLoading(false);
+					setValue({
+						...value,
+						passwordError: 'Password is required.',
+					});
+				} else if (error.code === 'auth/weak-password') {
+					setLoading(false);
+					setValue({
+						...value,
+						passwordError:
+							'Password should be at least 6 characters.',
+					});
+				} else {
+					setValue({
+						...value,
+						error: error.message,
+					});
+				}
+			}
 		}
 	};
 
+	const updateName = (text) => {
+		setValue({
+			...value,
+			displayName: text,
+			nameError: '',
+			error: '',
+		});
+	};
+
+	const updateEmail = (text) => {
+		setValue({
+			...value,
+			email: text,
+			emailError: '',
+			error: '',
+		});
+	};
+
+	const updatePassword = (text) => {
+		setValue({
+			...value,
+			password: text,
+			passwordError: '',
+			error: '',
+		});
+	};
 	return (
 		<TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
 			<View style={page.container}>
@@ -94,9 +136,7 @@ const SignUpScreen = () => {
 						<TextInput
 							style={input.text}
 							value={value.displayName}
-							onChangeText={(text) =>
-								setValue({ ...value, displayName: text })
-							}
+							onChangeText={(text) => updateName(text)}
 						/>
 						{!!value.nameError && (
 							<Text style={styles.error}>{value.nameError}</Text>
@@ -109,9 +149,7 @@ const SignUpScreen = () => {
 							style={input.text}
 							value={value.email}
 							keyboardType='email-address'
-							onChangeText={(text) =>
-								setValue({ ...value, email: text })
-							}
+							onChangeText={(text) => updateEmail(text)}
 						/>
 						{!!value.emailError && (
 							<Text style={styles.error}>{value.emailError}</Text>
@@ -123,11 +161,10 @@ const SignUpScreen = () => {
 						<TextInput
 							style={input.text}
 							value={value.password}
-							onChangeText={(text) =>
-								setValue({ ...value, password: text })
-							}
+							onChangeText={(text) => updatePassword(text)}
 							secureTextEntry={true}
 						/>
+
 						{!!value.passwordError && (
 							<Text style={styles.error}>
 								{value.passwordError}
@@ -148,9 +185,7 @@ const SignUpScreen = () => {
 					</TouchableOpacity>
 
 					{!!value.error && (
-						<View style={styles.error}>
-							<Text>{value.error}</Text>
-						</View>
+						<Text style={styles.error}>{value.error}</Text>
 					)}
 				</View>
 
@@ -172,8 +207,9 @@ const SignUpScreen = () => {
 
 const styles = StyleSheet.create({
 	error: {
-		marginTop: 5,
-		color: 'red',
+		marginTop: 15,
+		color: '#802119',
+		fontSize: 16,
 	},
 });
 
