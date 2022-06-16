@@ -13,11 +13,30 @@ export default function Settings(props) {
   const auth = getAuth();
 
   return (
-    <View style={[page.container, { paddingTop: 70 }]}>
+    <View
+      style={[
+        page.container,
+        {
+          height: 100,
+          width: "100%",
+          backgroundColor: "#454C57",
+        },
+      ]}
+    >
       <SafeAreaView>
         <StatusBar style="dark" />
 
-        <TitleText>Hello {user?.displayName}</TitleText>
+        <Text
+          style={{
+            color: "#fff",
+            fontSize: 20,
+            fontWeight: "500",
+            textTransform: "uppercase",
+            marginBottom: 25,
+          }}
+        >
+          Hello {user?.displayName}
+        </Text>
 
         <View style={page.section}>
           <TouchableOpacity
