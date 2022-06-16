@@ -12,7 +12,7 @@ const input = StyleSheet.create({
 		color: '#454C57',
 		marginTop: 10,
 		marginBottom: 5,
-		marginLeft: 40,
+
 		textTransform: 'uppercase',
 	},
 	text: {
