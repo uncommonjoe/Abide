@@ -47,7 +47,7 @@ const SignInScreen = () => {
 			setLoading(false);
 			setValue({
 				...value,
-				passwordError: 'Passord is required.',
+				passwordError: 'Password is required.',
 			});
 			return;
 		}
@@ -166,6 +166,16 @@ const SignInScreen = () => {
 					{!!value.error && (
 						<Text style={styles.error}>{value.error}</Text>
 					)}
+
+					<TouchableOpacity
+						style={[
+							button.link,
+							{ marginTop: 10, alignItems: 'center' },
+						]}
+						onPress={() => navigation.navigate('Forgot Password')}
+					>
+						<Text style={button.linkText}>Forgot password</Text>
+					</TouchableOpacity>
 				</View>
 
 				<View>

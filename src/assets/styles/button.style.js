@@ -35,6 +35,17 @@ const button = StyleSheet.create({
 		textTransform: 'uppercase',
 		textAlign: 'center',
 	},
+
+	link: {
+		padding: 5,
+		textAlign: 'left',
+		backgroundColor: 'transparent',
+	},
+	linkText: {
+		color: '#454C57',
+		textDecorationLine: 'underline',
+		fontSize: 16,
+	},
 });
 
 export default button;
