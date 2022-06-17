@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { StyleSheet, View, TouchableOpacity, Image, Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
@@ -26,7 +26,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { TransitionPresets } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { useDispatch, useSelector } from "react-redux";
-import { Audio } from "expo-av";
+import { Audio, InterruptionModeAndroid, InterruptionModeIOS } from "expo-av";
 import { PlayerAction } from "../redux/Actions";
 
 const Home = createNativeStackNavigator();
@@ -122,30 +122,60 @@ function BottomTab() {
   const [play, setPlay] = useState(true);
   const bottomSheetRef1 = useRef(null);
   const bottomSheetRef2 = useRef(null);
+  const playerRef = useRef(null);
+  const milliSeconds = useRef(0);
   const [headerTitle, setHeaderTitle] = useState("Abide");
   const soundFile = useSelector((state) => state.PlayerReducer.sound);
   const dispatch = useDispatch();
+  // const [sound, setSound] = useState(initialState);
   // console.warn("sound", soundFile.name);
 
   const onPlay = async () => {
-    await soundFile.sound.playAsync();
+    await playerRef.current.playAsync();
     setPlay(true);
   };
 
   const onPause = async () => {
-    await soundFile.sound.pauseAsync();
+    await playerRef.current.pauseAsync();
     setPlay(false);
   };
 
   const onReplay = async () => {
-    await soundFile.sound.replayAsync();
+    console.warn("jd", milliSeconds.current);
+    await playerRef.current.setPositionAsync(milliSeconds.current - 10000);
   };
 
   const onClose = async () => {
     dispatch(PlayerAction.SetSound(null));
     setPlay(true);
-    await soundFile.sound.unloadAsync();
+    await playerRef.current.unloadAsync();
   };
+
+  useEffect(() => {
+    if (soundFile) {
+      const play = async () => {
+        await Audio.setAudioModeAsync({
+          staysActiveInBackground: true,
+          interruptionModeAndroid: InterruptionModeIOS.DoNotMix,
+          shouldDuckAndroid: true,
+          playThroughEarpieceAndroid: true,
+          allowsRecordingIOS: false,
+          interruptionModeIOS: InterruptionModeAndroid.DoNotMix,
+          playsInSilentModeIOS: true,
+        });
+        const { sound } = await Audio.Sound.createAsync(
+          { uri: soundFile.url },
+          { shouldPlay: true }
+        );
+        playerRef.current = sound;
+        sound.setOnPlaybackStatusUpdate((val) => {
+          milliSeconds.current = val.positionMillis;
+          // console.warn("sound", val.positionMillis / 1000);
+        });
+      };
+      play();
+    }
+  }, [soundFile]);
 
   return (
     <View style={{ flex: 1 }}>

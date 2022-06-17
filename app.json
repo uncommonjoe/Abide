@@ -21,6 +21,11 @@
       "supportsTablet": true,
       "bundleIdentifier": "org.cornerstonebillings.abide",
 			"googleServicesFile": "./src/config/GoogleService-Info.plist",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      }
     },
     "android": {
       "package": "org.cornerstonebillings.abide",
