@@ -1,11 +1,13 @@
 import { StyleSheet } from 'react-native';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 const page = StyleSheet.create({
 	container: {
 		flex: 1,
-		paddingVertical: 40,
+		marginTop: getStatusBarHeight(),
+		paddingBottom: 40,
+		paddingHorizontal: 25,
 		backgroundColor: '#F3F2F8',
-		padding: 25,
 	},
 	section: {
 		flex: 1,
