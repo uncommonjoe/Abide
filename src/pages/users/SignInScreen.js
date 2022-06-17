@@ -116,7 +116,7 @@ const SignInScreen = () => {
 
 	return (
 		<TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-			<View style={page.container}>
+			<View style={[page.container, page.statusBarOffset]}>
 				<StatusBar style='dark' />
 
 				<TitleText style={{ marginTop: 40 }}>Welcome Back</TitleText>

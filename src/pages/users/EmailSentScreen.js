@@ -11,7 +11,7 @@ const EmailSentScreen = () => {
 	const navigation = useNavigation();
 
 	return (
-		<View style={page.container}>
+		<View style={[page.container, page.statusBarOffset]}>
 			<StatusBar style='dark' />
 
 			<TitleText style={{ marginTop: 40 }}>Check your mail</TitleText>
