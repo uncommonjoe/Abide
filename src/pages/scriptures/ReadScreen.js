@@ -5,8 +5,8 @@ import Scripture from "../../components/Scripture";
 import page from "../../assets/styles/page.style";
 import Header from "../../components/Header";
 import { ESV_API_KEY } from "@env";
-import { Audio } from "expo-av";
-import { useDispatch } from "react-redux";
+import { Audio , InterruptionModeIOS,InterruptionModeAndroid} from "expo-av";
+import { useDispatch, useSelector } from "react-redux";
 import { PlayerAction } from "../../redux/Actions";
 // import RNFetchBlob from "rn-fetch-blob";
 
@@ -14,6 +14,7 @@ const ReadScreen = ({ route }) => {
   const [readingObj, setReadingObj] = useState(route.params.reading);
   const [sound, setSound] = useState(null);
   const [loading, setLoading] = useState(true);
+  const soundFile = useSelector((state) => state.PlayerReducer.sound);
   //   const readingObj = route.params.reading;
   const onChange = route.params.onChange;
   const index = route.params.index;
@@ -21,7 +22,6 @@ const ReadScreen = ({ route }) => {
 
   useEffect(async () => {
     const reference = readingObj.passage.split(" ").join("+");
-    console.warn("reference", reference);
     try {
       const response = await fetch(
         `https://api.esv.org/v3/passage/audio/?q=${reference}`,
@@ -49,15 +49,24 @@ const ReadScreen = ({ route }) => {
   }, []);
 
   async function playSound(url) {
-    const { sound: playerRef } = await Audio.Sound.createAsync(
-      { uri: sound.url },
-      { shouldPlay: true }
-    );
+    // await Audio.setAudioModeAsync({
+    //   staysActiveInBackground: true,
+    //   interruptionModeAndroid: InterruptionModeIOS.DoNotMix,
+    //   shouldDuckAndroid: true,
+    //   playThroughEarpieceAndroid: true,
+    //   allowsRecordingIOS: false,
+    //   interruptionModeIOS: InterruptionModeAndroid.DoNotMix,
+    //   playsInSilentModeIOS: true,
+    // });
+    // const { sound: playerRef } = await Audio.Sound.createAsync(
+    //   { uri: sound.url },
+    //   { shouldPlay: true }
+    // );
     dispatch(
       PlayerAction.SetSound({
         name: sound.name,
         url: sound.url,
-        sound: playerRef,
+        // sound: playerRef,
       })
     );
   }
@@ -65,7 +74,7 @@ const ReadScreen = ({ route }) => {
   return (
     <View style={{ flex: 1 }}>
       <Header
-        onSoundPress={() => playSound()}
+        onSoundPress={() => (soundFile ? null : playSound())}
         title={readingObj}
         loading={loading}
         onChange={(isComplete) => {
@@ -84,7 +93,7 @@ const ReadScreen = ({ route }) => {
         <SafeAreaView>
           <StatusBar style="dark" />
 
-          <Scripture reading={readingObj} />
+          <Scripture reading={readingObj} loading={loading} />
         </SafeAreaView>
       </ScrollView>
     </View>
