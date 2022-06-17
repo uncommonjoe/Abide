@@ -94,6 +94,7 @@ const ToolboxModal = (item) => {
 const styles = StyleSheet.create({
 	title: {
 		textAlign: 'center',
+		paddingTop: 20,
 	},
 	white: {
 		color: 'white',

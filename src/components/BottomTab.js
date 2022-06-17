@@ -38,13 +38,19 @@ const BottomSheet = ({ bottomSheetRef, children }) => {
 			<BottomSheetModal
 				handleIndicatorStyle={{ backgroundColor: '#454C57' }}
 				ref={bottomSheetRef}
-				snapPoints={['50%', '95%']}
+				snapPoints={['50%', '25%', '95%']}
 				onDismiss={() => {
 					bottomSheetRef.current.dismiss();
 				}}
 				enablePanDownToClose={true}
 				onAnimate={() => console.log('on animate')}
-				backgroundStyle={{ backgroundColor: 'white' }}
+				backgroundStyle={{
+					backgroundColor: 'white',
+					shadowColor: '#454C57',
+					shadowRadius: 10,
+					shadowOpacity: 0.2,
+					borderRadius: 0,
+				}}
 			>
 				{children}
 			</BottomSheetModal>
@@ -130,7 +136,7 @@ function BottomTab() {
 	const soundFile = useSelector((state) => state.PlayerReducer.sound);
 	const dispatch = useDispatch();
 	// const [sound, setSound] = useState(initialState);
-	// console.warn("sound", soundFile.name);
+	//console.warn('sound', soundFile.name);
 
 	const onPlay = async () => {
 		await playerRef.current.playAsync();
