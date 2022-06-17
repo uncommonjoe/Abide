@@ -5,6 +5,10 @@ import {
   faHouse,
   faToolbox,
   faSliders,
+  faPlay,
+  faPause,
+  faRepeat,
+  faClose,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   BottomSheetModal,
@@ -21,7 +25,9 @@ import SelectTrackScreen from "../pages/users/SelectTrackScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { TransitionPresets } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Audio } from "expo-av";
+import { PlayerAction } from "../redux/Actions";
 
 const Home = createNativeStackNavigator();
 const ToolboxStack = createNativeStackNavigator();
@@ -113,60 +119,93 @@ var ToolBoxStack = () => (
 
 function BottomTab() {
   const Tab = createBottomTabNavigator();
-  const [modal, setModal] = useState(false);
+  const [play, setPlay] = useState(true);
   const bottomSheetRef1 = useRef(null);
   const bottomSheetRef2 = useRef(null);
   const [headerTitle, setHeaderTitle] = useState("Abide");
-  const sound = useSelector((state) => state.PlayerReducer.sound);
-  console.warn("sound", sound);
+  const soundFile = useSelector((state) => state.PlayerReducer.sound);
+  const dispatch = useDispatch();
+  // console.warn("sound", soundFile.name);
+
+  const onPlay = async () => {
+    await soundFile.sound.playAsync();
+    setPlay(true);
+  };
+
+  const onPause = async () => {
+    await soundFile.sound.pauseAsync();
+    setPlay(false);
+  };
+
+  const onReplay = async () => {
+    await soundFile.sound.replayAsync();
+  };
+
+  const onClose = async () => {
+    dispatch(PlayerAction.SetSound(null));
+    setPlay(true);
+    await soundFile.sound.unloadAsync();
+  };
+
   return (
     <View style={{ flex: 1 }}>
       <Tab.Navigator
         tabBar={(props) => {
           return (
             <>
-              <View
-                style={{
-                  width: "100%",
-                  height: 80,
-                  backgroundColor: "#fff",
-                  flexDirection: "row",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  paddingHorizontal: 20,
-                }}
-              >
-                <TouchableOpacity>
-                  <FontAwesomeIcon icon={faHouse} color={"#000"} size={32} />
-                </TouchableOpacity>
+              {soundFile ? (
                 <View
                   style={{
-                    position: "absolute",
-                    alignItems: "center",
-                    justifyContent: "center",
                     width: "100%",
-                    zIndex: -1,
-                  }}
-                >
-                  <Text>2 Cors 10:1</Text>
-                  <Text>2 Cors</Text>
-                </View>
-                <View
-                  style={{
+                    height: 80,
+                    backgroundColor: "#fff",
                     flexDirection: "row",
-                    alignItems: "center",
-                    width: "25%",
                     justifyContent: "space-between",
+                    alignItems: "center",
+                    paddingHorizontal: 20,
                   }}
                 >
-                  <TouchableOpacity>
-                    <FontAwesomeIcon icon={faHouse} color={"#000"} size={32} />
+                  <TouchableOpacity onPress={onClose}>
+                    <FontAwesomeIcon icon={faClose} color={"#000"} size={32} />
                   </TouchableOpacity>
-                  <TouchableOpacity>
-                    <FontAwesomeIcon icon={faHouse} color={"#000"} size={32} />
-                  </TouchableOpacity>
+                  <View
+                    style={{
+                      position: "absolute",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "100%",
+                      zIndex: -1,
+                    }}
+                  >
+                    <Text>{soundFile?.name}</Text>
+                  </View>
+                  <View
+                    style={{
+                      flexDirection: "row",
+                      alignItems: "center",
+                      width: "25%",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <TouchableOpacity onPress={onReplay}>
+                      <FontAwesomeIcon
+                        icon={faRepeat}
+                        color={"#000"}
+                        size={32}
+                      />
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      onPress={() => (play ? onPause() : onPlay())}
+                    >
+                      <FontAwesomeIcon
+                        icon={play ? faPause : faPlay}
+                        color={"#000"}
+                        size={32}
+                      />
+                    </TouchableOpacity>
+                  </View>
                 </View>
-              </View>
+              ) : null}
               <View
                 style={{
                   height: 80,
