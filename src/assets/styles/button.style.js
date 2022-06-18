@@ -46,6 +46,23 @@ const button = StyleSheet.create({
 		textDecorationLine: 'underline',
 		fontSize: 16,
 	},
+
+	list: {
+		backgroundColor: 'transparent',
+		paddingVertical: 15,
+		textAlign: 'left',
+		alignItems: 'left',
+		justifyContent: 'center',
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		minHeight: 50,
+	},
+	listText: {
+		color: '#424142',
+		textTransform: 'uppercase',
+		fontSize: 16,
+	},
+	listIcon: {},
 });
 
 export default button;

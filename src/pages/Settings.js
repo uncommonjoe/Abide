@@ -1,8 +1,20 @@
 import React from 'react';
-import { View, SafeAreaView, TouchableOpacity, Text } from 'react-native';
+import {
+	View,
+	ScrollView,
+	SafeAreaView,
+	TouchableOpacity,
+	Linking,
+} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { TitleText } from '../assets/styles/Text';
+import { TitleText, Text } from '../assets/styles/Text';
 import button from '../assets/styles/button.style';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import {
+	faCircleArrowRight,
+	faArrowUpRightFromSquare,
+	faArrowRightFromBracket,
+} from '@fortawesome/free-solid-svg-icons';
 import page from '../assets/styles/page.style';
 import useAuthentication from '../utils/hooks/useAuthentication';
 import { signOut, getAuth } from 'firebase/auth';
@@ -13,7 +25,7 @@ export default function Settings(props) {
 	const auth = getAuth();
 
 	return (
-		<View
+		<ScrollView
 			style={[
 				page.container,
 				{
@@ -39,7 +51,7 @@ export default function Settings(props) {
 
 				<View style={page.section}>
 					<TouchableOpacity
-						style={[button.button, button.green]}
+						style={button.list}
 						onPress={() => {
 							signOut(auth);
 							global.usrSettngs = null;
@@ -48,12 +60,35 @@ export default function Settings(props) {
 							NavService.resetStack('AuthStack');
 						}}
 					>
-						<Text style={[button.text, { color: 'white' }]}>
-							Sign Out
-						</Text>
+						<Text style={button.listText}>Sign Out</Text>
+						<View style={button.listIcon}>
+							<FontAwesomeIcon
+								icon={faCircleArrowRight}
+								color={'#424142'}
+								size={16}
+							/>
+						</View>
+					</TouchableOpacity>
+
+					<TouchableOpacity
+						style={button.list}
+						onPress={() => {
+							Linking.openURL(
+								'https://cornerstonebillings.org/privacy-policy/'
+							);
+						}}
+					>
+						<Text style={button.listText}>Privacy Policy</Text>
+						<View style={button.listIcon}>
+							<FontAwesomeIcon
+								icon={faArrowUpRightFromSquare}
+								color={'#424142'}
+								size={16}
+							/>
+						</View>
 					</TouchableOpacity>
 				</View>
 			</SafeAreaView>
-		</View>
+		</ScrollView>
 	);
 }
