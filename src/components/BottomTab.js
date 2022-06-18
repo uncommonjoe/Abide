@@ -294,7 +294,7 @@ function BottomTab() {
 							) : null}
 							<SafeAreaView
 								style={{
-									height: 80,
+									height: 100,
 									paddingTop: 0,
 									alignItems: 'center',
 									justifyContent: 'center',

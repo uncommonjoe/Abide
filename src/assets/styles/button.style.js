@@ -51,7 +51,6 @@ const button = StyleSheet.create({
 		backgroundColor: 'transparent',
 		paddingVertical: 10,
 		textAlign: 'left',
-		alignItems: 'left',
 		justifyContent: 'center',
 		flexDirection: 'row',
 		justifyContent: 'space-between',
@@ -63,7 +62,6 @@ const button = StyleSheet.create({
 		fontSize: 16,
 	},
 	listIcon: {
-		alignItems: 'right',
 		justifyContent: 'center',
 		flexDirection: 'row',
 	},

@@ -56,16 +56,20 @@ const Calendar = ({ setSelectedDay, selectedDay }) => {
 		setSelected(convertedDate);
 	};
 
-	useEffect(async () => {
-		// Initialize selected date
-		convertDate(selectedDay);
+	useEffect(() => {
+		async function fetchData() {
+			// Initialize selected date
+			convertDate(selectedDay);
 
-		var someResponse = await getWeekRange();
-		setCurrentWeek(someResponse);
-
-		if (componentMounted.current) {
+			var someResponse = await getWeekRange();
 			setCurrentWeek(someResponse);
+
+			if (componentMounted.current) {
+				setCurrentWeek(someResponse);
+			}
 		}
+		fetchData();
+
 		return () => {
 			// This code runs when component is unmounted
 			componentMounted.current = false; // set it to false when we leave the page

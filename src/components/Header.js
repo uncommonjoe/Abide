@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
 	StyleSheet,
 	View,
 	TouchableOpacity,
 	ActivityIndicator,
-	SafeAreaView,
 } from 'react-native';
-import { Text, TitleText } from '../assets/styles/Text';
+import { Text } from '../assets/styles/Text';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 import CircleCheck from './CircleCheck';
+import page from '../assets/styles/page.style';
 
 const Header = ({
 	title,
@@ -18,37 +18,35 @@ const Header = ({
 	loading = false,
 }) => {
 	return (
-		<SafeAreaView>
-			<View style={styles.header}>
-				<Text style={styles.title}>{title.passage}</Text>
+		<View style={[styles.header, page.statusBarOffset]}>
+			<Text style={styles.title}>{title.passage}</Text>
 
-				<View style={styles.buttonsWrap}>
-					<TouchableOpacity
-						style={styles.button}
-						onPress={onSoundPress}
-						color='blue'
-						disabled={loading}
-					>
-						{loading ? (
-							<ActivityIndicator size='small' color='#000' />
-						) : (
-							<FontAwesomeIcon
-								icon={faVolumeHigh}
-								color={'#454C57'}
-								size={28}
-							/>
-						)}
-					</TouchableOpacity>
+			<View style={styles.buttonsWrap}>
+				<TouchableOpacity
+					style={styles.button}
+					onPress={onSoundPress}
+					color='blue'
+					disabled={loading}
+				>
+					{loading ? (
+						<ActivityIndicator size='small' color='#000' />
+					) : (
+						<FontAwesomeIcon
+							icon={faVolumeHigh}
+							color={'#454C57'}
+							size={28}
+						/>
+					)}
+				</TouchableOpacity>
 
-					<CircleCheck
-						isComplete={title.isComplete}
-						readingObj={title}
-						color={'#454C57'}
-						onChange={onChange}
-					/>
-				</View>
+				<CircleCheck
+					isComplete={title.isComplete}
+					readingObj={title}
+					color={'#454C57'}
+					onChange={onChange}
+				/>
 			</View>
-		</SafeAreaView>
+		</View>
 	);
 };
 
