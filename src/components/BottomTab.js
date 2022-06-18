@@ -38,7 +38,7 @@ const BottomSheet = ({ bottomSheetRef, children }) => {
 			<BottomSheetModal
 				handleIndicatorStyle={{ backgroundColor: '#454C57' }}
 				ref={bottomSheetRef}
-				snapPoints={['50%', '25%', '95%']}
+				snapPoints={['30%', '50%', '95%']}
 				onDismiss={() => {
 					bottomSheetRef.current.dismiss();
 				}}

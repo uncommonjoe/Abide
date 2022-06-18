@@ -55,10 +55,7 @@ const Toolbox = () => {
 
 	return (
 		<ScrollView
-			style={[
-				page.container,
-				{ backgroundColor: 'white', paddingTop: 20 },
-			]}
+			style={[page.container, { backgroundColor: 'white' }]}
 			contentInsetAdjustmentBehavior='automatic'
 		>
 			<SafeAreaView style={{ marginBottom: 350 }}>
