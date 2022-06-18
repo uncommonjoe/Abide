@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
 	StyleSheet,
 	Text,
@@ -9,6 +9,7 @@ import {
 	TouchableWithoutFeedback,
 	Keyboard,
 	ActivityIndicator,
+	useWindowDimensions,
 } from 'react-native';
 import { TitleText } from '../../assets/styles/Text';
 import button from '../../assets/styles/button.style';
@@ -31,6 +32,7 @@ const SignInScreen = () => {
 		passwordError: '',
 	});
 	const navigation = useNavigation();
+	const windowSize = useWindowDimensions();
 
 	async function signIn() {
 		setLoading(true);
@@ -117,7 +119,13 @@ const SignInScreen = () => {
 
 	return (
 		<TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-			<View style={[page.container, page.statusBarOffset]}>
+			<View
+				style={[
+					page.container,
+					page.statusBarOffset,
+					{ marginHorizontal: windowSize.width > 500 ? 200 : 0 },
+				]}
+			>
 				<StatusBar style='dark' />
 
 				<TitleText style={{ marginTop: 40 }}>Welcome Back</TitleText>

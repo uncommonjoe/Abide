@@ -8,6 +8,7 @@ import {
 	TouchableWithoutFeedback,
 	Keyboard,
 	ActivityIndicator,
+	useWindowDimensions,
 } from 'react-native';
 
 import { TitleText, Text } from '../../assets/styles/Text';
@@ -26,6 +27,7 @@ const ForgotPasswordScreen = () => {
 	});
 
 	const navigation = useNavigation();
+	const windowSize = useWindowDimensions();
 
 	const resetPassword = async () => {
 		setLoading(true);
@@ -80,7 +82,13 @@ const ForgotPasswordScreen = () => {
 
 	return (
 		<TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-			<View style={[page.container, page.statusBarOffset]}>
+			<View
+				style={[
+					page.container,
+					page.statusBarOffset,
+					{ marginHorizontal: windowSize.width > 500 ? 200 : 0 },
+				]}
+			>
 				<StatusBar style='dark' />
 
 				<TitleText style={{ marginTop: 40 }}>Forgot Password</TitleText>

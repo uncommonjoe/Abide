@@ -9,6 +9,7 @@ import {
 	TouchableWithoutFeedback,
 	Keyboard,
 	ActivityIndicator,
+	useWindowDimensions,
 } from 'react-native';
 import {
 	getAuth,
@@ -26,6 +27,7 @@ const SignUpScreen = () => {
 	const [loading, setLoading] = useState(false);
 	const auth = getAuth();
 	const navigation = useNavigation();
+	const windowSize = useWindowDimensions();
 
 	const [value, setValue] = React.useState({
 		displayName: '',
@@ -148,7 +150,13 @@ const SignUpScreen = () => {
 	};
 	return (
 		<TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-			<View style={[page.container, page.statusBarOffset]}>
+			<View
+				style={[
+					page.container,
+					page.statusBarOffset,
+					{ marginHorizontal: windowSize.width > 500 ? 200 : 0 },
+				]}
+			>
 				<StatusBar style='dark' />
 
 				<TitleText style={{ marginTop: 40 }}>Getting Started</TitleText>

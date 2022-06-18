@@ -7,6 +7,7 @@ import {
 	TouchableOpacity,
 	ActivityIndicator,
 	Dimensions,
+	useWindowDimensions,
 } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 let { height, width } = Dimensions.get('window');
@@ -23,6 +24,7 @@ const SelectTrackScreen = (props) => {
 	const [loading, setLoading] = useState(false);
 	const user = useAuthentication();
 	const navigation = useNavigation();
+	const windowSize = useWindowDimensions();
 
 	const data = [
 		{ value: 'Track 1' },
@@ -50,7 +52,14 @@ const SelectTrackScreen = (props) => {
 	return (
 		<>
 			<ScrollView
-				style={[page.container, { paddingBottom: 50 }]}
+				style={[
+					page.container,
+					page.statusBarOffset,
+					{
+						paddingBottom: 50,
+						marginHorizontal: windowSize.width > 500 ? 200 : 0,
+					},
+				]}
 				contentInsetAdjustmentBehavior='automatic'
 			>
 				<SafeAreaView>
