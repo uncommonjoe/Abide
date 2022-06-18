@@ -77,10 +77,14 @@ const ToolboxModal = (item) => {
 
 	return (
 		<ScrollView
-			style={[page.container, backgroundStyle(payload.color)]}
+			style={[
+				page.container,
+				backgroundStyle(payload.color),
+				{ paddingTop: 20 },
+			]}
 			contentInsetAdjustmentBehavior='automatic'
 		>
-			<SafeAreaView>
+			<SafeAreaView style={{ marginBottom: 350 }}>
 				<TitleText style={[styles.white, styles.title]}>
 					{payload.title}
 				</TitleText>

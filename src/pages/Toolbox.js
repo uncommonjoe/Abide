@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import {
 	Text,
-	View,
-	FlatList,
-	StyleSheet,
 	ScrollView,
 	SafeAreaView,
 	TouchableOpacity,
 	ActivityIndicator,
 } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { TitleText } from '../assets/styles/Text';
 import { getToolbox } from '../config/firebase';
 import { useNavigation } from '@react-navigation/native';
 import page from '../assets/styles/page.style';
@@ -58,8 +54,14 @@ const Toolbox = () => {
 	}, []);
 
 	return (
-		<ScrollView style={[page.container, { backgroundColor: 'white' }]}>
-			<SafeAreaView>
+		<ScrollView
+			style={[
+				page.container,
+				{ backgroundColor: 'white', paddingTop: 20 },
+			]}
+			contentInsetAdjustmentBehavior='automatic'
+		>
+			<SafeAreaView style={{ marginBottom: 350 }}>
 				<StatusBar style='dark' />
 
 				<Text
@@ -95,12 +97,5 @@ const Toolbox = () => {
 		</ScrollView>
 	);
 };
-
-const styles = StyleSheet.create({
-	container: {
-		flexDirection: 'column',
-		justifyContent: 'space-between',
-	},
-});
 
 export default Toolbox;
