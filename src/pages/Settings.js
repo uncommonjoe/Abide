@@ -19,10 +19,12 @@ import page from '../assets/styles/page.style';
 import useAuthentication from '../utils/hooks/useAuthentication';
 import { signOut, getAuth } from 'firebase/auth';
 import NavService from '../navigation/NavService';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Settings(props) {
 	const { user } = useAuthentication();
 	const auth = getAuth();
+	const navigation = useNavigation();
 
 	return (
 		<ScrollView
@@ -62,6 +64,23 @@ export default function Settings(props) {
 					>
 						<Text style={button.listText}>Sign Out</Text>
 						<View style={button.listIcon}>
+							<FontAwesomeIcon
+								icon={faCircleArrowRight}
+								color={'#424142'}
+								size={16}
+							/>
+						</View>
+					</TouchableOpacity>
+
+					<TouchableOpacity
+						style={button.list}
+						onPress={() => {
+							navigation.navigate('Translation');
+						}}
+					>
+						<Text style={button.listText}>Translation</Text>
+						<View style={button.listIcon}>
+							<Text style={{ marginRight: 10 }}>ESV</Text>
 							<FontAwesomeIcon
 								icon={faCircleArrowRight}
 								color={'#424142'}

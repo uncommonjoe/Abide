@@ -49,20 +49,24 @@ const button = StyleSheet.create({
 
 	list: {
 		backgroundColor: 'transparent',
-		paddingVertical: 15,
+		paddingVertical: 10,
 		textAlign: 'left',
 		alignItems: 'left',
 		justifyContent: 'center',
 		flexDirection: 'row',
 		justifyContent: 'space-between',
-		minHeight: 50,
+		minHeight: 40,
 	},
 	listText: {
 		color: '#424142',
 		textTransform: 'uppercase',
 		fontSize: 16,
 	},
-	listIcon: {},
+	listIcon: {
+		alignItems: 'right',
+		justifyContent: 'center',
+		flexDirection: 'row',
+	},
 });
 
 export default button;
