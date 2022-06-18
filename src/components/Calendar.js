@@ -9,7 +9,7 @@ const Calendar = ({ setSelectedDay, selectedDay }) => {
 	const componentMounted = useRef(true);
 
 	const getWeekRange = () => {
-		let now = new Date();
+		let now = new Moment();
 
 		// set time to some convenient value
 		now.setHours(0, 0, 0, 0);

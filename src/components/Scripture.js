@@ -35,22 +35,13 @@ const Scripture = ({ reading, loading }) => {
 			const verseStyle = reactStringReplace(
 				noBrackets,
 				/(\d+)/g,
-				(match) => (
-					<Text
-						style={{
-							fontSize: 14,
-							textAlignVertical: 'super',
-							verticalAlign: 'super',
-						}}
-					>
-						{match}
-					</Text>
-				)
+				(match) => <Text style={{ fontSize: 14 }}>{match}</Text>
 			);
 
 			setPassageText(verseStyle);
 		} catch (error) {
 			console.error(error);
+			throw error;
 		} finally {
 			setLoading(false);
 		}

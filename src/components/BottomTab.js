@@ -181,7 +181,7 @@ function BottomTab() {
 	};
 
 	const onReplay = async () => {
-		console.warn('jd', milliSeconds.current);
+		//console.warn('jd', milliSeconds.current);
 		await playerRef.current.setPositionAsync(milliSeconds.current - 10000);
 	};
 

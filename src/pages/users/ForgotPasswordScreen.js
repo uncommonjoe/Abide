@@ -66,6 +66,7 @@ const ForgotPasswordScreen = () => {
 					console.warn(errorMessage);
 			}
 			setLoading(false);
+			throw error;
 		}
 	};
 

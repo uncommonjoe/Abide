@@ -241,6 +241,7 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 			}
 		} catch (error) {
 			console.error(error);
+			throw error;
 		} finally {
 			setLoading(false);
 		}

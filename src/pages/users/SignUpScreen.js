@@ -116,6 +116,7 @@ const SignUpScreen = () => {
 					console.warn(errorMessage);
 			}
 			setLoading(false);
+			throw error;
 		}
 	};
 

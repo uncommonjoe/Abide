@@ -91,6 +91,7 @@ const SignInScreen = () => {
 
 			console.warn('error', error);
 			setLoading(false);
+			throw error;
 		}
 	}
 
