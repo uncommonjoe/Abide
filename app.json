@@ -1,42 +1,39 @@
 {
-  "expo": {
-    "name": "abide",
-    "slug": "abide",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./src/assets/img/icon.png",
+	"expo": {
+		"name": "abide",
+		"slug": "abide",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./src/assets/img/icon.png",
 		"splash": {
 			"image": "./src/assets/img/splash.png",
-			"resizeMode": "contain",
+			"tabletImage": "./src/assets/img/splash-tablet.jpg",
+			"resizeMode": "cover",
 			"backgroundColor": "#ffffff"
 		},
-    "userInterfaceStyle": "light",
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "org.cornerstonebillings.abide",
+		"userInterfaceStyle": "light",
+		"updates": {
+			"fallbackToCacheTimeout": 0
+		},
+		"assetBundlePatterns": ["**/*"],
+		"ios": {
+			"supportsTablet": true,
+			"bundleIdentifier": "org.cornerstonebillings.abide",
 			"googleServicesFile": "./src/config/GoogleService-Info.plist",
-      "infoPlist": {
-        "UIBackgroundModes": [
-          "audio"
-        ]
-      }
-    },
-    "android": {
-      "package": "org.cornerstonebillings.abide",
+			"infoPlist": {
+				"UIBackgroundModes": ["audio"]
+			}
+		},
+		"android": {
+			"package": "org.cornerstonebillings.abide",
 			"googleServicesFile": "./src/config/google-services.json",
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
-  }
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/adaptive-icon.png",
+				"backgroundColor": "#FFFFFF"
+			}
+		},
+		"web": {
+			"favicon": "./assets/favicon.png"
+		}
+	}
 }
