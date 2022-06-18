@@ -7,7 +7,8 @@ export default {
 		icon: './src/assets/img/icon.png',
 		splash: {
 			image: './src/assets/img/splash.png',
-			resizeMode: 'contain',
+			tabletImage: './src/assets/img//splash-tablet.png',
+			resizeMode: 'cover',
 			backgroundColor: '#ffffff',
 		},
 		updates: {
@@ -18,6 +19,9 @@ export default {
 			supportsTablet: true,
 			bundleIdentifier: 'org.cornerstonebillings.abide',
 			googleServicesFile: './src/config/GoogleService-Info.plist',
+			infoPlist: {
+				UIBackgroundModes: ['audio'],
+			},
 		},
 		android: {
 			package: 'org.cornerstonebillings.abide',

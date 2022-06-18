@@ -14,7 +14,6 @@ import { useNavigation } from '@react-navigation/native';
 const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 	const [isLoading, setLoading] = useState(true);
 	const [todaysObject, setTodaysObject] = useState(null);
-	const [hasTracks, setHasTracks] = useState(false);
 	const navigation = useNavigation();
 	const userObj = {
 		track: global.usrSettngs?.track,
@@ -47,19 +46,6 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 				}
 			});
 			if (datesMatch.length > 0) {
-				setHasTracks(true);
-				console.log('here ', readingsMatch);
-
-				// const readings = [];
-
-				// for (let i = 0; i < 6; i++) {
-				//     readings[i] = filter(readingsMatch, function (r) {
-				//         if (r.reading == 'Reading ' + [i]) {
-				//             return r;
-				//         }
-				//     });
-				// }
-
 				let reading1State = filter(readingsMatch, function (r) {
 					if (r.reading == 'Reading 1') {
 						return r;
@@ -233,11 +219,9 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 						break;
 
 					default:
-						setHasTracks(false);
 				}
 			} else {
 				setTodaysObject([]);
-				setHasTracks(false);
 			}
 		} catch (error) {
 			console.error(error);
