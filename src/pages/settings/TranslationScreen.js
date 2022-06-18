@@ -5,7 +5,6 @@ import {
 	SafeAreaView,
 	ScrollView,
 	TouchableOpacity,
-	Linking,
 } from 'react-native';
 import page from '../../assets/styles/page.style';
 import { TitleText, Text } from '../../assets/styles/Text';
@@ -35,7 +34,7 @@ const TranslationScreen = () => {
 					English Standard Version®
 				</TitleText>
 
-				<Text>
+				<Text style={{ lineHeight: 24 }}>
 					ESV® Bible (The Holy Bible, English Standard Version®),
 					copyright © 2001 by Crossway, a publishing ministry of Good
 					News Publishers. Used by permission. All rights reserved.
@@ -43,19 +42,8 @@ const TranslationScreen = () => {
 					from the Revised Standard Version of the Bible, copyright
 					Division of Christian Education of the National Council of
 					the Churches of Christ in the U.S.A. All rights reserved.
-					For information on how the ESV can be quoted,
-					<TouchableOpacity
-						style={button.link}
-						onPress={() => {
-							Linking.openURL(
-								'https://www.crossway.org/permissions/'
-							);
-						}}
-					>
-						<Text style={button.linkText}>
-							please visit our permission site
-						</Text>
-					</TouchableOpacity>
+					For information on how the ESV can be quoted, please visit
+					our permission site (https://www.crossway.org/permissions)
 				</Text>
 			</SafeAreaView>
 		</ScrollView>
