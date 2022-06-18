@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, SafeAreaView } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
 	faHouse,
@@ -7,13 +7,15 @@ import {
 	faSliders,
 	faPlay,
 	faPause,
-	faRepeat,
 	faClose,
+	faArrowRotateLeft,
 } from '@fortawesome/free-solid-svg-icons';
 import {
 	BottomSheetModal,
 	BottomSheetModalProvider,
 } from '@gorhom/bottom-sheet';
+import { Text } from '../assets/styles/Text';
+
 import HomePage from '../pages/Home';
 import ReadScreen from '../pages/scriptures/ReadScreen';
 import Toolbox from '../pages/Toolbox';
@@ -219,7 +221,7 @@ function BottomTab() {
 	}, [soundFile]);
 
 	return (
-		<View style={{ flex: 1 }}>
+		<View style={{ flex: 1, backgroundColor: 'white' }}>
 			<Tab.Navigator
 				tabBar={(props) => {
 					return (
@@ -229,18 +231,19 @@ function BottomTab() {
 									style={{
 										width: '100%',
 										height: 80,
-										backgroundColor: '#fff',
+										backgroundColor: 'white',
 										flexDirection: 'row',
 										justifyContent: 'space-between',
 										alignItems: 'center',
 										paddingHorizontal: 20,
+										...styles.shadow,
 									}}
 								>
 									<TouchableOpacity onPress={onClose}>
 										<FontAwesomeIcon
 											icon={faClose}
 											color={'#000'}
-											size={32}
+											size={28}
 										/>
 									</TouchableOpacity>
 									<View
@@ -252,7 +255,13 @@ function BottomTab() {
 											zIndex: -1,
 										}}
 									>
-										<Text>{soundFile?.name}</Text>
+										<Text
+											style={{
+												textTransform: 'uppercase',
+											}}
+										>
+											{headerTitle.passage}
+										</Text>
 									</View>
 									<View
 										style={{
@@ -264,9 +273,9 @@ function BottomTab() {
 									>
 										<TouchableOpacity onPress={onReplay}>
 											<FontAwesomeIcon
-												icon={faRepeat}
+												icon={faArrowRotateLeft}
 												color={'#000'}
-												size={32}
+												size={28}
 											/>
 										</TouchableOpacity>
 										<TouchableOpacity
@@ -277,19 +286,19 @@ function BottomTab() {
 											<FontAwesomeIcon
 												icon={play ? faPause : faPlay}
 												color={'#000'}
-												size={32}
+												size={28}
 											/>
 										</TouchableOpacity>
 									</View>
 								</View>
 							) : null}
-							<View
+							<SafeAreaView
 								style={{
 									height: 80,
 									paddingTop: 0,
 									alignItems: 'center',
 									justifyContent: 'center',
-									backgroundColor: '#fff',
+									backgroundColor: 'white',
 									borderTopWidth: 0,
 									flexDirection: 'row',
 									justifyContent: 'space-between',
@@ -345,15 +354,18 @@ function BottomTab() {
 													? '#424142'
 													: '#A29FA2'
 											}
-											size={32}
+											size={28}
 										/>
 									</TouchableOpacity>
 								))}
-							</View>
+							</SafeAreaView>
 						</>
 					);
 				}}
-				tabBarOptions={{ showLabel: false, keyboardHidesTabBar: true }}
+				tabBarOptions={{
+					showLabel: false,
+					keyboardHidesTabBar: true,
+				}}
 				screenOptions={({ route }) => ({
 					headerShown: false,
 					activeTintColor: 'blue',

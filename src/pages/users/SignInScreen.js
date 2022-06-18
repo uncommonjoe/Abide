@@ -186,13 +186,8 @@ const SignInScreen = () => {
 					<TouchableOpacity
 						style={[button.button, button.green]}
 						onPress={() => navigation.navigate('Sign Up')}
-						disabled={loading}
 					>
-						{loading ? (
-							<ActivityIndicator size='small' color='#fff' />
-						) : (
-							<Text style={button.text}>Register</Text>
-						)}
+						<Text style={button.text}>Register</Text>
 					</TouchableOpacity>
 				</View>
 			</View>
