@@ -61,7 +61,7 @@ const Scripture = ({ reading, loading }) => {
 	}, []);
 
 	return (
-		<View>
+		<View style={{ paddingVertical: 20 }}>
 			{isLoading || loading ? (
 				<ActivityIndicator />
 			) : (
