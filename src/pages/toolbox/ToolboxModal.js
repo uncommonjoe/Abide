@@ -31,6 +31,10 @@ const ToolboxModal = (item) => {
 				return { backgroundColor: '#746756' };
 			case 'tan':
 				return { backgroundColor: '#C1A98B' };
+			case 'pink':
+				return { backgroundColor: '#CC9999' };
+			case 'black':
+				return { backgroundColor: '#424142' };
 		}
 	};
 
@@ -88,7 +92,7 @@ const ToolboxModal = (item) => {
 			]}
 			contentInsetAdjustmentBehavior='automatic'
 		>
-			<SafeAreaView style={{ marginBottom: 350 }}>
+			<SafeAreaView style={{ marginBottom: 500 }}>
 				<TouchableOpacity onPress={() => navigation.goBack()}>
 					<FontAwesomeIcon
 						icon={faArrowLeft}

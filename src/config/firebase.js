@@ -46,12 +46,13 @@ const db = getFirestore(auth);
 export const addTrack = async (props) => {
 	if (props) {
 		try {
-			const docRef = await addDoc(collection(db, 'users'), {
+			const docData = {
 				uid: props.user.uid,
 				name: props.user.displayName,
 				track: props.option,
-			});
-			console.log('Document written with ID: ', docRef.id);
+			};
+
+			setDoc(doc(db, 'users', props.user.uid), docData);
 		} catch (e) {
 			console.error('Error adding document: ', e);
 			throw error;

@@ -23,10 +23,10 @@ import ToolboxModal from '../pages/toolbox/ToolboxModal';
 import Settings from '../pages/Settings';
 import TranslationScreen from '../pages/settings/TranslationScreen';
 import SelectTrackScreen from '../pages/users/SelectTrackScreen';
+import UpdateTrackScreen from '../pages/settings/UpdateTrackScreen';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { TransitionPresets } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { useDispatch, useSelector } from 'react-redux';
 import { Audio, InterruptionModeAndroid, InterruptionModeIOS } from 'expo-av';
@@ -148,6 +148,13 @@ var SettingsStack = () => (
 			<SettingzStack.Screen
 				name='Translation'
 				component={TranslationScreen}
+				options={{
+					header: () => null,
+				}}
+			/>
+			<SettingzStack.Screen
+				name='UpdateTrackScreen'
+				component={UpdateTrackScreen}
 				options={{
 					header: () => null,
 				}}
