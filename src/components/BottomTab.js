@@ -175,17 +175,10 @@ function BottomTab() {
     setPlay(false);
   };
 
-<<<<<<< HEAD
 	const onReplay = async () => {
 		//console.warn('jd', milliSeconds.current);
 		await playerRef.current.setPositionAsync(milliSeconds.current - 10000);
 	};
-=======
-  const onReplay = async () => {
-    console.warn("jd", milliSeconds.current);
-    await playerRef.current.setPositionAsync(milliSeconds.current - 10000);
-  };
->>>>>>> 3cd1c15 (modified bottom tab structure to avoid doubling)
 
   const onClose = async () => {
     dispatch(PlayerAction.SetSound(null));
@@ -222,201 +215,6 @@ function BottomTab() {
     };
   }, [soundFile]);
 
-<<<<<<< HEAD
-	return (
-		<View style={{ flex: 1, backgroundColor: 'white' }}>
-			<Tab.Navigator
-				tabBar={(props) => {
-					return (
-						<>
-							{soundFile ? (
-								<View
-									style={{
-										width: '100%',
-										height: 80,
-										backgroundColor: 'white',
-										flexDirection: 'row',
-										justifyContent: 'space-between',
-										alignItems: 'center',
-										paddingHorizontal: 20,
-										...styles.shadow,
-									}}
-								>
-									<TouchableOpacity onPress={onClose}>
-										<FontAwesomeIcon
-											icon={faClose}
-											color={'#000'}
-											size={28}
-										/>
-									</TouchableOpacity>
-									<View
-										style={{
-											position: 'absolute',
-											alignItems: 'center',
-											justifyContent: 'center',
-											width: '100%',
-											zIndex: -1,
-										}}
-									>
-										<Text
-											style={{
-												textTransform: 'uppercase',
-											}}
-										>
-											{headerTitle.passage}
-										</Text>
-									</View>
-									<View
-										style={{
-											flexDirection: 'row',
-											alignItems: 'center',
-											width: '25%',
-											justifyContent: 'space-between',
-										}}
-									>
-										<TouchableOpacity onPress={onReplay}>
-											<FontAwesomeIcon
-												icon={faArrowRotateLeft}
-												color={'#000'}
-												size={28}
-											/>
-										</TouchableOpacity>
-										<TouchableOpacity
-											onPress={() =>
-												play ? onPause() : onPlay()
-											}
-										>
-											<FontAwesomeIcon
-												icon={play ? faPause : faPlay}
-												color={'#000'}
-												size={28}
-											/>
-										</TouchableOpacity>
-									</View>
-								</View>
-							) : null}
-							<SafeAreaView
-								style={{
-									height: 100,
-									paddingTop: 0,
-									alignItems: 'center',
-									justifyContent: 'center',
-									backgroundColor: 'white',
-									borderTopWidth: 0,
-									flexDirection: 'row',
-									justifyContent: 'space-between',
-								}}
-							>
-								{props.state.routes.map((val, index) => (
-									<TouchableOpacity
-										activeOpacity={0.7}
-										onPress={() => {
-											if (index == 2) {
-												setFocus('Setting');
-												bottomSheetRef1.current.present();
-												bottomSheetRef2.current.dismiss();
-												return;
-											}
-											if (index == 1) {
-												setFocus('Toolbox');
-												bottomSheetRef2.current.present();
-												bottomSheetRef1.current.dismiss();
-												return;
-											} else {
-												props.navigation.navigate(
-													'Home'
-												);
-												setFocus('Home');
-											}
-										}}
-										style={{
-											alignItems: 'center',
-											justifyContent: 'center',
-											flex: 1,
-											height: '100%',
-											// width: "33%",
-											// padding: 10
-										}}
-									>
-										<FontAwesomeIcon
-											icon={
-												index == 0
-													? faHouse
-													: index == 1
-													? faToolbox
-													: faSliders
-											}
-											color={
-												focus == 'Home' && index == 0
-													? '#424142'
-													: focus == 'Toolbox' &&
-													  index == 1
-													? '#424142'
-													: focus == 'Setting' &&
-													  index == 2
-													? '#424142'
-													: '#A29FA2'
-											}
-											size={28}
-										/>
-									</TouchableOpacity>
-								))}
-							</SafeAreaView>
-						</>
-					);
-				}}
-				tabBarOptions={{
-					showLabel: false,
-					keyboardHidesTabBar: true,
-				}}
-				screenOptions={({ route }) => ({
-					headerShown: false,
-					activeTintColor: 'blue',
-					inactiveTintColor: 'gray',
-					style: {
-						borderTopWidth: 0,
-						elevation: 0,
-						...styles.shadow,
-					},
-					keyboardHidesTabBar: true,
-					tabBarStyle: {
-						height: 70,
-						paddingHorizontal: 5,
-						paddingTop: 0,
-						alignItems: 'center',
-						justifyContent: 'center',
-						backgroundColor: '#fff',
-						// position: 'absolute',
-						borderTopWidth: 0,
-					},
-				})}
-			>
-				<Tab.Screen
-					name='Main'
-					children={() => (
-						<HomeStack
-							setHeaderTitle={setHeaderTitle}
-							bottomSheetRef1={bottomSheetRef1}
-							bottomSheetRef2={bottomSheetRef2}
-						/>
-					)}
-					headerShown={false}
-				/>
-				<Tab.Screen
-					name='Toolbox'
-					component={ToolBoxStack}
-					// children={() => <></>}
-					headerShown={false}
-				/>
-				<Tab.Screen
-					name='Settings'
-					component={SettingsStack}
-					headerShown={false}
-				/>
-			</Tab.Navigator>
-		</View>
-	);
-=======
   const BottomTabComp = ({ props }) => {
     const [focus, setFocus] = useState("Home");
     return props.state.routes.map((val, index) => (
@@ -603,7 +401,6 @@ function BottomTab() {
       </Tab.Navigator>
     </View>
   );
->>>>>>> 3cd1c15 (modified bottom tab structure to avoid doubling)
 }
 export default BottomTab;
 
