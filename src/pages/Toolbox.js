@@ -30,6 +30,10 @@ const Toolbox = () => {
 				return { backgroundColor: '#746756' };
 			case 'tan':
 				return { backgroundColor: '#C1A98B' };
+			case 'pink':
+				return { backgroundColor: '#CC9999' };
+			case 'black':
+				return { backgroundColor: '#424142' };
 		}
 	};
 
@@ -57,7 +61,7 @@ const Toolbox = () => {
 			style={[page.container, { backgroundColor: 'white' }]}
 			contentInsetAdjustmentBehavior='automatic'
 		>
-			<SafeAreaView style={{ marginBottom: 350 }}>
+			<SafeAreaView style={{ marginBottom: 450 }}>
 				<StatusBar style='dark' />
 
 				<Text

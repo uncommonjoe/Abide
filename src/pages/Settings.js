@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
 	View,
 	ScrollView,
@@ -21,7 +21,7 @@ import { signOut, getAuth } from 'firebase/auth';
 import NavService from '../navigation/NavService';
 import { useNavigation } from '@react-navigation/native';
 
-export default function Settings(props) {
+export default function Settings() {
 	const { user } = useAuthentication();
 	const auth = getAuth();
 	const navigation = useNavigation();
@@ -52,6 +52,25 @@ export default function Settings(props) {
 				</Text>
 
 				<View style={page.section}>
+					<TouchableOpacity
+						style={button.list}
+						onPress={() => {
+							navigation.navigate('UpdateTrackScreen');
+						}}
+					>
+						<Text style={button.listText}>Change Track</Text>
+						<View style={button.listIcon}>
+							<Text style={{ marginRight: 10 }}>
+								{global.usrSettngs?.track}
+							</Text>
+							<FontAwesomeIcon
+								icon={faCircleArrowRight}
+								color={'#424142'}
+								size={16}
+							/>
+						</View>
+					</TouchableOpacity>
+
 					<TouchableOpacity
 						style={button.list}
 						onPress={() => {
