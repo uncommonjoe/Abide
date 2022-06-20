@@ -171,11 +171,8 @@ function BottomTab() {
 	const playerRef = useRef(null);
 	const milliSeconds = useRef(0);
 	const [headerTitle, setHeaderTitle] = useState('Abide');
-	const [focus, setFocus] = useState('Home');
 	const soundFile = useSelector((state) => state.PlayerReducer.sound);
 	const dispatch = useDispatch();
-	// const [sound, setSound] = useState(initialState);
-	//console.warn('sound', soundFile.name);
 
 	const onPlay = async () => {
 		await playerRef.current.playAsync();
@@ -188,7 +185,6 @@ function BottomTab() {
 	};
 
 	const onReplay = async () => {
-		//console.warn('jd', milliSeconds.current);
 		await playerRef.current.setPositionAsync(milliSeconds.current - 10000);
 	};
 
@@ -279,7 +275,7 @@ function BottomTab() {
 							? '#424142'
 							: '#A29FA2'
 					}
-					size={32}
+					size={28}
 				/>
 			</TouchableOpacity>
 		));
@@ -359,7 +355,7 @@ function BottomTab() {
 							) : null}
 							<SafeAreaView
 								style={{
-									height: 80,
+									height: 100,
 									paddingTop: 0,
 									alignItems: 'center',
 									justifyContent: 'center',
