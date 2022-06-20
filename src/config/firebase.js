@@ -50,6 +50,7 @@ export const addTrack = async (props) => {
 				uid: props.user.uid,
 				name: props.user.displayName,
 				track: props.option,
+				role: 'user',
 			};
 
 			setDoc(doc(db, 'users', props.user.uid), docData);
