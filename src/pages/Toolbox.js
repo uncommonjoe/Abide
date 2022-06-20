@@ -34,7 +34,6 @@ const Toolbox = () => {
 	};
 
 	const selectBox = (item) => {
-		console.log(item);
 		navigation.navigate('Toolbox Modal', { item: item });
 	};
 
