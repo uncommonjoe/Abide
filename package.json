@@ -39,6 +39,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native": "0.68.2",
+    "react-native-calendar-strip": "^2.2.6",
     "react-native-dotenv": "^3.3.1",
     "react-native-draftjs-render": "^2.9.0",
     "react-native-gesture-handler": "~2.2.1",
