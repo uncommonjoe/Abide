@@ -21,7 +21,7 @@ const HomePage = ({ setHeaderTitle }) => {
   let today = Moment(addYear).format("ddd, MMM D, YYYY");
   // Create selectedDay state and default it to today
   const [selectedDay, setSelectedDay] = useState(today);
-  console.warn("today", selectedDay);
+  // console.warn("today", selectedDay);
 
   return (
     <View style={[styles.container, page.statusBarOffset]}>
