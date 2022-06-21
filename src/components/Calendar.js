@@ -1,86 +1,115 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { StyleSheet, View, FlatList, TouchableOpacity } from 'react-native';
-import Moment from 'moment';
-import { Text, TitleText } from '../assets/styles/Text';
+import React, { useEffect, useState, useRef } from "react";
+import {
+  StyleSheet,
+  View,
+  FlatList,
+  TouchableOpacity,
+  Dimensions,
+} from "react-native";
+import Moment from "moment";
+import { Text, TitleText } from "../assets/styles/Text";
+import CalendarStrip from "react-native-calendar-strip";
+let { width } = Dimensions.get("window");
 
 const Calendar = ({ setSelectedDay, selectedDay }) => {
-	const [currentWeek, setCurrentWeek] = useState(null);
-	const [selected, setSelected] = useState(null);
-	const componentMounted = useRef(true);
+  //   const [currentWeek, setCurrentWeek] = useState(null);
+  //   const [selected, setSelected] = useState(null);
+  //   const componentMounted = useRef(true);
 
-	const getWeekRange = () => {
-		let now = new Date();
+  //   const getWeekRange = () => {
+  //     let now = new Date();
 
-		// set time to some convenient value
-		now.setHours(0, 0, 0, 0);
+  //     // set time to some convenient value
+  //     now.setHours(0, 0, 0, 0);
 
-		// Get the previous Monday
-		let monday = new Date(now);
-		monday.setDate(monday.getDate() - monday.getDay() + 1);
+  //     // Get the previous Monday
+  //     let monday = new Date(now);
+  //     monday.setDate(monday.getDate() - monday.getDay() + 1);
 
-		// Get next Monday
-		let nextMonday = new Date(now);
-		nextMonday.setDate(nextMonday.getDate() - nextMonday.getDay() + 8);
+  //     // Get next Monday
+  //     let nextMonday = new Date(now);
+  //     nextMonday.setDate(nextMonday.getDate() - nextMonday.getDay() + 8);
 
-		// Loop through days between monday and nextMonday and add to week array
-		let week = [];
-		for (let m = Moment(monday); m.isBefore(nextMonday); m.add(1, 'days')) {
-			const dayObj = {
-				title: m.format('dd'),
-				day: m.format('DD'),
-				date: m.format('ddd, MMM D, YYYY'),
-			};
+  //     // Loop through days between monday and nextMonday and add to week array
+  //     let week = [];
+  //     for (let m = Moment(monday); m.isBefore(nextMonday); m.add(1, "days")) {
+  //       const dayObj = {
+  //         title: m.format("dd"),
+  //         day: m.format("DD"),
+  //         date: m.format("ddd, MMM D, YYYY"),
+  //       };
 
-			week.push(dayObj);
-		}
+  //       week.push(dayObj);
+  //     }
 
-		// Return array of date objects
-		console.log('week ', week);
-		return week;
-	};
+  //     // Return array of date objects
+  //     console.log("week ", week);
+  //     return week;
+  //   };
 
-	const selectDay = (day) => {
-		let newSelectedDay = Moment(day.date)
-			.add(1, 'y')
-			.format('ddd, MMM D, YYYY'); // TODO: For testing purposes. Remove before production
-		setSelectedDay(newSelectedDay);
-		setSelected(day.date);
-		console.log('You selected ', day);
-	};
+  //   const selectDay = (day) => {
+  //     let newSelectedDay = Moment(day.date)
+  //       .add(1, "y")
+  //       .format("ddd, MMM D, YYYY"); // TODO: For testing purposes. Remove before production
+  //     setSelectedDay(newSelectedDay);
+  //     setSelected(day.date);
+  //     console.log("You selected ", day);
+  //   };
 
-	// TODO: For testing purposes. Remove whole method before production
-	const convertDate = (date) => {
-		let convertedDate = Moment(date)
-			.subtract(1, 'y')
-			.format('ddd, MMM D, YYYY');
-		setSelected(convertedDate);
-	};
+  //   // TODO: For testing purposes. Remove whole method before production
+  //   const convertDate = (date) => {
+  //     let convertedDate = Moment(date)
+  //       .subtract(1, "y")
+  //       .format("ddd, MMM D, YYYY");
+  //     setSelected(convertedDate);
+  //   };
 
-	useEffect(() => {
-		async function fetchData() {
-			// Initialize selected date
-			convertDate(selectedDay);
+  //   useEffect(() => {
+  //     async function fetchData() {
+  //       // Initialize selected date
+  //       convertDate(selectedDay);
 
-			var someResponse = await getWeekRange();
-			setCurrentWeek(someResponse);
+  //       var someResponse = await getWeekRange();
+  //       setCurrentWeek(someResponse);
 
-			if (componentMounted.current) {
-				setCurrentWeek(someResponse);
-			}
-		}
-		fetchData();
+  //       if (componentMounted.current) {
+  //         setCurrentWeek(someResponse);
+  //       }
+  //     }
+  //     fetchData();
 
-		return () => {
-			// This code runs when component is unmounted
-			componentMounted.current = false; // set it to false when we leave the page
-		};
-	}, []);
+  //     return () => {
+  //       // This code runs when component is unmounted
+  //       componentMounted.current = false; // set it to false when we leave the page
+  //     };
+  //   }, []);
 
-	return (
-		<View>
-			<TitleText>Calendar</TitleText>
-
-			<FlatList
+  return (
+    <View style={{}}>
+      <TitleText>Calendar</TitleText>
+      <CalendarStrip
+        style={{ height: 120, width: width }}
+        scrollable
+        // scrollerPaging
+        calendarColor={"#fff"}
+        calendarHeaderStyle={{ color: "#000", paddingTop: 10 }}
+        dateNumberStyle={{ color: "#000" }}
+        dateNameStyle={{ color: "#000", paddingVertical: 5 }}
+        selectedDate={selectedDay}
+        onDateSelected={(date) =>
+          setSelectedDay(Moment(date).format("ddd, MMM D, YYYY"))
+        }
+        highlightDateContainerStyle={{
+          backgroundColor: "#454C57",
+          borderRadius: 0,
+        }}
+        highlightDateNameStyle={{
+          color: "#fff",
+          paddingVertical: 5,
+        }}
+        highlightDateNumberStyle={{ color: "#fff" }}
+      />
+      {/* <FlatList
 				data={currentWeek}
 				keyExtractor={(item) => item.day}
 				contentContainerStyle={styles.container}
@@ -116,37 +145,37 @@ const Calendar = ({ setSelectedDay, selectedDay }) => {
 						</Text>
 					</TouchableOpacity>
 				)}
-			/>
-		</View>
-	);
+			/> */}
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
-	container: {
-		backgroundColor: 'white',
-		padding: 12,
-		flexDirection: 'row',
-		justifyContent: 'space-between',
-	},
-	button: {
-		backgroundColor: 'transparent',
-		flexDirection: 'column',
-		alignItems: 'center',
-		marginBottom: 6,
-		paddingHorizontal: 10,
-		paddingVertical: 12,
-	},
-	selected: {
-		backgroundColor: '#454C57',
-	},
-	month: {
-		fontWeight: '700',
-		fontSize: 14,
-		marginBottom: 20,
-	},
-	day: {
-		fontSize: 16,
-	},
+  container: {
+    backgroundColor: "white",
+    padding: 12,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  button: {
+    backgroundColor: "transparent",
+    flexDirection: "column",
+    alignItems: "center",
+    marginBottom: 6,
+    paddingHorizontal: 10,
+    paddingVertical: 12,
+  },
+  selected: {
+    backgroundColor: "#454C57",
+  },
+  month: {
+    fontWeight: "700",
+    fontSize: 14,
+    marginBottom: 20,
+  },
+  day: {
+    fontSize: 16,
+  },
 });
 
 export default Calendar;
