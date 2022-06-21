@@ -1,7 +1,18 @@
 {
 	"build": {
-		"prod": {
-			"releaseChannel": "prod-v1"
+		"production": {
+			"releaseChannel": "prod-v1",
+
+			"ios": {
+				"env": {
+					"GOOGLE_SERVICES_FILE": "./src/config/GoogleService-Info.plist"
+				}
+			},
+			"android": {
+				"env": {
+					"GOOGLE_SERVICES_FILE": "./src/config/google-services.json"
+				}
+			}
 		},
 		"staging": {
 			"releaseChannel": "staging"
