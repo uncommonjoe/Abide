@@ -79,7 +79,7 @@ const calendar = StyleSheet.create({
 	day: {
 		color: '#AFADB9',
 		fontSize: 16,
-		fontWeight: 'regular',
+		fontWeight: 'normal',
 		paddingBottom: 10,
 	},
 });
