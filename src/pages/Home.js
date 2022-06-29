@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { StyleSheet, View, SafeAreaView } from 'react-native';
+import { StyleSheet, View, SafeAreaView, ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Moment from 'moment';
 import TodaysReading from '../components/TodaysReading';
@@ -24,7 +24,7 @@ const HomePage = ({ setHeaderTitle }) => {
 	// console.warn("today", selectedDay);
 
 	return (
-		<View style={[styles.container, page.statusBarOffset]}>
+		<ScrollView style={[styles.container, page.statusBarOffset]}>
 			<SafeAreaView style={{ flex: 1 }}>
 				<StatusBar style='dark' />
 
@@ -40,7 +40,7 @@ const HomePage = ({ setHeaderTitle }) => {
 					setHeaderTitle={setHeaderTitle}
 				/>
 			</SafeAreaView>
-		</View>
+		</ScrollView>
 	);
 };
 

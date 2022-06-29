@@ -56,7 +56,7 @@ const calendar = StyleSheet.create({
 	},
 	header: {
 		paddingHorizontal: 10,
-		paddingBottom: 0,
+		paddingBottom: 10,
 	},
 	headerTitle: {
 		alignSelf: 'flex-start',
@@ -67,7 +67,6 @@ const calendar = StyleSheet.create({
 		backgroundColor: '#454C57',
 	},
 	dayContainer: {
-		//backgroundColor: 'yellow',
 		borderRadius: 0,
 	},
 	month: {

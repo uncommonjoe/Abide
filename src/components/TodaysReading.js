@@ -261,10 +261,8 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 	}, [selectedDay, global.userReadings]);
 
 	return (
-		<View>
-			<TitleText style={{ marginTop: 40, marginLeft: 20 }}>
-				Today's Reading
-			</TitleText>
+		<View style={{ marginVertical: 20 }}>
+			<TitleText style={{ marginLeft: 20 }}>Today's Reading</TitleText>
 			{isLoading ? (
 				<ActivityIndicator />
 			) : (
