@@ -4,6 +4,7 @@ import {
 	StyleSheet,
 	View,
 	TextInput,
+	ScrollView,
 	TouchableOpacity,
 	TouchableWithoutFeedback,
 	Keyboard,
@@ -15,6 +16,7 @@ import { TitleText, Text } from '../../assets/styles/Text';
 import button from '../../assets/styles/button.style';
 import input from '../../assets/styles/input.style';
 import page from '../../assets/styles/page.style';
+import BackButton from '../../components/BackButton';
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 import { useNavigation } from '@react-navigation/native';
 
@@ -82,7 +84,7 @@ const ForgotPasswordScreen = () => {
 
 	return (
 		<TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-			<View
+			<ScrollView
 				style={[
 					page.container,
 					page.statusBarOffset,
@@ -91,7 +93,9 @@ const ForgotPasswordScreen = () => {
 			>
 				<StatusBar style='dark' />
 
-				<TitleText style={{ marginTop: 40 }}>Forgot Password</TitleText>
+				<BackButton style={{ marginVertical: 20 }} />
+
+				<TitleText>Forgot Password</TitleText>
 
 				<Text style={{ marginBottom: 20 }}>
 					Enter the email associated with your account and we'll send
@@ -106,6 +110,9 @@ const ForgotPasswordScreen = () => {
 							value={value.email}
 							keyboardType='email-address'
 							onChangeText={(text) => updateEmail(text)}
+							returnKeyType='go'
+							returnKeyLabel='go'
+							onSubmitEditing={resetPassword}
 						/>
 
 						{!!value.emailError && (
@@ -124,20 +131,16 @@ const ForgotPasswordScreen = () => {
 						)}
 					</TouchableOpacity>
 
+					<Text style={{ marginTop: 20 }}>
+						If you don't receive an email within 10 minutes, please
+						check your spam folder.
+					</Text>
+
 					{!!value.error && (
 						<Text style={styles.error}>{value.error}</Text>
 					)}
 				</View>
-
-				<View>
-					<TouchableOpacity
-						style={[button.button, button.green]}
-						onPress={() => navigation.navigate('Sign In')}
-					>
-						<Text style={button.text}>Back to Sign In</Text>
-					</TouchableOpacity>
-				</View>
-			</View>
+			</ScrollView>
 		</TouchableWithoutFeedback>
 	);
 };

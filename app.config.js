@@ -2,7 +2,7 @@ export default {
 	expo: {
 		name: 'abide',
 		slug: 'abide',
-		version: '1.0.0',
+		version: '1.1.0',
 		orientation: 'portrait',
 		icon: './src/assets/img/icon.png',
 		splash: {
