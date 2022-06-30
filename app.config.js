@@ -24,6 +24,8 @@ export default {
 			},
 		},
 		android: {
+			versionCode: 2,
+			versionName: '1.1.0',
 			package: 'org.cornerstonebillings.abide',
 			googleServicesFile: './src/config/google-services.json',
 			adaptiveIcon: {

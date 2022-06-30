@@ -14,6 +14,7 @@ design/
 
 # macOS
 .DS_Store
+
 src/config/google-services.json
 src/config/GoogleService-Info.plist
 src/config/pc-api-8932610628054283310-112-d20be9c6bda4.json

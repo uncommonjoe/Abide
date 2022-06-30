@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, SafeAreaView, ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Moment from 'moment';
