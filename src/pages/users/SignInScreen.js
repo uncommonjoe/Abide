@@ -5,6 +5,7 @@ import {
 	Text,
 	View,
 	TextInput,
+	ScrollView,
 	TouchableOpacity,
 	TouchableWithoutFeedback,
 	Keyboard,
@@ -119,7 +120,7 @@ const SignInScreen = () => {
 
 	return (
 		<TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-			<View
+			<ScrollView
 				style={[
 					page.container,
 					page.statusBarOffset,
@@ -138,6 +139,9 @@ const SignInScreen = () => {
 							value={value.email}
 							keyboardType='email-address'
 							onChangeText={(text) => updateEmail(text)}
+							returnKeyType='go'
+							returnKeyLabel='go'
+							onSubmitEditing={signIn}
 						/>
 
 						{!!value.emailError && (
@@ -152,6 +156,9 @@ const SignInScreen = () => {
 							value={value.password}
 							onChangeText={(text) => updatePassword(text)}
 							secureTextEntry={true}
+							returnKeyType='go'
+							returnKeyLabel='go'
+							onSubmitEditing={signIn}
 						/>
 
 						{!!value.passwordError && (
@@ -176,30 +183,35 @@ const SignInScreen = () => {
 						<Text style={styles.error}>{value.error}</Text>
 					)}
 
-					<TouchableOpacity
-						style={[
-							button.link,
-							{ marginTop: 10, alignItems: 'center' },
-						]}
-						onPress={() => navigation.navigate('Forgot Password')}
+					<View
+						style={{
+							flexDirection: 'row',
+							flexWrap: 'wrap',
+							marginTop: 10,
+							alignItems: 'center',
+							justifyContent: 'center',
+						}}
 					>
-						<Text style={button.linkText}>Forgot password</Text>
-					</TouchableOpacity>
-				</View>
+						<TouchableOpacity
+							style={[button.link]}
+							onPress={() =>
+								navigation.navigate('Forgot Password')
+							}
+						>
+							<Text style={button.linkText}>Forgot password</Text>
+						</TouchableOpacity>
 
-				<View>
-					<Text style={[input.title, { textAlign: 'center' }]}>
-						Don't have an account yet?
-					</Text>
+						<Text>|</Text>
 
-					<TouchableOpacity
-						style={[button.button, button.green]}
-						onPress={() => navigation.navigate('Sign Up')}
-					>
-						<Text style={button.text}>Register</Text>
-					</TouchableOpacity>
+						<TouchableOpacity
+							style={button.link}
+							onPress={() => navigation.navigate('Sign Up')}
+						>
+							<Text style={button.linkText}>Register</Text>
+						</TouchableOpacity>
+					</View>
 				</View>
-			</View>
+			</ScrollView>
 		</TouchableWithoutFeedback>
 	);
 };

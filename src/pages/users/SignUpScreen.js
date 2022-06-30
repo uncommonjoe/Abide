@@ -5,6 +5,7 @@ import {
 	Text,
 	View,
 	TextInput,
+	ScrollView,
 	TouchableOpacity,
 	TouchableWithoutFeedback,
 	Keyboard,
@@ -22,6 +23,7 @@ import button from '../../assets/styles/button.style';
 import input from '../../assets/styles/input.style';
 import page from '../../assets/styles/page.style';
 import NavService from '../../navigation/NavService';
+import BackButton from '../../components/BackButton';
 
 const SignUpScreen = () => {
 	const [loading, setLoading] = useState(false);
@@ -150,7 +152,7 @@ const SignUpScreen = () => {
 	};
 	return (
 		<TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-			<View
+			<ScrollView
 				style={[
 					page.container,
 					page.statusBarOffset,
@@ -159,7 +161,9 @@ const SignUpScreen = () => {
 			>
 				<StatusBar style='dark' />
 
-				<TitleText style={{ marginTop: 40 }}>Getting Started</TitleText>
+				<BackButton style={{ marginVertical: 20 }} />
+
+				<TitleText>Getting Started</TitleText>
 
 				<View style={page.section}>
 					<View style={input.container}>
@@ -168,6 +172,9 @@ const SignUpScreen = () => {
 							style={input.text}
 							value={value.displayName}
 							onChangeText={(text) => updateName(text)}
+							returnKeyType='next'
+							returnKeyLabel='next'
+							onSubmitEditing={signUp}
 						/>
 						{!!value.nameError && (
 							<Text style={styles.error}>{value.nameError}</Text>
@@ -181,6 +188,9 @@ const SignUpScreen = () => {
 							value={value.email}
 							keyboardType='email-address'
 							onChangeText={(text) => updateEmail(text)}
+							returnKeyType='next'
+							returnKeyLabel='next'
+							onSubmitEditing={signUp}
 						/>
 						{!!value.emailError && (
 							<Text style={styles.error}>{value.emailError}</Text>
@@ -194,6 +204,9 @@ const SignUpScreen = () => {
 							value={value.password}
 							onChangeText={(text) => updatePassword(text)}
 							secureTextEntry={true}
+							returnKeyType='next'
+							returnKeyLabel='next'
+							onSubmitEditing={signUp}
 						/>
 
 						{!!value.passwordError && (
@@ -219,19 +232,7 @@ const SignUpScreen = () => {
 						<Text style={styles.error}>{value.error}</Text>
 					)}
 				</View>
-
-				<View>
-					<Text style={[input.title, { textAlign: 'center' }]}>
-						Already have an account?
-					</Text>
-					<TouchableOpacity
-						style={[button.button, button.green]}
-						onPress={() => navigation.navigate('Sign In')}
-					>
-						<Text style={button.text}>Back to Sign In</Text>
-					</TouchableOpacity>
-				</View>
-			</View>
+			</ScrollView>
 		</TouchableWithoutFeedback>
 	);
 };

@@ -1,7 +1,7 @@
 {
 	"build": {
 		"production": {
-			"releaseChannel": "prod-v1",
+			"releaseChannel": "prod-v1.1",
 
 			"ios": {
 				"env": {
@@ -9,6 +9,8 @@
 				}
 			},
 			"android": {
+				"buildType": "app-bundle",
+				"gradleCommand": ":app:bundleRelease",
 				"env": {
 					"GOOGLE_SERVICES_FILE": "./src/config/google-services.json"
 				}

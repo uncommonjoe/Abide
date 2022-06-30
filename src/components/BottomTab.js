@@ -1,5 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { StyleSheet, View, TouchableOpacity, SafeAreaView } from 'react-native';
+import {
+	StyleSheet,
+	View,
+	TouchableOpacity,
+	SafeAreaView,
+	useWindowDimensions,
+} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
 	faHouse,
@@ -42,7 +48,7 @@ const BottomSheet = ({ bottomSheetRef, children }) => {
 			<BottomSheetModal
 				handleIndicatorStyle={{ backgroundColor: '#454C57' }}
 				ref={bottomSheetRef}
-				snapPoints={['30%', '50%', '95%']}
+				snapPoints={['30%', '50%', '92%']}
 				onDismiss={() => {
 					bottomSheetRef.current.dismiss();
 				}}
@@ -173,6 +179,8 @@ function BottomTab() {
 	const [headerTitle, setHeaderTitle] = useState('Abide');
 	const soundFile = useSelector((state) => state.PlayerReducer.sound);
 	const dispatch = useDispatch();
+
+	const windowSize = useWindowDimensions();
 
 	const onPlay = async () => {
 		await playerRef.current.playAsync();
@@ -355,8 +363,10 @@ function BottomTab() {
 							) : null}
 							<SafeAreaView
 								style={{
-									height: 100,
+									height: windowSize.height > 667 ? 80 : 70,
+									//height: 70,
 									paddingTop: 0,
+									marginTop: windowSize.height > 667 ? 10 : 0,
 									alignItems: 'center',
 									justifyContent: 'center',
 									backgroundColor: 'white',

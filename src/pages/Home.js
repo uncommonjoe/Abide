@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { StyleSheet, View, SafeAreaView } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, View, SafeAreaView, ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Moment from 'moment';
 import TodaysReading from '../components/TodaysReading';
@@ -15,20 +15,20 @@ const HomePage = ({ setHeaderTitle }) => {
 	let getDate = new Date();
 
 	// addYear is just to use next years data
-	let addYear = Moment(getDate).add(1, 'y'); // TODO: For testing purposes. Remove before production
+	//let addYear = Moment(getDate).add(1, "y"); // TODO: For testing purposes. Remove before production
 
 	// Format the date
-	let today = Moment(addYear).format('ddd, MMM D, YYYY');
-
+	let today = Moment(getDate).format('ddd, MMM D, YYYY');
 	// Create selectedDay state and default it to today
 	const [selectedDay, setSelectedDay] = useState(today);
+	// console.warn("today", selectedDay);
 
 	return (
-		<View style={[styles.container, page.statusBarOffset]}>
+		<ScrollView style={[styles.container, page.statusBarOffset]}>
 			<SafeAreaView style={{ flex: 1 }}>
 				<StatusBar style='dark' />
 
-				<View style={styles.section}>
+				<View style={{ ...styles.section, padding: 0 }}>
 					<Calendar
 						setSelectedDay={setSelectedDay}
 						selectedDay={selectedDay}
@@ -40,7 +40,7 @@ const HomePage = ({ setHeaderTitle }) => {
 					setHeaderTitle={setHeaderTitle}
 				/>
 			</SafeAreaView>
-		</View>
+		</ScrollView>
 	);
 };
 

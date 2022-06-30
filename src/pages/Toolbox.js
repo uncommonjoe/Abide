@@ -11,6 +11,7 @@ import { getToolbox } from '../config/firebase';
 import { useNavigation } from '@react-navigation/native';
 import page from '../assets/styles/page.style';
 import button from '../assets/styles/button.style';
+import { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 
 const Toolbox = () => {
 	const [toolboxItems, setToolboxItems] = useState({});
@@ -57,9 +58,10 @@ const Toolbox = () => {
 	}, []);
 
 	return (
-		<ScrollView
+		<BottomSheetScrollView
 			style={[page.container, { backgroundColor: 'white' }]}
 			contentInsetAdjustmentBehavior='automatic'
+			nestedScrollEnabled
 		>
 			<SafeAreaView style={{ marginBottom: 450 }}>
 				<StatusBar style='dark' />
@@ -94,7 +96,7 @@ const Toolbox = () => {
 					))
 				)}
 			</SafeAreaView>
-		</ScrollView>
+		</BottomSheetScrollView>
 	);
 };
 

@@ -38,23 +38,6 @@ const ToolboxModal = (item) => {
 		}
 	};
 
-	// Convert image to something React Native can handle
-	const atomicHandler = (item) => {
-		switch (item.data.type) {
-			case 'image':
-				return (
-					<View key={item.key} style={{ flex: 1 }}>
-						<Image
-							style={{ width: 288, height: 161 }}
-							source={{ uri: item.data.url }}
-						/>
-					</View>
-				);
-			default:
-				return null;
-		}
-	};
-
 	useEffect(() => {
 		setPayload(item.route.params.item);
 
@@ -66,7 +49,6 @@ const ToolboxModal = (item) => {
 			const params = {
 				contentState: desc,
 				customStyles,
-				atomicHandler,
 				depthMargin: 32,
 				textProps: {
 					selectable: true,
