@@ -2,7 +2,7 @@ export default {
 	expo: {
 		name: 'abide',
 		slug: 'abide',
-		version: '1.1.0',
+		version: '1.2.0',
 		orientation: 'portrait',
 		icon: './src/assets/img/icon.png',
 		splash: {
@@ -12,7 +12,7 @@ export default {
 			backgroundColor: '#ffffff',
 		},
 		updates: {
-			fallbackToCacheTimeout: 0,
+			fallbackToCacheTimeout: 30000,
 		},
 		assetBundlePatterns: ['**/*'],
 		ios: {
@@ -24,10 +24,15 @@ export default {
 			},
 		},
 		android: {
-			versionCode: 2,
-			versionName: '1.1.0',
+			versionCode: 3, // Must be an integer and needs updated each time
+			versionName: '1.2.0',
+			compileSdkVersion: 33,
+			targetSdkVersion: 33,
+			buildToolsVersion: '33.0.0',
 			package: 'org.cornerstonebillings.abide',
-			googleServicesFile: './src/config/google-services.json',
+			googleServicesFile:
+				process.env.GOOGLE_SERVICES_FILE ||
+				'./src/config/google-services.json',
 			adaptiveIcon: {
 				foregroundImage: './src/assets/img/adaptive-icon.png',
 				backgroundColor: '#FFFFFF',
@@ -35,6 +40,11 @@ export default {
 		},
 		web: {
 			favicon: './src/assets/img/favicon.png',
+		},
+		extra: {
+			eas: {
+				projectId: '897e4e07-a74f-47ad-bdf9-a3557021abfc',
+			},
 		},
 	},
 };
