@@ -3,6 +3,7 @@ export default {
 		name: 'abide',
 		slug: 'abide',
 		version: '1.2.0',
+		runtimeVersion: '1.2.0',
 		orientation: 'portrait',
 		icon: './src/assets/img/icon.png',
 		splash: {
