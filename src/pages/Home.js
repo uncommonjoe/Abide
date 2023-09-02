@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, SafeAreaView, ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Moment from 'moment';
@@ -9,19 +9,21 @@ import page from '../assets/styles/page.style';
 
 const HomePage = ({ setHeaderTitle }) => {
 	const { usrReadings } = userReadings();
+	const [selectedDay, setSelectedDay] = useState();
+
 	global.userReadings = usrReadings;
 	global.planTitle = '2022-2023';
+
 	// Get today's date to default into Today's Reading and Calendar
 	let getDate = new Date();
 
-	// addYear is just to use next years data
-	//let addYear = Moment(getDate).add(1, "y"); // TODO: For testing purposes. Remove before production
-
 	// Format the date
 	let today = Moment(getDate).format('ddd, MMM D, YYYY');
-	// Create selectedDay state and default it to today
-	const [selectedDay, setSelectedDay] = useState(today);
-	// console.warn("today", selectedDay);
+
+	useEffect(() => {
+		// Create selectedDay state and default it to today
+		setSelectedDay(today);
+	}, []);
 
 	return (
 		<ScrollView style={[styles.container, page.statusBarOffset]}>

@@ -1,9 +1,12 @@
+const versionNumber = '1.2.1';
+const versionCode = 4; // Must be an integer and needs updated each time
+
 export default {
 	expo: {
 		name: 'abide',
 		slug: 'abide',
-		version: '1.2.0',
-		runtimeVersion: '1.2.0',
+		version: versionNumber,
+		runtimeVersion: versionNumber,
 		orientation: 'portrait',
 		icon: './src/assets/img/icon.png',
 		splash: {
@@ -25,11 +28,8 @@ export default {
 			},
 		},
 		android: {
-			versionCode: 3, // Must be an integer and needs updated each time
-			versionName: '1.2.0',
-			compileSdkVersion: 33,
-			targetSdkVersion: 33,
-			buildToolsVersion: '33.0.0',
+			versionCode: versionCode,
+			versionName: versionNumber,
 			package: 'org.cornerstonebillings.abide',
 			googleServicesFile:
 				process.env.GOOGLE_SERVICES_FILE ||

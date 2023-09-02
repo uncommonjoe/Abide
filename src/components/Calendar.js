@@ -1,11 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import {
-	StyleSheet,
-	View,
-	FlatList,
-	TouchableOpacity,
-	Dimensions,
-} from 'react-native';
+import { StyleSheet, View, Dimensions } from 'react-native';
 import Moment from 'moment';
 import { Text, TitleText } from '../assets/styles/Text';
 import CalendarStrip from 'react-native-calendar-strip';
