@@ -1,8 +1,8 @@
-import {
+const {
 	withAppBuildGradle,
 	withMainApplication,
 	createRunOncePlugin,
-} from '@expo/config-plugins';
+} = require('@expo/config-plugins');
 
 /**
  * This plugin is a temporary fix that is needed to fix Android builds on Expo 48.
@@ -45,7 +45,7 @@ const withAndroidExpoFix = (config) => {
 	return config;
 };
 
-export default createRunOncePlugin(
+module.exports = createRunOncePlugin(
 	withAndroidExpoFix,
 	'withAndroidExpoFix',
 	'1.0.0'

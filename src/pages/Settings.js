@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
 	View,
 	ScrollView,
 	SafeAreaView,
 	TouchableOpacity,
 	Linking,
+	Alert,
 } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { TitleText, Text } from '../assets/styles/Text';
+import { Text } from '../assets/styles/Text';
 import button from '../assets/styles/button.style';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {
 	faCircleArrowRight,
 	faArrowUpRightFromSquare,
-	faArrowRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
 import page from '../assets/styles/page.style';
 import useAuthentication from '../utils/hooks/useAuthentication';
@@ -26,6 +26,24 @@ export default function Settings() {
 	const { user } = useAuthentication();
 	const auth = getAuth();
 	const navigation = useNavigation();
+
+	const logOut = () => {
+		Alert.alert('Sign Out', 'Are you sure you want to sign out?', [
+			{
+				text: 'Cancel',
+				style: 'Cancel',
+			},
+			{ text: 'Sign Out', onPress: () => loggingOut() },
+		]);
+	};
+
+	const loggingOut = () => {
+		signOut(auth);
+		global.usrSettngs = null;
+		global.user = null;
+		global.userReadings = [];
+		NavService.resetStack('AuthStack');
+	};
 
 	return (
 		<ScrollView
@@ -75,11 +93,7 @@ export default function Settings() {
 					<TouchableOpacity
 						style={button.list}
 						onPress={() => {
-							signOut(auth);
-							global.usrSettngs = null;
-							global.user = null;
-							global.userReadings = [];
-							NavService.resetStack('AuthStack');
+							logOut();
 						}}
 					>
 						<Text style={button.listText}>Sign Out</Text>

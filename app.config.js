@@ -16,6 +16,8 @@ export default {
 			backgroundColor: '#ffffff',
 		},
 		updates: {
+			url: 'https://u.expo.dev/897e4e07-a74f-47ad-bdf9-a3557021abfc',
+			useClassicUpdates: true,
 			fallbackToCacheTimeout: 30000,
 		},
 		assetBundlePatterns: ['**/*'],
