@@ -20,6 +20,7 @@ import useAuthentication from '../utils/hooks/useAuthentication';
 import { signOut, getAuth } from 'firebase/auth';
 import NavService from '../navigation/NavService';
 import { useNavigation } from '@react-navigation/native';
+import { StyleSheet } from 'react-native';
 
 export default function Settings() {
 	const { user } = useAuthentication();
@@ -125,8 +126,18 @@ export default function Settings() {
 							/>
 						</View>
 					</TouchableOpacity>
+
+					<Text style={styles.version}>v{global.versionNumber}</Text>
 				</View>
 			</SafeAreaView>
 		</ScrollView>
 	);
 }
+
+const styles = StyleSheet.create({
+	version: {
+		fontSize: 14,
+		marginTop: 20,
+		textAlign: 'center',
+	},
+});
