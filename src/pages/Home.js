@@ -18,7 +18,7 @@ const HomePage = ({ setHeaderTitle }) => {
 	let getDate = new Date();
 
 	// Format the date
-	let today = Moment(getDate).format('ddd, MMM D, YYYY');
+	let today = Moment(getDate).format('YYYY-MM-DDTHH:mm:ss.SSSZ');
 
 	useEffect(() => {
 		// Create selectedDay state and default it to today

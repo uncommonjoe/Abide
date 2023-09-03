@@ -28,7 +28,9 @@ const Calendar = ({ setSelectedDay, selectedDay }) => {
 				dateNumberStyle={calendar.day}
 				selectedDate={selectedDay}
 				onDateSelected={(date) =>
-					setSelectedDay(Moment(date).format('ddd, MMM D, YYYY'))
+					setSelectedDay(
+						Moment(date).format('YYYY-MM-DDTHH:mm:ss.SSSZ')
+					)
 				}
 				highlightDateContainerStyle={calendar.selected}
 				highlightDateNameStyle={[calendar.month, { color: 'white' }]}

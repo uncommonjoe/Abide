@@ -10,6 +10,7 @@ import { TitleText, Text } from '../assets/styles/Text';
 import CircleCheck from './CircleCheck';
 import { filter } from 'lodash';
 import { useNavigation } from '@react-navigation/native';
+import Moment from 'moment';
 
 const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 	const [isLoading, setLoading] = useState(true);
@@ -26,6 +27,10 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 
 	const getPlan = async (selectedDay) => {
 		let pickTracks = [];
+
+		const formattedSelectedDay =
+			Moment(selectedDay).format('ddd, MMM D, YYYY');
+
 		try {
 			const response = await fetch(
 				'https://cornerstonebillings.org/api/abide.json?v=7'
@@ -34,14 +39,14 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 
 			// Filter plans and get the object that matches todays date
 			const datesMatch = filter(json.plans, function (p) {
-				if (p.date == selectedDay) {
+				if (p.date == formattedSelectedDay) {
 					// Filter track by users selected track
 					return p.date;
 				}
 			});
 
 			const readingsMatch = filter(global.userReadings, function (r) {
-				if (r.date == selectedDay) {
+				if (r.date == formattedSelectedDay) {
 					return r;
 				}
 			});

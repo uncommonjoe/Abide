@@ -208,8 +208,6 @@ function BottomTab() {
 				await Audio.setAudioModeAsync({
 					staysActiveInBackground: true,
 					interruptionModeAndroid: InterruptionModeIOS.DoNotMix,
-					shouldDuckAndroid: true,
-					playThroughEarpieceAndroid: true,
 					allowsRecordingIOS: false,
 					interruptionModeIOS: InterruptionModeAndroid.DoNotMix,
 					playsInSilentModeIOS: true,
@@ -299,7 +297,7 @@ function BottomTab() {
 								<View
 									style={{
 										width: '100%',
-										height: 80,
+										height: 70,
 										backgroundColor: 'white',
 										flexDirection: 'row',
 										justifyContent: 'space-between',
@@ -364,9 +362,8 @@ function BottomTab() {
 							<SafeAreaView
 								style={{
 									height: windowSize.height > 667 ? 80 : 70,
-									//height: 70,
 									paddingTop: 0,
-									marginTop: windowSize.height > 667 ? 10 : 0,
+									//marginTop: windowSize.height > 667 ? 10 : 0,
 									alignItems: 'center',
 									justifyContent: 'center',
 									backgroundColor: 'white',

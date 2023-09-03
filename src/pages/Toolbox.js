@@ -58,11 +58,7 @@ const Toolbox = () => {
 	}, []);
 
 	return (
-		<BottomSheetScrollView
-			style={[page.container, { backgroundColor: 'white' }]}
-			contentInsetAdjustmentBehavior='automatic'
-			nestedScrollEnabled
-		>
+		<ScrollView style={[page.container, { backgroundColor: 'white' }]}>
 			<SafeAreaView style={{ marginBottom: 450 }}>
 				<StatusBar style='dark' />
 
@@ -96,7 +92,7 @@ const Toolbox = () => {
 					))
 				)}
 			</SafeAreaView>
-		</BottomSheetScrollView>
+		</ScrollView>
 	);
 };
 

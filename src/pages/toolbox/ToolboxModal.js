@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
 	View,
-	Image,
 	StyleSheet,
 	SafeAreaView,
 	ScrollView,
@@ -12,7 +11,8 @@ import { TitleText } from '../../assets/styles/Text';
 import getRNDraftJSBlocks from 'react-native-draftjs-render';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
+import { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 
 const ToolboxModal = (item) => {
 	const [payload, setPayload] = useState(item.route.params.item);
@@ -51,7 +51,7 @@ const ToolboxModal = (item) => {
 				customStyles,
 				depthMargin: 32,
 				textProps: {
-					selectable: true,
+					selectable: false,
 				},
 			};
 
@@ -65,15 +65,8 @@ const ToolboxModal = (item) => {
 		}
 	}, [item]);
 
-	return (
-		<ScrollView
-			style={[
-				page.container,
-				backgroundStyle(payload.color),
-				{ paddingTop: 20 },
-			]}
-			contentInsetAdjustmentBehavior='automatic'
-		>
+	const toolboxContent = () => {
+		return (
 			<SafeAreaView style={{ marginBottom: 500 }}>
 				<TouchableOpacity onPress={() => navigation.goBack()}>
 					<FontAwesomeIcon
@@ -88,8 +81,38 @@ const ToolboxModal = (item) => {
 
 				<View>{convertedText}</View>
 			</SafeAreaView>
-		</ScrollView>
-	);
+		);
+	};
+
+	const renderScrollView = () => {
+		if (Platform.OS === 'ios') {
+			return (
+				<ScrollView
+					style={[
+						page.container,
+						backgroundStyle(payload.color),
+						{ paddingTop: 20 },
+					]}
+				>
+					{toolboxContent()}
+				</ScrollView>
+			);
+		} else {
+			return (
+				<BottomSheetScrollView
+					style={[
+						page.container,
+						backgroundStyle(payload.color),
+						{ paddingTop: 20 },
+					]}
+				>
+					{toolboxContent()}
+				</BottomSheetScrollView>
+			);
+		}
+	};
+
+	return renderScrollView();
 };
 
 const styles = StyleSheet.create({
