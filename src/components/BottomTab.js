@@ -361,9 +361,13 @@ function BottomTab() {
 							) : null}
 							<SafeAreaView
 								style={{
-									height: windowSize.height > 667 ? 80 : 70,
+									height: 80,
+									...Platform.select({
+										android: {
+											height: 60,
+										},
+									}),
 									paddingTop: 0,
-									//marginTop: windowSize.height > 667 ? 10 : 0,
 									alignItems: 'center',
 									justifyContent: 'center',
 									backgroundColor: 'white',
