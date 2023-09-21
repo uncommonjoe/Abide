@@ -1,5 +1,5 @@
-const versionNumber = '1.2.1';
-const versionCode = 4; // Must be an integer and needs updated each time
+const versionNumber = '1.2.2';
+const versionCode = 5; // Must be an integer and needs updated each time
 
 export default {
 	expo: {
