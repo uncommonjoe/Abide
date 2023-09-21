@@ -53,7 +53,6 @@ const BottomSheet = ({ bottomSheetRef, children }) => {
 					bottomSheetRef.current.dismiss();
 				}}
 				enablePanDownToClose={true}
-				// onAnimate={() => console.log("on animate")}
 				backgroundStyle={{
 					backgroundColor: 'white',
 					shadowColor: '#454C57',
@@ -381,11 +380,9 @@ function BottomTab() {
 						</>
 					);
 				}}
-				tabBarOptions={{
+				screenOptions={({ route }) => ({
 					showLabel: false,
 					keyboardHidesTabBar: true,
-				}}
-				screenOptions={({ route }) => ({
 					headerShown: false,
 					activeTintColor: 'blue',
 					inactiveTintColor: 'gray',

@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
 		...Platform.select({
 			android: {
 				// Styles specific to Android
-				paddingTop: 4,
+				paddingTop: 3,
 			},
 		}),
 	},

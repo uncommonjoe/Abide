@@ -125,7 +125,7 @@ export const getUserReadings = async (user) => {
 			querySnapshot.forEach((doc) => {
 				readings.push(doc.data());
 			});
-			console.log(readings);
+
 			return readings;
 		} catch (e) {
 			console.error('Error getting document: ', e);
@@ -149,7 +149,7 @@ export const getToolbox = async () => {
 		querySnapshot.forEach((doc) => {
 			toolbox.push(doc.data());
 		});
-		console.log(toolbox);
+
 		return toolbox;
 	} catch (e) {
 		console.error('Error getting toolbox: ', e);

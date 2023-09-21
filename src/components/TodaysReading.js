@@ -22,9 +22,6 @@ const TodaysReading = ({ selectedDay, setHeaderTitle }) => {
 	let [reading1, reading2, reading3, reading4, reading5] =
 		Array(5).fill(false);
 
-	// console.log('global user settings ', global.usrSettngs);
-	// console.log('global readings ', global.usrReadings);
-
 	const getPlan = async (selectedDay) => {
 		let pickTracks = [];
 
@@ -349,6 +346,11 @@ const styles = StyleSheet.create({
 		marginHorizontal: 5,
 		padding: 20,
 		width: 140,
+		...Platform.select({
+			android: {
+				marginVertical: -1,
+			},
+		}),
 	},
 	track: {
 		fontWeight: '700',
