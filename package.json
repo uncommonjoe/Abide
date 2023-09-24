@@ -1,6 +1,6 @@
 {
 	"name": "org.cornerstonebillings.abide",
-	"version": "1.2.4",
+	"version": "1.2.73d6846",
 	"scripts": {
 		"start": "expo start",
 		"android": "expo start --android",
