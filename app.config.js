@@ -1,5 +1,5 @@
-const versionNumber = '1.2.2';
-const versionCode = 5; // Must be an integer and needs updated each time
+const versionNumber = '1.2.4';
+const versionCode = 7; // Must be an integer and needs updated each time
 
 export default {
 	expo: {
@@ -38,7 +38,7 @@ export default {
 				'./src/config/google-services.json',
 			adaptiveIcon: {
 				foregroundImage: './src/assets/img/adaptive-icon.png',
-				backgroundColor: '#FFFFFF',
+				backgroundColor: '#434a57',
 			},
 		},
 		web: {
