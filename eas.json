@@ -1,7 +1,8 @@
 {
 	"build": {
 		"production": {
-			"releaseChannel": "prod-v1.1",
+			"releaseChannel": "prod-v1.2",
+            "channel": "prod-v1.2",
 
 			"ios": {
 				"env": {
@@ -17,7 +18,8 @@
 			}
 		},
 		"staging": {
-			"releaseChannel": "staging"
+			"releaseChannel": "staging",
+            "channel": "staging"
 		}
 	}
 }

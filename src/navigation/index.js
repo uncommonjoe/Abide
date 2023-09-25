@@ -19,7 +19,7 @@ const RootNavigation = () => {
 	const { usrReadings } = userReadings();
 	global.userReadings = usrReadings;
 	global.planTitle = '2022-2023';
-	global.versionNumber = '1.2.73d6846';
+	global.versionNumber = '1.2.b6110d';
 
 	const Stack = createNativeStackNavigator();
 
